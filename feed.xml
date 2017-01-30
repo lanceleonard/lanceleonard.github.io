@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://localhost:4000/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.3.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-01-30T09:06:54-08:00</updated><id>http://localhost:4000//</id><title type="html">Lance's quips and quibbles</title><subtitle>Random thoughts and occasionally useful articles from Lance Leonard, a technical  writer, programmer, and problem solver currently located somewhere near Seattle,  WA (USA).
+</subtitle><entry><title type="html">Converting XML to JSON using Node.js</title><link href="http://localhost:4000/post/2017/01/29/node-convert-xml-json.html" rel="alternate" type="text/html" title="Converting XML to JSON using Node.js" /><published>2017-01-29T00:00:00-08:00</published><updated>2017-01-29T00:00:00-08:00</updated><id>http://localhost:4000/post/2017/01/29/node-convert-xml-json</id><content type="html" xml:base="http://localhost:4000/post/2017/01/29/node-convert-xml-json.html">&lt;p&gt;There are many ways to use node.js to convert XML to JSON.  To date, one of the simplest involves an &lt;a href=&quot;https://www.npmjs.com/package/xml2js&quot;&gt;npm module called &lt;code class=&quot;highlighter-rouge&quot;&gt;xml2js&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;The basic wrapper code is:&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;fs&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'fs'&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;x2j&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'xml2js'&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;sInputFile&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;books&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;xml&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;x2j&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Parser&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;sXMLData&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;fs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;readFileSync&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;sInputFile&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'utf8'&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;parseString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;sXMLData&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;err&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;result&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; 
+   &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;s&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;JSON&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;stringify&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;undefined&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+   &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Result&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;\n&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;\n&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Here, the input file (&lt;code class=&quot;highlighter-rouge&quot;&gt;books.xml&lt;/code&gt;) is read into a string variable and then parsed.  The result is passed to an anonymous function that formats it before printing it to the console.&lt;/p&gt;
+
+&lt;p&gt;When XML elements contain attributes, this version creates an attribute object named &lt;code class=&quot;highlighter-rouge&quot;&gt;$&lt;/code&gt; on the parent and then assigned the values as children of the attribute object.  To place attributes as direct children of the parent object (without the intervening &lt;code class=&quot;highlighter-rouge&quot;&gt;$&lt;/code&gt; object), set the &lt;code class=&quot;highlighter-rouge&quot;&gt;mergeAttrs&lt;/code&gt; option to &lt;code class=&quot;highlighter-rouge&quot;&gt;true&lt;/code&gt; when declaring the parser:&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;x2j&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Parser&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;mergeAttrs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;To learn more, see &lt;a href=&quot;https://www.npmjs.com/package/xml2js&quot;&gt;the documentation&lt;/a&gt; for &lt;code class=&quot;highlighter-rouge&quot;&gt;xml2js&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h1 id=&quot;vital-stats&quot;&gt;Vital Stats&lt;/h1&gt;
+&lt;p&gt;Lasted tested January 2017:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;node v7.4.0&lt;/li&gt;
+  &lt;li&gt;npm, v4.0.5&lt;/li&gt;
+  &lt;li&gt;xml2js, v0.4.17&lt;/li&gt;
+  &lt;li&gt;MacOS 10.12.3&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;revision-history&quot;&gt;Revision History&lt;/h2&gt;
+
+&lt;p&gt;29 Jan 2017: Original post.&lt;/p&gt;</content><author><name>Lance Leonard</name></author><category term="post" /><category term="node" /><category term="javascript" /><category term="xml" /><category term="json" /><summary type="html">There are many ways to use node.js to convert XML to JSON.  To date, one of the simplest involves an npm module called xml2js.</summary></entry><entry><title type="html">Word 2011 reminders</title><link href="http://localhost:4000/post/2017/01/28/word-2011-reminders.html" rel="alternate" type="text/html" title="Word 2011 reminders" /><published>2017-01-28T00:00:00-08:00</published><updated>2017-01-28T00:00:00-08:00</updated><id>http://localhost:4000/post/2017/01/28/word-2011-reminders</id><content type="html" xml:base="http://localhost:4000/post/2017/01/28/word-2011-reminders.html">&lt;p&gt;Word 2011 is thankfully, obsolete, having finally been replaced by Word 2016 for the Mac.  Up until a couple of years ago, I worked exclusively with Windows and hadn't thought of earlier versions of Word in some time.  When handed my first Mac, however, I quickly learned that the venerable Word 2011 featured some, ah, &lt;em&gt;eccentric&lt;/em&gt; behavior.&lt;/p&gt;
+
+&lt;p&gt;Here are a few tips I learned while waiting for the update:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;If you have trouble getting the tabs to respond to mouse clicks, try clicking the very top pixel of the tab (or as close to it as you can manage.)  Yeah, I know.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;When transferring files between different countries, regions, and languages, use care to verify the Page Setup and Default Language settings before printing or redistributing the document.  The angst you save may be your own.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;The following keyboard shortcuts help manage list and paragraph indents:&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;Promote bullet one level (move right): [&lt;code class=&quot;highlighter-rouge&quot;&gt;Shift&lt;/code&gt;] + [&lt;code class=&quot;highlighter-rouge&quot;&gt;Control&lt;/code&gt;] + [&lt;code class=&quot;highlighter-rouge&quot;&gt;Right arrow&lt;/code&gt;]&lt;/li&gt;
+      &lt;li&gt;Demote bullet one level (move left): [&lt;code class=&quot;highlighter-rouge&quot;&gt;Shift&lt;/code&gt;] + [&lt;code class=&quot;highlighter-rouge&quot;&gt;Control&lt;/code&gt;] + [&lt;code class=&quot;highlighter-rouge&quot;&gt;Left arrow&lt;/code&gt;]&lt;/li&gt;
+      &lt;li&gt;Indent paragraph one tab stop (move right): [&lt;code class=&quot;highlighter-rouge&quot;&gt;Control&lt;/code&gt;] + [&lt;code class=&quot;highlighter-rouge&quot;&gt;Shift&lt;/code&gt;] + [&lt;code class=&quot;highlighter-rouge&quot;&gt;M&lt;/code&gt;]&lt;/li&gt;
+      &lt;li&gt;Unindent paragraph one tab stop (move left): [&lt;code class=&quot;highlighter-rouge&quot;&gt;Shift&lt;/code&gt;] + [&lt;code class=&quot;highlighter-rouge&quot;&gt;Command&lt;/code&gt;] + [&lt;code class=&quot;highlighter-rouge&quot;&gt;M&lt;/code&gt;]&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I realize this is a bit of a grab bag; however, there may yet be one person out there struggling to make the program behave.&lt;/p&gt;
+
+&lt;p&gt;If it's any consolation, &lt;a href=&quot;http://pandoc.org/&quot;&gt;pandoc&lt;/a&gt; is incredibly useful for converting Word documents to other formats (and back again, which is useful for fixing up hideously broken styles).  Check it out!&lt;/p&gt;
+
+&lt;h2 id=&quot;revision-history&quot;&gt;Revision History&lt;/h2&gt;
+
+&lt;p&gt;28 Jan 2017: Original post.&lt;/p&gt;</content><author><name>Lance Leonard</name></author><category term="post" /><category term="Word-2011" /><category term="MacOS" /><category term="OSX" /><category term="Office" /><summary type="html">Word 2011 is thankfully, obsolete, having finally been replaced by Word 2016 for the Mac.  Up until a couple of years ago, I worked exclusively with Windows and hadn't thought of earlier versions of Word in some time.  When handed my first Mac, however, I quickly learned that the venerable Word 2011 featured some, ah, eccentric behavior.</summary></entry><entry><title type="html">Keyboard shortcuts for elevation prompts</title><link href="http://localhost:4000/post/2017/01/27/elevation-prompt-shortcuts.html" rel="alternate" type="text/html" title="Keyboard shortcuts for elevation prompts" /><published>2017-01-27T00:00:00-08:00</published><updated>2017-01-27T00:00:00-08:00</updated><id>http://localhost:4000/post/2017/01/27/elevation-prompt-shortcuts</id><content type="html" xml:base="http://localhost:4000/post/2017/01/27/elevation-prompt-shortcuts.html">&lt;p&gt;Windows Vista introduced elevation prompts, dialog boxes that confirm administrator level actions such as installing new software, deleting files from sensitive locations, and so on.&lt;/p&gt;
+
+&lt;p&gt;Many find the feature annoying, which (oddly) was &lt;a href=&quot;https://arstechnica.com/security/2008/04/vistas-uac-security-prompt-was-designed-to-annoy-you/&quot;&gt;the original point&lt;/a&gt;.  Personally, I appreciate the opportunity to avoid accidentally deleting an important file; however, I know this view &lt;a href=&quot;https://www.youtube.com/watch?v=FxOIebkmrqs&quot;&gt;isn't universal&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;I do find the elevation experience jarring—especially since I prefer trackballs over traditional mice.  When Windows displays an elevation prompt, my trackball stops responding until the prompt is handled.  (I suspect this has something to do with permissions that have not yet been properly coded into the underlying drivers or their installation process. I haven't investigated deeply.)&lt;/p&gt;
+
+&lt;p&gt;To manage the situation, I've come to rely on keyboard shortcuts:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;To quickly accept an elevation prompt, press [&lt;code class=&quot;highlighter-rouge&quot;&gt;Left Arrow&lt;/code&gt;] and then press [&lt;code class=&quot;highlighter-rouge&quot;&gt;Enter&lt;/code&gt;].&lt;/li&gt;
+  &lt;li&gt;To cancel, press [&lt;code class=&quot;highlighter-rouge&quot;&gt;Esc&lt;/code&gt;].&lt;/li&gt;
+  &lt;li&gt;You can continue many elevation prompts by pressing [&lt;code class=&quot;highlighter-rouge&quot;&gt;Spacebar&lt;/code&gt;].  (In my experience, support varies in different Windows versions.)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I've found the [&lt;code class=&quot;highlighter-rouge&quot;&gt;Left Arrow&lt;/code&gt;] + [&lt;code class=&quot;highlighter-rouge&quot;&gt;Enter&lt;/code&gt;] shortcut consistent in every version of Windows since Vista.  Ironically, it's nearly an automatic response.  Since automatic responses are also inattentive responses, one wonders if deliberate annoyance was all that effective in the long run?&lt;/p&gt;
+
+&lt;h2 id=&quot;revision-history&quot;&gt;Revision History&lt;/h2&gt;
+
+&lt;p&gt;27 Jan 2017: Original post.&lt;/p&gt;</content><author><name>Lance Leonard</name></author><category term="post" /><category term="windows" /><category term="elevation" /><category term="keyboard" /><category term="shortcuts" /><summary type="html">Windows Vista introduced elevation prompts, dialog boxes that confirm administrator level actions such as installing new software, deleting files from sensitive locations, and so on.</summary></entry><entry><title type="html">Dictionary sorting in JavaScript</title><link href="http://localhost:4000/article/2017/01/26/javascript-dictionary-sorting.html" rel="alternate" type="text/html" title="Dictionary sorting in JavaScript" /><published>2017-01-26T00:00:00-08:00</published><updated>2017-01-26T00:00:00-08:00</updated><id>http://localhost:4000/article/2017/01/26/javascript-dictionary-sorting</id><content type="html" xml:base="http://localhost:4000/article/2017/01/26/javascript-dictionary-sorting.html">&lt;p&gt;&lt;em&gt;&quot;There is always a well-known solution to every human problem–neat, plausible, and wrong.&quot;&lt;/em&gt;&lt;br /&gt;
+&lt;em&gt;– H.L. Menken.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;If you've ever gathered requirements, reviewed change requests, or even handled support tickets, you've probably seen cases where a proposed solution did not resolve the user's need. Learn to recognize the true need underlying a request so you can create solutions that actually solve problems.&lt;/p&gt;
+
+&lt;p&gt;To illustrate, consider the following book titles:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;A Study in Scarlet
+The Sign of Four
+The Adventures of Sherlock Holmes
+The Memoirs of Sherlock Holmes
+The Hound of the Baskervilles
+The Return of Sherlock Holmes
+His Last Bow
+The Valley of Fear
+The Case-Book of Sherlock Holmes
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Suppose these are stored in an array and you've been asked to print the titles with JavaScript:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;    &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;iTotal&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;astrTitles&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; 
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;iTotal&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        
+       &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;iTitles&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;iTitles&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;iTotal&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;iTitles&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+          &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;str&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;astrTitles&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;iTitles&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+          &lt;span class=&quot;nx&quot;&gt;writeTitle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;str&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+       &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Here, the &lt;em&gt;writeTitle()&lt;/em&gt; function represents whatever display technique is appropriate for your use (&lt;a href=&quot;https://jsfiddle.net/lleonard/b45xzgau/&quot;&gt;example #1&lt;/a&gt;).&lt;/p&gt;
+
+&lt;p&gt;Your code might vary, but the underlying approach would likely be similar. You'd loop through the array and print each element value. (It's worth noting that the initial order roughly corresponds to original publication order of these titles.)&lt;/p&gt;
+
+&lt;p&gt;Now, suppose your users ask you to print the titles alphabetically.  To do so, you might use (&lt;a href=&quot;https://jsfiddle.net/lleonard/74yfbthu/&quot;&gt;example #2&lt;/a&gt;):&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;    &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;iTotal&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;astrTitles&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; 
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;iTotal&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    
+       &lt;span class=&quot;nx&quot;&gt;astrTitles&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;sort&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+       &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;iTitles&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;iTitles&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;iTitles&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;iTotal&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+          &lt;span class=&quot;nx&quot;&gt;writeTitle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;astrTitles&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;iTitles&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+       &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;This leads to:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;A Study in Scarlet
+His Last Bow
+The Adventures of Sherlock Holmes
+The Case-Book of Sherlock Holmes
+The Hound of the Baskervilles
+The Memoirs of Sherlock Holmes
+The Return of Sherlock Holmes
+The Sign of Four
+The Valley of Fear
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Sorting the values is the obvious, simplest answer.  Is it the correct answer?  Not really; it addresses the request, but not the need. This version uses the entire string value to determine sort order.  However, there's a difference between alphabetic sorting and dictionary sorting (which ignores leading articles). In dictionary sorting, &quot;A Study in Scarlet&quot; appears after &quot;The Sign of Four.&quot; The need, then, is to use dictionary sorting rather than strict alphabetic sorting.&lt;/p&gt;
+
+&lt;p&gt;In earlier times, libraries handled this by moving leading articles to the end of the title, as in &quot;Study in Scarlet, A&quot;, &quot;Sign of Four, The&quot;, and so on.&lt;/p&gt;
+
+&lt;p&gt;You &lt;em&gt;could&lt;/em&gt; follow the same convention by modifying the data values accordingly:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&quot;Adventures of Sherlock Holmes, The&quot;
+&quot;Case-Book of Sherlock Holmes, The&quot;
+&quot;His Last Bow&quot;
+&quot;Hound of the Baskervilles, The&quot;
+&quot;Memoirs of Sherlock Holmes, The&quot;
+&quot;Return of Sherlock Holmes, The&quot;
+&quot;Sign of Four, The&quot;
+&quot;Study in Scarlet, A&quot;
+&quot;Valley of Fear, The&quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;This approach is simple and leads to the expected result. It's well-known, neat, and plausible. It also avoids code changes. However, the technique forces the user to adapt to the limitations of the implementation.  Worse, future features (such as search) become more difficult to implement.  There must be a better way.&lt;/p&gt;
+
+&lt;p&gt;You might think to store separate data values: one displayed to the user and one used to sort the data. In the long run, this would be more effective than changing the data because it provides the correct order without affecting the user's experience.  However, additional costs soon become apparent. First, storage increases because of the near duplicate data values.  Second, your code now needs to synchronize both values when the data changes.&lt;/p&gt;
+
+&lt;p&gt;(Contrary to expectation, book titles can change over time.  &quot;The Sign of Four&quot; was originally published as &quot;The Sign of The Four&quot; and there's an &lt;a href=&quot;https://en.wikipedia.org/wiki/The_Sign_of_the_Four#Publishing_history&quot;&gt;open debate&lt;/a&gt; as to which title is the correct one.)&lt;/p&gt;
+
+&lt;p&gt;Fortunately, JavaScript provides a better way, one that slightly increases the code without duplicating the data or breaking the user's experience (&lt;a href=&quot;https://jsfiddle.net/lleonard/t3qmvxj8/&quot;&gt;example #3&lt;/a&gt;):&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;    &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;moveLeadingArticle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;sInput&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+       &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;sResult&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;sInput&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;toLocaleLowerCase&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+       &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;aArticles&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'a'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'an'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'the'&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+       &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;aWords&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;sResult&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;split&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\s&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+       &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;aArticles&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;indexOf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;aWords&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+          &lt;span class=&quot;nx&quot;&gt;sResult&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;aWords&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;slice&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;join&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;' '&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+          &lt;span class=&quot;nx&quot;&gt;sResult&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;', '&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;aWords&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+       &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;   
+       &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;sResult&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;iTotal&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;astrTitles&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; 
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;iTotal&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    
+       &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;aResultsArray&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;length&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+       
+          &lt;span class=&quot;nx&quot;&gt;aResultsArray&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;sort&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+             &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;SortTermA&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;moveLeadingArticle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+             &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;SortTermB&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;moveLeadingArticle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+             &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;SortTermA&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;localeCompare&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;SortTermB&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+          &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+       &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+       &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;iTitles&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;iTitles&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;iTitles&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;iTotal&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+          &lt;span class=&quot;nx&quot;&gt;writeTitle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;astrTitles&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;iTitles&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+       &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Here, the &lt;em&gt;moveLeadingArticle()&lt;/em&gt; function uses a regular expression to detect and move leading articles to the end of a title.  The sorting code uses an anonymous function to override the built-in sort algorithm with one using the new function.  These changes incorporate the librarian's trick without affecting the underlying data or the user's experience.&lt;/p&gt;
+
+&lt;p&gt;This provided the expected results:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    The Adventures of Sherlock Holmes
+    The Case-Book of Sherlock Holmes
+    His Last Bow
+    The Hound of the Baskervilles
+    The Memoirs of Sherlock Holmes
+    The Return of Sherlock Holmes
+    The Sign of Four
+    A Study in Scarlet
+    The Valley of Fear
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;This solution meets the user's need without adversely affecting their experience, without requiring changes to the data, and without complicating future feature requests.  This is the right answer.&lt;/p&gt;
+
+&lt;p&gt;Your users are unlikely to notice the additional effort put into your final solution. That's fine; it really is. The satisfaction of programming comes, in part, from correctly meeting user needs, even when the implementation needs a little more work than originally expected.&lt;/p&gt;
+
+&lt;h2 id=&quot;updates&quot;&gt;Updates&lt;/h2&gt;
+
+&lt;p&gt;26 Jan 2017: Original post.&lt;/p&gt;</content><author><name>Lance Leonard</name></author><category term="article" /><category term="javascript" /><category term="sorting" /><summary type="html">&quot;There is always a well-known solution to every human problem–neat, plausible, and wrong.&quot;
+– H.L. Menken.</summary></entry><entry><title type="html">First post: don't panic</title><link href="http://localhost:4000/post/2017/01/25/first-post-dont-panic.html" rel="alternate" type="text/html" title="First post: don't panic" /><published>2017-01-25T00:00:00-08:00</published><updated>2017-01-25T00:00:00-08:00</updated><id>http://localhost:4000/post/2017/01/25/first-post-dont-panic</id><content type="html" xml:base="http://localhost:4000/post/2017/01/25/first-post-dont-panic.html">&lt;p&gt;Choose your greeting:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Hail and well met!&lt;/li&gt;
+  &lt;li&gt;Greetings, lifeform.&lt;/li&gt;
+  &lt;li&gt;Goooood Eeeeevvvening.&lt;/li&gt;
+  &lt;li&gt;Hello troubleshooter.&lt;/li&gt;
+  &lt;li&gt;Buh-doop beep?  BLAAAT!&lt;/li&gt;
+  &lt;li&gt;Oh.  It's &lt;em&gt;you&lt;/em&gt;.  It's been a &lt;em&gt;looong&lt;/em&gt; time.  How've you been?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;After many promises, multiple unfinished prototypes, and much pondering, it's finally online.  The site, I mean.&lt;/p&gt;
+
+&lt;p&gt;Here, you'll find technical articles and posts related to things I'm working on, lessons I've learned, solutions I've found, and other thoughts I think might be useful to write up.  Feel free to browse, but I do ask that shenanigans be kept to a minimum…unless, of course, I'm allowed to be rambunctious as well. In that event, well, it's off to the races… off to the races…&lt;/p&gt;
+
+&lt;p&gt;See &lt;a href=&quot;/about&quot;&gt;About the site&lt;/a&gt; for the rules (such as they are).&lt;/p&gt;
+
+&lt;p&gt;Things are a bit sparse at the moment, but that's because I'm still pulling things together.&lt;/p&gt;
+
+&lt;p&gt;For the near future, I'm keeping it simple.  Eventually, I'll need to complicate things a bit, but hopefully not too much.  I generally follow a light, bloggy style…except when I don't.  When there's enough content to make it worthwhile, I'll separate formal articles from informal observations and add navigation shortcuts, search, and other traditional features.&lt;/p&gt;
+
+&lt;p&gt;Comments are not currently enabled, so you'll need to provide feedback through the methods displayed below.&lt;/p&gt;
+
+&lt;p&gt;If you find anything useful, feel free to share and enjoy (share and enjoy).  Please give credit where credit is due.  You may not pinch and poach.   If something's useful, cite where you found it.  If you feel I've not cited things correctly, let me know so I can take appropriate action.&lt;/p&gt;
+
+&lt;p&gt;Things are a bit of a mess at the moment, but the style will settle down and start telling you things you need to know.  I hope.&lt;/p&gt;
+
+&lt;h2 id=&quot;revision-history&quot;&gt;Revision History&lt;/h2&gt;
+
+&lt;p&gt;25 Jan 2017: Original post.&lt;/p&gt;</content><author><name>Lance Leonard</name></author><category term="post" /><category term="greetings" /><category term="introduction" /><category term="rules" /><summary type="html">Choose your greeting:</summary></entry></feed>
