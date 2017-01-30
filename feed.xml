@@ -1,5 +1,47 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://localhost:4000/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.3.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-01-30T09:06:54-08:00</updated><id>http://localhost:4000//</id><title type="html">Lance's quips and quibbles</title><subtitle>Random thoughts and occasionally useful articles from Lance Leonard, a technical  writer, programmer, and problem solver currently located somewhere near Seattle,  WA (USA).
-</subtitle><entry><title type="html">Converting XML to JSON using Node.js</title><link href="http://localhost:4000/post/2017/01/29/node-convert-xml-json.html" rel="alternate" type="text/html" title="Converting XML to JSON using Node.js" /><published>2017-01-29T00:00:00-08:00</published><updated>2017-01-29T00:00:00-08:00</updated><id>http://localhost:4000/post/2017/01/29/node-convert-xml-json</id><content type="html" xml:base="http://localhost:4000/post/2017/01/29/node-convert-xml-json.html">&lt;p&gt;There are many ways to use node.js to convert XML to JSON.  To date, one of the simplest involves an &lt;a href=&quot;https://www.npmjs.com/package/xml2js&quot;&gt;npm module called &lt;code class=&quot;highlighter-rouge&quot;&gt;xml2js&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://localhost:4000/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.3.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-01-30T10:28:36-08:00</updated><id>http://localhost:4000//</id><title type="html">Lance's quips and quibbles</title><subtitle>Random thoughts and occasionally useful articles from Lance Leonard, a technical  writer, programmer, and problem solver currently located somewhere near Seattle,  WA (USA).
+</subtitle><entry><title type="html">Editorial resources for writers, editors, and wearers of multiple hats.</title><link href="http://localhost:4000/post/2017/01/30/editorial_writing_resources.html" rel="alternate" type="text/html" title="Editorial resources for writers, editors, and wearers of multiple hats." /><published>2017-01-30T00:00:00-08:00</published><updated>2017-01-30T00:00:00-08:00</updated><id>http://localhost:4000/post/2017/01/30/editorial_writing_resources</id><content type="html" xml:base="http://localhost:4000/post/2017/01/30/editorial_writing_resources.html">&lt;p&gt;I recently asked an online content group for links to &quot;style guides.&quot;  There were several responses, including many links to &quot;design guides,&quot; as in guidelines for interface design: layout, colors, fonts, and so on.  Interesting stuff to be sure, but not precisely what I was looking for.&lt;/p&gt;
+
+&lt;p&gt;What I really wanted were links to resources like &lt;em&gt;The Microsoft Manual of Style&lt;/em&gt; (aka MSTP), &lt;em&gt;The Chicago Manual of Style&lt;/em&gt; (CMoS), &lt;em&gt;AP Stylebook&lt;/em&gt;, &lt;a href=&quot;https://en.wikipedia.org/wiki/List_of_style_guides&quot;&gt;and so on&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;These are all excellent resources.  Unfortunately, my personal copies are out-of-date and I was trying to keep an eye on expenses.  Thus, I was looking for alternatives and had hoped to tap the hive mind.&lt;/p&gt;
+
+&lt;p&gt;If you're interested in &lt;em&gt;editorial&lt;/em&gt; style guides, here's what I've gathered so far:&lt;/p&gt;
+
+&lt;h2 id=&quot;editorial-style-resources&quot;&gt;Editorial style resources&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Perdue University &lt;a href=&quot;https://owl.english.purdue.edu/owl/&quot;&gt;Online Writing Library (OWL)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Washington State University &lt;a href=&quot;http://public.wsu.edu/~brians/errors/errors.html#errors&quot;&gt;Common English Errors&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;American Physiological Society (APS) &lt;a href=&quot;http://www.apsstylemanual.org/&quot;&gt;Manual of Style&lt;/a&gt;.  An &lt;a href=&quot;http://www.apsstylemanual.org/oldmanual/index.htm&quot;&gt;earlier version&lt;/a&gt; is also available and worth reviewing.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.grammarbook.com/&quot;&gt;Blue Book of Grammar&lt;/a&gt;:  Extensive, but hard to read.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.thepunctuationguide.com/index.html&quot;&gt;The Punctuation Guide&lt;/a&gt;: An interesting interface, but a bit light on content.&lt;/li&gt;
+  &lt;li&gt;Chicago &lt;a href=&quot;http://www.chicagomanualofstyle.org&quot;&gt;Manual of Style Online&lt;/a&gt;: Subscription required, but search occasionally returns useful tidbits.&lt;/li&gt;
+  &lt;li&gt;Salesforce Documentation &lt;a href=&quot;https://developer.salesforce.com/docs/atlas.en-us.salesforce_pubs_style_guide.meta/salesforce_pubs_style_guide/overview.htm&quot;&gt;Style Guide&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.grammarcheck.net&quot;&gt;GrammarCheck.net&lt;/a&gt; provides helpful infographics worth sharing.&lt;/li&gt;
+  &lt;li&gt;NARA Principles for &lt;a href=&quot;http://www.archives.gov/open/plain-writing/10-principles.html&quot;&gt;Plain Language&lt;/a&gt; and &lt;a href=&quot;https://www.archives.gov/files/open/plain-writing/style-guide.pdf&quot;&gt;Style Guide (PDF)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;18F &lt;a href=&quot;https://pages.18f.gov/content-guide/&quot;&gt;Content Guide&lt;/a&gt;: Another &quot;clear writing&quot; resource.&lt;/li&gt;
+  &lt;li&gt;Introduction to &lt;a href=&quot;http://idratherbewriting.com/2017/01/25/hyperste-simplified-technical-english-asd-ste100/&quot;&gt;Simplified Technical English&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;h2 id=&quot;related-resources-including-design-style-guides&quot;&gt;Related resources, including design style guides:&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Interesting editorial: &quot;&lt;a href=&quot;http://jamescooke.info/api-documentation-and-the-communication-illusion.html&quot;&gt;The Communication Illusion&lt;/a&gt;.&quot;:&lt;/li&gt;
+  &lt;li&gt;REST API &lt;a href=&quot;https://github.com/jamescooke/restapidocs&quot;&gt;documentation templates&lt;/a&gt; in Markdown&lt;/li&gt;
+  &lt;li&gt;Microsoft &lt;a href=&quot;https://github.com/Microsoft/api-guidelines/blob/master/Guidelines.md&quot;&gt;REST API Guidelines&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.developer.com/tech/article.php/3848981/The-7-Rules-for-Writing-World-Class-Technical-Documentation.htm&quot;&gt;7 rules for creating world class docs&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;The meaning and origins of &lt;a href=&quot;http://www.phrases.org.uk/&quot;&gt;English Phrases&lt;/a&gt; (UK)&lt;/li&gt;
+  &lt;li&gt;Andy Clark's &lt;a href=&quot;https://stuffandnonsense.co.uk/blog/about/designing-inspired-style-guides-presentation-slides-and-transcript&quot;&gt;Design guidelines&lt;/a&gt; (layout and editorial):&lt;/li&gt;
+  &lt;li&gt;Google's &lt;a href=&quot;https://material.io/guidelines/style/writing.html&quot;&gt;Material Style Guide&lt;/a&gt;: blends design with content guidance, mainly for app UX.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;If you have other resources, please feel free to share them.  I'll update these lists from time to time.&lt;/p&gt;
+
+&lt;h2 id=&quot;revision-history&quot;&gt;Revision History&lt;/h2&gt;
+
+&lt;p&gt;29 Jan 2017: Original post.&lt;/p&gt;</content><author><name>Lance Leonard</name></author><category term="post" /><category term="editorial" /><category term="style" /><category term="guide" /><category term="grammar" /><category term="resources" /><summary type="html">I recently asked an online content group for links to &quot;style guides.&quot;  There were several responses, including many links to &quot;design guides,&quot; as in guidelines for interface design: layout, colors, fonts, and so on.  Interesting stuff to be sure, but not precisely what I was looking for.</summary></entry><entry><title type="html">Converting XML to JSON using Node.js</title><link href="http://localhost:4000/post/2017/01/29/node-convert-xml-json.html" rel="alternate" type="text/html" title="Converting XML to JSON using Node.js" /><published>2017-01-29T00:00:00-08:00</published><updated>2017-01-29T00:00:00-08:00</updated><id>http://localhost:4000/post/2017/01/29/node-convert-xml-json</id><content type="html" xml:base="http://localhost:4000/post/2017/01/29/node-convert-xml-json.html">&lt;p&gt;There are many ways to use node.js to convert XML to JSON.  To date, one of the simplest involves an &lt;a href=&quot;https://www.npmjs.com/package/xml2js&quot;&gt;npm module called &lt;code class=&quot;highlighter-rouge&quot;&gt;xml2js&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;The basic wrapper code is:&lt;/p&gt;
 
