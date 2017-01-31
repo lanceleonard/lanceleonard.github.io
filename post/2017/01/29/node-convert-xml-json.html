@@ -10,7 +10,7 @@
   <meta name="description" content="There are many ways to use node.js to convert XML to JSON. To date, one of the simplest involves an npm module called xml2js.">
 
   <link rel="stylesheet" href="/assets/main.css">
-  <link rel="canonical" href="/post/2017/01/29/node-convert-xml-json.html">
+  <link rel="canonical" href="http://localhost:4000/post/2017/01/29/node-convert-xml-json.html">
   <link rel="alternate" type="application/rss+xml" title="Lance&#39;s quips and quibbles" href="/feed.xml">
   
   
@@ -75,7 +75,7 @@
 <div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">fs</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span> <span class="s1">'fs'</span> <span class="p">),</span>
     <span class="nx">x2j</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span> <span class="s1">'xml2js'</span> <span class="p">);</span>
 
-<span class="kd">var</span> <span class="nx">sInputFile</span> <span class="o">=</span> <span class="nx">books</span><span class="p">.</span><span class="nx">xml</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">sInputFile</span> <span class="o">=</span> <span class="s2">"books.xml;"</span>
 
 <span class="kd">var</span> <span class="nx">p</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">x2j</span><span class="p">.</span><span class="nx">Parser</span><span class="p">();</span>
 <span class="kd">var</span> <span class="nx">sXMLData</span> <span class="o">=</span> <span class="nx">fs</span><span class="p">.</span><span class="nx">readFileSync</span><span class="p">(</span> <span class="nx">sInputFile</span><span class="p">,</span> <span class="s1">'utf8'</span> <span class="p">);</span>
@@ -96,14 +96,8 @@
 
 <p>To learn more, see <a href="https://www.npmjs.com/package/xml2js">the documentation</a> for <code class="highlighter-rouge">xml2js</code>.</p>
 
-<h1 id="vital-stats">Vital Stats</h1>
-<p>Lasted tested January 2017:</p>
-<ul>
-  <li>node v7.4.0</li>
-  <li>npm, v4.0.5</li>
-  <li>xml2js, v0.4.17</li>
-  <li>MacOS 10.12.3</li>
-</ul>
+<h2 id="vital-stats">Vital Stats</h2>
+<p>Lasted tested January 2017: node v7.4.0, npm v4.0.5, xml2js v0.4.17, and MacOS 10.12.3</p>
 
 <h2 id="revision-history">Revision History</h2>
 
