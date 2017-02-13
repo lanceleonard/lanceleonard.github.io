@@ -1,5 +1,119 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.3.1">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2017-02-05T15:19:00-08:00</updated><id>//</id><title type="html">Lance's quips and quibbles</title><subtitle>Random thoughts and occasionally useful articles from Lance Leonard, a technical  writer, programmer, and problem solver currently located somewhere near Seattle,  WA (USA).
-</subtitle><entry><title type="html">Collecting filenames with Node.js</title><link href="/post/2017/02/04/collecting_filenames_with_nodejs.html" rel="alternate" type="text/html" title="Collecting filenames with Node.js" /><published>2017-02-04T00:00:00-08:00</published><updated>2017-02-04T00:00:00-08:00</updated><id>/post/2017/02/04/collecting_filenames_with_nodejs</id><content type="html" xml:base="/post/2017/02/04/collecting_filenames_with_nodejs.html">&lt;p&gt;When creating content experiences, I like to use Node.js for light housekeeping, by which I mean little chores that streamline the process.  Things like:&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.3.1">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2017-02-12T19:05:32-08:00</updated><id>//</id><title type="html">Lance's quips and quibbles</title><subtitle>Random thoughts and occasionally useful articles from Lance Leonard, a technical  writer, programmer, and problem solver currently located somewhere near Seattle,  WA (USA).
+</subtitle><entry><title type="html">Cresting Node.js modulese</title><link href="/post/2017/02/12/creating-node-modules.html" rel="alternate" type="text/html" title="Cresting Node.js modulese" /><published>2017-02-12T00:00:00-08:00</published><updated>2017-02-12T00:00:00-08:00</updated><id>/post/2017/02/12/creating-node-modules</id><content type="html" xml:base="/post/2017/02/12/creating-node-modules.html">&lt;p&gt;Recently, I showed one way to use Node.js to &lt;a href=&quot;http://lanceleonard.com/post/2017/02/04/collecting_filenames_with_nodejs.html&quot;&gt;collect filenames from a directory&lt;/a&gt; and its child directories.  I described the technique as fundamental to various cleanup scripts.  Such routines should be collected into reusable libraries (or modules, to use Node terminology).  By doing so, you reduce maintenance, improve readability, and keep things organized.&lt;/p&gt;
+
+&lt;p&gt;This post shows how to create and use a custom module in Node.js.&lt;/p&gt;
+
+&lt;p&gt;Node.js module design is based on &lt;a href=&quot;http://www.commonjs.org/specs/modules/1.0/&quot;&gt;CommonJS module specification&lt;/a&gt;, though sources vary on the &lt;a href=&quot;https://en.wikipedia.org/wiki/CommonJS&quot;&gt;intent&lt;/a&gt; and &lt;a href=&quot;http://www.requirejs.org/docs/commonjs.html&quot;&gt;history&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;To begin, move the reusable functions to a separate JavaScript file (called &lt;code class=&quot;highlighter-rouge&quot;&gt;mymodules.js&lt;/code&gt; in this example):&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// myModule.js&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;module&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;exports&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;isBlank&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;inputValue&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+
+   &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;blnResult&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;inputValue&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;undefined&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt;
+                     &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;inputValue&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; 
+                     &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;inputValue&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+   &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;blnResult&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;module&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;exports&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;collectFilenames&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;strTargetPath&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+
+   &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;oResults&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Object&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+   &lt;span class=&quot;nx&quot;&gt;oResults&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;paths&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[];&lt;/span&gt;
+   &lt;span class=&quot;nx&quot;&gt;oResults&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;paths&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;push&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;strTargetPath&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+   &lt;span class=&quot;nx&quot;&gt;oResults&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;files&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[];&lt;/span&gt;
+
+   &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;fs&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'fs'&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+   &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;xDir&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;xDir&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;oResults&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;paths&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;length&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;xDir&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;sCurrDir&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;oResults&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;paths&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;xDir&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+      &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;aThisDir&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;fs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;readdirSync&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;sCurrDir&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+      &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;xThisFile&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;xThisFile&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;aThisDir&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;length&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;xThisFile&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+
+         &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;strFullFilename&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;sCurrDir&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;/&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;aThisDir&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;xThisFile&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+         &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;xTFStat&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;fs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;statSync&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;strFullFilename&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+         &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;xTFStat&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;isFile&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;nx&quot;&gt;oResults&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;files&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;push&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;strFullFilename&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+         &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;xTFStat&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;isDirectory&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;nx&quot;&gt;oResults&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;paths&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;push&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;strFullFilename&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+         &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Skipping &quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;strFullFilename&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;; not a file or directory.&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+         &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+      &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; 
+   &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+   &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;oResults&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;files&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;You might have noticed that &lt;code class=&quot;highlighter-rouge&quot;&gt;collectFilenames&lt;/code&gt; returns an array of strings in this version, rather than the object from the earlier post.  That's a stylistic choice.  I tend to limit return types to simple data types; I find this reduces problems in different clients (especially older ones).  You'll notice I also limit the syntactical shortcuts for pretty much the same reason.  I find this makes subtle errors easier to locate and results in clear, concise code.&lt;/p&gt;
+
+&lt;p&gt;Notice that the function declarations have changed.  For websites, standalone JavaScript libraries are usually pulled into a webpage with the  &lt;code class=&quot;highlighter-rouge&quot;&gt;script src=&quot;...&quot;&lt;/code&gt; statement.  Such libraries usually shareable routines as functions:&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;isBlank&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;inputValue&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;...&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;collectFilenames&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;strTargetPath&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;...&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;When creating node modules, you assign functions to the &lt;code class=&quot;highlighter-rouge&quot;&gt;module.exports&lt;/code&gt; object.  Thus, your traditional function calls become:&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;module&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;exports&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;isBlank&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;inputValue&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;...&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;module&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;exports&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;collectFilenames&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;strTargetPath&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;...&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;As of &lt;a href=&quot;https://nodejs.org/dist/latest-v7.x/docs/api/modules.html#modules_exports_shortcut&quot;&gt;Node v0.1.16&lt;/a&gt;, the &lt;code class=&quot;highlighter-rouge&quot;&gt;module&lt;/code&gt; reference is optional for exports defined in the same file.&lt;/p&gt;
+
+&lt;p&gt;With the module in place, the calling code can be rewritten:&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;nbt&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;./myModule&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;fs&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;fs&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;strFilePath&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;process&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;argv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;nbt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;isBlank&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;strFilePath&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+   &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Declaration error: Cleanup directory not specified.&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+   &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;path&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;strFilePath&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;resolve&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;strFilePath&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;aFilenames&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[];&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;aFilenames&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;nbt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;collectFilenames&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;strFilePath&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;JSON&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;stringify&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;aFilenames&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;undefined&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;What remains is generally focused on the specific task.&lt;/p&gt;
+
+&lt;p&gt;Note: If you receive an &lt;code class=&quot;highlighter-rouge&quot;&gt;&quot;Error: Cannot find module 'example'&lt;/code&gt; error when running your calling code, try adding a directory reference to the module name in your &lt;code class=&quot;highlighter-rouge&quot;&gt;requires&lt;/code&gt; statement:&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;nbt&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;./myModule&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;In this example, the &lt;code class=&quot;highlighter-rouge&quot;&gt;myModule&lt;/code&gt; module is assumed to be in the same directory as the calling module.  If your application stores things differently, you'll need to adjust accordingly.&lt;/p&gt;
+
+&lt;p&gt;In a future post, we'll explore some interesting design considerations that might affect the way you export module functions.&lt;/p&gt;
+
+&lt;p&gt;More info:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Node's full &lt;a href=&quot;https://nodejs.org/api/modules.html&quot;&gt;module documentation&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.commonjs.org/specs/modules/1.0/&quot;&gt;CommonJS module specification&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://openmymind.net/2012/2/3/Node-Require-and-Exports/&quot;&gt;Node.js, Require, and Exports&lt;/a&gt;, by Karl Seguin.&lt;/li&gt;
+  &lt;li&gt;How to Node: &lt;a href=&quot;https://howtonode.org/creating-custom-modules&quot;&gt;Creating Custom Modules&lt;/a&gt;, by Tim Craswell.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Vital stats:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;First published: 12 Feb 2017.&lt;/li&gt;
+  &lt;li&gt;Verified using Node.js, v7.4.0.&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Lance Leonard</name></author><category term="node.js," /><category term="javascript," /><category term="modules," /><category term="reuse" /><summary type="html">Recently, I showed one way to use Node.js to collect filenames from a directory and its child directories.  I described the technique as fundamental to various cleanup scripts.  Such routines should be collected into reusable libraries (or modules, to use Node terminology).  By doing so, you reduce maintenance, improve readability, and keep things organized.</summary></entry><entry><title type="html">Collecting filenames with Node.js</title><link href="/post/2017/02/04/collecting_filenames_with_nodejs.html" rel="alternate" type="text/html" title="Collecting filenames with Node.js" /><published>2017-02-04T00:00:00-08:00</published><updated>2017-02-04T00:00:00-08:00</updated><id>/post/2017/02/04/collecting_filenames_with_nodejs</id><content type="html" xml:base="/post/2017/02/04/collecting_filenames_with_nodejs.html">&lt;p&gt;When creating content experiences, I like to use Node.js for light housekeeping, by which I mean little chores that streamline the process.  Things like:&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Detecting files added to (or removed from) source repositories.&lt;/li&gt;
@@ -90,31 +204,43 @@
 &lt;h2 id=&quot;editorial-style-resources&quot;&gt;Editorial style resources&lt;/h2&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Perdue University &lt;a href=&quot;https://owl.english.purdue.edu/owl/&quot;&gt;Online Writing Library (OWL)&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Washington State University &lt;a href=&quot;http://public.wsu.edu/~brians/errors/errors.html#errors&quot;&gt;Common English Errors&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;American Physiological Society (APS) &lt;a href=&quot;http://www.apsstylemanual.org/&quot;&gt;Manual of Style&lt;/a&gt;.  An &lt;a href=&quot;http://www.apsstylemanual.org/oldmanual/index.htm&quot;&gt;earlier version&lt;/a&gt; is also available and worth reviewing.&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.grammarbook.com/&quot;&gt;Blue Book of Grammar&lt;/a&gt;:  Extensive, but hard to read.&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.thepunctuationguide.com/index.html&quot;&gt;The Punctuation Guide&lt;/a&gt;: An interesting interface, but a bit light on content.&lt;/li&gt;
-  &lt;li&gt;Chicago &lt;a href=&quot;http://www.chicagomanualofstyle.org&quot;&gt;Manual of Style Online&lt;/a&gt;: Subscription required, but search occasionally returns useful tidbits.&lt;/li&gt;
-  &lt;li&gt;Salesforce Documentation &lt;a href=&quot;https://developer.salesforce.com/docs/atlas.en-us.salesforce_pubs_style_guide.meta/salesforce_pubs_style_guide/overview.htm&quot;&gt;Style Guide&lt;/a&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.grammarcheck.net&quot;&gt;GrammarCheck.net&lt;/a&gt; provides helpful infographics worth sharing.&lt;/li&gt;
-  &lt;li&gt;NARA Principles for &lt;a href=&quot;http://www.archives.gov/open/plain-writing/10-principles.html&quot;&gt;Plain Language&lt;/a&gt; and &lt;a href=&quot;https://www.archives.gov/files/open/plain-writing/style-guide.pdf&quot;&gt;Style Guide (PDF)&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;18F &lt;a href=&quot;https://pages.18f.gov/content-guide/&quot;&gt;Content Guide&lt;/a&gt;: Another &quot;clear writing&quot; resource.&lt;/li&gt;
-  &lt;li&gt;Tom Johnson introduces &lt;a href=&quot;http://idratherbewriting.com/2017/01/25/hyperste-simplified-technical-english-asd-ste100/&quot;&gt;Simplified Technical English&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Sean Madsen's &lt;a href=&quot;https://github.com/seanmadsen/elegant-docs&quot;&gt;Elegant Documentation Principles&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;My primary editorial resources:&lt;/p&gt;
 
-&lt;p&gt; &lt;/p&gt;
-&lt;h2 id=&quot;related-resources-including-design-style-guides&quot;&gt;Related resources, including design style guides:&lt;/h2&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Perdue University &lt;a href=&quot;https://owl.english.purdue.edu/owl/&quot;&gt;Online Writing Library (OWL)&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;http://writingexplained.org/&quot;&gt;Writing Explained&lt;/a&gt; is a very interesting resource that combines information from multiple sources, including summarizing rules from &lt;em&gt;the Chicago Manual of Style&lt;/em&gt;, &lt;em&gt;AP Stylebook&lt;/em&gt;, and other sources.  Highly recommended.&lt;/li&gt;
+      &lt;li&gt;Washington State University &lt;a href=&quot;http://public.wsu.edu/~brians/errors/errors.html#errors&quot;&gt;Common English Errors&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;The meaning and origins of &lt;a href=&quot;http://www.phrases.org.uk/&quot;&gt;English Phrases&lt;/a&gt; (UK)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Additional resources (alphabetically):&lt;/p&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;Interesting editorial: &quot;&lt;a href=&quot;http://jamescooke.info/api-documentation-and-the-communication-illusion.html&quot;&gt;The Communication Illusion&lt;/a&gt;&quot;&lt;/li&gt;
-  &lt;li&gt;REST API &lt;a href=&quot;https://github.com/jamescooke/restapidocs&quot;&gt;documentation templates&lt;/a&gt; in Markdown&lt;/li&gt;
-  &lt;li&gt;Microsoft &lt;a href=&quot;https://github.com/Microsoft/api-guidelines/blob/master/Guidelines.md&quot;&gt;REST API Guidelines&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.developer.com/tech/article.php/3848981/The-7-Rules-for-Writing-World-Class-Technical-Documentation.htm&quot;&gt;7 rules for creating world class docs&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;The meaning and origins of &lt;a href=&quot;http://www.phrases.org.uk/&quot;&gt;English Phrases&lt;/a&gt; (UK)&lt;/li&gt;
-  &lt;li&gt;Andy Clark's &lt;a href=&quot;https://stuffandnonsense.co.uk/blog/about/designing-inspired-style-guides-presentation-slides-and-transcript&quot;&gt;Design guidelines&lt;/a&gt; (layout and editorial):&lt;/li&gt;
-  &lt;li&gt;Google's &lt;a href=&quot;https://material.io/guidelines/style/writing.html&quot;&gt;Material Style Guide&lt;/a&gt;: blends design with content guidance, mainly for app UX.&lt;/li&gt;
+    &lt;ul&gt;
+      &lt;li&gt;18F &lt;a href=&quot;https://pages.18f.gov/content-guide/&quot;&gt;Content Guide&lt;/a&gt;: A &quot;clear writing&quot; resource.&lt;/li&gt;
+      &lt;li&gt;American Physiological Society (APS) &lt;a href=&quot;http://www.apsstylemanual.org/&quot;&gt;Manual of Style&lt;/a&gt;.  An &lt;a href=&quot;http://www.apsstylemanual.org/oldmanual/index.htm&quot;&gt;earlier version&lt;/a&gt; is also available and worth reviewing.&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;http://www.grammarbook.com/&quot;&gt;Blue Book of Grammar&lt;/a&gt;:  Extensive, but a bit hard to read.&lt;/li&gt;
+      &lt;li&gt;Chicago &lt;a href=&quot;http://www.chicagomanualofstyle.org&quot;&gt;Manual of Style Online&lt;/a&gt;: Subscription required, but search occasionally returns useful tidbits.&lt;/li&gt;
+      &lt;li&gt;Google's &lt;a href=&quot;https://material.io/guidelines/style/writing.html&quot;&gt;Material Style Guide&lt;/a&gt;: blends design with content guidance, mainly for application and user experience.&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;http://www.grammarcheck.net&quot;&gt;GrammarCheck.net&lt;/a&gt; provides helpful infographics and grammar review.&lt;/li&gt;
+      &lt;li&gt;Microsoft &lt;a href=&quot;https://github.com/Microsoft/api-guidelines/blob/master/Guidelines.md&quot;&gt;REST API Guidelines&lt;/a&gt;.&lt;/li&gt;
+      &lt;li&gt;National Archives (NARA) - Principles for &lt;a href=&quot;http://www.archives.gov/open/plain-writing/10-principles.html&quot;&gt;Plain Language&lt;/a&gt; and &lt;a href=&quot;https://www.archives.gov/files/open/plain-writing/style-guide.pdf&quot;&gt;Style Guide (PDF)&lt;/a&gt;.&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;http://www.thepunctuationguide.com/index.html&quot;&gt;The Punctuation Guide&lt;/a&gt;: An interesting interface, but a bit light on content.&lt;/li&gt;
+      &lt;li&gt;Salesforce Documentation &lt;a href=&quot;https://developer.salesforce.com/docs/atlas.en-us.salesforce_pubs_style_guide.meta/salesforce_pubs_style_guide/overview.htm&quot;&gt;Style Guide&lt;/a&gt;.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Editorials and guidance from other technical writers&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;James Cooke: &lt;a href=&quot;http://jamescooke.info/api-documentation-and-the-communication-illusion.html&quot;&gt;The Communication Illusion&lt;/a&gt;.&lt;/li&gt;
+      &lt;li&gt;James Cooke: REST API &lt;a href=&quot;https://github.com/jamescooke/restapidocs&quot;&gt;documentation templates&lt;/a&gt; in Markdown.&lt;/li&gt;
+      &lt;li&gt;Tom Johnson introduces &lt;a href=&quot;http://idratherbewriting.com/2017/01/25/hyperste-simplified-technical-english-asd-ste100/&quot;&gt;Simplified Technical English&lt;/a&gt;.&lt;/li&gt;
+      &lt;li&gt;Sean Madsen's &lt;a href=&quot;https://github.com/seanmadsen/elegant-docs&quot;&gt;Elegant Documentation Principles&lt;/a&gt;.&lt;/li&gt;
+      &lt;li&gt;Bob Reselman's &lt;a href=&quot;http://www.developer.com/tech/article.php/3848981/The-7-Rules-for-Writing-World-Class-Technical-Documentation.htm&quot;&gt;7 rules for creating world class docs&lt;/a&gt;.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;If you have other resources, please feel free to share them.  I'll update these lists from time to time.&lt;/p&gt;
@@ -124,6 +250,7 @@
 &lt;ul&gt;
   &lt;li&gt;30 Jan 2017: Original post.&lt;/li&gt;
   &lt;li&gt;31 Jan 2017: Adding Elegant Document Principles, fixing typos, and fleshing out attributions.&lt;/li&gt;
+  &lt;li&gt;7 Feb 2017: Adding &quot;Writing Explained&quot; and reworking resource presentation.&lt;/li&gt;
 &lt;/ul&gt;</content><author><name>Lance Leonard</name></author><category term="post" /><category term="editorial" /><category term="style" /><category term="guide" /><category term="grammar" /><category term="resources" /><summary type="html">I recently asked an online content group for links to &quot;style guides.&quot;  There were several responses, including many links to &quot;design guides,&quot; as in guidelines for interface design: layout, colors, fonts, and so on.  Interesting stuff to be sure, but not precisely what I was looking for.</summary></entry><entry><title type="html">Converting XML to JSON using Node.js</title><link href="/post/2017/01/29/node-convert-xml-json.html" rel="alternate" type="text/html" title="Converting XML to JSON using Node.js" /><published>2017-01-29T00:00:00-08:00</published><updated>2017-01-29T00:00:00-08:00</updated><id>/post/2017/01/29/node-convert-xml-json</id><content type="html" xml:base="/post/2017/01/29/node-convert-xml-json.html">&lt;p&gt;There are many ways to use node.js to convert XML to JSON.  To date, one of the simplest involves an &lt;a href=&quot;https://www.npmjs.com/package/xml2js&quot;&gt;npm module called &lt;code class=&quot;highlighter-rouge&quot;&gt;xml2js&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;The basic wrapper code is:&lt;/p&gt;
@@ -170,13 +297,16 @@
 
     &lt;ol&gt;
       &lt;li&gt;Select the Header and Footer tab.&lt;/li&gt;
-      &lt;li&gt;In Position, set the &quot;Header from Top&quot; and &quot;Footer from Bottom&quot; fields to appropriate values.  If you're unsure, try &lt;code class=&quot;highlighter-rouge&quot;&gt;0.5&lt;/code&gt;.  (The actual value changes from printer to printer.)&lt;/li&gt;
+      &lt;li&gt;In Position, set the &quot;Header from Top&quot; and &quot;Footer from Bottom&quot; fields to appropriate values.  If you're unsure, try &lt;code class=&quot;highlighter-rouge&quot;&gt;0.5&lt;/code&gt;.  (The actual minimum value changes from printer to printer.)&lt;/li&gt;
     &lt;/ol&gt;
 
-    &lt;p&gt;This frequently appears in documents edited in different countries; regional page size defaults can vary greatly.&lt;/p&gt;
+    &lt;p&gt;This frequently appears in documents edited in different countries; regional page size defaults can resize page setup margins, headers, and footers beyond expected ranges.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;How do I update the table of contents?  Move focus to the generated table of contents and then press [&lt;code class=&quot;highlighter-rouge&quot;&gt;F9&lt;/code&gt;].&lt;/p&gt;
+    &lt;p&gt;Want to update a the table of contents?  Move focus to the generated table of contents and then press [&lt;code class=&quot;highlighter-rouge&quot;&gt;F9&lt;/code&gt;].&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Revision marks consume a &lt;em&gt;lot&lt;/em&gt; of memory.  If the document is taking a very long time to render or navigate, consider clearing previous revision marks.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;When transferring files between different countries, regions, and languages, use care to verify the Page Setup and Default Language settings before printing or redistributing the document.  The angst you save may be your own.&lt;/p&gt;
