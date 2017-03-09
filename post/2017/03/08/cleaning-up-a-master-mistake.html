@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Cleaning up a git master mistake</title>
+  <meta name="description" content="Git is an interesting version control system, one that enables workflows not possible with earlier version control systems. However, there are days I wish it...">
+
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="http://localhost:4000/post/2017/03/08/cleaning-up-a-master-mistake.html">
+  <link rel="alternate" type="application/rss+xml" title="Lance&#39;s quips and quibbles" href="/feed.xml">
+  
+  
+</head>
+
+
+  <body>
+
+    <header class="site-header" role="banner">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">Lance&#39;s quips and quibbles</a>
+
+    <nav class="site-nav">
+      <span class="menu-icon">
+        <svg viewBox="0 0 18 15" width="18px" height="15px">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </span>
+
+      <div class="trigger">
+        
+          
+          <a class="page-link" href="/about/">About the site</a>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Cleaning up a git master mistake</h1>
+    <p class="post-meta"><time datetime="2017-03-08T00:00:00-08:00" itemprop="datePublished">Mar 8, 2017</time> • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Lance Leonard</span></span></p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <p>Git is an <em>interesting</em> version control system, one that enables workflows not possible with earlier version control systems.  However, there are days I wish it was less… Powerful?  Cryptic?  Unfathomable?  Irritating?  (Too far?)</p>
+
+<p>I'm not entirely sure how it happened, but I recently realized my local master repository had somehow gotten ahead of origin/master, the  authoritative version of a repository.  (I'm sure I did something without realizing it.)</p>
+
+<p>Now, I don't work in master.  Usually, I create individual branches and submit pull requests (PRs) when a work item is complete.  Each PR is reviewed and approved before being merged.  (At least, that's the workflow for this particular project.)</p>
+
+<p>I noticed new pull requests for my individual branches included commits from other branches, generally branches associated with PRs still under review.  Unfortunately, I've been busy this week and checked in quite a few pull requests before noticing the problem.</p>
+
+<p>Ideally, each branch contains just the commits appropriate for the underlying work item.  I needed to update each problematic PR branch.</p>
+
+<p>Here's what I did:</p>
+
+<ol>
+  <li>For each affected pull request, create a new pull request containing just the intended commit.</li>
+  <li>Once all affected branches have been replaced, reset master to origin/master to avoid on-going problems.</li>
+</ol>
+
+<h2 id="resetting-and-replacing-pull-requests">Resetting and replacing pull requests</h2>
+
+<p>You can't simply <em>remove</em> commits from a pull request.  Instead, create a new branch, reset it to origin/master, and then cherry-pick the commit(s) you want the branch to track.</p>
+
+<p>Here's how it works:</p>
+
+<ol>
+  <li>
+    <p>Determine (and save) the ID for the commit you want to keep:</p>
+
+    <div class="language-bash highlighter-rouge"><pre class="highlight"><code> <span class="nv">$ </span>git checkout broken-branch 
+ <span class="nv">$ </span>git log
+</code></pre>
+    </div>
+
+    <p>In my case, the commit ID was the first commit in each log.  Your needs likely vary.</p>
+  </li>
+  <li>
+    <p>Create and checkout a new branch.</p>
+
+    <div class="language-bash highlighter-rouge"><pre class="highlight"><code> <span class="nv">$ </span>git checkout -b broken-branch-upd
+</code></pre>
+    </div>
+
+    <p><em>Tip:</em> I base the new name on the old branch name (ex: <code class="highlighter-rouge">broken-branch-upd</code>) for continuity.  I also leave relevant comments on each PR explaining the situation while pointing to the other PR.  This creates an audit trail in case someone down the line wonders what the heck I was doing.</p>
+  </li>
+  <li>
+    <p>Reset the new branch to origin/master.</p>
+
+    <div class="language-bash highlighter-rouge"><pre class="highlight"><code> <span class="nv">$ </span>git fetch origin master
+ <span class="nv">$ </span>git reset --hard origin/master
+</code></pre>
+    </div>
+
+    <p>If you receive a <code class="highlighter-rouge">Fatal: could not read from remote repository</code> error while trying fetch origin master, it's likely one of the following:</p>
+
+    <ul>
+      <li>You've mistyped <code class="highlighter-rouge">origin</code>; verify that the remote origin is specified correctly.</li>
+      <li>The current working directory isn't part of origin/master.  In this case, change to an appropriate directory and try again.<br /></li>
+    </ul>
+  </li>
+  <li>
+    <p>Cherry-pick the desired commit(s) from the original pull request.</p>
+
+    <div class="language-bash highlighter-rouge"><pre class="highlight"><code> <span class="nv">$ </span>git cherry-pick saved-commit-id
+</code></pre>
+    </div>
+  </li>
+  <li>
+    <p>Review and verify your local files.  When satisfied, push your changes to Github:</p>
+
+    <div class="language-bash highlighter-rouge"><pre class="highlight"><code> <span class="nv">$ </span>git push origin broken-branch-upd:broken-branch-upd
+</code></pre>
+    </div>
+  </li>
+  <li>
+    <p>At this point, you can create a new pull request (which should be blissfully free from other commits) and delete the original one.  Don't forget to delete the branches.</p>
+  </li>
+</ol>
+
+<p>If you're planning to add additional commits to the new PR, push a small edit to one of the files in scope of the PR.  This may trigger the upstream warning that appears when local branches aren't tracked remotely. If the warning appears, use the prompt text to track your local branch.</p>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>git push --set-upstream origin broken-branch-upd
+</code></pre>
+</div>
+
+<p>Do so now to avoid future surprises and head-scratching.</p>
+
+<h2 id="resetting-and-replacing-pull-requests-1">Resetting and replacing pull requests</h2>
+
+<p>Once the PRs are all straightened out, you'll want to resolve the differences between your local master and origin.</p>
+
+<p>First, check out master, <a href="http://stackoverflow.com/questions/822811/showing-which-files-have-changed-between-two-revisions">investigate the differences</a>, and resolve them.  (I was lucky; each difference was a commit represented in a different PR.)</p>
+
+<p>Once you've accounted for the differences, reset master to origin:</p>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>git checkout master
+<span class="gp">$ </span>git fetch origin master
+<span class="gp">$ </span>git reset --hard origin/master
+<span class="gp">$ </span>git status
+On branch master
+Your branch is up to date with <span class="s1">'origin/master'</span>.
+nothing to commit, working tree clean
+</code></pre>
+</div>
+
+<p>Now, you're ready to return to your regularly developed workflow.</p>
+
+<h2 id="vital-statistics">Vital statistics</h2>
+
+<p><em>Last tested:</em> 8 March 2017 using git 2.10.1, MacOS Sierra 10.12.3</p>
+
+<p><em>Source:</em> Derived from <a href="http://stackoverflow.com/questions/25955822/git-cherry-pick-a-single-commit-for-pull-request">Stack Overflow Q# 25955822</a>.  My mileage varied, so I wrote this up and added my commentary.</p>
+
+  </div>
+
+  
+</article>
+
+      </div>
+    </main>
+
+    <footer class="site-footer">
+<div class="wrapper"><div class="footer-col-wrapper">
+   <div>Lance's quips and quibbles</div>
+   <div>Copyright (C) 2017, Lance Leonard (<a href="/about">[more info]</a>)</div>
+   <div>Content released under <a href="https://choosealicense.com/licenses/mit/">MIT License</a></div>
+</div></div>
+</footer>
+
+
+  </body>
+
+</html>

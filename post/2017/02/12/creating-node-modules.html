@@ -10,7 +10,7 @@
   <meta name="description" content="Recently, I showed one way to use Node.js to collect filenames from a directory and its child directories. I described the technique as fundamental to variou...">
 
   <link rel="stylesheet" href="/assets/main.css">
-  <link rel="canonical" href="/post/2017/02/12/creating-node-modules.html">
+  <link rel="canonical" href="http://localhost:4000/post/2017/02/12/creating-node-modules.html">
   <link rel="alternate" type="application/rss+xml" title="Lance&#39;s quips and quibbles" href="/feed.xml">
   
   
@@ -109,7 +109,8 @@
          <span class="p">}</span> <span class="k">else</span> <span class="p">{</span> <span class="k">if</span> <span class="p">(</span> <span class="nx">xTFStat</span><span class="p">.</span><span class="nx">isDirectory</span><span class="p">()</span> <span class="p">)</span> <span class="p">{</span>
             <span class="nx">oResults</span><span class="p">.</span><span class="nx">paths</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span> <span class="nx">strFullFilename</span> <span class="p">);</span>
          <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span> <span class="s2">"Skipping "</span><span class="p">,</span> <span class="nx">strFullFilename</span><span class="p">,</span> <span class="s2">"; not a file or directory."</span> <span class="p">);</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span> <span class="s2">"Skipping "</span><span class="p">,</span> <span class="nx">strFullFilename</span><span class="p">,</span> 
+                         <span class="s2">"; not a file or directory."</span> <span class="p">);</span>
          <span class="p">}</span> <span class="p">}</span>
       <span class="p">}</span> 
    <span class="p">}</span>
@@ -158,13 +159,13 @@
 
 <p>What remains is generally focused on the specific task.</p>
 
-<p>Note: If you receive an <code class="highlighter-rouge">"Error: Cannot find module 'example'</code> error when running your calling code, try adding a directory reference to the module name in your <code class="highlighter-rouge">requires</code> statement:</p>
+<p>Note: If you receive an <code class="highlighter-rouge">"Error: Cannot find module 'example'</code> error when you <code class="highlighter-rouge">require</code> your module, try adding a directory reference:</p>
 
 <div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">nbt</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span> <span class="s2">"./myModule"</span><span class="p">);</span>
 </code></pre>
 </div>
 
-<p>In this example, the <code class="highlighter-rouge">myModule</code> module is assumed to be in the same directory as the calling module.  If your application stores things differently, you'll need to adjust accordingly.</p>
+<p>This example, assumes <code class="highlighter-rouge">myModule</code> is located in the same directory as the calling module.  Adjust as needed to reflect your application structure.</p>
 
 <p>In a future post, we'll explore some interesting design considerations that might affect the way you export module functions.</p>
 
@@ -173,6 +174,7 @@
 <ul>
   <li>Node's full <a href="https://nodejs.org/api/modules.html">module documentation</a></li>
   <li><a href="http://www.commonjs.org/specs/modules/1.0/">CommonJS module specification</a></li>
+  <li>npm's <a href="https://docs.npmjs.com/getting-started/creating-node-modules">Creating Node.js Modules</a> tutorial.</li>
   <li><a href="http://openmymind.net/2012/2/3/Node-Require-and-Exports/">Node.js, Require, and Exports</a>, by Karl Seguin.</li>
   <li>How to Node: <a href="https://howtonode.org/creating-custom-modules">Creating Custom Modules</a>, by Tim Craswell.</li>
 </ul>
