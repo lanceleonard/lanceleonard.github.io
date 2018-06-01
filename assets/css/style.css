@@ -453,3 +453,19 @@ pre {
 
 .site-footer {
   background-color: #9999CC; }
+
+kbd {
+  background-color: #f7f7f7;
+  border-radius: 3px;
+  border-bottom: 1px solid #999;
+  border-left: 1px solid #ccc;
+  border-top: 1px solid #ccc;
+  border-right: 1px solid #999;
+  color: #333;
+  display: inline-block;
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: smaller;
+  max-width: 624px;
+  overflow: auto;
+  padding: 0px 3px 0px 3px;
+  vertical-align: text-bottom; }
