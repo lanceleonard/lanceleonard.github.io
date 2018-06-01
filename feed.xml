@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://localhost:4000/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.3.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-03-08T16:38:35-08:00</updated><id>http://localhost:4000//</id><title type="html">Lance's quips and quibbles</title><subtitle>Random thoughts and occasionally useful articles from Lance Leonard, a technical  writer, programmer, and problem solver currently located somewhere near Seattle,  WA (USA).
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://localhost:4000/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.3.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-06-01T10:12:59-07:00</updated><id>http://localhost:4000//</id><title type="html">Lance's quips and quibbles</title><subtitle>Random thoughts and occasionally useful articles from Lance Leonard, a technical  writer, programmer, and problem solver currently located somewhere near Seattle,  WA (USA).
 </subtitle><entry><title type="html">Cleaning up a git master mistake</title><link href="http://localhost:4000/post/2017/03/08/cleaning-up-a-master-mistake.html" rel="alternate" type="text/html" title="Cleaning up a git master mistake" /><published>2017-03-08T00:00:00-08:00</published><updated>2017-03-08T00:00:00-08:00</updated><id>http://localhost:4000/post/2017/03/08/cleaning-up-a-master-mistake</id><content type="html" xml:base="http://localhost:4000/post/2017/03/08/cleaning-up-a-master-mistake.html">&lt;p&gt;Git is an &lt;em&gt;interesting&lt;/em&gt; version control system, one that enables workflows not possible with earlier version control systems.  However, there are days I wish it was less… Powerful?  Cryptic?  Unfathomable?  Irritating?  (Too far?)&lt;/p&gt;
 
 &lt;p&gt;I'm not entirely sure how it happened, but I recently realized my local master repository had somehow gotten ahead of origin/master, the  authoritative version of a repository.  (I'm sure I did something without realizing it.)&lt;/p&gt;
@@ -306,64 +306,74 @@ nothing to commit, working tree clean
 
 &lt;p&gt;First posted: 4 February 2017; tested using Node.js v7.4.0.&lt;/p&gt;</content><author><name>Lance Leonard</name></author><category term="node.js" /><category term="javascript" /><category term="file" /><summary type="html">When creating content experiences, I like to use Node.js for light housekeeping, by which I mean little chores that streamline the process.  Things like:</summary></entry><entry><title type="html">Editorial resources for writers, editors, and wearers of multiple hats.</title><link href="http://localhost:4000/post/2017/01/30/editorial_writing_resources.html" rel="alternate" type="text/html" title="Editorial resources for writers, editors, and wearers of multiple hats." /><published>2017-01-30T00:00:00-08:00</published><updated>2017-01-30T00:00:00-08:00</updated><id>http://localhost:4000/post/2017/01/30/editorial_writing_resources</id><content type="html" xml:base="http://localhost:4000/post/2017/01/30/editorial_writing_resources.html">&lt;p&gt;I recently asked an online content group for links to &quot;style guides.&quot;  There were several responses, including many links to &quot;design guides,&quot; as in guidelines for interface design: layout, colors, fonts, and so on.  Interesting stuff to be sure, but not precisely what I was looking for.&lt;/p&gt;
 
-&lt;p&gt;What I really wanted were links to &lt;em&gt;editorial&lt;/em&gt; resources like &lt;em&gt;The Microsoft Manual of Style&lt;/em&gt; (aka MSTP), &lt;em&gt;The Chicago Manual of Style&lt;/em&gt; (CMoS), &lt;em&gt;AP Stylebook&lt;/em&gt;, &lt;a href=&quot;https://en.wikipedia.org/wiki/List_of_style_guides&quot;&gt;and so on&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I was looking for &lt;em&gt;editorial&lt;/em&gt; style guides, such as &lt;em&gt;The Chicago Manual of Style&lt;/em&gt; (CMoS), &lt;em&gt;AP Stylebook&lt;/em&gt;, &lt;a href=&quot;https://en.wikipedia.org/wiki/List_of_style_guides&quot;&gt;and so on&lt;/a&gt;.  Not that these aren't excellent resources, but if you're on a budget (as I was), you might be interested in freely available resources.&lt;/p&gt;
 
-&lt;p&gt;These are all excellent resources.  Unfortunately, my personal copies are out-of-date and I was trying to keep an eye on expenses.  Thus, I was looking for alternatives and had hoped to tap the hive mind.&lt;/p&gt;
-
-&lt;p&gt;If you're interested in &lt;em&gt;editorial&lt;/em&gt; style guides, here's what I've gathered so far:&lt;/p&gt;
+&lt;p&gt;If you're interested in editorial style guides, here's what I've gathered so far:&lt;/p&gt;
 
 &lt;h2 id=&quot;editorial-style-resources&quot;&gt;Editorial style resources&lt;/h2&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;My primary editorial resources:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;- 18F [Content Guide](https://pages.18f.gov/content-guide/): A &quot;clear writing&quot; resource.
 
-    &lt;ul&gt;
-      &lt;li&gt;Perdue University &lt;a href=&quot;https://owl.english.purdue.edu/owl/&quot;&gt;Online Writing Library (OWL)&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;http://writingexplained.org/&quot;&gt;Writing Explained&lt;/a&gt; is a very interesting resource that combines information from multiple sources, including summarizing rules from &lt;em&gt;the Chicago Manual of Style&lt;/em&gt;, &lt;em&gt;AP Stylebook&lt;/em&gt;, and other sources.  Highly recommended.&lt;/li&gt;
-      &lt;li&gt;Washington State University &lt;a href=&quot;http://public.wsu.edu/~brians/errors/errors.html#errors&quot;&gt;Common English Errors&lt;/a&gt;.&lt;/li&gt;
-      &lt;li&gt;The meaning and origins of &lt;a href=&quot;http://www.phrases.org.uk/&quot;&gt;English Phrases&lt;/a&gt; (UK). &lt;br /&gt;
-&lt;br /&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Additional resources (alphabetically):&lt;/p&gt;
+- American Physiological Society (APS) [Manual of Style](http://www.apsstylemanual.org/).  An [earlier version](http://www.apsstylemanual.org/oldmanual/index.htm) is also available and worth reviewing.
 
-    &lt;ul&gt;
-      &lt;li&gt;18F &lt;a href=&quot;https://pages.18f.gov/content-guide/&quot;&gt;Content Guide&lt;/a&gt;: A &quot;clear writing&quot; resource.&lt;/li&gt;
-      &lt;li&gt;American Physiological Society (APS) &lt;a href=&quot;http://www.apsstylemanual.org/&quot;&gt;Manual of Style&lt;/a&gt;.  An &lt;a href=&quot;http://www.apsstylemanual.org/oldmanual/index.htm&quot;&gt;earlier version&lt;/a&gt; is also available and worth reviewing.&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;http://apvschicago.com&quot;&gt;AP vs Chicago&lt;/a&gt; compares differences between the &lt;em&gt;AP Stylebook&lt;/em&gt; and the &lt;em&gt;Chicago Manual of Style&lt;/em&gt;.&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;http://www.grammarbook.com/&quot;&gt;Blue Book of Grammar&lt;/a&gt;:  Extensive, but a bit hard to read.&lt;/li&gt;
-      &lt;li&gt;Chicago &lt;a href=&quot;http://www.chicagomanualofstyle.org&quot;&gt;Manual of Style Online&lt;/a&gt;: Subscription required, but search occasionally returns useful tidbits.&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;http://www.dailywritingtips.com/size-matters/&quot;&gt;Daily Writing Tips&lt;/a&gt; offers advice for common (and uncommon) writing questions.&lt;/li&gt;
-      &lt;li&gt;Dojo (JavaScript library) &lt;a href=&quot;http://dojotoolkit.org/reference-guide/1.10/developer/styleguide.html#developer-styleguide&quot;&gt;documentation style&lt;/a&gt; guide.&lt;/li&gt;
-      &lt;li&gt;Google's &lt;a href=&quot;https://material.io/guidelines/style/writing.html&quot;&gt;Material Style Guide&lt;/a&gt;: blends design with content guidance, mainly for application and user experience.&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;http://www.grammarcheck.net&quot;&gt;GrammarCheck.net&lt;/a&gt; provides helpful infographics and grammar review.&lt;/li&gt;
-      &lt;li&gt;Microsoft &lt;a href=&quot;https://github.com/Microsoft/api-guidelines/blob/master/Guidelines.md&quot;&gt;REST API Guidelines&lt;/a&gt;.&lt;/li&gt;
-      &lt;li&gt;National Archives (NARA) - Principles for &lt;a href=&quot;http://www.archives.gov/open/plain-writing/10-principles.html&quot;&gt;Plain Language&lt;/a&gt; and &lt;a href=&quot;https://www.archives.gov/files/open/plain-writing/style-guide.pdf&quot;&gt;Style Guide (PDF)&lt;/a&gt;.&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;http://www.thepunctuationguide.com/index.html&quot;&gt;The Punctuation Guide&lt;/a&gt;: An interesting interface, but a bit light on content.&lt;/li&gt;
-      &lt;li&gt;Salesforce Documentation &lt;a href=&quot;https://developer.salesforce.com/docs/atlas.en-us.salesforce_pubs_style_guide.meta/salesforce_pubs_style_guide/overview.htm&quot;&gt;Style Guide&lt;/a&gt;.&lt;br /&gt;
-&lt;br /&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Editorials and guidance from other technical writers&lt;/p&gt;
+- [AP vs Chicago](http://apvschicago.com) compares differences between the _AP Stylebook_ and the _Chicago Manual of Style_.
 
-    &lt;ul&gt;
-      &lt;li&gt;James Cooke: &lt;a href=&quot;http://jamescooke.info/api-documentation-and-the-communication-illusion.html&quot;&gt;The Communication Illusion&lt;/a&gt;.&lt;/li&gt;
-      &lt;li&gt;James Cooke: REST API &lt;a href=&quot;https://github.com/jamescooke/restapidocs&quot;&gt;documentation templates&lt;/a&gt; in Markdown.&lt;/li&gt;
-      &lt;li&gt;Tom Johnson introduces &lt;a href=&quot;http://idratherbewriting.com/2017/01/25/hyperste-simplified-technical-english-asd-ste100/&quot;&gt;Simplified Technical English&lt;/a&gt;.&lt;/li&gt;
-      &lt;li&gt;Sean Madsen's &lt;a href=&quot;https://github.com/seanmadsen/elegant-docs&quot;&gt;Elegant Documentation Principles&lt;/a&gt;.&lt;/li&gt;
-      &lt;li&gt;Bob Reselman's &lt;a href=&quot;http://www.developer.com/tech/article.php/3848981/The-7-Rules-for-Writing-World-Class-Technical-Documentation.htm&quot;&gt;7 rules for creating world class docs&lt;/a&gt;.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
+- [Apple Style Guide](https://help.apple.com/applestyleguide).
+
+- [Blue Book of Grammar](http://www.grammarbook.com/):  Extensive, but a bit hard to read.
+
+- Chicago [Manual of Style Online](http://www.chicagomanualofstyle.org): Subscription required, but search occasionally returns useful tidbits.
+
+- [Daily Writing Tips](http://www.dailywritingtips.com/size-matters/) offers advice for common (and uncommon) writing questions.
+
+- Dojo (JavaScript library) [documentation style](http://dojotoolkit.org/reference-guide/1.10/developer/styleguide.html#developer-styleguide) guide.
+
+- [English Phrases](http://www.phrases.org.uk/) explains the meaning and origins of common phrases and iodoms. (UK).   
+
+- Google's [Developer Documentation](https://developers.google.com/style) Style Guide.  For user experience (UX) guidelines, see their [Material Style Guide](https://material.io/guidelines/style/writing.html).
+
+- [GrammarCheck.net](http://www.grammarcheck.net) provides helpful infographics and grammar review. 
+
+- Microsoft [Writing Style Guide](https://docs.microsoft.com/style-guide/welcome) represents the latest ideas and practices used in docs.microsoft.com; it supersedes and replaces the _Microsoft Manual of Style_ (MMoS) and the _Microsoft Guide to Technical Publications_ (MSTP).  If you're familiar with the earlier works, take time to review the new guidelines. 
+
+- Microsoft [REST API Guidelines](https://github.com/Microsoft/api-guidelines/blob/master/Guidelines.md). 
+
+- National Archives (NARA) - Principles for [Plain Language](http://www.archives.gov/open/plain-writing/10-principles.html) and [Style Guide (PDF)](https://www.archives.gov/files/open/plain-writing/style-guide.pdf).
+
+- Perdue University [Online Writing Library (OWL)](https://owl.english.purdue.edu/owl/)
+
+- [The Punctuation Guide](http://www.thepunctuationguide.com/index.html): An interesting interface, but a bit light on content.
+
+- [Rackspace Documentation Guide](http://rackerlabs.github.io/docs-rackspace/style-guide/basic-writing-guidelines.html) offers sage advice while breaking a other few rules.  
+
+- Salesforce Documentation [Style Guide](https://developer.salesforce.com/docs/atlas.en-us.salesforce_pubs_style_guide.meta/salesforce_pubs_style_guide/overview.htm).  
+
+- Washington State University's [Common English Errors](http://public.wsu.edu/~brians/errors/errors.html#errors). 
+
+- [Writing Explained](http://writingexplained.org/) is a very interesting resource that combines information from multiple sources, including summarizing rules from _the Chicago Manual of Style_, _AP Stylebook_, and other sources.  Highly recommended.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;editorials-and-guidance-from-other-technical-writers&quot;&gt;Editorials and guidance from other technical writers:&lt;/h2&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;- James Cooke: [The Communication Illusion](http://jamescooke.info/api-documentation-and-the-communication-illusion.html).
+
+- James Cooke: REST API [documentation templates](https://github.com/jamescooke/restapidocs) in Markdown. 
+
+- Tom Johnson introduces [Simplified Technical English](http://idratherbewriting.com/2017/01/25/hyperste-simplified-technical-english-asd-ste100/).
+
+- Sean Madsen's [Elegant Documentation Principles](https://github.com/seanmadsen/elegant-docs).
+
+- Bob Reselman's [7 rules for creating world class docs](http://www.developer.com/tech/article.php/3848981/The-7-Rules-for-Writing-World-Class-Technical-Documentation.htm).
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;p&gt;If you have other resources, please feel free to share them.  I'll update these lists from time to time.&lt;/p&gt;
 
 &lt;h2 id=&quot;revision-history&quot;&gt;Revision History&lt;/h2&gt;
 
 &lt;ul&gt;
+  &lt;li&gt;6 May 2018: Reviewing and updating.&lt;/li&gt;
   &lt;li&gt;8 Mar 2017: Synchronizing with latest updates.&lt;/li&gt;
   &lt;li&gt;7 Feb 2017: Adding &quot;Writing Explained&quot; and reworking resource presentation.&lt;/li&gt;
   &lt;li&gt;31 Jan 2017: Adding &quot;Elegant Document Principles,&quot; fixing typos, and fleshing out attributions.&lt;/li&gt;
@@ -420,7 +430,7 @@ nothing to commit, working tree clean
     &lt;p&gt;This frequently appears in documents edited in different countries; regional page size defaults can resize page setup margins, headers, and footers beyond expected ranges.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;Want to update a the table of contents?  Move focus to the generated table of contents and then press [&lt;code class=&quot;highlighter-rouge&quot;&gt;F9&lt;/code&gt;].&lt;/p&gt;
+    &lt;p&gt;Want to update a the table of contents?  Move focus to the generated table of contents and then press &lt;kbd&gt; F9 &lt;/kbd&gt;.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;Revision marks consume a &lt;em&gt;lot&lt;/em&gt; of memory.  If the document is taking a very long time to render or navigate, consider clearing previous revision marks.&lt;/p&gt;
@@ -455,15 +465,15 @@ nothing to commit, working tree clean
 
 &lt;p&gt;I do find the elevation experience jarring—especially since I prefer trackballs over traditional mice.  When Windows displays an elevation prompt, my trackball stops responding until the prompt is handled.  (I suspect this has something to do with permissions that have not yet been properly coded into the underlying drivers or their installation process. I haven't investigated deeply.)&lt;/p&gt;
 
-&lt;p&gt;To manage the situation, I've come to rely on keyboard shortcuts:&lt;/p&gt;
+&lt;p&gt;To manage, I've come to rely on keyboard shortcuts:&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;To quickly accept an elevation prompt, press [&lt;code class=&quot;highlighter-rouge&quot;&gt;Left Arrow&lt;/code&gt;] and then press [&lt;code class=&quot;highlighter-rouge&quot;&gt;Enter&lt;/code&gt;].&lt;/li&gt;
-  &lt;li&gt;To cancel, press [&lt;code class=&quot;highlighter-rouge&quot;&gt;Esc&lt;/code&gt;].&lt;/li&gt;
-  &lt;li&gt;You can continue many elevation prompts by pressing [&lt;code class=&quot;highlighter-rouge&quot;&gt;Spacebar&lt;/code&gt;].  (In my experience, support varies in different Windows versions.)&lt;/li&gt;
+  &lt;li&gt;To quickly accept an elevation prompt, press &lt;kbd&gt;Left Arrow&lt;/kbd&gt; and then press &lt;kbd&gt;Enter&lt;/kbd&gt;.&lt;/li&gt;
+  &lt;li&gt;To cancel, press &lt;kbd&gt;Esc&lt;/kbd&gt;.&lt;/li&gt;
+  &lt;li&gt;You can continue many elevation prompts by pressing &lt;kbd&gt;Spacebar&lt;/kbd&gt;.  (In my experience, support varies in different Windows versions.)&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;I've found the [&lt;code class=&quot;highlighter-rouge&quot;&gt;Left Arrow&lt;/code&gt;] + [&lt;code class=&quot;highlighter-rouge&quot;&gt;Enter&lt;/code&gt;] shortcut consistent in every version of Windows since Vista.  Ironically, it's nearly an automatic response.  Since automatic responses are also inattentive responses, one wonders: was deliberate annoyance was all that effective in the long run?&lt;/p&gt;
+&lt;p&gt;I've found the &lt;kbd&gt;Left Arrow&lt;/kbd&gt; + &lt;kbd&gt;Enter&lt;/kbd&gt; shortcut consistent in every version of Windows since Vista.  Ironically, it's nearly an automatic response for me.  Since automatic responses are also inattentive responses, one wonders: was deliberate annoyance was all that effective in the long run?&lt;/p&gt;
 
 &lt;h2 id=&quot;revision-history&quot;&gt;Revision History&lt;/h2&gt;
 
