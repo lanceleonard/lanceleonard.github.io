@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Doc guidelines, standards, and tools on Lance&#39;s Quips &amp; Quibbles</title>
+    <link>http://localhost:1313/tips/doc/</link>
+    <description>Recent content in Doc guidelines, standards, and tools on Lance&#39;s Quips &amp; Quibbles</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 06 May 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tips/doc/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Doc project tenets</title>
+      <link>http://localhost:1313/tips/doc/tenets/</link>
+      <pubDate>Mon, 06 May 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tips/doc/tenets/</guid>
+      <description>Tenets are guiding project principles; they outline and frame design thinking.&#xA;I use tenets for nearly all projects I work on. (I don&amp;rsquo;t always tell people about them.)&#xA;Here are the ones I generally start with. Unless you can think of better ones&amp;hellip;&#xA;Docs are features Many teams treat docs as afterthoughts. Like good software, good docs require design, forethought, and planning.&#xA;Effective docs follow the product lifecycle: design, implementation, review, and maintenance.</description>
+    </item>
+    <item>
+      <title>Voice &amp; tone principles</title>
+      <link>http://localhost:1313/tips/doc/voice-tone-principles/</link>
+      <pubDate>Mon, 06 May 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tips/doc/voice-tone-principles/</guid>
+      <description>Docs, to some degree, reprsent the voice of your organization. Readers repond well to a friendly tone that is easy-to-read.&#xA;These principles help.&#xA;Use one clear intent Good docs help users solve problems.&#xA;Before working on a doc, understand the audience you&amp;rsquo;re trying to reach and the problem being solved.&#xA;This is called the intent and is typically expressed as as follows:&#xA;&amp;ldquo;As a &amp;lt;role&amp;gt;, I want to &amp;lt;solve a problem&amp;gt;.</description>
+    </item>
+  </channel>
+</rss>
