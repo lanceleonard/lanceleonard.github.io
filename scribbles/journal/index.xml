@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Journal on Lance&#39;s Quips &amp; Quibbles</title>
+    <link>http://localhost:1313/scribbles/journal/</link>
+    <description>Recent content in Journal on Lance&#39;s Quips &amp; Quibbles</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 01 May 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/scribbles/journal/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Restart the engines</title>
+      <link>http://localhost:1313/scribbles/journal/restart-engines/</link>
+      <pubDate>Wed, 01 May 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/scribbles/journal/restart-engines/</guid>
+      <description>Welcome back to the ongoing work-in-progress. I&amp;rsquo;m blowing off the dust, sweeping away the cobwebs, and setting up a new set of things.&#xA;This site serves as a practical portfolio and personal knowledgebase. It&amp;rsquo;s meant to provide samples of my writing style and to illustrate my approach to tecnical writing. It&amp;rsquo;s also eant to share knowledge and lessons learned during my technical adventures.&#xA;I hope the content is engaging, practical, and has at least a bit of value.</description>
+    </item>
+    <item>
+      <title>First post: Don&#39;t panic</title>
+      <link>http://localhost:1313/scribbles/journal/first-post/</link>
+      <pubDate>Wed, 25 Jan 2017 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/scribbles/journal/first-post/</guid>
+      <description>Choose your greeting:&#xA;Hail and well met! Greetings, lifeform. Goooood Eeeeevvvening. Hello troubleshooter. Buh-doop beep? BLAAAT! Oh. It&amp;rsquo;s you. It&amp;rsquo;s been a looong time. How&amp;rsquo;ve you been? After many promises, multiple unfinished prototypes, and much pondering, it&amp;rsquo;s finally online. The site, I mean.&#xA;Here, you&amp;rsquo;ll find technical articles and posts related to things I&amp;rsquo;m working on, lessons I&amp;rsquo;ve learned, solutions I&amp;rsquo;ve found, and other thoughts I thought worth sharing.&#xA;Feel free to browse, but I do ask that shenanigans be kept to a minimum…unless, of course, I&amp;rsquo;m allowed to be rambunctious as well.</description>
+    </item>
+  </channel>
+</rss>

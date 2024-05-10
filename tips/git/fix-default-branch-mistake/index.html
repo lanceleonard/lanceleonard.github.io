@@ -3,7 +3,6 @@
   <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link rel="alternate" type="application/rss&#43;xml" href="http://localhost:1313/about/index.xml">
 <meta name="robots" content="noindex, nofollow">
 
 
@@ -18,25 +17,24 @@
 <link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
 <link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
 
-<title>About the Site | Lance&#39;s Quips &amp; Quibbles</title>
-<meta name="description" content="A personal portfolio and knowledgebase">
-<meta property="og:url" content="http://localhost:1313/about/">
+<title>Fix broken branches and main mistakes | Lance&#39;s Quips &amp; Quibbles</title>
+<meta name="description" content="Shows how to clean up branches after mistakes happen.">
+<meta property="og:url" content="http://localhost:1313/tips/git/fix-default-branch-mistake/">
   <meta property="og:site_name" content="Lance&#39;s Quips &amp; Quibbles">
-  <meta property="og:title" content="About the Site">
-  <meta property="og:description" content="This is the personal site for Lance Leonard, a technical writer, programmer, creative problem solver, and cat herder currently operating somewhere in the vicinity of Seattle, WA USA.
-The site is part portfolio, part personal knowledgebase, and part…well, whatever you can get out of it.
-Contact info: LinkedIn
-Disclaimer Opinions and ideas expressed on this site are my own and do not necessarily reflect the views of my employer, family, friends, or anyone able to rub two synapses together.">
+  <meta property="og:title" content="Fix broken branches and main mistakes">
+  <meta property="og:description" content="Shows how to clean up branches after mistakes happen.">
   <meta property="og:locale" content="en">
-  <meta property="og:type" content="website">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="tips">
+    <meta property="article:published_time" content="2024-05-06T00:00:00+00:00">
+    <meta property="article:modified_time" content="2024-05-06T00:00:00+00:00">
 
-  <meta itemprop="name" content="About the Site">
-  <meta itemprop="description" content="This is the personal site for Lance Leonard, a technical writer, programmer, creative problem solver, and cat herder currently operating somewhere in the vicinity of Seattle, WA USA.
-The site is part portfolio, part personal knowledgebase, and part&hellip;well, whatever you can get out of it.
-Contact info: LinkedIn
-Disclaimer Opinions and ideas expressed on this site are my own and do not necessarily reflect the views of my employer, family, friends, or anyone able to rub two synapses together.">
-  <meta itemprop="wordCount" content="232"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="About the Site">
-<meta name="twitter:description" content="A personal portfolio and knowledgebase">
+  <meta itemprop="name" content="Fix broken branches and main mistakes">
+  <meta itemprop="description" content="Shows how to clean up branches after mistakes happen.">
+  <meta itemprop="datePublished" content="2024-05-06T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2024-05-06T00:00:00+00:00">
+  <meta itemprop="wordCount" content="586"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="Fix broken branches and main mistakes">
+<meta name="twitter:description" content="Shows how to clean up branches after mistakes happen.">
 
 
 
@@ -54,7 +52,7 @@ Disclaimer Opinions and ideas expressed on this site are my own and do not neces
   crossorigin="anonymous"></script>
 
   </head>
-  <body class="td-section">
+  <body class="td-page">
     <header>
       <nav class="td-navbar js-navbar-scroll" data-bs-theme="dark">
 <div class="container-fluid flex-column flex-md-row">
@@ -62,10 +60,10 @@ Disclaimer Opinions and ideas expressed on this site are my own and do not neces
   <div class="td-navbar-nav-scroll ms-md-auto" id="main_navbar">
     <ul class="navbar-nav">
       <li class="nav-item">
-        <a class="nav-link active" href="/about/"><span>About</span></a>
+        <a class="nav-link" href="/about/"><span>About</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/tips/"><span>Tips</span></a>
+        <a class="nav-link active" href="/tips/"><span>Tips</span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="/scribbles/"><span>Scribbles</span></a>
@@ -170,10 +168,10 @@ Disclaimer Opinions and ideas expressed on this site are my own and do not neces
       <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m--li">
   <a href="/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section tree-root" id="m-"><span class="">Lance&#39;s Quips &amp; Quibbles</span></a>
   <ul class="ul-1">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-tips-li">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-tips-li">
   <a href="/tips/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-tips"><span class="">Tips</span></a>
   <ul class="ul-2 foldable">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child collapse" id="m-tipsdoc-li">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-tipsdoc-li">
   <a href="/tips/doc/" title="Doc guidelines, standards, and tools" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-tipsdoc"><span class="">Docs</span></a>
   <ul class="ul-3 foldable">
     <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-tipsdoctenets-li">
@@ -193,16 +191,16 @@ Disclaimer Opinions and ideas expressed on this site are my own and do not neces
   </ul>
 </li>
   </ul>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child collapse" id="m-tipsgit-li">
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-tipsgit-li">
   <a href="/tips/git/" title="Git, GitHub, &amp; related" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-tipsgit"><span class="">git</span></a>
   <ul class="ul-3 foldable">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-tipsgitgit-bash-default-path-li">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipsgitgit-bash-default-path-li">
   <a href="/tips/git/git-bash-default-path/" title="Set Git Bash default path" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-tipsgitgit-bash-default-path"><span class="">Git Bash default path</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-tipsgitfix-default-branch-mistake-li">
-  <a href="/tips/git/fix-default-branch-mistake/" title="Fix broken branches and main mistakes" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-tipsgitfix-default-branch-mistake"><span class="">Fix broken branches</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-tipsgitfix-default-branch-mistake-li">
+  <a href="/tips/git/fix-default-branch-mistake/" title="Fix broken branches and main mistakes" class="align-left ps-0 active td-sidebar-link td-sidebar-link__page" id="m-tipsgitfix-default-branch-mistake"><span class="td-sidebar-nav-active-item">Fix broken branches</span></a>
 </li>
   </ul>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child collapse" id="m-tipsweb-li">
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-tipsweb-li">
   <a href="/tips/web/" title="HTML, CSS, and more." class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-tipsweb"><span class="">HTML &amp; CSS</span></a>
   <ul class="ul-3 foldable">
     <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-tipswebcss-li">
@@ -211,7 +209,7 @@ Disclaimer Opinions and ideas expressed on this site are my own and do not neces
   <a href="/tips/web/html/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-tipswebhtml"><span class=""></span></a>
 </li>
   </ul>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child collapse" id="m-tipsjavascript-li">
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-tipsjavascript-li">
   <a href="/tips/javascript/" title="JavaScript, Node.js, and related" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-tipsjavascript"><span class="">JavaScript</span></a>
   <ul class="ul-3 foldable">
     <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-tipsjavascriptdictionary-sorting-li">
@@ -222,9 +220,9 @@ Disclaimer Opinions and ideas expressed on this site are my own and do not neces
   <a href="/tips/javascript/nodejs/" title="Node.js, npm, and more" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-tipsjavascriptnodejs"><span class="">Node.js &amp; npm</span></a>
 </li>
   </ul>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-tipsmac-li">
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipsmac-li">
   <a href="/tips/mac/" title="Mac, MacOS, and OS/X" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-tipsmac"><span class="">Mac</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child collapse" id="m-tipswindows-li">
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-tipswindows-li">
   <a href="/tips/windows/" title="Windows and related topics" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-tipswindows"><span class="">Windows</span></a>
   <ul class="ul-3 foldable">
     <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-tipswindowselevation-prompt-shortcuts-li">
@@ -249,16 +247,16 @@ Disclaimer Opinions and ideas expressed on this site are my own and do not neces
   </ul>
 </li>
   </ul>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-about-li">
-  <a href="/about/" title="About the Site" class="align-left ps-0 active td-sidebar-link td-sidebar-link__section" id="m-about"><span class="td-sidebar-nav-active-item">About</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-about-li">
+  <a href="/about/" title="About the Site" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-about"><span class="">About</span></a>
   <ul class="ul-2 foldable">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-aboutfair-warnings-li">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-aboutfair-warnings-li">
   <a href="/about/fair-warnings/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-aboutfair-warnings"><span class="">Fair warnings</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-aboutprivacy-policy-li">
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-aboutprivacy-policy-li">
   <a href="/about/privacy-policy/" title="Privacy policy" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-aboutprivacy-policy"><span class="">Privacy</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-aboutsite-name-li">
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-aboutsite-name-li">
   <a href="/about/site-name/" title="The site name" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-aboutsite-name"><span class="">Site name</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-aboutchangelog-li">
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-aboutchangelog-li">
   <a href="/about/changelog/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-aboutchangelog"><span class="">Changelog</span></a>
 </li>
   </ul>
@@ -278,7 +276,8 @@ Disclaimer Opinions and ideas expressed on this site are my own and do not neces
             <div class="td-toc">
         <nav id="TableOfContents">
   <ul>
-    <li><a href="#disclaimer">Disclaimer</a></li>
+    <li><a href="#replace-broken-branch">Replace broken branch</a></li>
+    <li><a href="#reset-local-default">Reset local default</a></li>
     <li><a href="#vital-statistics">Vital statistics</a></li>
   </ul>
 </nav>
@@ -291,71 +290,110 @@ Disclaimer Opinions and ideas expressed on this site are my own and do not neces
             
   
 
-            <nav aria-label="breadcrumb" class="td-breadcrumbs td-breadcrumbs__single">
+            <nav aria-label="breadcrumb" class="td-breadcrumbs">
   <ol class="breadcrumb">
+  <li class="breadcrumb-item">
+    <a href="/tips/">Tips</a></li>
+  <li class="breadcrumb-item">
+    <a href="/tips/git/">git</a></li>
   <li class="breadcrumb-item active" aria-current="page">
-    About</li>
+    Fix broken branches</li>
   </ol>
 </nav>
             
 <div class="td-content">
-	<h1>About the Site</h1>
-  
+	<h1>Fix broken branches and main mistakes</h1>
+	<div class="lead">Shows how to clean up branches after mistakes happen.</div>
 	<header class="article-meta">
 		
-  <p class="reading-time"><i class="fa-solid fa-clock" aria-hidden="true"></i>&nbsp; 2 minute read &nbsp;</p>
+  <p class="reading-time"><i class="fa-solid fa-clock" aria-hidden="true"></i>&nbsp; 3 minute read &nbsp;</p>
 </header>
-	<p>This is the personal site for Lance Leonard, a technical writer, programmer, creative problem solver, and cat herder currently operating somewhere in the vicinity of Seattle, WA USA.</p>
-<p>The site is part portfolio, part personal knowledgebase, and part&hellip;well, whatever you can get out of it.</p>
-<p>Contact info: <a href="https://www.linkedin.com/in/lleonard">LinkedIn</a></p>
-<h2 id="disclaimer">Disclaimer<a class="td-heading-self-link" href="#disclaimer" aria-label="Heading self-link"></a></h2>
-<p>Opinions and ideas expressed on this site are my own and do not necessarily reflect the views of my employer, family, friends, or anyone able to rub two synapses together.</p>
-<p>Information is provided as-is with no guarantee as to accuracy, completeness, fitness of purpose, etc, and so on.</p>
-<p>I warrant only that it worked on my devices well enough to write up. I&rsquo;ve tried to draw conclusions based on reproducible results and verifiable sources. I do make mistakes and I&rsquo;ve been known to be wrong.</p>
-<p>Remember, though: information on the Internet grows stale over time. Your mileage may, and perhaps should, vary. If it does, that&rsquo;s your own lookout. Burn after reading; the Secretary disavows all knowledge.</p>
-<p>(If you find a typo or technical error, please let me know.</p>
-<p>My response will likely depend on my ability to replicate your findings, your level of professionalism/courtesy, the phase of the moon, and other secret ingredients unlikely to be revealed at the moment.)</p>
-<h2 id="vital-statistics">Vital statistics<a class="td-heading-self-link" href="#vital-statistics" aria-label="Heading self-link"></a></h2>
+	<p>Once established, git workflows go fairly smoothly.</p>
+<p>At some point, you might realize that a branch pull request (PR) includes commits that it shouldn&rsquo;t.</p>
+<p>Alternatively, your local default branch (<em>main</em> or <em>master</em> for older projects) has somehow managed to get ahead of the remote origin.</p>
+<p>To fix things, you need to:</p>
+<ol>
+<li>Replace the broken branch</li>
+<li>Replace the broken pull request</li>
+</ol>
+<h2 id="replace-broken-branch">Replace broken branch<a class="td-heading-self-link" href="#replace-broken-branch" aria-label="Heading self-link"></a></h2>
+<p>For the most part, you can&rsquo;t selectively remove commits from a pull request.</p>
+<p>Instead you need to replace the broken branch with a new one.</p>
+<p>To do so:</p>
 <ul>
-<li>Updates
+<li>Review the commits in the broken PR</li>
+<li>Determine (and save) the commit IDs for the changes you want to keep</li>
+<li>Create a new branch and then add the selected commits in your new branch</li>
+<li>Discard the original branch</li>
+</ul>
+<p>Here&rsquo;s how it works:</p>
+<ol>
+<li>
+<p>Determine and save the IDs for the commits you want to keep:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-console" data-lang="console"><span style="display:flex;"><span><span style="color:#8f5902">$</span> git checkout broken-branch
+</span></span><span style="display:flex;"><span><span style="color:#8f5902">$</span> git log    
+</span></span></code></pre></div><p>If you&rsquo;re lucky, you just need the first commit ID displayed in the log.</p>
+</li>
+<li>
+<p>Create and check out a new branch</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-console" data-lang="console"><span style="display:flex;"><span><span style="color:#8f5902">$</span> git checkout broken-branch-update
+</span></span><span style="display:flex;"><span><span style="color:#8f5902">$</span> git log    
+</span></span></code></pre></div><p><em>Tip:</em> Consider linking the branch names.  Here, I&rsquo;ve added <code>update</code> to the previous branch name so that a future reviewer might recognize the connection between the branches.  Such consistency can help when looking back weeks or months later.</p>
+</li>
+<li>
+<p>Reset the new branch to a known baseline, such as your remote default branch (<code>origin/main</code>).</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-console" data-lang="console"><span style="display:flex;"><span><span style="color:#8f5902">$</span> git fetch origin main
+</span></span><span style="display:flex;"><span><span style="color:#8f5902">$</span> git reset --hard origin/main    
+</span></span></code></pre></div><p>If you receive an error saying <code>Fatal: could not read from remote repository</code>, it&rsquo;s likely one of the following:</p>
 <ul>
-<li>6 May 2024: Reviewed &amp; updated for site revamp</li>
-<li>1 June 2018: Minor edits</li>
-<li>26 January 2017: original post</li>
+<li>You&rsquo;ve mistyped <code>origin</code>: verify the name of your upstream remote and try again.</li>
+<li>Your current working directory isn&rsquo;t (yet) part of your remote branch.  Change to a shared directory and try again.</li>
+<li>Your session credentials have expired; renew your session and try again.</li>
 </ul>
 </li>
+<li>
+<p>Add the desired commits from the original branch:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-console" data-lang="console"><span style="display:flex;"><span><span style="color:#8f5902">$</span> git cherry-pick saved-commit-id
+</span></span></code></pre></div><p>Run this for each saved commit ID.</p>
+</li>
+<li>
+<p>Review your local files and commit your changes.</p>
+<p>When satisfied, push your new branch:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-console" data-lang="console"><span style="display:flex;"><span><span style="color:#8f5902">$</span> git push origin broken-branch-upd:broken-branch-upd 
+</span></span></code></pre></div></li>
+<li>
+<p>To finish: create a new pull request (which should be blissfully free from other commits), delete the original (broken) PR, and then clean up your local branches.</p>
+</li>
+</ol>
+<p>Befoe adding additional commits to your new PR, consider pushing a small edit within the scope of the PR.  If this triggers an upstream warning that &ldquo;changes aren&rsquo;t tracked remotely,&rdquo; use the text in the error to set up remote tracking.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-console" data-lang="console"><span style="display:flex;"><span><span style="color:#8f5902">$</span> git push --set-upstream origin broken-branch-upd
+</span></span></code></pre></div><p>Consider doing this now to avoid future surprises.</p>
+<h2 id="reset-local-default">Reset local default<a class="td-heading-self-link" href="#reset-local-default" aria-label="Heading self-link"></a></h2>
+<p>Once you&rsquo;ve replaced broken branches and pull requests, you will likely need to reset your local default branch (<code>main</code>) to your remote default (<code>origin/main</code>).</p>
+<p>To begin, check out <code>main</code>, investigate the differences between your local copy and your upstream remote, and then resolve any differences.  (Most have likely been resolved while replacing broken ranches.)</p>
+<p>When things look good, reset your local default (<code>main</code>) to your remote default (<code>origin/main</code>):</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-console" data-lang="console"><span style="display:flex;"><span><span style="color:#8f5902">$</span> git checkout main
+</span></span><span style="display:flex;"><span><span style="color:#8f5902">$</span> git fetch origin main
+</span></span><span style="display:flex;"><span><span style="color:#8f5902">$</span> git reset --hard origin/main
+</span></span><span style="display:flex;"><span><span style="color:#8f5902">$</span> git status
+</span></span><span style="display:flex;"><span><span style="color:#000;font-style:italic">On branch main
+</span></span></span><span style="display:flex;"><span><span style="color:#000;font-style:italic">Your branch is up to date with &#39;origin/main&#39;.
+</span></span></span><span style="display:flex;"><span><span style="color:#000;font-style:italic">nothing to commit, working tree clean
+</span></span></span></code></pre></div><p>Once the working tree is clean, you&rsquo;re ready to resume your normal activities.</p>
+<h2 id="vital-statistics">Vital statistics<a class="td-heading-self-link" href="#vital-statistics" aria-label="Heading self-link"></a></h2>
+<ul>
+<li><em>Update</em><br>
+7 May 2024 - Rewritten to reflect current style and conventions</li>
+<li><em>Tested</em><br>
+8 March 2017 using git 2.10.1, MacOS Sierra 10.12.3</li>
+<li><em>Source material</em> <br>
+Based on Stack Overflow <a href="http://stackoverflow.com/questions/25955822/git-cherry-pick-a-single-commit-for-pull-request">Question #25955822</a>.<br>
+(My mileage varied, so I wrote this and added my comments.)</li>
 </ul>
 
-  <div class="section-index">
-    
-    
-    <hr class="panel-line">
-        <div class="entry">
-                <h5>
-                    <a href="/about/fair-warnings/">Fair warnings</a>
-                </h5>
-                <p>Assorted things you should know about me and my sense of humor.</p>
-            </div>
-        <div class="entry">
-                <h5>
-                    <a href="/about/privacy-policy/">Privacy policy</a>
-                </h5>
-                <p>My privacy policy (such as it is).</p>
-            </div>
-        <div class="entry">
-                <h5>
-                    <a href="/about/site-name/">The site name</a>
-                </h5>
-                <p>A bit about the name of the site.</p>
-            </div>
-        <div class="entry">
-                <h5>
-                    <a href="/about/changelog/">Changelog</a>
-                </h5>
-                <p>Change happens.  Here&rsquo;s what&rsquo;s happened here recently.</p>
-            </div>
-        </div>
+	
 </div>
+
 
           </main>
         </div>

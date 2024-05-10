@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Documentation tools on Lance&#39;s Quips &amp; Quibbles</title>
+    <link>http://localhost:1313/tips/docs/tools/</link>
+    <description>Recent content in Documentation tools on Lance&#39;s Quips &amp; Quibbles</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 08 May 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tips/docs/tools/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>MKDocs</title>
+      <link>http://localhost:1313/tips/docs/tools/mkdocs/</link>
+      <pubDate>Wed, 08 May 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tips/docs/tools/mkdocs/</guid>
+      <description>MKDocs is a static-site generator that converts Markdown source files into fully formed websites.&#xA;Check version Use --version to display the current MkDocs version:&#xA;$ mkdocs --version Hide footer ad Early versions of MkDocs include a small &amp;ldquo;ad&amp;rdquo; in the footer of your webpages (&amp;ldquo;Documentation built wwith MKDocs&amp;rdquo;).&#xA;You can hide this by adding a CSS rule to hide the message or by removing it from your site&amp;rsquo;s template.&#xA;Hide with CSS To hide the ad using CSS:</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Git, GitHub, &amp; related on Lance&#39;s Quips &amp; Quibbles</title>
+    <link>http://localhost:1313/tips/git/</link>
+    <description>Recent content in Git, GitHub, &amp; related on Lance&#39;s Quips &amp; Quibbles</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 07 May 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tips/git/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Set Git Bash default path</title>
+      <link>http://localhost:1313/tips/git/git-bash-default-path/</link>
+      <pubDate>Tue, 07 May 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tips/git/git-bash-default-path/</guid>
+      <description>Git for Windows includes a tool called Git Bash, which gives you a bash shell you can use to run git via the command line.&#xA;To set the Git Bash default directory, change the Start in field on the Shortcut tab of the Git Bash properties.&#xA;Here&amp;rsquo;s how:&#xA;Right-click the Git Bash icon in the taskbar to display the taskbar shortcut menu.&#xA;Right-click the Git Bash command in the taskbar shortcut menu and then select Properties.</description>
+    </item>
+    <item>
+      <title>Fix broken branches and main mistakes</title>
+      <link>http://localhost:1313/tips/git/fix-default-branch-mistake/</link>
+      <pubDate>Mon, 06 May 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tips/git/fix-default-branch-mistake/</guid>
+      <description>Once established, git workflows go fairly smoothly.&#xA;At some point, you might realize that a branch pull request (PR) includes commits that it shouldn&amp;rsquo;t.&#xA;Alternatively, your local default branch (main or master for older projects) has somehow managed to get ahead of the remote origin.&#xA;To fix things, you need to:&#xA;Replace the broken branch Replace the broken pull request Replace broken branch For the most part, you can&amp;rsquo;t selectively remove commits from a pull request.</description>
+    </item>
+  </channel>
+</rss>

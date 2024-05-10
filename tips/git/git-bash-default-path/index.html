@@ -3,7 +3,6 @@
   <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link rel="alternate" type="application/rss&#43;xml" href="http://localhost:1313/about/index.xml">
 <meta name="robots" content="noindex, nofollow">
 
 
@@ -18,25 +17,24 @@
 <link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
 <link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
 
-<title>About the Site | Lance&#39;s Quips &amp; Quibbles</title>
-<meta name="description" content="A personal portfolio and knowledgebase">
-<meta property="og:url" content="http://localhost:1313/about/">
+<title>Set Git Bash default path | Lance&#39;s Quips &amp; Quibbles</title>
+<meta name="description" content="How to change the default directory for Git Bash">
+<meta property="og:url" content="http://localhost:1313/tips/git/git-bash-default-path/">
   <meta property="og:site_name" content="Lance&#39;s Quips &amp; Quibbles">
-  <meta property="og:title" content="About the Site">
-  <meta property="og:description" content="This is the personal site for Lance Leonard, a technical writer, programmer, creative problem solver, and cat herder currently operating somewhere in the vicinity of Seattle, WA USA.
-The site is part portfolio, part personal knowledgebase, and part…well, whatever you can get out of it.
-Contact info: LinkedIn
-Disclaimer Opinions and ideas expressed on this site are my own and do not necessarily reflect the views of my employer, family, friends, or anyone able to rub two synapses together.">
+  <meta property="og:title" content="Set Git Bash default path">
+  <meta property="og:description" content="How to change the default directory for Git Bash">
   <meta property="og:locale" content="en">
-  <meta property="og:type" content="website">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="tips">
+    <meta property="article:published_time" content="2024-05-07T00:00:00+00:00">
+    <meta property="article:modified_time" content="2024-05-07T00:00:00+00:00">
 
-  <meta itemprop="name" content="About the Site">
-  <meta itemprop="description" content="This is the personal site for Lance Leonard, a technical writer, programmer, creative problem solver, and cat herder currently operating somewhere in the vicinity of Seattle, WA USA.
-The site is part portfolio, part personal knowledgebase, and part&hellip;well, whatever you can get out of it.
-Contact info: LinkedIn
-Disclaimer Opinions and ideas expressed on this site are my own and do not necessarily reflect the views of my employer, family, friends, or anyone able to rub two synapses together.">
-  <meta itemprop="wordCount" content="232"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="About the Site">
-<meta name="twitter:description" content="A personal portfolio and knowledgebase">
+  <meta itemprop="name" content="Set Git Bash default path">
+  <meta itemprop="description" content="How to change the default directory for Git Bash">
+  <meta itemprop="datePublished" content="2024-05-07T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2024-05-07T00:00:00+00:00">
+  <meta itemprop="wordCount" content="142"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="Set Git Bash default path">
+<meta name="twitter:description" content="How to change the default directory for Git Bash">
 
 
 
@@ -54,7 +52,7 @@ Disclaimer Opinions and ideas expressed on this site are my own and do not neces
   crossorigin="anonymous"></script>
 
   </head>
-  <body class="td-section">
+  <body class="td-page">
     <header>
       <nav class="td-navbar js-navbar-scroll" data-bs-theme="dark">
 <div class="container-fluid flex-column flex-md-row">
@@ -62,10 +60,10 @@ Disclaimer Opinions and ideas expressed on this site are my own and do not neces
   <div class="td-navbar-nav-scroll ms-md-auto" id="main_navbar">
     <ul class="navbar-nav">
       <li class="nav-item">
-        <a class="nav-link active" href="/about/"><span>About</span></a>
+        <a class="nav-link" href="/about/"><span>About</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/tips/"><span>Tips</span></a>
+        <a class="nav-link active" href="/tips/"><span>Tips</span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="/scribbles/"><span>Scribbles</span></a>
@@ -170,10 +168,10 @@ Disclaimer Opinions and ideas expressed on this site are my own and do not neces
       <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m--li">
   <a href="/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section tree-root" id="m-"><span class="">Lance&#39;s Quips &amp; Quibbles</span></a>
   <ul class="ul-1">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-tips-li">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-tips-li">
   <a href="/tips/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-tips"><span class="">Tips</span></a>
   <ul class="ul-2 foldable">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child collapse" id="m-tipsdoc-li">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-tipsdoc-li">
   <a href="/tips/doc/" title="Doc guidelines, standards, and tools" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-tipsdoc"><span class="">Docs</span></a>
   <ul class="ul-3 foldable">
     <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-tipsdoctenets-li">
@@ -193,16 +191,16 @@ Disclaimer Opinions and ideas expressed on this site are my own and do not neces
   </ul>
 </li>
   </ul>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child collapse" id="m-tipsgit-li">
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-tipsgit-li">
   <a href="/tips/git/" title="Git, GitHub, &amp; related" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-tipsgit"><span class="">git</span></a>
   <ul class="ul-3 foldable">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-tipsgitgit-bash-default-path-li">
-  <a href="/tips/git/git-bash-default-path/" title="Set Git Bash default path" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-tipsgitgit-bash-default-path"><span class="">Git Bash default path</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-tipsgitfix-default-branch-mistake-li">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-tipsgitgit-bash-default-path-li">
+  <a href="/tips/git/git-bash-default-path/" title="Set Git Bash default path" class="align-left ps-0 active td-sidebar-link td-sidebar-link__page" id="m-tipsgitgit-bash-default-path"><span class="td-sidebar-nav-active-item">Git Bash default path</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipsgitfix-default-branch-mistake-li">
   <a href="/tips/git/fix-default-branch-mistake/" title="Fix broken branches and main mistakes" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-tipsgitfix-default-branch-mistake"><span class="">Fix broken branches</span></a>
 </li>
   </ul>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child collapse" id="m-tipsweb-li">
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-tipsweb-li">
   <a href="/tips/web/" title="HTML, CSS, and more." class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-tipsweb"><span class="">HTML &amp; CSS</span></a>
   <ul class="ul-3 foldable">
     <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-tipswebcss-li">
@@ -211,7 +209,7 @@ Disclaimer Opinions and ideas expressed on this site are my own and do not neces
   <a href="/tips/web/html/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-tipswebhtml"><span class=""></span></a>
 </li>
   </ul>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child collapse" id="m-tipsjavascript-li">
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-tipsjavascript-li">
   <a href="/tips/javascript/" title="JavaScript, Node.js, and related" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-tipsjavascript"><span class="">JavaScript</span></a>
   <ul class="ul-3 foldable">
     <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-tipsjavascriptdictionary-sorting-li">
@@ -222,9 +220,9 @@ Disclaimer Opinions and ideas expressed on this site are my own and do not neces
   <a href="/tips/javascript/nodejs/" title="Node.js, npm, and more" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-tipsjavascriptnodejs"><span class="">Node.js &amp; npm</span></a>
 </li>
   </ul>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-tipsmac-li">
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipsmac-li">
   <a href="/tips/mac/" title="Mac, MacOS, and OS/X" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-tipsmac"><span class="">Mac</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child collapse" id="m-tipswindows-li">
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-tipswindows-li">
   <a href="/tips/windows/" title="Windows and related topics" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-tipswindows"><span class="">Windows</span></a>
   <ul class="ul-3 foldable">
     <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-tipswindowselevation-prompt-shortcuts-li">
@@ -249,16 +247,16 @@ Disclaimer Opinions and ideas expressed on this site are my own and do not neces
   </ul>
 </li>
   </ul>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-about-li">
-  <a href="/about/" title="About the Site" class="align-left ps-0 active td-sidebar-link td-sidebar-link__section" id="m-about"><span class="td-sidebar-nav-active-item">About</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-about-li">
+  <a href="/about/" title="About the Site" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-about"><span class="">About</span></a>
   <ul class="ul-2 foldable">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-aboutfair-warnings-li">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-aboutfair-warnings-li">
   <a href="/about/fair-warnings/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-aboutfair-warnings"><span class="">Fair warnings</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-aboutprivacy-policy-li">
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-aboutprivacy-policy-li">
   <a href="/about/privacy-policy/" title="Privacy policy" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-aboutprivacy-policy"><span class="">Privacy</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-aboutsite-name-li">
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-aboutsite-name-li">
   <a href="/about/site-name/" title="The site name" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-aboutsite-name"><span class="">Site name</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-aboutchangelog-li">
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-aboutchangelog-li">
   <a href="/about/changelog/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-aboutchangelog"><span class="">Changelog</span></a>
 </li>
   </ul>
@@ -278,7 +276,6 @@ Disclaimer Opinions and ideas expressed on this site are my own and do not neces
             <div class="td-toc">
         <nav id="TableOfContents">
   <ul>
-    <li><a href="#disclaimer">Disclaimer</a></li>
     <li><a href="#vital-statistics">Vital statistics</a></li>
   </ul>
 </nav>
@@ -291,71 +288,56 @@ Disclaimer Opinions and ideas expressed on this site are my own and do not neces
             
   
 
-            <nav aria-label="breadcrumb" class="td-breadcrumbs td-breadcrumbs__single">
+            <nav aria-label="breadcrumb" class="td-breadcrumbs">
   <ol class="breadcrumb">
+  <li class="breadcrumb-item">
+    <a href="/tips/">Tips</a></li>
+  <li class="breadcrumb-item">
+    <a href="/tips/git/">git</a></li>
   <li class="breadcrumb-item active" aria-current="page">
-    About</li>
+    Git Bash default path</li>
   </ol>
 </nav>
             
 <div class="td-content">
-	<h1>About the Site</h1>
-  
+	<h1>Set Git Bash default path</h1>
+	<div class="lead">How to change the default directory for Git Bash</div>
 	<header class="article-meta">
 		
-  <p class="reading-time"><i class="fa-solid fa-clock" aria-hidden="true"></i>&nbsp; 2 minute read &nbsp;</p>
+  <p class="reading-time"><i class="fa-solid fa-clock" aria-hidden="true"></i>&nbsp; less than a minute &nbsp;</p>
 </header>
-	<p>This is the personal site for Lance Leonard, a technical writer, programmer, creative problem solver, and cat herder currently operating somewhere in the vicinity of Seattle, WA USA.</p>
-<p>The site is part portfolio, part personal knowledgebase, and part&hellip;well, whatever you can get out of it.</p>
-<p>Contact info: <a href="https://www.linkedin.com/in/lleonard">LinkedIn</a></p>
-<h2 id="disclaimer">Disclaimer<a class="td-heading-self-link" href="#disclaimer" aria-label="Heading self-link"></a></h2>
-<p>Opinions and ideas expressed on this site are my own and do not necessarily reflect the views of my employer, family, friends, or anyone able to rub two synapses together.</p>
-<p>Information is provided as-is with no guarantee as to accuracy, completeness, fitness of purpose, etc, and so on.</p>
-<p>I warrant only that it worked on my devices well enough to write up. I&rsquo;ve tried to draw conclusions based on reproducible results and verifiable sources. I do make mistakes and I&rsquo;ve been known to be wrong.</p>
-<p>Remember, though: information on the Internet grows stale over time. Your mileage may, and perhaps should, vary. If it does, that&rsquo;s your own lookout. Burn after reading; the Secretary disavows all knowledge.</p>
-<p>(If you find a typo or technical error, please let me know.</p>
-<p>My response will likely depend on my ability to replicate your findings, your level of professionalism/courtesy, the phase of the moon, and other secret ingredients unlikely to be revealed at the moment.)</p>
+	<p><a href="https://gitforwindows.org/">Git for Windows</a> includes a tool called Git Bash, which gives you a bash shell you can use to run git via the command line.</p>
+<p>To set the Git Bash default directory, change the <strong>Start in</strong> field on the <strong>Shortcut</strong> tab of the Git Bash properties.</p>
+<p>Here&rsquo;s how:</p>
+<ol>
+<li>
+<p>Right-click the Git Bash icon in the taskbar to display the taskbar shortcut menu.</p>
+</li>
+<li>
+<p>Right-click the Git Bash command in the taskbar shortcut menu and then select <strong>Properties</strong>.</p>
+</li>
+<li>
+<p>If the <strong>Target</strong> field includes the <code>-cd-to-home</code> option, remove it.</p>
+</li>
+<li>
+<p>Set <strong>Start in</strong> to the directory you wish to use.</p>
+<p>Use the Windows <code>cmd</code> path naming convention, instead of Unix.</p>
+<p>For example: <code>c:\mypath\myrepos</code> instead of <code>/c/mypath/myrepos</code>.</p>
+</li>
+<li>
+<p>When finished, select <strong>OK</strong> or press <code>Enter</code>.</p>
+</li>
+</ol>
+<p>If necessary, exit and restart Git Bash.</p>
 <h2 id="vital-statistics">Vital statistics<a class="td-heading-self-link" href="#vital-statistics" aria-label="Heading self-link"></a></h2>
 <ul>
-<li>Updates
-<ul>
-<li>6 May 2024: Reviewed &amp; updated for site revamp</li>
-<li>1 June 2018: Minor edits</li>
-<li>26 January 2017: original post</li>
-</ul>
-</li>
+<li>7 May 2024: Rewritten and updated for site revamp</li>
+<li>2 June 2018: First post</li>
 </ul>
 
-  <div class="section-index">
-    
-    
-    <hr class="panel-line">
-        <div class="entry">
-                <h5>
-                    <a href="/about/fair-warnings/">Fair warnings</a>
-                </h5>
-                <p>Assorted things you should know about me and my sense of humor.</p>
-            </div>
-        <div class="entry">
-                <h5>
-                    <a href="/about/privacy-policy/">Privacy policy</a>
-                </h5>
-                <p>My privacy policy (such as it is).</p>
-            </div>
-        <div class="entry">
-                <h5>
-                    <a href="/about/site-name/">The site name</a>
-                </h5>
-                <p>A bit about the name of the site.</p>
-            </div>
-        <div class="entry">
-                <h5>
-                    <a href="/about/changelog/">Changelog</a>
-                </h5>
-                <p>Change happens.  Here&rsquo;s what&rsquo;s happened here recently.</p>
-            </div>
-        </div>
+	
 </div>
+
 
           </main>
         </div>
