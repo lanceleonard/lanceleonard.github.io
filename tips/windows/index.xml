@@ -6,7 +6,6 @@
     <description>Recent content in Windows and related topics on Lance&#39;s Quips &amp; Quibbles</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 07 May 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/tips/windows/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Keyboard shortcuts for elevation prompts</title>
@@ -20,7 +19,7 @@
       <link>http://localhost:1313/tips/windows/recover-offscreen-window/</link>
       <pubDate>Tue, 07 May 2024 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/tips/windows/recover-offscreen-window/</guid>
-      <description>When working with multiple monitors, it&amp;rsquo;s possible for open windows to be left offscreen.&#xA;I&amp;rsquo;ve see this happen when:&#xA;Travelling with a laptop normally hooked up to external monitors when docked at home.&#xA;Using a KVM switch to toggle a monitor to support a different machine.&#xA;Most of the time, windows adjust to the new display area. Every so often, however, one remains in its original position. It&amp;rsquo;s open and responds to input.</description>
+      <description>When working with multiple monitors, it&amp;rsquo;s possible for open windows to be left offscreen.&#xA;I&amp;rsquo;ve see this happen when:&#xA;Traveling with a laptop normally hooked up to external monitors when docked at home.&#xA;Using a KVM switch to share a monitor between different machines.&#xA;Most of the time, windows adjust to the new display area. Every so often, however, one remains in its original position. It&amp;rsquo;s open and responds to input.</description>
     </item>
   </channel>
 </rss>

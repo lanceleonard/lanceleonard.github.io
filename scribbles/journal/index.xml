@@ -6,14 +6,20 @@
     <description>Recent content in Journal on Lance&#39;s Quips &amp; Quibbles</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 01 May 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/scribbles/journal/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Initial migration complete</title>
+      <link>http://localhost:1313/scribbles/journal/initial-migration/</link>
+      <pubDate>Fri, 10 May 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/scribbles/journal/initial-migration/</guid>
+      <description>The site has been been updated to a new look. It has more content and a more professional pipeline.&#xA;I have to admit that I was a little worried when starting the migration process, even though I&amp;rsquo;ve been working with (or near) the new toolset for some time.&#xA;Part of my nervousness stems from earlier experiences, which have included some rather&amp;hellip;dramatic results.&#xA;No matter how well you plan, something always seems to go sideways.</description>
+    </item>
     <item>
       <title>Restart the engines</title>
       <link>http://localhost:1313/scribbles/journal/restart-engines/</link>
       <pubDate>Wed, 01 May 2024 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/scribbles/journal/restart-engines/</guid>
-      <description>Welcome back to the ongoing work-in-progress. I&amp;rsquo;m blowing off the dust, sweeping away the cobwebs, and setting up a new set of things.&#xA;This site serves as a practical portfolio and personal knowledgebase. It&amp;rsquo;s meant to provide samples of my writing style and to illustrate my approach to tecnical writing. It&amp;rsquo;s also eant to share knowledge and lessons learned during my technical adventures.&#xA;I hope the content is engaging, practical, and has at least a bit of value.</description>
+      <description>Welcome back to the ongoing work-in-progress. I&amp;rsquo;m blowing off the dust, sweeping away the cobwebs, and setting up a new set of things.&#xA;This site serves as a practical portfolio and personal knowledgebase. It provides writing samples and to illustrates my approach to technical writing. It share knowledge and lessons learned during my technical adventures.&#xA;I hope the content is engaging, practical, and has at least a bit of value. (I&amp;rsquo;m still trying to chase down the various typos, so you&amp;rsquo;ll have to forgive a few rough edges.</description>
     </item>
     <item>
       <title>First post: Don&#39;t panic</title>

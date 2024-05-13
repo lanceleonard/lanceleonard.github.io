@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Unix general tips on Lance&#39;s Quips &amp; Quibbles</title>
+    <link>http://localhost:1313/tips/unix/</link>
+    <description>Recent content in Unix general tips on Lance&#39;s Quips &amp; Quibbles</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <atom:link href="http://localhost:1313/tips/unix/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Vi editor cheat sheet</title>
+      <link>http://localhost:1313/tips/unix/vi-cheat-sheet/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tips/unix/vi-cheat-sheet/</guid>
+      <description>Here is a quick cheat sheet for the vi text editor:&#xA;There are two modes: Command and Insert.&#xA;The word INSERT appears in the bottom left corner of the screen when that mode is active.&#xA;If you&amp;rsquo;re not sure what mode you&amp;rsquo;re in, press Esc to go into Command mode.&#xA;To move the cursor in command mode:&#xA;H (left) J (right) K (up) L (right) Press I to activate Insert mode.</description>
+    </item>
+  </channel>
+</rss>
