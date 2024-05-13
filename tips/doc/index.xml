@@ -6,8 +6,14 @@
     <description>Recent content in Doc guidelines, standards, and tools on Lance&#39;s Quips &amp; Quibbles</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 06 May 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/tips/doc/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Style guides</title>
+      <link>http://localhost:1313/tips/doc/style-guides/</link>
+      <pubDate>Wed, 08 May 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tips/doc/style-guides/</guid>
+      <description>Style guides define rules for using language in a given context.&#xA;These rules provide a &amp;ldquo;common voice&amp;rdquo; that customers recognize and expect when working with professional content.&#xA;A good style guide improves your writing and overall effectiveness.&#xA;Recommended guides For technical docs, consider adopting one of the following:&#xA;Google developer doc style guide Microsoft Writing Style Guide Each guide was developed by the publisher using research and customer focus groups. Each is actively tested, reviewed, and maintained by their respective organizations.</description>
+    </item>
     <item>
       <title>Doc project tenets</title>
       <link>http://localhost:1313/tips/doc/tenets/</link>
@@ -20,7 +26,7 @@
       <link>http://localhost:1313/tips/doc/voice-tone-principles/</link>
       <pubDate>Mon, 06 May 2024 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/tips/doc/voice-tone-principles/</guid>
-      <description>Docs, to some degree, reprsent the voice of your organization. Readers repond well to a friendly tone that is easy-to-read.&#xA;These principles help.&#xA;Use one clear intent Good docs help users solve problems.&#xA;Before working on a doc, understand the audience you&amp;rsquo;re trying to reach and the problem being solved.&#xA;This is called the intent and is typically expressed as as follows:&#xA;&amp;ldquo;As a &amp;lt;role&amp;gt;, I want to &amp;lt;solve a problem&amp;gt;.</description>
+      <description>Docs, to some degree, represent the voice of your organization. Readers respond well to a friendly tone that is easy-to-read.&#xA;These principles help.&#xA;Use one clear intent Good docs help users solve problems.&#xA;Before working on a doc, understand the audience you&amp;rsquo;re trying to reach and the problem being solved.&#xA;This is called the intent and is typically expressed as as follows:&#xA;&amp;ldquo;As a &amp;lt;role&amp;gt;, I want to &amp;lt;solve a problem&amp;gt;.</description>
     </item>
   </channel>
 </rss>

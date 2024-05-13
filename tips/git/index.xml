@@ -6,8 +6,14 @@
     <description>Recent content in Git, GitHub, &amp; related on Lance&#39;s Quips &amp; Quibbles</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 07 May 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/tips/git/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Email privacy error</title>
+      <link>http://localhost:1313/tips/git/remote-privacy-errors/</link>
+      <pubDate>Sun, 12 May 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tips/git/remote-privacy-errors/</guid>
+      <description>When trying to push a commit using git from the command-line, you receive a GH007 remote error:&#xA;remote: error: GH007: Your push would publish a private email address. Here, you&amp;rsquo;ve likely:&#xA;Configured your local copy of git to use the email address associated with your GitHub account Enabled the Keep my email addresses private option in your Github profile settings. The error is Github&amp;rsquo;s way of enforcing the privacy of your email address.</description>
+    </item>
     <item>
       <title>Set Git Bash default path</title>
       <link>http://localhost:1313/tips/git/git-bash-default-path/</link>

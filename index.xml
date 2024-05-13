@@ -6,21 +6,13 @@
     <description>Recent content on Lance&#39;s Quips &amp; Quibbles</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 08 May 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Doc project tenets</title>
-      <link>http://localhost:1313/tips/doc/tenets/</link>
-      <pubDate>Mon, 06 May 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tips/doc/tenets/</guid>
-      <description>Tenets are guiding project principles; they outline and frame design thinking.&#xA;I use tenets for nearly all projects I work on. (I don&amp;rsquo;t always tell people about them.)&#xA;Here are the ones I generally start with. Unless you can think of better ones&amp;hellip;&#xA;Docs are features Many teams treat docs as afterthoughts. Like good software, good docs require design, forethought, and planning.&#xA;Effective docs follow the product lifecycle: design, implementation, review, and maintenance.</description>
-    </item>
-    <item>
-      <title>Voice &amp; tone principles</title>
-      <link>http://localhost:1313/tips/doc/voice-tone-principles/</link>
-      <pubDate>Mon, 06 May 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tips/doc/voice-tone-principles/</guid>
-      <description>Docs, to some degree, reprsent the voice of your organization. Readers repond well to a friendly tone that is easy-to-read.&#xA;These principles help.&#xA;Use one clear intent Good docs help users solve problems.&#xA;Before working on a doc, understand the audience you&amp;rsquo;re trying to reach and the problem being solved.&#xA;This is called the intent and is typically expressed as as follows:&#xA;&amp;ldquo;As a &amp;lt;role&amp;gt;, I want to &amp;lt;solve a problem&amp;gt;.</description>
+      <title>Email privacy error</title>
+      <link>http://localhost:1313/tips/git/remote-privacy-errors/</link>
+      <pubDate>Sun, 12 May 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tips/git/remote-privacy-errors/</guid>
+      <description>When trying to push a commit using git from the command-line, you receive a GH007 remote error:&#xA;remote: error: GH007: Your push would publish a private email address. Here, you&amp;rsquo;ve likely:&#xA;Configured your local copy of git to use the email address associated with your GitHub account Enabled the Keep my email addresses private option in your Github profile settings. The error is Github&amp;rsquo;s way of enforcing the privacy of your email address.</description>
     </item>
     <item>
       <title>MKDocs</title>
@@ -28,6 +20,13 @@
       <pubDate>Wed, 08 May 2024 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/tips/doc/tools/mkdocs/</guid>
       <description>MKDocs is a static-site generator that converts Markdown source files into fully formed websites.&#xA;Check version Use --version to display the current MkDocs version:&#xA;$ mkdocs --version Hide footer ad Early versions of MkDocs include a small &amp;ldquo;ad&amp;rdquo; in the footer of your webpages (&amp;ldquo;Documentation built wwith MKDocs&amp;rdquo;).&#xA;You can hide this by adding a CSS rule to hide the message or by removing it from your site&amp;rsquo;s template.&#xA;Hide with CSS To hide the ad using CSS:</description>
+    </item>
+    <item>
+      <title>Style guides</title>
+      <link>http://localhost:1313/tips/doc/style-guides/</link>
+      <pubDate>Wed, 08 May 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tips/doc/style-guides/</guid>
+      <description>Style guides define rules for using language in a given context.&#xA;These rules provide a &amp;ldquo;common voice&amp;rdquo; that customers recognize and expect when working with professional content.&#xA;A good style guide improves your writing and overall effectiveness.&#xA;Recommended guides For technical docs, consider adopting one of the following:&#xA;Google developer doc style guide Microsoft Writing Style Guide Each guide was developed by the publisher using research and customer focus groups. Each is actively tested, reviewed, and maintained by their respective organizations.</description>
     </item>
     <item>
       <title>Set Git Bash default path</title>
@@ -58,6 +57,27 @@
       <description>An uncommon bit of website maintenance involves reviewing or updating links on a webpage.&#xA;Typically, you want a list of the URLs specified in anchor elements (&amp;lt;a href=&amp;quot;...&amp;quot;&amp;gt;&amp;lt;/a&amp;gt;).&#xA;This means you want a list of the URLs specified in the HREF attribute of anchors.&#xA;Like many tasks, this can be more complicated than it first appears.&#xA;List webpage links Use the Document.links property to get a list of the links on a webpage.</description>
     </item>
     <item>
+      <title>Fix broken branches and main mistakes</title>
+      <link>http://localhost:1313/tips/git/fix-default-branch-mistake/</link>
+      <pubDate>Mon, 06 May 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tips/git/fix-default-branch-mistake/</guid>
+      <description>Once established, git workflows go fairly smoothly.&#xA;At some point, you might realize that a branch pull request (PR) includes commits that it shouldn&amp;rsquo;t.&#xA;Alternatively, your local default branch (main or master for older projects) has somehow managed to get ahead of the remote origin.&#xA;To fix things, you need to:&#xA;Replace the broken branch Replace the broken pull request Replace broken branch For the most part, you can&amp;rsquo;t selectively remove commits from a pull request.</description>
+    </item>
+    <item>
+      <title>Doc project tenets</title>
+      <link>http://localhost:1313/tips/doc/tenets/</link>
+      <pubDate>Mon, 06 May 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tips/doc/tenets/</guid>
+      <description>Tenets are guiding project principles; they outline and frame design thinking.&#xA;I use tenets for nearly all projects I work on. (I don&amp;rsquo;t always tell people about them.)&#xA;Here are the ones I generally start with. Unless you can think of better ones&amp;hellip;&#xA;Docs are features Many teams treat docs as afterthoughts. Like good software, good docs require design, forethought, and planning.&#xA;Effective docs follow the product lifecycle: design, implementation, review, and maintenance.</description>
+    </item>
+    <item>
+      <title>Voice &amp; tone principles</title>
+      <link>http://localhost:1313/tips/doc/voice-tone-principles/</link>
+      <pubDate>Mon, 06 May 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tips/doc/voice-tone-principles/</guid>
+      <description>Docs, to some degree, represent the voice of your organization. Readers respond well to a friendly tone that is easy-to-read.&#xA;These principles help.&#xA;Use one clear intent Good docs help users solve problems.&#xA;Before working on a doc, understand the audience you&amp;rsquo;re trying to reach and the problem being solved.&#xA;This is called the intent and is typically expressed as as follows:&#xA;&amp;ldquo;As a &amp;lt;role&amp;gt;, I want to &amp;lt;solve a problem&amp;gt;.</description>
+    </item>
+    <item>
       <title>Fair warnings</title>
       <link>http://localhost:1313/about/fair-warnings/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -69,35 +89,42 @@
       <link>http://localhost:1313/about/privacy-policy/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/about/privacy-policy/</guid>
-      <description>I don&amp;rsquo;t track you or how you use the site. I don&amp;rsquo;t record any personally identifying information (PII).&#xA;No cookies are saved to your device, so there&amp;rsquo;s nothing to opt in to.&#xA;At some point, I may add analytics to help understand how people (in general) use the site. When I do that, I&amp;rsquo;ll update things accordingly.&#xA;If I learn you stopped by, I&amp;rsquo;ll keep that to myself.&#xA;Since I&amp;rsquo;m not tracking anything, there&amp;rsquo;s nothing to share, sell, delete, or otherwise abuse.</description>
+      <description>I don&amp;rsquo;t track you or how you use the site.&#xA;I don&amp;rsquo;t record any personally identifying information (PII).&#xA;No cookies are saved to your device, so there&amp;rsquo;s nothing to opt in to.&#xA;At some point, I may add analytics to help understand how people (in general) use the site. When I do that, I&amp;rsquo;ll update things accordingly.&#xA;If I learn you stopped by, I&amp;rsquo;ll keep that to myself.&#xA;Since I&amp;rsquo;m not tracking anything, there&amp;rsquo;s nothing to share, sell, delete, or otherwise abuse.</description>
     </item>
     <item>
       <title>The site name</title>
       <link>http://localhost:1313/about/site-name/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/about/site-name/</guid>
-      <description>A paradox?&#xA;A paradox, A most-ingenious paradox!&#xA;We&amp;rsquo;ve quips and quibbles heard in flocks!&#xA;But none to beat this paradox!&#xA;&amp;ndash; Ruth &amp;amp; Frederic, &amp;ldquo;The Pirates of Penzance&amp;rdquo;,&#xA;Act II (Scene 19), by W.S. Gilbert &amp;amp; Arthur Sullivan, 1879&#xA;The site&amp;rsquo;s name is based, in part, on lyrics from The Pirates of Penzance. (It&amp;rsquo;s also a subtle nod to one of my earliest documentation roles and, yes, there&amp;rsquo;s a small story [or two] there.</description>
+      <description>A paradox?&#xA;A paradox, A most ingenious paradox!&#xA;We&amp;rsquo;ve quips and quibbles heard in flocks!&#xA;But none to beat this paradox!&#xA;&amp;ndash; Ruth &amp;amp; Frederic, &amp;ldquo;The Pirates of Penzance&amp;rdquo;,&#xA;Act II (Scene 19), by W.S. Gilbert &amp;amp; Arthur Sullivan, 1879&#xA;The site&amp;rsquo;s name is based, in part, on lyrics from The Pirates of Penzance. (It&amp;rsquo;s also a subtle nod to one of my earliest documentation roles and, yes, there&amp;rsquo;s a small story or few.</description>
     </item>
     <item>
       <title>Recover offscreen window</title>
       <link>http://localhost:1313/tips/windows/recover-offscreen-window/</link>
       <pubDate>Tue, 07 May 2024 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/tips/windows/recover-offscreen-window/</guid>
-      <description>When working with multiple monitors, it&amp;rsquo;s possible for open windows to be left offscreen.&#xA;I&amp;rsquo;ve see this happen when:&#xA;Travelling with a laptop normally hooked up to external monitors when docked at home.&#xA;Using a KVM switch to toggle a monitor to support a different machine.&#xA;Most of the time, windows adjust to the new display area. Every so often, however, one remains in its original position. It&amp;rsquo;s open and responds to input.</description>
+      <description>When working with multiple monitors, it&amp;rsquo;s possible for open windows to be left offscreen.&#xA;I&amp;rsquo;ve see this happen when:&#xA;Traveling with a laptop normally hooked up to external monitors when docked at home.&#xA;Using a KVM switch to share a monitor between different machines.&#xA;Most of the time, windows adjust to the new display area. Every so often, however, one remains in its original position. It&amp;rsquo;s open and responds to input.</description>
     </item>
     <item>
-      <title>Fix broken branches and main mistakes</title>
-      <link>http://localhost:1313/tips/git/fix-default-branch-mistake/</link>
-      <pubDate>Mon, 06 May 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tips/git/fix-default-branch-mistake/</guid>
-      <description>Once established, git workflows go fairly smoothly.&#xA;At some point, you might realize that a branch pull request (PR) includes commits that it shouldn&amp;rsquo;t.&#xA;Alternatively, your local default branch (main or master for older projects) has somehow managed to get ahead of the remote origin.&#xA;To fix things, you need to:&#xA;Replace the broken branch Replace the broken pull request Replace broken branch For the most part, you can&amp;rsquo;t selectively remove commits from a pull request.</description>
+      <title>Vi editor cheat sheet</title>
+      <link>http://localhost:1313/tips/unix/vi-cheat-sheet/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tips/unix/vi-cheat-sheet/</guid>
+      <description>Here is a quick cheat sheet for the vi text editor:&#xA;There are two modes: Command and Insert.&#xA;The word INSERT appears in the bottom left corner of the screen when that mode is active.&#xA;If you&amp;rsquo;re not sure what mode you&amp;rsquo;re in, press Esc to go into Command mode.&#xA;To move the cursor in command mode:&#xA;H (left) J (right) K (up) L (right) Press I to activate Insert mode.</description>
+    </item>
+    <item>
+      <title>Initial migration complete</title>
+      <link>http://localhost:1313/scribbles/journal/initial-migration/</link>
+      <pubDate>Fri, 10 May 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/scribbles/journal/initial-migration/</guid>
+      <description>The site has been been updated to a new look. It has more content and a more professional pipeline.&#xA;I have to admit that I was a little worried when starting the migration process, even though I&amp;rsquo;ve been working with (or near) the new toolset for some time.&#xA;Part of my nervousness stems from earlier experiences, which have included some rather&amp;hellip;dramatic results.&#xA;No matter how well you plan, something always seems to go sideways.</description>
     </item>
     <item>
       <title>Restart the engines</title>
       <link>http://localhost:1313/scribbles/journal/restart-engines/</link>
       <pubDate>Wed, 01 May 2024 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/scribbles/journal/restart-engines/</guid>
-      <description>Welcome back to the ongoing work-in-progress. I&amp;rsquo;m blowing off the dust, sweeping away the cobwebs, and setting up a new set of things.&#xA;This site serves as a practical portfolio and personal knowledgebase. It&amp;rsquo;s meant to provide samples of my writing style and to illustrate my approach to tecnical writing. It&amp;rsquo;s also eant to share knowledge and lessons learned during my technical adventures.&#xA;I hope the content is engaging, practical, and has at least a bit of value.</description>
+      <description>Welcome back to the ongoing work-in-progress. I&amp;rsquo;m blowing off the dust, sweeping away the cobwebs, and setting up a new set of things.&#xA;This site serves as a practical portfolio and personal knowledgebase. It provides writing samples and to illustrates my approach to technical writing. It share knowledge and lessons learned during my technical adventures.&#xA;I hope the content is engaging, practical, and has at least a bit of value. (I&amp;rsquo;m still trying to chase down the various typos, so you&amp;rsquo;ll have to forgive a few rough edges.</description>
     </item>
     <item>
       <title>First post: Don&#39;t panic</title>
