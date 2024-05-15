@@ -7,5 +7,26 @@
     <generator>Hugo</generator>
     <language>en</language>
     <atom:link href="http://localhost:1313/tips/javascript/nodejs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Collect filenames with Node.js</title>
+      <link>http://localhost:1313/tips/javascript/nodejs/collect-filenames/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tips/javascript/nodejs/collect-filenames/</guid>
+      <description>Node.js can help maintain doc experiences through automation. You can use it to:&#xA;Detect file changes in source repositories.&#xA;Fix pathname issues in doc source files&#xA;Repair broken (or incomplete) markup&#xA;Update pipeline config files&#xA;Generate index pages, tag clouds, and other supporting content.&#xA;Tasks like these frequently require a list of files in a given directory, along with any child directories.&#xA;Here&amp;rsquo;s one way to generate such a list:</description>
+    </item>
+    <item>
+      <title>Create custom Node.js modules</title>
+      <link>http://localhost:1313/tips/javascript/nodejs/create-node-modules/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tips/javascript/nodejs/create-node-modules/</guid>
+      <description>This article shows how to create and use a custom Node module&#xA;Node.js module design is based on CommonJS module specification, though sources vary on the intent and history. (Some sources vary when describing intent and history.)&#xA;To begin, move reusable functions into a separate JavaScript file (called mymodules.js in this example):&#xA;// myModule.js module.exports.isBlank = function( inputValue ) { var blnResult = ( ( inputValue == undefined ) || ( inputValue == null ) || ( inputValue == &amp;#34;&amp;#34; ) ); return blnResult; } module.</description>
+    </item>
+    <item>
+      <title>Convert XML to JSON</title>
+      <link>http://localhost:1313/tips/javascript/nodejs/xml-to-json/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tips/javascript/nodejs/xml-to-json/</guid>
+      <description>The xml2js module provides a convenient way to Here&amp;rsquo;s a relatively simple way to convert XML to JSON using Node.js:&#xA;var fs = require( &amp;#39;fs&amp;#39; ), x2j = require( &amp;#39;xml2js&amp;#39; ); var sInputFile = &amp;#34;books.xml;&amp;#34; var p = new x2j.Parser(); var sXMLData = fs.readFileSync( sInputFile, &amp;#39;utf8&amp;#39; ); p.parseString( sXMLData, function( err, result ) { var s = JSON.stringify( result, undefined, 3 ); console.log( &amp;#34;Result&amp;#34; + &amp;#34;\n&amp;#34;, s, &amp;#34;\n&amp;#34; ); }); Here, the input file (books.</description>
+    </item>
   </channel>
 </rss>
