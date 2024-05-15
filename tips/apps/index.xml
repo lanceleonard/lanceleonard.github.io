@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>App tips and tricks on Lance&#39;s Quips &amp; Quibbles</title>
+    <link>http://localhost:1313/tips/apps/</link>
+    <description>Recent content in App tips and tricks on Lance&#39;s Quips &amp; Quibbles</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <atom:link href="http://localhost:1313/tips/apps/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Excel tips</title>
+      <link>http://localhost:1313/tips/apps/excel-tips/</link>
+      <pubDate>Wed, 08 May 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tips/apps/excel-tips/</guid>
+      <description>Here some practical tips for Microsoft Excel.&#xA;Strikethrough text To draw a line (or strike through) text in a cell:&#xA;Edit the cell Select the text Press Ctrl+5 (Windows) Here, 5 represents the key in the number row of your keyboard, not the center key in a number pad.&#xA;For best results, format the cell to wrap overflow text.&#xA;String formula functions Here are a few macros to help manipulate text strings</description>
+    </item>
+    <item>
+      <title>Word 2011 tips and fixes</title>
+      <link>http://localhost:1313/tips/apps/word-2011-tips/</link>
+      <pubDate>Wed, 08 May 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tips/apps/word-2011-tips/</guid>
+      <description>If, for whatever reason, you&amp;rsquo;re using Microsoft Word 2001 for the Mac, the following tips may help:&#xA;If the tabs don&amp;rsquo;t respond to mouse clicks, try clicking the very top pixel of the tab (or as close to it as you can manage).&#xA;For some unknown reason, this seems to do the trick.&#xA;The A footer of section _x_ is set outside the printable area of this page error indicates that the footer (or header) is larger than the non-printable area of the page.</description>
+    </item>
+  </channel>
+</rss>

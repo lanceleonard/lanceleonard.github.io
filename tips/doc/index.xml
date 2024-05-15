@@ -19,14 +19,14 @@
       <link>http://localhost:1313/tips/doc/tenets/</link>
       <pubDate>Mon, 06 May 2024 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/tips/doc/tenets/</guid>
-      <description>Tenets are guiding project principles; they outline and frame design thinking.&#xA;I use tenets for nearly all projects I work on. (I don&amp;rsquo;t always tell people about them.)&#xA;Here are the ones I generally start with. Unless you can think of better ones&amp;hellip;&#xA;Docs are features Many teams treat docs as afterthoughts. Like good software, good docs require design, forethought, and planning.&#xA;Effective docs follow the product lifecycle: design, implementation, review, and maintenance.</description>
+      <description>Tenets are guiding project principles; they outline and frame design thinking.&#xA;Here are the ones I generally start with.&#xA;Docs are features Many teams treat docs as afterthoughts. Like good software, good docs require design, forethought, and planning.&#xA;Effective docs follow the product lifecycle: design, implementation, review, and maintenance.&#xA;Treat doc reviews as seriously as code reviews. Reviewers need to be proactive and timely in their feedback.&#xA;Feedback must be specific, clear, and actionable.</description>
     </item>
     <item>
       <title>Voice &amp; tone principles</title>
       <link>http://localhost:1313/tips/doc/voice-tone-principles/</link>
       <pubDate>Mon, 06 May 2024 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/tips/doc/voice-tone-principles/</guid>
-      <description>Docs, to some degree, represent the voice of your organization. Readers respond well to a friendly tone that is easy-to-read.&#xA;These principles help.&#xA;Use one clear intent Good docs help users solve problems.&#xA;Before working on a doc, understand the audience you&amp;rsquo;re trying to reach and the problem being solved.&#xA;This is called the intent and is typically expressed as as follows:&#xA;&amp;ldquo;As a &amp;lt;role&amp;gt;, I want to &amp;lt;solve a problem&amp;gt;.</description>
+      <description>Docs, to some degree, represent the voice of your organization.&#xA;People respond well to a friendly, helpful tone that is easy-to-read.&#xA;These principles help.&#xA;Use one clear intent Good docs help users solve problems.&#xA;Before working on a doc, understand the audience you&amp;rsquo;re trying to reach and the problem being solved.&#xA;This is called the intent and is typically expressed as as follows:&#xA;&amp;ldquo;As a &amp;lt;role&amp;gt;, I want to &amp;lt;solve a problem&amp;gt;.</description>
     </item>
   </channel>
 </rss>

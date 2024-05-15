@@ -8,11 +8,32 @@
     <language>en</language>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Git console commands</title>
+      <link>http://localhost:1313/tips/git/console-commands/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tips/git/console-commands/</guid>
+      <description>Here are a few common (and uncommon) tasks you can perform from the command-line.&#xA;Set up new project $ git clone ... $ git submodule init $ git submodule update Start work $ git checkout main $ git pull $ git checkout branch-name $ git merge main // resolve merge conflicts, if any This helps keep things up-to-date when working with others.&#xA;There are considerations and alternatives.&#xA;Work a task $ git status $ git add //.</description>
+    </item>
+    <item>
+      <title>Fix broken branches and main mistakes</title>
+      <link>http://localhost:1313/tips/git/fix-default-branch-mistake/</link>
+      <pubDate>Mon, 06 May 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tips/git/fix-default-branch-mistake/</guid>
+      <description>Once established, git workflows go fairly smoothly.&#xA;At some point, you might realize that a branch pull request (PR) includes commits that it shouldn&amp;rsquo;t.&#xA;Alternatively, your local default branch (main or master for older projects) has somehow managed to get ahead of the remote origin.&#xA;To fix things, you need to:&#xA;Replace the broken branch Replace the broken pull request Replace broken branch For the most part, you can&amp;rsquo;t selectively remove commits from a pull request.</description>
+    </item>
+    <item>
       <title>Email privacy error</title>
       <link>http://localhost:1313/tips/git/remote-privacy-errors/</link>
       <pubDate>Sun, 12 May 2024 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/tips/git/remote-privacy-errors/</guid>
       <description>When trying to push a commit using git from the command-line, you receive a GH007 remote error:&#xA;remote: error: GH007: Your push would publish a private email address. Here, you&amp;rsquo;ve likely:&#xA;Configured your local copy of git to use the email address associated with your GitHub account Enabled the Keep my email addresses private option in your Github profile settings. The error is Github&amp;rsquo;s way of enforcing the privacy of your email address.</description>
+    </item>
+    <item>
+      <title>Excel tips</title>
+      <link>http://localhost:1313/tips/apps/excel-tips/</link>
+      <pubDate>Wed, 08 May 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tips/apps/excel-tips/</guid>
+      <description>Here some practical tips for Microsoft Excel.&#xA;Strikethrough text To draw a line (or strike through) text in a cell:&#xA;Edit the cell Select the text Press Ctrl+5 (Windows) Here, 5 represents the key in the number row of your keyboard, not the center key in a number pad.&#xA;For best results, format the cell to wrap overflow text.&#xA;String formula functions Here are a few macros to help manipulate text strings</description>
     </item>
     <item>
       <title>MKDocs</title>
@@ -27,6 +48,13 @@
       <pubDate>Wed, 08 May 2024 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/tips/doc/style-guides/</guid>
       <description>Style guides define rules for using language in a given context.&#xA;These rules provide a &amp;ldquo;common voice&amp;rdquo; that customers recognize and expect when working with professional content.&#xA;A good style guide improves your writing and overall effectiveness.&#xA;Recommended guides For technical docs, consider adopting one of the following:&#xA;Google developer doc style guide Microsoft Writing Style Guide Each guide was developed by the publisher using research and customer focus groups. Each is actively tested, reviewed, and maintained by their respective organizations.</description>
+    </item>
+    <item>
+      <title>Word 2011 tips and fixes</title>
+      <link>http://localhost:1313/tips/apps/word-2011-tips/</link>
+      <pubDate>Wed, 08 May 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tips/apps/word-2011-tips/</guid>
+      <description>If, for whatever reason, you&amp;rsquo;re using Microsoft Word 2001 for the Mac, the following tips may help:&#xA;If the tabs don&amp;rsquo;t respond to mouse clicks, try clicking the very top pixel of the tab (or as close to it as you can manage).&#xA;For some unknown reason, this seems to do the trick.&#xA;The A footer of section _x_ is set outside the printable area of this page error indicates that the footer (or header) is larger than the non-printable area of the page.</description>
     </item>
     <item>
       <title>Set Git Bash default path</title>
@@ -57,25 +85,32 @@
       <description>An uncommon bit of website maintenance involves reviewing or updating links on a webpage.&#xA;Typically, you want a list of the URLs specified in anchor elements (&amp;lt;a href=&amp;quot;...&amp;quot;&amp;gt;&amp;lt;/a&amp;gt;).&#xA;This means you want a list of the URLs specified in the HREF attribute of anchors.&#xA;Like many tasks, this can be more complicated than it first appears.&#xA;List webpage links Use the Document.links property to get a list of the links on a webpage.</description>
     </item>
     <item>
-      <title>Fix broken branches and main mistakes</title>
-      <link>http://localhost:1313/tips/git/fix-default-branch-mistake/</link>
-      <pubDate>Mon, 06 May 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tips/git/fix-default-branch-mistake/</guid>
-      <description>Once established, git workflows go fairly smoothly.&#xA;At some point, you might realize that a branch pull request (PR) includes commits that it shouldn&amp;rsquo;t.&#xA;Alternatively, your local default branch (main or master for older projects) has somehow managed to get ahead of the remote origin.&#xA;To fix things, you need to:&#xA;Replace the broken branch Replace the broken pull request Replace broken branch For the most part, you can&amp;rsquo;t selectively remove commits from a pull request.</description>
-    </item>
-    <item>
       <title>Doc project tenets</title>
       <link>http://localhost:1313/tips/doc/tenets/</link>
       <pubDate>Mon, 06 May 2024 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/tips/doc/tenets/</guid>
-      <description>Tenets are guiding project principles; they outline and frame design thinking.&#xA;I use tenets for nearly all projects I work on. (I don&amp;rsquo;t always tell people about them.)&#xA;Here are the ones I generally start with. Unless you can think of better ones&amp;hellip;&#xA;Docs are features Many teams treat docs as afterthoughts. Like good software, good docs require design, forethought, and planning.&#xA;Effective docs follow the product lifecycle: design, implementation, review, and maintenance.</description>
+      <description>Tenets are guiding project principles; they outline and frame design thinking.&#xA;Here are the ones I generally start with.&#xA;Docs are features Many teams treat docs as afterthoughts. Like good software, good docs require design, forethought, and planning.&#xA;Effective docs follow the product lifecycle: design, implementation, review, and maintenance.&#xA;Treat doc reviews as seriously as code reviews. Reviewers need to be proactive and timely in their feedback.&#xA;Feedback must be specific, clear, and actionable.</description>
     </item>
     <item>
       <title>Voice &amp; tone principles</title>
       <link>http://localhost:1313/tips/doc/voice-tone-principles/</link>
       <pubDate>Mon, 06 May 2024 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/tips/doc/voice-tone-principles/</guid>
-      <description>Docs, to some degree, represent the voice of your organization. Readers respond well to a friendly tone that is easy-to-read.&#xA;These principles help.&#xA;Use one clear intent Good docs help users solve problems.&#xA;Before working on a doc, understand the audience you&amp;rsquo;re trying to reach and the problem being solved.&#xA;This is called the intent and is typically expressed as as follows:&#xA;&amp;ldquo;As a &amp;lt;role&amp;gt;, I want to &amp;lt;solve a problem&amp;gt;.</description>
+      <description>Docs, to some degree, represent the voice of your organization.&#xA;People respond well to a friendly, helpful tone that is easy-to-read.&#xA;These principles help.&#xA;Use one clear intent Good docs help users solve problems.&#xA;Before working on a doc, understand the audience you&amp;rsquo;re trying to reach and the problem being solved.&#xA;This is called the intent and is typically expressed as as follows:&#xA;&amp;ldquo;As a &amp;lt;role&amp;gt;, I want to &amp;lt;solve a problem&amp;gt;.</description>
+    </item>
+    <item>
+      <title>Collect filenames with Node.js</title>
+      <link>http://localhost:1313/tips/javascript/nodejs/collect-filenames/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tips/javascript/nodejs/collect-filenames/</guid>
+      <description>Node.js can help maintain doc experiences through automation. You can use it to:&#xA;Detect file changes in source repositories.&#xA;Fix pathname issues in doc source files&#xA;Repair broken (or incomplete) markup&#xA;Update pipeline config files&#xA;Generate index pages, tag clouds, and other supporting content.&#xA;Tasks like these frequently require a list of files in a given directory, along with any child directories.&#xA;Here&amp;rsquo;s one way to generate such a list:</description>
+    </item>
+    <item>
+      <title>Create custom Node.js modules</title>
+      <link>http://localhost:1313/tips/javascript/nodejs/create-node-modules/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tips/javascript/nodejs/create-node-modules/</guid>
+      <description>This article shows how to create and use a custom Node module&#xA;Node.js module design is based on CommonJS module specification, though sources vary on the intent and history. (Some sources vary when describing intent and history.)&#xA;To begin, move reusable functions into a separate JavaScript file (called mymodules.js in this example):&#xA;// myModule.js module.exports.isBlank = function( inputValue ) { var blnResult = ( ( inputValue == undefined ) || ( inputValue == null ) || ( inputValue == &amp;#34;&amp;#34; ) ); return blnResult; } module.</description>
     </item>
     <item>
       <title>Fair warnings</title>
@@ -99,11 +134,25 @@
       <description>A paradox?&#xA;A paradox, A most ingenious paradox!&#xA;We&amp;rsquo;ve quips and quibbles heard in flocks!&#xA;But none to beat this paradox!&#xA;&amp;ndash; Ruth &amp;amp; Frederic, &amp;ldquo;The Pirates of Penzance&amp;rdquo;,&#xA;Act II (Scene 19), by W.S. Gilbert &amp;amp; Arthur Sullivan, 1879&#xA;The site&amp;rsquo;s name is based, in part, on lyrics from The Pirates of Penzance. (It&amp;rsquo;s also a subtle nod to one of my earliest documentation roles and, yes, there&amp;rsquo;s a small story or few.</description>
     </item>
     <item>
+      <title>Convert XML to JSON</title>
+      <link>http://localhost:1313/tips/javascript/nodejs/xml-to-json/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tips/javascript/nodejs/xml-to-json/</guid>
+      <description>The xml2js module provides a convenient way to Here&amp;rsquo;s a relatively simple way to convert XML to JSON using Node.js:&#xA;var fs = require( &amp;#39;fs&amp;#39; ), x2j = require( &amp;#39;xml2js&amp;#39; ); var sInputFile = &amp;#34;books.xml;&amp;#34; var p = new x2j.Parser(); var sXMLData = fs.readFileSync( sInputFile, &amp;#39;utf8&amp;#39; ); p.parseString( sXMLData, function( err, result ) { var s = JSON.stringify( result, undefined, 3 ); console.log( &amp;#34;Result&amp;#34; + &amp;#34;\n&amp;#34;, s, &amp;#34;\n&amp;#34; ); }); Here, the input file (books.</description>
+    </item>
+    <item>
       <title>Recover offscreen window</title>
       <link>http://localhost:1313/tips/windows/recover-offscreen-window/</link>
       <pubDate>Tue, 07 May 2024 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/tips/windows/recover-offscreen-window/</guid>
       <description>When working with multiple monitors, it&amp;rsquo;s possible for open windows to be left offscreen.&#xA;I&amp;rsquo;ve see this happen when:&#xA;Traveling with a laptop normally hooked up to external monitors when docked at home.&#xA;Using a KVM switch to share a monitor between different machines.&#xA;Most of the time, windows adjust to the new display area. Every so often, however, one remains in its original position. It&amp;rsquo;s open and responds to input.</description>
+    </item>
+    <item>
+      <title>Package managers</title>
+      <link>http://localhost:1313/tips/unix/package-managers/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tips/unix/package-managers/</guid>
+      <description>Package managers vary between distributions (distros).&#xA;Here&amp;rsquo;s a starting list:&#xA;Operating system (distro) Package manager MacOS (OS/X) brew Alpine Linux apk Amazon Linux dnf (AL2023)&#xA;yum (AL2 and earlier) archlinux pacman Debian (v8+)&#xA;Ubuntu (v13.10+) apt-get Fedora Linux dnf (v22+)&#xA;yum (v21 and earlier) FreeBSD pkg gentoo linux emerge OpenBSD/NetBSD pkg_add openSUSE zypper Raspberry Pi (Raspbian) Varies, typically apt or pip Red Hat Enterprise (RHEL) (v7+) yum Slackware sbopkg </description>
     </item>
     <item>
       <title>Vi editor cheat sheet</title>
