@@ -192,8 +192,13 @@
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child collapse" id="m-tipsdoctools-li">
   <a href="/tips/doc/tools/" title="Documentation tools" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-tipsdoctools"><span class="">Tools</span></a>
   <ul class="ul-4 foldable">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-tipsdoctoolshugo-li">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child collapse" id="m-tipsdoctoolshugo-li">
   <a href="/tips/doc/tools/hugo/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-tipsdoctoolshugo"><span class="">Hugo</span></a>
+  <ul class="ul-5 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-tipsdoctoolshugodark-mode-code-docsy-li">
+  <a href="/tips/doc/tools/hugo/dark-mode-code-docsy/" title="Fix dark mode code block" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-tipsdoctoolshugodark-mode-code-docsy"><span class="">Dark mode code</span></a>
+</li>
+  </ul>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-tipsdoctoolsmarkdown-li">
   <a href="/tips/doc/tools/markdown/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-tipsdoctoolsmarkdown"><span class="">Markdown</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-tipsdoctoolsmkdocs-li">
@@ -351,77 +356,77 @@
 <p>Here, we show how to define a custom sort order in JavaScript.</p>
 <h2 id="process-array">Process array<a class="td-heading-self-link" href="#process-array" aria-label="Heading self-link"></a></h2>
 <p>To illustrate, consider the following book titles, organized roughly by the year they were first published.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>A Study in Scarlet
-</span></span><span style="display:flex;"><span>The Sign of Four
-</span></span><span style="display:flex;"><span>The Adventures of Sherlock Holmes
-</span></span><span style="display:flex;"><span>The Memoirs of Sherlock Holmes
-</span></span><span style="display:flex;"><span>The Hound of the Baskervilles
-</span></span><span style="display:flex;"><span>The Return of Sherlock Holmes
-</span></span><span style="display:flex;"><span>His Last Bow
-</span></span><span style="display:flex;"><span>The Valley of Fear
-</span></span><span style="display:flex;"><span>The Case-Book of Sherlock Holmes
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">A Study in Scarlet
+</span></span><span class="line"><span class="cl">The Sign of Four
+</span></span><span class="line"><span class="cl">The Adventures of Sherlock Holmes
+</span></span><span class="line"><span class="cl">The Memoirs of Sherlock Holmes
+</span></span><span class="line"><span class="cl">The Hound of the Baskervilles
+</span></span><span class="line"><span class="cl">The Return of Sherlock Holmes
+</span></span><span class="line"><span class="cl">His Last Bow
+</span></span><span class="line"><span class="cl">The Valley of Fear
+</span></span><span class="line"><span class="cl">The Case-Book of Sherlock Holmes
 </span></span></code></pre></div><p>To print an array containing these titles to a web page, you might use something like this:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">var</span> <span style="color:#000">iTotal</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">astrTitles</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">length</span><span style="color:#000;font-weight:bold">;</span> 
-</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">if</span> <span style="color:#000;font-weight:bold">(</span> <span style="color:#000">iTotal</span> <span style="color:#ce5c00;font-weight:bold">&gt;</span> <span style="color:#0000cf;font-weight:bold">0</span> <span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">{</span>
-</span></span><span style="display:flex;"><span>        
-</span></span><span style="display:flex;"><span>       <span style="color:#204a87;font-weight:bold">for</span> <span style="color:#000;font-weight:bold">(</span> <span style="color:#204a87;font-weight:bold">var</span> <span style="color:#000">iTitles</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#0000cf;font-weight:bold">0</span><span style="color:#000;font-weight:bold">;</span> <span style="color:#000">iTitles</span> <span style="color:#ce5c00;font-weight:bold">&lt;</span> <span style="color:#000">iTotal</span><span style="color:#000;font-weight:bold">;</span> <span style="color:#000">iTitles</span><span style="color:#ce5c00;font-weight:bold">++</span> <span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">{</span>
-</span></span><span style="display:flex;"><span>          <span style="color:#204a87;font-weight:bold">var</span> <span style="color:#000">str</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">astrTitles</span><span style="color:#000;font-weight:bold">[</span> <span style="color:#000">iTitles</span> <span style="color:#000;font-weight:bold">];</span>
-</span></span><span style="display:flex;"><span>          <span style="color:#000">writeTitle</span><span style="color:#000;font-weight:bold">(</span> <span style="color:#000">str</span> <span style="color:#000;font-weight:bold">);</span>
-</span></span><span style="display:flex;"><span>       <span style="color:#000;font-weight:bold">}</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">}</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl">    <span class="kd">var</span> <span class="nx">iTotal</span> <span class="o">=</span> <span class="nx">astrTitles</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> 
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span> <span class="nx">iTotal</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">       <span class="k">for</span> <span class="p">(</span> <span class="kd">var</span> <span class="nx">iTitles</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">iTitles</span> <span class="o">&lt;</span> <span class="nx">iTotal</span><span class="p">;</span> <span class="nx">iTitles</span><span class="o">++</span> <span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">          <span class="kd">var</span> <span class="nx">str</span> <span class="o">=</span> <span class="nx">astrTitles</span><span class="p">[</span> <span class="nx">iTitles</span> <span class="p">];</span>
+</span></span><span class="line"><span class="cl">          <span class="nx">writeTitle</span><span class="p">(</span> <span class="nx">str</span> <span class="p">);</span>
+</span></span><span class="line"><span class="cl">       <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span></code></pre></div><p>Here, the <em>writeTitle()</em> function represents the code needed to display the title on the target device.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">function</span> <span style="color:#000">writeTitle</span><span style="color:#000;font-weight:bold">(</span> <span style="color:#000">strTitle</span> <span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">{</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">var</span> <span style="color:#000">obj</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87">document</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">getElementById</span><span style="color:#000;font-weight:bold">(</span> <span style="color:#4e9a06">&#34;pOutput&#34;</span> <span style="color:#000;font-weight:bold">);</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#000">obj</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">textContent</span> <span style="color:#ce5c00;font-weight:bold">+=</span> <span style="color:#000">strTitle</span> <span style="color:#ce5c00;font-weight:bold">+</span> <span style="color:#4e9a06">&#34;\n&#34;</span><span style="color:#000;font-weight:bold">;</span>
-</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">writeTitle</span><span class="p">(</span> <span class="nx">strTitle</span> <span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">var</span> <span class="nx">obj</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span> <span class="s2">&#34;pOutput&#34;</span> <span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">obj</span><span class="p">.</span><span class="nx">textContent</span> <span class="o">+=</span> <span class="nx">strTitle</span> <span class="o">+</span> <span class="s2">&#34;\n&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></div><p><em>Example 1</em>: A JavaScript function to write string values to a webpage. (<a href="https://jsfiddle.net/lleonard/b45xzgau/">Try it out</a>)</p>
 <h2 id="sort-an-array">Sort an array<a class="td-heading-self-link" href="#sort-an-array" aria-label="Heading self-link"></a></h2>
 <p>When asked to sort the array alphabetically, you might call the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort">Array.sort()</a> function:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">var</span> <span style="color:#000">iTotal</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">astrTitles</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">length</span><span style="color:#000;font-weight:bold">;</span> 
-</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">if</span> <span style="color:#000;font-weight:bold">(</span> <span style="color:#000">iTotal</span> <span style="color:#ce5c00;font-weight:bold">&gt;</span> <span style="color:#0000cf;font-weight:bold">0</span> <span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">{</span>
-</span></span><span style="display:flex;"><span>    
-</span></span><span style="display:flex;"><span>       <span style="color:#000">astrTitles</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">sort</span><span style="color:#000;font-weight:bold">();</span>
-</span></span><span style="display:flex;"><span>       <span style="color:#204a87;font-weight:bold">for</span> <span style="color:#000;font-weight:bold">(</span> <span style="color:#204a87;font-weight:bold">var</span> <span style="color:#000">iTitles</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#0000cf;font-weight:bold">0</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">iTitles</span><span style="color:#ce5c00;font-weight:bold">++</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">iTitles</span> <span style="color:#ce5c00;font-weight:bold">&lt;</span> <span style="color:#000">iTotal</span> <span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">{</span>
-</span></span><span style="display:flex;"><span>          <span style="color:#000">writeTitle</span><span style="color:#000;font-weight:bold">(</span> <span style="color:#000">astrTitles</span><span style="color:#000;font-weight:bold">[</span> <span style="color:#000">iTitles</span> <span style="color:#000;font-weight:bold">]</span> <span style="color:#000;font-weight:bold">);</span>
-</span></span><span style="display:flex;"><span>       <span style="color:#000;font-weight:bold">}</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">}</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl">    <span class="kd">var</span> <span class="nx">iTotal</span> <span class="o">=</span> <span class="nx">astrTitles</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> 
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span> <span class="nx">iTotal</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">       <span class="nx">astrTitles</span><span class="p">.</span><span class="nx">sort</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">       <span class="k">for</span> <span class="p">(</span> <span class="kd">var</span> <span class="nx">iTitles</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="nx">iTitles</span><span class="o">++</span><span class="p">,</span> <span class="nx">iTitles</span> <span class="o">&lt;</span> <span class="nx">iTotal</span> <span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">          <span class="nx">writeTitle</span><span class="p">(</span> <span class="nx">astrTitles</span><span class="p">[</span> <span class="nx">iTitles</span> <span class="p">]</span> <span class="p">);</span>
+</span></span><span class="line"><span class="cl">       <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span></code></pre></div><p><em>Example 2</em>: JavaScript code to sort an array before process it. (<a href="https://jsfiddle.net/lleonard/74yfbthu/">Try it out</a>)</p>
 <p>When run, this leads to the following:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>A Study in Scarlet
-</span></span><span style="display:flex;"><span>His Last Bow
-</span></span><span style="display:flex;"><span>The Adventures of Sherlock Holmes
-</span></span><span style="display:flex;"><span>The Case-Book of Sherlock Holmes
-</span></span><span style="display:flex;"><span>The Hound of the Baskervilles
-</span></span><span style="display:flex;"><span>The Memoirs of Sherlock Holmes
-</span></span><span style="display:flex;"><span>The Return of Sherlock Holmes
-</span></span><span style="display:flex;"><span>The Sign of Four
-</span></span><span style="display:flex;"><span>The Valley of Fear
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">A Study in Scarlet
+</span></span><span class="line"><span class="cl">His Last Bow
+</span></span><span class="line"><span class="cl">The Adventures of Sherlock Holmes
+</span></span><span class="line"><span class="cl">The Case-Book of Sherlock Holmes
+</span></span><span class="line"><span class="cl">The Hound of the Baskervilles
+</span></span><span class="line"><span class="cl">The Memoirs of Sherlock Holmes
+</span></span><span class="line"><span class="cl">The Return of Sherlock Holmes
+</span></span><span class="line"><span class="cl">The Sign of Four
+</span></span><span class="line"><span class="cl">The Valley of Fear
 </span></span></code></pre></div><p>From a technical view, these might be the results you expect; however, your users might have different ideas.</p>
 <h2 id="move-leading-articles">Move leading articles<a class="td-heading-self-link" href="#move-leading-articles" aria-label="Heading self-link"></a></h2>
 <p>As an alternative, consider:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>Adventures of Sherlock Holmes, The
-</span></span><span style="display:flex;"><span>Case-Book of Sherlock Holmes, The
-</span></span><span style="display:flex;"><span>His Last Bow
-</span></span><span style="display:flex;"><span>Hound of the Baskervilles, The
-</span></span><span style="display:flex;"><span>Memoirs of Sherlock Holmes, The
-</span></span><span style="display:flex;"><span>Return of Sherlock Holmes, The
-</span></span><span style="display:flex;"><span>Sign of Four, The
-</span></span><span style="display:flex;"><span>Study in Scarlet, A
-</span></span><span style="display:flex;"><span>Valley of Fear, The
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">Adventures of Sherlock Holmes, The
+</span></span><span class="line"><span class="cl">Case-Book of Sherlock Holmes, The
+</span></span><span class="line"><span class="cl">His Last Bow
+</span></span><span class="line"><span class="cl">Hound of the Baskervilles, The
+</span></span><span class="line"><span class="cl">Memoirs of Sherlock Holmes, The
+</span></span><span class="line"><span class="cl">Return of Sherlock Holmes, The
+</span></span><span class="line"><span class="cl">Sign of Four, The
+</span></span><span class="line"><span class="cl">Study in Scarlet, A
+</span></span><span class="line"><span class="cl">Valley of Fear, The
 </span></span></code></pre></div><p>Here, leading articles (<em>a</em>, <em>an</em>, and <em>the</em>) are moved to the end of the title.  To some, these results are clearer and more logical.</p>
 <p>This strategy is common to business filing systems and known by different names, including <em>dictionary sorting</em> and <em>alphabetic collation</em>.</p>
 <p>For a detailed look, see <a href="https://www.niso.org/sites/default/files/2017-08/tr03.pdf">Section 4.6</a> (PDF) of &ldquo;Guidelines for Alphabetical Arrangement of Letters and Sorting of Numerals and Other Symbols&rdquo;, by Hans H. Wellisch, 1999 National Information Standards Organization (NISO) Technical Report TR02-1999.</p>
 <p>To create a custom function that does this in JavaScript, you might use something along these lines:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">function</span> <span style="color:#000">moveLeadingArticle</span><span style="color:#000;font-weight:bold">(</span> <span style="color:#000">sInput</span> <span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">{</span>
-</span></span><span style="display:flex;"><span>       <span style="color:#204a87;font-weight:bold">var</span> <span style="color:#000">sResult</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">sInput</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">toLocaleLowerCase</span><span style="color:#000;font-weight:bold">();</span>
-</span></span><span style="display:flex;"><span>       <span style="color:#204a87;font-weight:bold">var</span> <span style="color:#000">aArticles</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">[</span> <span style="color:#4e9a06">&#39;a&#39;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#39;an&#39;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#39;the&#39;</span> <span style="color:#000;font-weight:bold">];</span>
-</span></span><span style="display:flex;"><span>       <span style="color:#204a87;font-weight:bold">var</span> <span style="color:#000">aWords</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">sResult</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">split</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">/\s/</span><span style="color:#000;font-weight:bold">);</span>
-</span></span><span style="display:flex;"><span>       <span style="color:#204a87;font-weight:bold">if</span> <span style="color:#000;font-weight:bold">(</span> <span style="color:#000">aArticles</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">indexOf</span><span style="color:#000;font-weight:bold">(</span> <span style="color:#000">aWords</span><span style="color:#000;font-weight:bold">[</span><span style="color:#0000cf;font-weight:bold">0</span><span style="color:#000;font-weight:bold">]</span> <span style="color:#000;font-weight:bold">)</span> <span style="color:#ce5c00;font-weight:bold">&gt;</span> <span style="color:#ce5c00;font-weight:bold">-</span><span style="color:#0000cf;font-weight:bold">1</span> <span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">{</span>
-</span></span><span style="display:flex;"><span>          <span style="color:#000">sResult</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">aWords</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">slice</span><span style="color:#000;font-weight:bold">(</span> <span style="color:#0000cf;font-weight:bold">1</span> <span style="color:#000;font-weight:bold">).</span><span style="color:#000">join</span><span style="color:#000;font-weight:bold">(</span> <span style="color:#4e9a06">&#39; &#39;</span> <span style="color:#000;font-weight:bold">);</span>
-</span></span><span style="display:flex;"><span>          <span style="color:#000">sResult</span> <span style="color:#ce5c00;font-weight:bold">+=</span> <span style="color:#4e9a06">&#39;, &#39;</span> <span style="color:#ce5c00;font-weight:bold">+</span> <span style="color:#000">aWords</span><span style="color:#000;font-weight:bold">[</span><span style="color:#0000cf;font-weight:bold">0</span><span style="color:#000;font-weight:bold">];</span>
-</span></span><span style="display:flex;"><span>       <span style="color:#000;font-weight:bold">}</span>   
-</span></span><span style="display:flex;"><span>       <span style="color:#204a87;font-weight:bold">return</span> <span style="color:#000">sResult</span><span style="color:#000;font-weight:bold">;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">}</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl">    <span class="kd">function</span> <span class="nx">moveLeadingArticle</span><span class="p">(</span> <span class="nx">sInput</span> <span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">       <span class="kd">var</span> <span class="nx">sResult</span> <span class="o">=</span> <span class="nx">sInput</span><span class="p">.</span><span class="nx">toLocaleLowerCase</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">       <span class="kd">var</span> <span class="nx">aArticles</span> <span class="o">=</span> <span class="p">[</span> <span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;an&#39;</span><span class="p">,</span> <span class="s1">&#39;the&#39;</span> <span class="p">];</span>
+</span></span><span class="line"><span class="cl">       <span class="kd">var</span> <span class="nx">aWords</span> <span class="o">=</span> <span class="nx">sResult</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="sr">/\s/</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">       <span class="k">if</span> <span class="p">(</span> <span class="nx">aArticles</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span> <span class="nx">aWords</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="p">)</span> <span class="o">&gt;</span> <span class="o">-</span><span class="mi">1</span> <span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">          <span class="nx">sResult</span> <span class="o">=</span> <span class="nx">aWords</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span> <span class="mi">1</span> <span class="p">).</span><span class="nx">join</span><span class="p">(</span> <span class="s1">&#39; &#39;</span> <span class="p">);</span>
+</span></span><span class="line"><span class="cl">          <span class="nx">sResult</span> <span class="o">+=</span> <span class="s1">&#39;, &#39;</span> <span class="o">+</span> <span class="nx">aWords</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">       <span class="p">}</span>   
+</span></span><span class="line"><span class="cl">       <span class="k">return</span> <span class="nx">sResult</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span></code></pre></div><p><em>Example 3</em>: A custom function to move leading titles to the end of an input string. (<a href="https://jsfiddle.net/lleonard/t3qmvxj8/">Try it out</a>)</p>
 <p>Here, the input parameter value is:</p>
 <ol>
@@ -441,17 +446,17 @@
 </ul>
 <h2 id="custom-sort-order">Custom sort order<a class="td-heading-self-link" href="#custom-sort-order" aria-label="Heading self-link"></a></h2>
 <p>You can create a custom sort order by passing an anonymous function to the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort#comparefn">Array.sort()</a> function.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">var</span> <span style="color:#000">iTotal</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">astrTitles</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">length</span><span style="color:#000;font-weight:bold">;</span> 
-</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">if</span> <span style="color:#000;font-weight:bold">(</span> <span style="color:#000">iTotal</span> <span style="color:#ce5c00;font-weight:bold">&gt;</span> <span style="color:#0000cf;font-weight:bold">0</span> <span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">{</span>
-</span></span><span style="display:flex;"><span>    
-</span></span><span style="display:flex;"><span>       <span style="color:#204a87;font-weight:bold">if</span> <span style="color:#000;font-weight:bold">(</span> <span style="color:#000">aResultsArray</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">length</span> <span style="color:#ce5c00;font-weight:bold">&gt;</span> <span style="color:#0000cf;font-weight:bold">1</span> <span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">{</span>
-</span></span><span style="display:flex;"><span>       
-</span></span><span style="display:flex;"><span>          <span style="color:#000">aResultsArray</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">sort</span><span style="color:#000;font-weight:bold">(</span> <span style="color:#204a87;font-weight:bold">function</span><span style="color:#000;font-weight:bold">(</span> <span style="color:#000">a</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">b</span> <span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">{</span>
-</span></span><span style="display:flex;"><span>             <span style="color:#204a87;font-weight:bold">var</span> <span style="color:#000">SortTermA</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">moveLeadingArticle</span><span style="color:#000;font-weight:bold">(</span> <span style="color:#000">a</span> <span style="color:#000;font-weight:bold">);</span>
-</span></span><span style="display:flex;"><span>             <span style="color:#204a87;font-weight:bold">var</span> <span style="color:#000">SortTermB</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">moveLeadingArticle</span><span style="color:#000;font-weight:bold">(</span> <span style="color:#000">b</span> <span style="color:#000;font-weight:bold">);</span>
-</span></span><span style="display:flex;"><span>             <span style="color:#204a87;font-weight:bold">return</span> <span style="color:#000">SortTermA</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">localeCompare</span><span style="color:#000;font-weight:bold">(</span> <span style="color:#000">SortTermB</span> <span style="color:#000;font-weight:bold">);</span>
-</span></span><span style="display:flex;"><span>          <span style="color:#000;font-weight:bold">}</span> <span style="color:#000;font-weight:bold">);</span>
-</span></span><span style="display:flex;"><span>       <span style="color:#000;font-weight:bold">}</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl">    <span class="kd">var</span> <span class="nx">iTotal</span> <span class="o">=</span> <span class="nx">astrTitles</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> 
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span> <span class="nx">iTotal</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">       <span class="k">if</span> <span class="p">(</span> <span class="nx">aResultsArray</span><span class="p">.</span><span class="nx">length</span> <span class="o">&gt;</span> <span class="mi">1</span> <span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">       
+</span></span><span class="line"><span class="cl">          <span class="nx">aResultsArray</span><span class="p">.</span><span class="nx">sort</span><span class="p">(</span> <span class="kd">function</span><span class="p">(</span> <span class="nx">a</span><span class="p">,</span> <span class="nx">b</span> <span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">             <span class="kd">var</span> <span class="nx">SortTermA</span> <span class="o">=</span> <span class="nx">moveLeadingArticle</span><span class="p">(</span> <span class="nx">a</span> <span class="p">);</span>
+</span></span><span class="line"><span class="cl">             <span class="kd">var</span> <span class="nx">SortTermB</span> <span class="o">=</span> <span class="nx">moveLeadingArticle</span><span class="p">(</span> <span class="nx">b</span> <span class="p">);</span>
+</span></span><span class="line"><span class="cl">             <span class="k">return</span> <span class="nx">SortTermA</span><span class="p">.</span><span class="nx">localeCompare</span><span class="p">(</span> <span class="nx">SortTermB</span> <span class="p">);</span>
+</span></span><span class="line"><span class="cl">          <span class="p">}</span> <span class="p">);</span>
+</span></span><span class="line"><span class="cl">       <span class="p">}</span>
 </span></span></code></pre></div><p><em>Example 4</em>: Performing a custom sort using an anonymous function. (<a href="https://jsfiddle.net/lleonard/t3qmvxj8/">Try it out</a>)</p>
 <p>Here, the anonymous function calls the custom function when comparing string values.  When run, these titles are sorted in dictionary order (shown earlier).</p>
 <p><a href="/">Example #3</a> shows this in action.</p>

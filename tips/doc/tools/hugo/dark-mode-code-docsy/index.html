@@ -17,27 +17,24 @@
 <link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
 <link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
 
-<title>Initial migration complete | Lance&#39;s Quips &amp; Quibbles</title>
-<meta name="description" content="The site has been successfully updated
-">
-<meta property="og:url" content="http://localhost:1313/scribbles/journal/initial-migration/">
+<title>Fix dark mode code block | Lance&#39;s Quips &amp; Quibbles</title>
+<meta name="description" content="How to get code to render in dark mode using docsy theme.">
+<meta property="og:url" content="http://localhost:1313/tips/doc/tools/hugo/dark-mode-code-docsy/">
   <meta property="og:site_name" content="Lance&#39;s Quips &amp; Quibbles">
-  <meta property="og:title" content="Initial migration complete">
-  <meta property="og:description" content="The site has been successfully updated">
+  <meta property="og:title" content="Fix dark mode code block">
+  <meta property="og:description" content="How to get code to render in dark mode using docsy theme.">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
-    <meta property="article:section" content="scribbles">
-    <meta property="article:published_time" content="2024-05-10T00:00:00+00:00">
-    <meta property="article:modified_time" content="2024-05-14T11:40:01-07:00">
+    <meta property="article:section" content="tips">
+    <meta property="article:published_time" content="2024-05-08T00:00:00+00:00">
+    <meta property="article:modified_time" content="2024-05-17T13:51:15-07:00">
 
-  <meta itemprop="name" content="Initial migration complete">
-  <meta itemprop="description" content="The site has been successfully updated
-">
-  <meta itemprop="datePublished" content="2024-05-10T00:00:00+00:00">
-  <meta itemprop="dateModified" content="2024-05-14T11:40:01-07:00">
-  <meta itemprop="wordCount" content="460"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="Initial migration complete">
-<meta name="twitter:description" content="The site has been successfully updated
-">
+  <meta itemprop="name" content="Fix dark mode code block">
+  <meta itemprop="description" content="How to get code to render in dark mode using docsy theme.">
+  <meta itemprop="datePublished" content="2024-05-08T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2024-05-17T13:51:15-07:00">
+  <meta itemprop="wordCount" content="121"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="Fix dark mode code block">
+<meta name="twitter:description" content="How to get code to render in dark mode using docsy theme.">
 
 
 
@@ -55,7 +52,7 @@
   crossorigin="anonymous"></script>
 
   </head>
-  <body class="td-page td-blog">
+  <body class="td-page">
     <header>
       <nav class="td-navbar js-navbar-scroll" data-bs-theme="dark">
 <div class="container-fluid flex-column flex-md-row">
@@ -66,10 +63,10 @@
         <a class="nav-link" href="/about/"><span>About</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/tips/"><span>Tips</span></a>
+        <a class="nav-link active" href="/tips/"><span>Tips</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link active" href="/scribbles/"><span>Scribbles</span></a>
+        <a class="nav-link" href="/scribbles/"><span>Scribbles</span></a>
       </li>
       <li class="td-light-dark-menu nav-item dropdown">
         <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
@@ -171,10 +168,10 @@
       <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m--li">
   <a href="/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section tree-root" id="m-"><span class="">Lance&#39;s Quips &amp; Quibbles</span></a>
   <ul class="ul-1">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-tips-li">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-tips-li">
   <a href="/tips/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-tips"><span class="">Tips</span></a>
   <ul class="ul-2 foldable">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child collapse" id="m-tipsapps-li">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-tipsapps-li">
   <a href="/tips/apps/" title="App tips and tricks" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-tipsapps"><span class="">Apps</span></a>
   <ul class="ul-3 foldable">
     <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-tipsappsexcel-tips-li">
@@ -183,34 +180,34 @@
   <a href="/tips/apps/word-2011-tips/" title="Word 2011 tips and fixes" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-tipsappsword-2011-tips"><span class="">Word 2011 tips</span></a>
 </li>
   </ul>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child collapse" id="m-tipsdoc-li">
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-tipsdoc-li">
   <a href="/tips/doc/" title="Doc guidelines, standards, and tools" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-tipsdoc"><span class="">Docs</span></a>
   <ul class="ul-3 foldable">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-tipsdocstyle-guides-li">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipsdocstyle-guides-li">
   <a href="/tips/doc/style-guides/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-tipsdocstyle-guides"><span class="">Style guides</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-tipsdoctenets-li">
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipsdoctenets-li">
   <a href="/tips/doc/tenets/" title="Doc project tenets" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-tipsdoctenets"><span class="">Tenets</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-tipsdocvoice-tone-principles-li">
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipsdocvoice-tone-principles-li">
   <a href="/tips/doc/voice-tone-principles/" title="Voice &amp; tone principles" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-tipsdocvoice-tone-principles"><span class="">Voice &amp; tone</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child collapse" id="m-tipsdoctools-li">
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-tipsdoctools-li">
   <a href="/tips/doc/tools/" title="Documentation tools" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-tipsdoctools"><span class="">Tools</span></a>
   <ul class="ul-4 foldable">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child collapse" id="m-tipsdoctoolshugo-li">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-tipsdoctoolshugo-li">
   <a href="/tips/doc/tools/hugo/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-tipsdoctoolshugo"><span class="">Hugo</span></a>
   <ul class="ul-5 foldable">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-tipsdoctoolshugodark-mode-code-docsy-li">
-  <a href="/tips/doc/tools/hugo/dark-mode-code-docsy/" title="Fix dark mode code block" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-tipsdoctoolshugodark-mode-code-docsy"><span class="">Dark mode code</span></a>
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-tipsdoctoolshugodark-mode-code-docsy-li">
+  <a href="/tips/doc/tools/hugo/dark-mode-code-docsy/" title="Fix dark mode code block" class="align-left ps-0 active td-sidebar-link td-sidebar-link__page" id="m-tipsdoctoolshugodark-mode-code-docsy"><span class="td-sidebar-nav-active-item">Dark mode code</span></a>
 </li>
   </ul>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-tipsdoctoolsmarkdown-li">
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipsdoctoolsmarkdown-li">
   <a href="/tips/doc/tools/markdown/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-tipsdoctoolsmarkdown"><span class="">Markdown</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-tipsdoctoolsmkdocs-li">
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipsdoctoolsmkdocs-li">
   <a href="/tips/doc/tools/mkdocs/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-tipsdoctoolsmkdocs"><span class="">MKDocs</span></a>
 </li>
   </ul>
 </li>
   </ul>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child collapse" id="m-tipsgit-li">
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-tipsgit-li">
   <a href="/tips/git/" title="Git, GitHub, &amp; related" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-tipsgit"><span class="">Git</span></a>
   <ul class="ul-3 foldable">
     <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-tipsgitconsole-commands-li">
@@ -223,7 +220,7 @@
   <a href="/tips/git/git-bash-default-path/" title="Set Git Bash default path" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-tipsgitgit-bash-default-path"><span class="">Git Bash default path</span></a>
 </li>
   </ul>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child collapse" id="m-tipsweb-li">
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-tipsweb-li">
   <a href="/tips/web/" title="HTML, CSS, and more." class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-tipsweb"><span class="">HTML &amp; CSS</span></a>
   <ul class="ul-3 foldable">
     <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-tipswebcss-li">
@@ -232,7 +229,7 @@
   <a href="/tips/web/html/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-tipswebhtml"><span class=""></span></a>
 </li>
   </ul>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child collapse" id="m-tipsjavascript-li">
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-tipsjavascript-li">
   <a href="/tips/javascript/" title="JavaScript, Node.js, and related" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-tipsjavascript"><span class="">JavaScript</span></a>
   <ul class="ul-3 foldable">
     <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-tipsjavascriptdictionary-sorting-li">
@@ -252,9 +249,9 @@
   </ul>
 </li>
   </ul>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-tipsmac-li">
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipsmac-li">
   <a href="/tips/mac/" title="Mac, MacOS, and OS/X" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-tipsmac"><span class="">Mac</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child collapse" id="m-tipsunix-li">
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-tipsunix-li">
   <a href="/tips/unix/" title="Unix general tips" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-tipsunix"><span class="">Unix</span></a>
   <ul class="ul-3 foldable">
     <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-tipsunixpackage-managers-li">
@@ -263,7 +260,7 @@
   <a href="/tips/unix/vi-cheat-sheet/" title="Vi editor cheat sheet" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-tipsunixvi-cheat-sheet"><span class="">vi cheat sheet</span></a>
 </li>
   </ul>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child collapse" id="m-tipswindows-li">
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-tipswindows-li">
   <a href="/tips/windows/" title="Windows and related topics" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-tipswindows"><span class="">Windows</span></a>
   <ul class="ul-3 foldable">
     <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-tipswindowselevation-prompt-shortcuts-li">
@@ -274,17 +271,17 @@
   </ul>
 </li>
   </ul>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-scribbles-li">
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-scribbles-li">
   <a href="/scribbles/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-scribbles"><span class="">Scribbles</span></a>
   <ul class="ul-2 foldable">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-scribblesjournal-li">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child collapse" id="m-scribblesjournal-li">
   <a href="/scribbles/journal/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-scribblesjournal"><span class="">Journal</span></a>
   <ul class="ul-3 foldable">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-scribblesjournalinitial-migration-li">
-  <a href="/scribbles/journal/initial-migration/" title="Initial migration complete" class="align-left ps-0 active td-sidebar-link td-sidebar-link__page" id="m-scribblesjournalinitial-migration"><span class="td-sidebar-nav-active-item">Initial migration</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-scribblesjournalrestart-engines-li">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-scribblesjournalinitial-migration-li">
+  <a href="/scribbles/journal/initial-migration/" title="Initial migration complete" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-scribblesjournalinitial-migration"><span class="">Initial migration</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-scribblesjournalrestart-engines-li">
   <a href="/scribbles/journal/restart-engines/" title="Restart the engines" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-scribblesjournalrestart-engines"><span class="">Restart engines</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-scribblesjournalfirst-post-li">
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-scribblesjournalfirst-post-li">
   <a href="/scribbles/journal/first-post/" title="First post: Don&#39;t panic" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-scribblesjournalfirst-post"><span class="">Don&#39;t panic!</span></a>
 </li>
   </ul>
@@ -316,67 +313,79 @@
 
 </div>
 
-            
+            <div class="td-toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#vital-statistics">Vital statistics</a></li>
+  </ul>
+</nav>
+      </div>
+    
             
 	
           </aside>
-          <main class="col-12 col-md-9 col-xl-8 ps-md-5 pe-md-4" role="main">
-            <a class="td-rss-button" title="RSS" href="/scribbles/journal/index.xml" target="_blank" rel="noopener">
-              <i class="fa-solid fa-rss" aria-hidden="true"></i>
-            </a>
+          <main class="col-12 col-md-9 col-xl-8 ps-md-5" role="main">
+            
+  
+
+            <nav aria-label="breadcrumb" class="td-breadcrumbs">
+  <ol class="breadcrumb">
+  <li class="breadcrumb-item">
+    <a href="/tips/">Tips</a></li>
+  <li class="breadcrumb-item">
+    <a href="/tips/doc/">Docs</a></li>
+  <li class="breadcrumb-item">
+    <a href="/tips/doc/tools/">Tools</a></li>
+  <li class="breadcrumb-item">
+    <a href="/tips/doc/tools/hugo/">Hugo</a></li>
+  <li class="breadcrumb-item active" aria-current="page">
+    Dark mode code</li>
+  </ol>
+</nav>
             
 <div class="td-content">
-	<h1>Initial migration complete</h1>
-	<div class="lead">The site has been successfully updated</div>
-	<div class="td-byline mb-4">
-		By <b>Lance Leonard</b> |
-		<time datetime="2024-05-10" class="text-body-secondary">Friday, May 10, 2024</time>
-	</div>
+	<h1>Fix dark mode code block</h1>
+	<div class="lead">How to get code to render in dark mode using docsy theme.</div>
 	<header class="article-meta">
 		
-  <p class="reading-time"><i class="fa-solid fa-clock" aria-hidden="true"></i>&nbsp; 3 minute read &nbsp;</p>
+  <p class="reading-time"><i class="fa-solid fa-clock" aria-hidden="true"></i>&nbsp; less than a minute &nbsp;</p>
 </header>
-	<p>The site has been been updated to a new look.  It has more content and a more professional pipeline.</p>
-<p>I have to admit that I was a little worried when starting the migration process, even though I&rsquo;ve been working with (or near) the new toolset for some time.</p>
-<p>Part of my nervousness stems from earlier experiences, which have included some rather&hellip;dramatic results.</p>
-<p>No matter how well you plan, something always seems to go sideways. And, truth be told, there were a couple of glitches along the way. (Fortunately, I noticed and resolved things quickly.)</p>
-<p>The new site is built using <a href="https://gohugo.io/">Hugo</a> in conjunction with the <a href="https://www.docsy.dev/docs/">Docsy theme</a>. It&rsquo;s deployed using <a href="https://docs.github.com/en/pages">Github pages</a>, which should be fine for the amount of traffic I get.  (I do have a scaling plan in case things blow up, but I highly doubt that&rsquo;s going to happen.)</p>
-<p>Content is maintained in a private repo and updates are synchronized to a public repo.  (I plan to write a couple of articles walking through the process.)</p>
-<p>This approach and architecture is meant to show what you can accomplish with minimal investment. Except for domain registration, the site currently relies on free services.</p>
-<p>A number of companies take similar approaches for their docs.  Microsoft, for example, maintains private and public repos for <a href="https://learn.microsoft.com/en-us/docs/">Microsoft Learn</a>, their doc site.  They get the benefit of public contributions while securing product release plans until they&rsquo;re ready to be unveiled.</p>
-<p>So how long did this makeover take?  Roughly ten days from start to finish:</p>
+	<p>If you&rsquo;re using <a href="https://docsy.dev/docs">docsy</a> as your <a href="https://gohugo.io">Hugo</a> theme and have enabled dark mode, your code blocks might not render by default.</p>
+<p>To fix this quickly, you can create a CSS rule that sets the background-color for <code>&lt;pre&gt;</code> elements that are children of the <code>.highlight</code> class.</p>
+<p>Here&rsquo;s one way to do this:</p>
+<ol>
+<li>
+<p>In your <code>assets/scss</code> folder, create (or edit) <code>_style_project.scss</code>.</p>
+</li>
+<li>
+<p>Declare the following rule:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="c">/* Fix dark mode code rendering */</span>
+</span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nc">highlight</span> <span class="nt">pre</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">background-color</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">td</span><span class="o">-</span><span class="kc">pre</span><span class="o">-</span><span class="n">bg</span><span class="p">)</span> <span class="cp">!important</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>Here, <code>--td-pre-bg</code> evaluates to the background color value defined by your theme.</p>
+</li>
+<li>
+<p>Save your changes and rebuild your project.</p>
+</li>
+</ol>
+<p>Your code blocks should now be more readable in dark mode.</p>
+<h2 id="vital-statistics">Vital statistics<a class="td-heading-self-link" href="#vital-statistics" aria-label="Heading self-link"></a></h2>
 <ul>
 <li>
-<p>A prototype was &ldquo;publishable&rdquo; in three days.</p>
-<p>Granted, I wouldn&rsquo;t have wanted to publish that version, but I could have if pressed.</p>
+<p>Last tested with:</p>
+<ul>
+<li>Hugo v0.0125.5+extended</li>
+<li>Docsy v0.10.0</li>
+</ul>
 </li>
 <li>
-<p>The following week was spent testing, tweaking, and refining.</p>
-<p>This included reworking previous articles, adding support material, and writing new articles.</p>
-</li>
-<li>
-<p>The actual site migration took about 30 minutes overall.</p>
-<p>Timing started with adding a notice to the previous version of the site, just in case things went terribly wrong.</p>
-<p>I considered migration complete when the public URLs were updated.</p>
+<p>16 May 2024: First post</p>
 </li>
 </ul>
-<p>Migration was handled carefully. Each step was tested and verified.</p>
-<p>This helped identify a few issues and I&rsquo;ve filed tickets accordingly.  (Yes, I have a private Jira project to track work for the site.)</p>
-<p>I think the new site works at least as well as the earlier one. That may seem like a modest win (table stakes, some would say).  And, yet&hellip;how many times have we seen larger projects stumble because of less attention to detail?</p>
-<p>So here we are.  Is the site everything I imagined?  Not entirely.  But, I think it <em>is</em> an improvement and it sets a solid foundation for additional work.</p>
-<p>With luck, the next major update will happen within days.  And, with more luck (and diligence), that will only be the beginning.</p>
-<p>Qapla'!</p>
 
-	<ul class="list-unstyled d-flex justify-content-between align-items-center mb-0 pt-5">
-  <li>
-    <a href="/scribbles/journal/restart-engines/" aria-label="Previous - Restart the engines" class="btn btn-primary"><span class="me-1">←</span>Previous</a>
-  </li>
-  <li>
-    <a class="btn btn-primary disabled">Next<span class="ms-1">→</span></a>
-  </li>
-</ul>
-
-	</div>
+	
+</div>
 
 
           </main>

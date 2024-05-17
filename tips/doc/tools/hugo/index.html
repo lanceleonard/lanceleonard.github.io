@@ -30,8 +30,8 @@
   <meta itemprop="name" content="Hugo">
   <meta itemprop="description" content="Tips and tricks for Hugo, a static site generator.">
   <meta itemprop="datePublished" content="2024-05-08T00:00:00+00:00">
-  <meta itemprop="dateModified" content="2024-05-10T11:22:41-07:00">
-  <meta itemprop="wordCount" content="353"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="Hugo">
+  <meta itemprop="dateModified" content="2024-05-17T13:51:15-07:00">
+  <meta itemprop="wordCount" content="393"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="Hugo">
 <meta name="twitter:description" content="Tips and tricks for Hugo, a static site generator.">
 
 
@@ -190,8 +190,13 @@
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-tipsdoctools-li">
   <a href="/tips/doc/tools/" title="Documentation tools" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-tipsdoctools"><span class="">Tools</span></a>
   <ul class="ul-4 foldable">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-tipsdoctoolshugo-li">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-tipsdoctoolshugo-li">
   <a href="/tips/doc/tools/hugo/" class="align-left ps-0 active td-sidebar-link td-sidebar-link__section" id="m-tipsdoctoolshugo"><span class="td-sidebar-nav-active-item">Hugo</span></a>
+  <ul class="ul-5 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipsdoctoolshugodark-mode-code-docsy-li">
+  <a href="/tips/doc/tools/hugo/dark-mode-code-docsy/" title="Fix dark mode code block" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-tipsdoctoolshugodark-mode-code-docsy"><span class="">Dark mode code</span></a>
+</li>
+  </ul>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipsdoctoolsmarkdown-li">
   <a href="/tips/doc/tools/markdown/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-tipsdoctoolsmarkdown"><span class="">Markdown</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipsdoctoolsmkdocs-li">
@@ -310,6 +315,7 @@
         <nav id="TableOfContents">
   <ul>
     <li><a href="#serve-local-site">Serve local site</a></li>
+    <li><a href="#show-version">Show version</a></li>
     <li><a href="#hide-content">Hide content</a>
       <ul>
         <li><a href="#hide-article-content">Hide article content</a></li>
@@ -354,15 +360,20 @@
 <p>Here, I collect relevant links, tips, and tricks.</p>
 <h2 id="serve-local-site">Serve local site<a class="td-heading-self-link" href="#serve-local-site" aria-label="Heading self-link"></a></h2>
 <p>To preview local changes:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-console" data-lang="console"><span style="display:flex;"><span><span style="color:#8f5902">$</span> hugo serve
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-console" data-lang="console"><span class="line"><span class="cl"><span class="gp">$</span> hugo serve
 </span></span></code></pre></div><p>By default, Hugo publishes your preview to <a href="http://localhost:1313/"><code>http://localhost:1313</code> </a>.</p>
 <p>You can also use command-line options to customize Hugo&rsquo;s behavior.</p>
 <p>For example:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-console" data-lang="console"><span style="display:flex;"><span><span style="color:#8f5902">$</span> hugo serve --disableFastRender --ignoreCache --logLevel warn
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-console" data-lang="console"><span class="line"><span class="cl"><span class="gp">$</span> hugo serve --disableFastRender --ignoreCache --logLevel warn
 </span></span></code></pre></div><p>These options tell Hugo to fully rebuild the entire site when updating the local preview and to display more error messages.</p>
 <p>To learn more, use Hugo&rsquo;s built-in help:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-console" data-lang="console"><span style="display:flex;"><span><span style="color:#8f5902">$</span> hugo -help
-</span></span></code></pre></div><h2 id="hide-content">Hide content<a class="td-heading-self-link" href="#hide-content" aria-label="Heading self-link"></a></h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-console" data-lang="console"><span class="line"><span class="cl"><span class="gp">$</span> hugo -help
+</span></span></code></pre></div><h2 id="show-version">Show version<a class="td-heading-self-link" href="#show-version" aria-label="Heading self-link"></a></h2>
+<p>To display the Hugo version number (or to see if it&rsquo;s installed):</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-console" data-lang="console"><span class="line"><span class="cl"><span class="gp">$</span> hugo version
+</span></span><span class="line"><span class="cl"><span class="go">hugo v0.125.5+extended darwin/amd64 BuildDate=2024-05-01T15:22:11Z VendorInfo=brew
+</span></span></span></code></pre></div><p>This example shows that the <a href="https://github.com/gohugoio/hugoDocs/issues/1152#issuecomment-646284959">extended version</a> of Hugo v0.125.5 is installed.</p>
+<h2 id="hide-content">Hide content<a class="td-heading-self-link" href="#hide-content" aria-label="Heading self-link"></a></h2>
 <p>There are times when you&rsquo;ll want to hide content from from  different views.</p>
 <p>For example, an article might:</p>
 <ul>
@@ -373,49 +384,57 @@
 <p>Here are different ways to hide content.</p>
 <h3 id="hide-article-content">Hide article content<a class="td-heading-self-link" href="#hide-article-content" aria-label="Heading self-link"></a></h3>
 <p>Use HTML comments to hide content within an article.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span><span style="color:#800080;font-weight:bold">## Section 1
-</span></span></span><span style="display:flex;"><span><span style="color:#800080;font-weight:bold"></span><span style="color:#8f5902;font-style:italic">&lt;!-- 
-</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"></span><span style="color:#800080;font-weight:bold">## Section 2 in progress
-</span></span></span><span style="display:flex;"><span><span style="color:#800080;font-weight:bold"></span><span style="color:#8f5902;font-style:italic">--&gt;</span>
-</span></span><span style="display:flex;"><span><span style="color:#800080;font-weight:bold">## Section 3
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl"><span class="gu">## Section 1
+</span></span></span><span class="line"><span class="cl"><span class="gu"></span><span class="c">&lt;!-- 
+</span></span></span><span class="line"><span class="cl"><span class="c"></span><span class="gu">## Section 2 in progress
+</span></span></span><span class="line"><span class="cl"><span class="gu"></span><span class="c">--&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="gu">## Section 3
 </span></span></span></code></pre></div><p>This keeps the content from rendering on the published webpage; however, it&rsquo;s still published in the source.</p>
 <p>Use care when working with sensitive content.</p>
 <h3 id="set-draft-mode">Set draft mode<a class="td-heading-self-link" href="#set-draft-mode" aria-label="Heading self-link"></a></h3>
 <p>Use draft mode to keep articles private.</p>
 <p>Do this in the article&rsquo;s front matter:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#000">---</span><span style="color:#f8f8f8;text-decoration:underline">
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#204a87;font-weight:bold">title</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#4e9a06">&#34;My article title&#34;</span><span style="color:#f8f8f8;text-decoration:underline">
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#204a87;font-weight:bold">description</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#4e9a06">&#34;My article description&#34;</span><span style="color:#f8f8f8;text-decoration:underline">
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#204a87;font-weight:bold">draft</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">true</span><span style="color:#f8f8f8;text-decoration:underline">
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#000">---</span><span style="color:#f8f8f8;text-decoration:underline">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nn">---</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;My article title&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;My article description&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">draft</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nn">---</span><span class="w">
 </span></span></span></code></pre></div><p>If a doc appears in the table of contents (TOC) after setting this option, verify that you&rsquo;ve set the value as shown.</p>
 <p>To list articles currently in draft mode:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-console" data-lang="console"><span style="display:flex;"><span><span style="color:#8f5902">$</span> hugo list drafts
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-console" data-lang="console"><span class="line"><span class="cl"><span class="gp">$</span> hugo list drafts
 </span></span></code></pre></div><p>For details, see the <a href="https://gohugo.io/commands/hugo_list_drafts/">Hugo reference page</a>.</p>
 <h3 id="exclude-from-contents">Exclude from contents<a class="td-heading-self-link" href="#exclude-from-contents" aria-label="Heading self-link"></a></h3>
 <p>To exclude an article from the navigation menu displayed along the left side of the page, hide it from the table of contents (toc):</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#000">---</span><span style="color:#f8f8f8;text-decoration:underline">
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#204a87;font-weight:bold">title</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#4e9a06">&#34;My article title&#34;</span><span style="color:#f8f8f8;text-decoration:underline">
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#204a87;font-weight:bold">description</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#4e9a06">&#34;My article description&#34;</span><span style="color:#f8f8f8;text-decoration:underline">
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#204a87;font-weight:bold">toc_hide</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">true</span><span style="color:#f8f8f8;text-decoration:underline">
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#000">---</span><span style="color:#f8f8f8;text-decoration:underline">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nn">---</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;My article title&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;My article description&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">toc_hide</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nn">---</span><span class="w">
 </span></span></span></code></pre></div><h3 id="hide-summary">Hide summary<a class="td-heading-self-link" href="#hide-summary" aria-label="Heading self-link"></a></h3>
 <p>By default, article descriptions appear in index pages as article summaries.</p>
 <p>You can hide descriptions from the index page by updating the article&rsquo;s front matter:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#000">---</span><span style="color:#f8f8f8;text-decoration:underline">
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#204a87;font-weight:bold">title</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#4e9a06">&#34;My article title&#34;</span><span style="color:#f8f8f8;text-decoration:underline">
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#204a87;font-weight:bold">description</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#4e9a06">&#34;My article description&#34;</span><span style="color:#f8f8f8;text-decoration:underline">
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#204a87;font-weight:bold">hide_summary</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">true</span><span style="color:#f8f8f8;text-decoration:underline">
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#000">---</span><span style="color:#f8f8f8;text-decoration:underline">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nn">---</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;My article title&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;My article description&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">hide_summary</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nn">---</span><span class="w">
 </span></span></span></code></pre></div><h2 id="vital-statistics">Vital statistics<a class="td-heading-self-link" href="#vital-statistics" aria-label="Heading self-link"></a></h2>
 <ul>
-<li>First post: 8 May 2024</li>
+<li>16 May 2024: Added version section</li>
+<li>8 May 2024: First post:</li>
 </ul>
 
   <div class="section-index">
     
     
-    </div>
+    <hr class="panel-line">
+        <div class="entry">
+                <h5>
+                    <a href="/tips/doc/tools/hugo/dark-mode-code-docsy/">Fix dark mode code block</a>
+                </h5>
+                <p>How to get code to render in dark mode using docsy theme.</p>
+            </div>
+        </div>
 </div>
 
           </main>
