@@ -29,6 +29,13 @@
       <description>When trying to push a commit using git from the command-line, you receive a GH007 remote error:&#xA;remote: error: GH007: Your push would publish a private email address. Here, you&amp;rsquo;ve likely:&#xA;Configured your local copy of git to use the email address associated with your GitHub account Enabled the Keep my email addresses private option in your Github profile settings. The error is Github&amp;rsquo;s way of enforcing the privacy of your email address.</description>
     </item>
     <item>
+      <title>Fix dark mode code block</title>
+      <link>http://localhost:1313/tips/doc/tools/hugo/dark-mode-code-docsy/</link>
+      <pubDate>Wed, 08 May 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tips/doc/tools/hugo/dark-mode-code-docsy/</guid>
+      <description>If you&amp;rsquo;re using docsy as your Hugo theme and have enabled dark mode, your code blocks might not render by default.&#xA;To fix this quickly, you can create a CSS rule that sets the background-color for &amp;lt;pre&amp;gt; elements that are children of the .highlight class.&#xA;Here&amp;rsquo;s one way to do this:&#xA;In your assets/scss folder, create (or edit) _style_project.scss.&#xA;Declare the following rule:&#xA;/* Fix dark mode code rendering */ .</description>
+    </item>
+    <item>
       <title>Excel tips</title>
       <link>http://localhost:1313/tips/apps/excel-tips/</link>
       <pubDate>Wed, 08 May 2024 00:00:00 +0000</pubDate>

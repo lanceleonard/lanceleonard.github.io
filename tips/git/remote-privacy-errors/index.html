@@ -192,8 +192,13 @@
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child collapse" id="m-tipsdoctools-li">
   <a href="/tips/doc/tools/" title="Documentation tools" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-tipsdoctools"><span class="">Tools</span></a>
   <ul class="ul-4 foldable">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-tipsdoctoolshugo-li">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child collapse" id="m-tipsdoctoolshugo-li">
   <a href="/tips/doc/tools/hugo/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-tipsdoctoolshugo"><span class="">Hugo</span></a>
+  <ul class="ul-5 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-tipsdoctoolshugodark-mode-code-docsy-li">
+  <a href="/tips/doc/tools/hugo/dark-mode-code-docsy/" title="Fix dark mode code block" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-tipsdoctoolshugodark-mode-code-docsy"><span class="">Dark mode code</span></a>
+</li>
+  </ul>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-tipsdoctoolsmarkdown-li">
   <a href="/tips/doc/tools/markdown/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-tipsdoctoolsmarkdown"><span class="">Markdown</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-tipsdoctoolsmkdocs-li">
@@ -342,7 +347,7 @@
   <p class="reading-time"><i class="fa-solid fa-clock" aria-hidden="true"></i>&nbsp; 2 minute read &nbsp;</p>
 </header>
 	<p>When trying to push a commit using git from the command-line, you receive a GH007 remote error:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-console" data-lang="console"><span style="display:flex;"><span><span style="color:#000;font-style:italic">remote: error: GH007: Your push would publish a private email address.
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-console" data-lang="console"><span class="line"><span class="cl"><span class="go">remote: error: GH007: Your push would publish a private email address.
 </span></span></span></code></pre></div><p>Here, you&rsquo;ve likely:</p>
 <ul>
 <li>Configured your local copy of git to use the email address associated with your GitHub account</li>
@@ -370,9 +375,9 @@
 </li>
 <li>
 <p>Add, commit, and push your changes.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ git add .
-</span></span><span style="display:flex;"><span>$ git commit -m <span style="color:#4e9a06">&#34;My commit message&#34;</span>
-</span></span><span style="display:flex;"><span>$ git push
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ git add .
+</span></span><span class="line"><span class="cl">$ git commit -m <span class="s2">&#34;My commit message&#34;</span>
+</span></span><span class="line"><span class="cl">$ git push
 </span></span></code></pre></div></li>
 </ol>
 <p>The commit should now succeed.</p>

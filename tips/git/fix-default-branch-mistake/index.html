@@ -192,8 +192,13 @@
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child collapse" id="m-tipsdoctools-li">
   <a href="/tips/doc/tools/" title="Documentation tools" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-tipsdoctools"><span class="">Tools</span></a>
   <ul class="ul-4 foldable">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-tipsdoctoolshugo-li">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child collapse" id="m-tipsdoctoolshugo-li">
   <a href="/tips/doc/tools/hugo/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-tipsdoctoolshugo"><span class="">Hugo</span></a>
+  <ul class="ul-5 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-tipsdoctoolshugodark-mode-code-docsy-li">
+  <a href="/tips/doc/tools/hugo/dark-mode-code-docsy/" title="Fix dark mode code block" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-tipsdoctoolshugodark-mode-code-docsy"><span class="">Dark mode code</span></a>
+</li>
+  </ul>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-tipsdoctoolsmarkdown-li">
   <a href="/tips/doc/tools/markdown/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-tipsdoctoolsmarkdown"><span class="">Markdown</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-tipsdoctoolsmkdocs-li">
@@ -365,20 +370,20 @@
 <ol>
 <li>
 <p>Determine and save the IDs for the commits you want to keep:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-console" data-lang="console"><span style="display:flex;"><span><span style="color:#8f5902">$</span> git checkout broken-branch
-</span></span><span style="display:flex;"><span><span style="color:#8f5902">$</span> git log    
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-console" data-lang="console"><span class="line"><span class="cl"><span class="gp">$</span> git checkout broken-branch
+</span></span><span class="line"><span class="cl"><span class="gp">$</span> git log    
 </span></span></code></pre></div><p>If you&rsquo;re lucky, you just need the first commit ID displayed in the log.</p>
 </li>
 <li>
 <p>Create and check out a new branch</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-console" data-lang="console"><span style="display:flex;"><span><span style="color:#8f5902">$</span> git checkout broken-branch-update
-</span></span><span style="display:flex;"><span><span style="color:#8f5902">$</span> git log    
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-console" data-lang="console"><span class="line"><span class="cl"><span class="gp">$</span> git checkout broken-branch-update
+</span></span><span class="line"><span class="cl"><span class="gp">$</span> git log    
 </span></span></code></pre></div><p><em>Tip:</em> Consider linking the branch names.  Here, I&rsquo;ve added <code>update</code> to the previous branch name so that a future reviewer might recognize the connection between the branches.  Such consistency can help when looking back weeks or months later.</p>
 </li>
 <li>
 <p>Reset the new branch to a known baseline, such as your remote default branch (<code>origin/main</code>).</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-console" data-lang="console"><span style="display:flex;"><span><span style="color:#8f5902">$</span> git fetch origin main
-</span></span><span style="display:flex;"><span><span style="color:#8f5902">$</span> git reset --hard origin/main    
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-console" data-lang="console"><span class="line"><span class="cl"><span class="gp">$</span> git fetch origin main
+</span></span><span class="line"><span class="cl"><span class="gp">$</span> git reset --hard origin/main    
 </span></span></code></pre></div><p>If you receive an error saying <code>Fatal: could not read from remote repository</code>, it&rsquo;s likely one of the following:</p>
 <ul>
 <li>You&rsquo;ve mistyped <code>origin</code>: verify the name of your upstream remote and try again.</li>
@@ -388,32 +393,32 @@
 </li>
 <li>
 <p>Add the desired commits from the original branch:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-console" data-lang="console"><span style="display:flex;"><span><span style="color:#8f5902">$</span> git cherry-pick saved-commit-id
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-console" data-lang="console"><span class="line"><span class="cl"><span class="gp">$</span> git cherry-pick saved-commit-id
 </span></span></code></pre></div><p>Run this for each saved commit ID.</p>
 </li>
 <li>
 <p>Review your local files and commit your changes.</p>
 <p>When satisfied, push your new branch:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-console" data-lang="console"><span style="display:flex;"><span><span style="color:#8f5902">$</span> git push origin broken-branch-upd:broken-branch-upd 
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-console" data-lang="console"><span class="line"><span class="cl"><span class="gp">$</span> git push origin broken-branch-upd:broken-branch-upd 
 </span></span></code></pre></div></li>
 <li>
 <p>To finish: create a new pull request (which should be blissfully free from other commits), delete the original (broken) PR, and then clean up your local branches.</p>
 </li>
 </ol>
 <p>Before adding additional commits to your new PR, consider pushing a small edit within the scope of the PR.  If this triggers an upstream warning that &ldquo;changes aren&rsquo;t tracked remotely,&rdquo; use the text in the error to set up remote tracking.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-console" data-lang="console"><span style="display:flex;"><span><span style="color:#8f5902">$</span> git push --set-upstream origin broken-branch-upd
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-console" data-lang="console"><span class="line"><span class="cl"><span class="gp">$</span> git push --set-upstream origin broken-branch-upd
 </span></span></code></pre></div><p>Consider doing this now to avoid future surprises.</p>
 <h2 id="reset-local-default">Reset local default<a class="td-heading-self-link" href="#reset-local-default" aria-label="Heading self-link"></a></h2>
 <p>Once you&rsquo;ve replaced broken branches and pull requests, you will likely need to reset your local default branch (<code>main</code>) to your remote default (<code>origin/main</code>).</p>
 <p>To begin, check out <code>main</code>, investigate the differences between your local copy and your upstream remote, and then resolve any differences.  (Most have likely been resolved while replacing broken ranches.)</p>
 <p>When things look good, reset your local default (<code>main</code>) to your remote default (<code>origin/main</code>):</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-console" data-lang="console"><span style="display:flex;"><span><span style="color:#8f5902">$</span> git checkout main
-</span></span><span style="display:flex;"><span><span style="color:#8f5902">$</span> git fetch origin main
-</span></span><span style="display:flex;"><span><span style="color:#8f5902">$</span> git reset --hard origin/main
-</span></span><span style="display:flex;"><span><span style="color:#8f5902">$</span> git status
-</span></span><span style="display:flex;"><span><span style="color:#000;font-style:italic">On branch main
-</span></span></span><span style="display:flex;"><span><span style="color:#000;font-style:italic">Your branch is up to date with &#39;origin/main&#39;.
-</span></span></span><span style="display:flex;"><span><span style="color:#000;font-style:italic">nothing to commit, working tree clean
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-console" data-lang="console"><span class="line"><span class="cl"><span class="gp">$</span> git checkout main
+</span></span><span class="line"><span class="cl"><span class="gp">$</span> git fetch origin main
+</span></span><span class="line"><span class="cl"><span class="gp">$</span> git reset --hard origin/main
+</span></span><span class="line"><span class="cl"><span class="gp">$</span> git status
+</span></span><span class="line"><span class="cl"><span class="go">On branch main
+</span></span></span><span class="line"><span class="cl"><span class="go">Your branch is up to date with &#39;origin/main&#39;.
+</span></span></span><span class="line"><span class="cl"><span class="go">nothing to commit, working tree clean
 </span></span></span></code></pre></div><p>Once the working tree is clean, you&rsquo;re ready to resume your normal activities.</p>
 <h2 id="vital-statistics">Vital statistics<a class="td-heading-self-link" href="#vital-statistics" aria-label="Heading self-link"></a></h2>
 <ul>

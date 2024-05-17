@@ -190,8 +190,13 @@
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child collapse" id="m-tipsdoctools-li">
   <a href="/tips/doc/tools/" title="Documentation tools" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-tipsdoctools"><span class="">Tools</span></a>
   <ul class="ul-4 foldable">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-tipsdoctoolshugo-li">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child collapse" id="m-tipsdoctoolshugo-li">
   <a href="/tips/doc/tools/hugo/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-tipsdoctoolshugo"><span class="">Hugo</span></a>
+  <ul class="ul-5 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-tipsdoctoolshugodark-mode-code-docsy-li">
+  <a href="/tips/doc/tools/hugo/dark-mode-code-docsy/" title="Fix dark mode code block" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-tipsdoctoolshugodark-mode-code-docsy"><span class="">Dark mode code</span></a>
+</li>
+  </ul>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-tipsdoctoolsmarkdown-li">
   <a href="/tips/doc/tools/markdown/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-tipsdoctoolsmarkdown"><span class="">Markdown</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-tipsdoctoolsmkdocs-li">
@@ -356,43 +361,43 @@
 </header>
 	<p>Here are a few common (and uncommon) tasks you can perform from the command-line.</p>
 <h3 id="set-up-new-project">Set up new project<a class="td-heading-self-link" href="#set-up-new-project" aria-label="Heading self-link"></a></h3>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-console" data-lang="console"><span style="display:flex;"><span><span style="color:#8f5902">$</span> git clone ...
-</span></span><span style="display:flex;"><span><span style="color:#8f5902">$</span> git submodule init
-</span></span><span style="display:flex;"><span><span style="color:#8f5902">$</span> git submodule update
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-console" data-lang="console"><span class="line"><span class="cl"><span class="gp">$</span> git clone ...
+</span></span><span class="line"><span class="cl"><span class="gp">$</span> git submodule init
+</span></span><span class="line"><span class="cl"><span class="gp">$</span> git submodule update
 </span></span></code></pre></div><h3 id="start-work">Start work<a class="td-heading-self-link" href="#start-work" aria-label="Heading self-link"></a></h3>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-console" data-lang="console"><span style="display:flex;"><span><span style="color:#8f5902">$</span> git checkout main
-</span></span><span style="display:flex;"><span><span style="color:#8f5902">$</span> git pull
-</span></span><span style="display:flex;"><span><span style="color:#8f5902">$</span> git checkout branch-name
-</span></span><span style="display:flex;"><span><span style="color:#8f5902">$</span> git merge main
-</span></span><span style="display:flex;"><span><span style="color:#000;font-style:italic">// resolve merge conflicts, if any
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-console" data-lang="console"><span class="line"><span class="cl"><span class="gp">$</span> git checkout main
+</span></span><span class="line"><span class="cl"><span class="gp">$</span> git pull
+</span></span><span class="line"><span class="cl"><span class="gp">$</span> git checkout branch-name
+</span></span><span class="line"><span class="cl"><span class="gp">$</span> git merge main
+</span></span><span class="line"><span class="cl"><span class="go">// resolve merge conflicts, if any
 </span></span></span></code></pre></div><p>This helps keep things up-to-date when working with others.</p>
 <p>There are <a href="https://stackoverflow.com/questions/3876977/update-git-branches-from-master">considerations and alternatives</a>.</p>
 <h3 id="work-a-task">Work a task<a class="td-heading-self-link" href="#work-a-task" aria-label="Heading self-link"></a></h3>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-console" data-lang="console"><span style="display:flex;"><span><span style="color:#8f5902">$</span> git status
-</span></span><span style="display:flex;"><span><span style="color:#8f5902">$</span> git add //...
-</span></span><span style="display:flex;"><span><span style="color:#8f5902">$</span> git commit -m <span style="color:#4e9a06">&#34;Relevant and descriptive commit message&#34;</span>
-</span></span><span style="display:flex;"><span><span style="color:#8f5902">$</span> git push
-</span></span><span style="display:flex;"><span><span style="color:#8f5902">$</span> git checkout main
-</span></span><span style="display:flex;"><span><span style="color:#8f5902">$</span> git pull
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-console" data-lang="console"><span class="line"><span class="cl"><span class="gp">$</span> git status
+</span></span><span class="line"><span class="cl"><span class="gp">$</span> git add //...
+</span></span><span class="line"><span class="cl"><span class="gp">$</span> git commit -m <span class="s2">&#34;Relevant and descriptive commit message&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="gp">$</span> git push
+</span></span><span class="line"><span class="cl"><span class="gp">$</span> git checkout main
+</span></span><span class="line"><span class="cl"><span class="gp">$</span> git pull
 </span></span></code></pre></div><h3 id="clone-repo-wiki">Clone repo wiki<a class="td-heading-self-link" href="#clone-repo-wiki" aria-label="Heading self-link"></a></h3>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-console" data-lang="console"><span style="display:flex;"><span><span style="color:#8f5902">$</span> git clone &lt;project-url&gt;.wiki.git 
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-console" data-lang="console"><span class="line"><span class="cl"><span class="gp">$</span> git clone &lt;project-url&gt;.wiki.git 
 </span></span></code></pre></div><h3 id="fix-commit-message-typo">Fix commit message typo<a class="td-heading-self-link" href="#fix-commit-message-typo" aria-label="Heading self-link"></a></h3>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-console" data-lang="console"><span style="display:flex;"><span><span style="color:#8f5902">$</span> git commit --amend -m <span style="color:#4e9a06">&#34;Commit message without typos.&#34;</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-console" data-lang="console"><span class="line"><span class="cl"><span class="gp">$</span> git commit --amend -m <span class="s2">&#34;Commit message without typos.&#34;</span>
 </span></span></code></pre></div><p>Not guaranteed; best if run before making additional changes.</p>
 <h3 id="list-recently-updated-branches">List recently updated branches<a class="td-heading-self-link" href="#list-recently-updated-branches" aria-label="Heading self-link"></a></h3>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-console" data-lang="console"><span style="display:flex;"><span><span style="color:#8f5902">$</span> git branch --sort<span style="color:#ce5c00;font-weight:bold">=</span>-committerdate
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-console" data-lang="console"><span class="line"><span class="cl"><span class="gp">$</span> git branch --sort<span class="o">=</span>-committerdate
 </span></span></code></pre></div><p>This displays results in descending order.</p>
 <p>To display in ascending order, remove the hyphen (<code>-</code>) after <code>--sort=</code>.</p>
 <h3 id="revert-file">Revert file<a class="td-heading-self-link" href="#revert-file" aria-label="Heading self-link"></a></h3>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-console" data-lang="console"><span style="display:flex;"><span><span style="color:#8f5902">$</span> git checkout -- &lt;filename&gt;
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-console" data-lang="console"><span class="line"><span class="cl"><span class="gp">$</span> git checkout -- &lt;filename&gt;
 </span></span></code></pre></div><h3 id="show-branch-remote-origin">Show branch remote origin<a class="td-heading-self-link" href="#show-branch-remote-origin" aria-label="Heading self-link"></a></h3>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-console" data-lang="console"><span style="display:flex;"><span><span style="color:#8f5902">$</span> git branch -vv
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-console" data-lang="console"><span class="line"><span class="cl"><span class="gp">$</span> git branch -vv
 </span></span></code></pre></div><h3 id="show-unmerged-commits">Show unmerged commits<a class="td-heading-self-link" href="#show-unmerged-commits" aria-label="Heading self-link"></a></h3>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-console" data-lang="console"><span style="display:flex;"><span><span style="color:#8f5902">$</span> git branch --no-merged main
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-console" data-lang="console"><span class="line"><span class="cl"><span class="gp">$</span> git branch --no-merged main
 </span></span></code></pre></div><h3 id="unstage-a-commit">Unstage a commit<a class="td-heading-self-link" href="#unstage-a-commit" aria-label="Heading self-link"></a></h3>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-console" data-lang="console"><span style="display:flex;"><span><span style="color:#8f5902">$</span> git restore --staged &lt;file&gt;
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-console" data-lang="console"><span class="line"><span class="cl"><span class="gp">$</span> git restore --staged &lt;file&gt;
 </span></span></code></pre></div><h3 id="view-config">View config<a class="td-heading-self-link" href="#view-config" aria-label="Heading self-link"></a></h3>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-console" data-lang="console"><span style="display:flex;"><span><span style="color:#8f5902">$</span> git config --list
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-console" data-lang="console"><span class="line"><span class="cl"><span class="gp">$</span> git config --list
 </span></span></code></pre></div><h2 id="vital-statistics">Vital statistics<a class="td-heading-self-link" href="#vital-statistics" aria-label="Heading self-link"></a></h2>
 <ul>
 <li>First post: 14 May 2024.</li>

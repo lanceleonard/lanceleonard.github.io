@@ -192,8 +192,13 @@
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-tipsdoctools-li">
   <a href="/tips/doc/tools/" title="Documentation tools" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-tipsdoctools"><span class="">Tools</span></a>
   <ul class="ul-4 foldable">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipsdoctoolshugo-li">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-tipsdoctoolshugo-li">
   <a href="/tips/doc/tools/hugo/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-tipsdoctoolshugo"><span class="">Hugo</span></a>
+  <ul class="ul-5 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-tipsdoctoolshugodark-mode-code-docsy-li">
+  <a href="/tips/doc/tools/hugo/dark-mode-code-docsy/" title="Fix dark mode code block" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-tipsdoctoolshugodark-mode-code-docsy"><span class="">Dark mode code</span></a>
+</li>
+  </ul>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipsdoctoolsmarkdown-li">
   <a href="/tips/doc/tools/markdown/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-tipsdoctoolsmarkdown"><span class="">Markdown</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-tipsdoctoolsmkdocs-li">
@@ -354,7 +359,7 @@
 	<p><a href="https://mkdocs.org">MKDocs</a> is a static-site generator that converts Markdown source files into fully formed websites.</p>
 <h2 id="check-version">Check version<a class="td-heading-self-link" href="#check-version" aria-label="Heading self-link"></a></h2>
 <p>Use <code>--version</code> to display the current MkDocs version:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-console" data-lang="console"><span style="display:flex;"><span><span style="color:#8f5902">$</span> mkdocs --version
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-console" data-lang="console"><span class="line"><span class="cl"><span class="gp">$</span> mkdocs --version
 </span></span></code></pre></div><h2 id="hide-footer-ad">Hide footer ad<a class="td-heading-self-link" href="#hide-footer-ad" aria-label="Heading self-link"></a></h2>
 <p>Early versions of MkDocs include a small &ldquo;ad&rdquo; in the footer of your webpages (&ldquo;Documentation built wwith MKDocs&rdquo;).</p>
 <p>You can hide this by adding a CSS rule to hide the message or by removing it from your site&rsquo;s template.</p>
@@ -363,19 +368,19 @@
 <ol>
 <li>
 <p>In your project&rsquo;s <code>/docs/</code> folder, add the following rule to a custom style sheet:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">footer</span> <span style="color:#000;font-weight:bold">:</span><span style="color:#5c35cc;font-weight:bold">last-child</span> <span style="color:#000;font-weight:bold">{</span> <span style="color:#204a87;font-weight:bold">display</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">none</span><span style="color:#000;font-weight:bold">;</span> <span style="color:#000;font-weight:bold">}</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="nt">footer</span> <span class="p">:</span><span class="nd">last-child</span> <span class="p">{</span> <span class="k">display</span><span class="p">:</span> <span class="kc">none</span><span class="p">;</span> <span class="p">}</span>
 </span></span></code></pre></div></li>
 <li>
 <p>Verify that your custom style sheet is declared in your site&rsquo;s project configuration (<code>mydocs.yml</code>)</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">site_name</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">My</span> <span style="color:#204a87;font-weight:bold">example</span> <span style="color:#204a87;font-weight:bold">site</span>
-</span></span><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">exta_css</span><span style="color:#ce5c00;font-weight:bold">:</span>
-</span></span><span style="display:flex;"><span>   <span style="color:#204a87;font-weight:bold">-</span> <span style="color:#204a87;font-weight:bold">hidefooter</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">css</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="nt">site_name</span><span class="o">:</span> <span class="nt">My</span> <span class="nt">example</span> <span class="nt">site</span>
+</span></span><span class="line"><span class="cl"><span class="nt">exta_css</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">   <span class="nt">-</span> <span class="nt">hidefooter</span><span class="p">.</span><span class="nc">css</span>
 </span></span></code></pre></div><p>Here, we assume your custom CSS file is named <code>hidefooter.css</code>.</p>
 </li>
 </ol>
 <p>If you&rsquo;re working with an earlier version of MKDocs, you may need to tweak the CSS rule. In version v0.15.x, for example, MKDocs placed its ad in a <code>&lt;center&gt;</code> element (now <a href="https://html.spec.whatwg.org/multipage/obsolete.html#center">deprecated</a>).</p>
 <p>To hide the footer in this version:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">center</span> <span style="color:#000;font-weight:bold">{</span> <span style="color:#204a87;font-weight:bold">display</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">none</span><span style="color:#000;font-weight:bold">;</span> <span style="color:#000;font-weight:bold">}</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="nt">center</span> <span class="p">{</span> <span class="k">display</span><span class="p">:</span> <span class="kc">none</span><span class="p">;</span> <span class="p">}</span>
 </span></span></code></pre></div><h3 id="update-template">Update template<a class="td-heading-self-link" href="#update-template" aria-label="Heading self-link"></a></h3>
 <p>You can also update the template to remove the ad entirely:</p>
 <ol>
@@ -384,7 +389,7 @@
 </li>
 <li>
 <p>Update <code>mkdocs.yml</code> to refer to your new theme:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">theme_dir</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">&lt;custom-template&gt;</span><span style="color:#f8f8f8;text-decoration:underline">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">theme_dir</span><span class="p">:</span><span class="w"> </span><span class="l">&lt;custom-template&gt;</span><span class="w">
 </span></span></span></code></pre></div></li>
 <li>
 <p>Update <code>base.html</code> to remove the &ldquo;Built with&rdquo; line (line 189 as of this writing).</p>

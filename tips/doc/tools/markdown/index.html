@@ -190,8 +190,13 @@
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-tipsdoctools-li">
   <a href="/tips/doc/tools/" title="Documentation tools" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-tipsdoctools"><span class="">Tools</span></a>
   <ul class="ul-4 foldable">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipsdoctoolshugo-li">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-tipsdoctoolshugo-li">
   <a href="/tips/doc/tools/hugo/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-tipsdoctoolshugo"><span class="">Hugo</span></a>
+  <ul class="ul-5 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-tipsdoctoolshugodark-mode-code-docsy-li">
+  <a href="/tips/doc/tools/hugo/dark-mode-code-docsy/" title="Fix dark mode code block" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-tipsdoctoolshugodark-mode-code-docsy"><span class="">Dark mode code</span></a>
+</li>
+  </ul>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-tipsdoctoolsmarkdown-li">
   <a href="/tips/doc/tools/markdown/" class="align-left ps-0 active td-sidebar-link td-sidebar-link__section" id="m-tipsdoctoolsmarkdown"><span class="td-sidebar-nav-active-item">Markdown</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipsdoctoolsmkdocs-li">
@@ -366,11 +371,11 @@
 <h2 id="tables">Tables<a class="td-heading-self-link" href="#tables" aria-label="Heading self-link"></a></h2>
 <h3 id="basics">Basics<a class="td-heading-self-link" href="#basics" aria-label="Heading self-link"></a></h3>
 <p>Tables require at least three lines:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>| Name  | Description   |
-</span></span><span style="display:flex;"><span>|-------|---------------|
-</span></span><span style="display:flex;"><span>| Row 1 | Explanation 1 | 
-</span></span><span style="display:flex;"><span>| Row 2 | Explanation 2 | 
-</span></span><span style="display:flex;"><span>| Row 3 | Explanation 3 | 
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl">| Name  | Description   |
+</span></span><span class="line"><span class="cl">|-------|---------------|
+</span></span><span class="line"><span class="cl">| Row 1 | Explanation 1 | 
+</span></span><span class="line"><span class="cl">| Row 2 | Explanation 2 | 
+</span></span><span class="line"><span class="cl">| Row 3 | Explanation 3 | 
 </span></span></code></pre></div><p>Which leads to:</p>
 <table>
 <thead>
@@ -404,12 +409,12 @@
 </li>
 </ol>
 <h3 id="column-alignment">Column alignment<a class="td-heading-self-link" href="#column-alignment" aria-label="Heading self-link"></a></h3>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>| Left    | Center  | Right   |
-</span></span><span style="display:flex;"><span>|---------|:-------:|--------:|
-</span></span><span style="display:flex;"><span>| <span style="color:#4e9a06">`:---`</span>  | <span style="color:#4e9a06">`:---:`</span> | <span style="color:#4e9a06">`---:`</span>  |
-</span></span><span style="display:flex;"><span>| Alpha   | Apple   | Alpha   |
-</span></span><span style="display:flex;"><span>| Beta    | Banana  | Bravo   |
-</span></span><span style="display:flex;"><span>| Gamma   | Cherry  | Charlie |
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl">| Left    | Center  | Right   |
+</span></span><span class="line"><span class="cl">|---------|:-------:|--------:|
+</span></span><span class="line"><span class="cl">| <span class="sb">`:---`</span>  | <span class="sb">`:---:`</span> | <span class="sb">`---:`</span>  |
+</span></span><span class="line"><span class="cl">| Alpha   | Apple   | Alpha   |
+</span></span><span class="line"><span class="cl">| Beta    | Banana  | Bravo   |
+</span></span><span class="line"><span class="cl">| Gamma   | Cherry  | Charlie |
 </span></span></code></pre></div><p>Leads to:</p>
 <table>
 <thead>
