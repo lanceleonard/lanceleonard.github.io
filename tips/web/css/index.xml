@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Lance&#39;s Quips &amp; Quibbles</title>
+    <title>Cascading style sheets (CSS) on Lance&#39;s Quips &amp; Quibbles</title>
     <link>http://localhost:1313/tips/web/css/</link>
-    <description>Recent content on Lance&#39;s Quips &amp; Quibbles</description>
+    <description>Recent content in Cascading style sheets (CSS) on Lance&#39;s Quips &amp; Quibbles</description>
     <generator>Hugo</generator>
     <language>en</language>
     <atom:link href="http://localhost:1313/tips/web/css/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Simple newspaper columns</title>
+      <link>http://localhost:1313/tips/web/css/newspapers-columns/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tips/web/css/newspapers-columns/</guid>
+      <description>Use the column-width property to display lists in columns that flow like newspaper stories.&#xA;Here&amp;rsquo;s an example:&#xA;Abyssinian&#xA;American Shorthair&#xA;Arabian Mau&#xA;Bengal&#xA;Calico&#xA;Chartreux&#xA;Himalayan&#xA;Korat&#xA;Maine Coon&#xA;Manx&#xA;Minuet&#xA;Norwegian Forest Cat&#xA;Persian&#xA;Ragdoll&#xA;Siamese&#xA;Snowshoe&#xA;Tortoiseshell&#xA;York Chocolate&#xA;To learn more, including how to style the columns, see Multiple-column layout (Mozilla developer).&#xA;Inline examples Here, the list is specified using an inline style parameter applied to an unordered list (&amp;lt;ul&amp;gt;) element.</description>
+    </item>
   </channel>
 </rss>

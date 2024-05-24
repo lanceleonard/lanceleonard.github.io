@@ -30,7 +30,7 @@
   <meta itemprop="name" content="HTML, CSS, and more.">
   <meta itemprop="description" content="Content related to websites, including HTML, CSS, design, troubleshooting, and more">
   <meta itemprop="dateModified" content="2024-05-17T13:51:15-07:00">
-  <meta itemprop="wordCount" content="207"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="HTML, CSS, and more.">
+  <meta itemprop="wordCount" content="259"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="HTML, CSS, and more.">
 <meta name="twitter:description" content="Content related to websites, including HTML, CSS, design, troubleshooting, and more">
 
 
@@ -200,6 +200,8 @@
   <a href="/tips/doc/tools/markdown/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-tipsdoctoolsmarkdown"><span class="">Markdown</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-tipsdoctoolsmkdocs-li">
   <a href="/tips/doc/tools/mkdocs/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-tipsdoctoolsmkdocs"><span class="">MKDocs</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-tipsdoctoolspandoc-li">
+  <a href="/tips/doc/tools/pandoc/" title="Pandoc conversion tips" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-tipsdoctoolspandoc"><span class="">Pandoc</span></a>
 </li>
   </ul>
 </li>
@@ -220,10 +222,20 @@
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-tipsweb-li">
   <a href="/tips/web/" title="HTML, CSS, and more." class="align-left ps-0 active td-sidebar-link td-sidebar-link__section" id="m-tipsweb"><span class="td-sidebar-nav-active-item">HTML &amp; CSS</span></a>
   <ul class="ul-3 foldable">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipswebcss-li">
-  <a href="/tips/web/css/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-tipswebcss"><span class=""></span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipswebhtml-li">
-  <a href="/tips/web/html/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-tipswebhtml"><span class=""></span></a>
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-tipswebcss-li">
+  <a href="/tips/web/css/" title="Cascading style sheets (CSS)" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-tipswebcss"><span class="">CSS</span></a>
+  <ul class="ul-4 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-tipswebcssnewspapers-columns-li">
+  <a href="/tips/web/css/newspapers-columns/" title="Simple newspaper columns" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-tipswebcssnewspapers-columns"><span class="">Newspaper columns</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-tipswebhtml-li">
+  <a href="/tips/web/html/" title="HTML samples, ticks, and tidbits" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-tipswebhtml"><span class="">HTML</span></a>
+  <ul class="ul-4 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-tipswebhtmldetails-element-li">
+  <a href="/tips/web/html/details-element/" title="Hide details until needed" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-tipswebhtmldetails-element"><span class="">Hide details</span></a>
+</li>
+  </ul>
 </li>
   </ul>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-tipsjavascript-li">
@@ -319,6 +331,11 @@
         <li><a href="#developer-tools">Developer tools</a></li>
       </ul>
     </li>
+    <li><a href="#web-servers">Web servers</a>
+      <ul>
+        <li><a href="#dns-alias-ip-address">DNS alias IP address</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
       </div>
@@ -344,7 +361,7 @@
   <div class="lead">Content related to websites, including HTML, CSS, design, troubleshooting, and more</div>
 	<header class="article-meta">
 		
-  <p class="reading-time"><i class="fa-solid fa-clock" aria-hidden="true"></i>&nbsp; less than a minute &nbsp;</p>
+  <p class="reading-time"><i class="fa-solid fa-clock" aria-hidden="true"></i>&nbsp; 2 minute read &nbsp;</p>
 </header>
 	<h2 id="web-browsers">Web browsers<a class="td-heading-self-link" href="#web-browsers" aria-label="Heading self-link"></a></h2>
 <h3 id="helpful-tools">Helpful tools<a class="td-heading-self-link" href="#helpful-tools" aria-label="Heading self-link"></a></h3>
@@ -397,22 +414,27 @@
 </ul>
 </li>
 </ul>
-
+<h2 id="web-servers">Web servers<a class="td-heading-self-link" href="#web-servers" aria-label="Heading self-link"></a></h2>
+<h3 id="dns-alias-ip-address">DNS alias IP address<a class="td-heading-self-link" href="#dns-alias-ip-address" aria-label="Heading self-link"></a></h3>
+<p>When setting up a <a href="https://www.cloudflare.com/learning/dns/what-is-dns/">DNS</a> record alias (ANAME or CNAME), you often need to know the IP address to assign to the alias.</p>
+<p>If, for whatever reason, you don&rsquo;t know the IP address, use the <code>dig</code> command to discover it:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-console" data-lang="console"><span class="line"><span class="cl"><span class="gp">$</span> dig example.github.io +nostats +nocomments +nocmd
+</span></span></code></pre></div>
   <div class="section-index">
     
     
     <hr class="panel-line">
         <div class="entry">
                 <h5>
-                    <a href="/tips/web/css/"></a>
+                    <a href="/tips/web/css/">Cascading style sheets (CSS)</a>
                 </h5>
-                <p></p>
+                <p>CSS examples, recipes, and related tidbits.</p>
             </div>
         <div class="entry">
                 <h5>
-                    <a href="/tips/web/html/"></a>
+                    <a href="/tips/web/html/">HTML samples, ticks, and tidbits</a>
                 </h5>
-                <p></p>
+                <p>An assortment of idea related to HTML and webpage markup.</p>
             </div>
         </div>
 </div>
