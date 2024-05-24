@@ -127,6 +127,27 @@
       <description>Occasionally, I&amp;rsquo;m asked I&amp;rsquo;m a particular Lance Leonard.&#xA;I&amp;rsquo;ll admit to being a Lance Leonard, but perhaps not the Lance Leonard you&amp;rsquo;re looking for. (&amp;ldquo;Haven&amp;rsquo;t you heard? I come in six-packs.&amp;rdquo;)&#xA;For example, I am not:&#xA;A conservative politician from New Jersey. (You&amp;rsquo;ve likely reversed the names, not to mention the, well, never mind. It&amp;rsquo;s not that sort of site.)&#xA;Formerly of any confection or beverage companies; the email addresses are close, but different.</description>
     </item>
     <item>
+      <title>Hide details until needed</title>
+      <link>http://localhost:1313/tips/web/html/details-element/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tips/web/html/details-element/</guid>
+      <description>Effective web design is often a balancing act between engaging experiences and practical content. You want to provide visual delight to those willing to partake without alienating those who prefer to avoid unwanted distractions.&#xA;An effective compromise is to hide certain elements until the user choose to view them. The &amp;lt;details&amp;gt; element lets you do this.&#xA;By default, it hides content until opened by the user. Because &amp;lt;details&amp;gt; is a core HTML element, most browsers implement it in a way that lets those using alternate browsing experiences, such as screen readers, know what&amp;rsquo;s going on and how to interact with the content.</description>
+    </item>
+    <item>
+      <title>Simple newspaper columns</title>
+      <link>http://localhost:1313/tips/web/css/newspapers-columns/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tips/web/css/newspapers-columns/</guid>
+      <description>Use the column-width property to display lists in columns that flow like newspaper stories.&#xA;Here&amp;rsquo;s an example:&#xA;Abyssinian&#xA;American Shorthair&#xA;Arabian Mau&#xA;Bengal&#xA;Calico&#xA;Chartreux&#xA;Himalayan&#xA;Korat&#xA;Maine Coon&#xA;Manx&#xA;Minuet&#xA;Norwegian Forest Cat&#xA;Persian&#xA;Ragdoll&#xA;Siamese&#xA;Snowshoe&#xA;Tortoiseshell&#xA;York Chocolate&#xA;To learn more, including how to style the columns, see Multiple-column layout (Mozilla developer).&#xA;Inline examples Here, the list is specified using an inline style parameter applied to an unordered list (&amp;lt;ul&amp;gt;) element.</description>
+    </item>
+    <item>
+      <title>Pandoc conversion tips</title>
+      <link>http://localhost:1313/tips/doc/tools/pandoc/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tips/doc/tools/pandoc/</guid>
+      <description>Pandoc helps convert documents, such as Word .DOCX files or PDF documents, to alternate formats, like Markdown and others.&#xA;Conversion can require a bit of tinkering. The following tips can help.&#xA;Simple conversion To use Pandoc to convert a document to a new format:&#xA;$ pandoc source.docx -o target.md By default, many details are inferred from the input parameters. In this example:&#xA;The input file (source) is assumed to be a Microsoft Word .</description>
+    </item>
+    <item>
       <title>Privacy policy</title>
       <link>http://localhost:1313/about/privacy-policy/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -187,7 +208,7 @@
       <link>http://localhost:1313/scribbles/journal/first-post/</link>
       <pubDate>Wed, 25 Jan 2017 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/scribbles/journal/first-post/</guid>
-      <description>Choose your greeting:&#xA;Hail and well met! Greetings, lifeform. Goooood Eeeeevvvening. Hello troubleshooter. Buh-doop beep? BLAAAT! Oh. It&amp;rsquo;s you. It&amp;rsquo;s been a looong time. How&amp;rsquo;ve you been? After many promises, multiple unfinished prototypes, and much pondering, it&amp;rsquo;s finally online. The site, I mean.&#xA;Here, you&amp;rsquo;ll find technical articles and posts related to things I&amp;rsquo;m working on, lessons I&amp;rsquo;ve learned, solutions I&amp;rsquo;ve found, and other thoughts I thought worth sharing.&#xA;Feel free to browse, but I do ask that shenanigans be kept to a minimum…unless, of course, I&amp;rsquo;m allowed to be rambunctious as well.</description>
+      <description>&lt;p&gt;Choose your greeting:&lt;/p&gt;</description>
     </item>
     <item>
       <title>Search Results</title>

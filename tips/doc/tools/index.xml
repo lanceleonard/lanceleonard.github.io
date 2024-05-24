@@ -15,5 +15,12 @@
       <guid>http://localhost:1313/tips/doc/tools/mkdocs/</guid>
       <description>MKDocs is a static-site generator that converts Markdown source files into fully formed websites.&#xA;Check version Use --version to display the current MkDocs version:&#xA;$ mkdocs --version Hide footer ad Early versions of MkDocs include a small &amp;ldquo;ad&amp;rdquo; in the footer of your webpages (&amp;ldquo;Documentation built wwith MKDocs&amp;rdquo;).&#xA;You can hide this by adding a CSS rule to hide the message or by removing it from your site&amp;rsquo;s template.&#xA;Hide with CSS To hide the ad using CSS:</description>
     </item>
+    <item>
+      <title>Pandoc conversion tips</title>
+      <link>http://localhost:1313/tips/doc/tools/pandoc/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tips/doc/tools/pandoc/</guid>
+      <description>Pandoc helps convert documents, such as Word .DOCX files or PDF documents, to alternate formats, like Markdown and others.&#xA;Conversion can require a bit of tinkering. The following tips can help.&#xA;Simple conversion To use Pandoc to convert a document to a new format:&#xA;$ pandoc source.docx -o target.md By default, many details are inferred from the input parameters. In this example:&#xA;The input file (source) is assumed to be a Microsoft Word .</description>
+    </item>
   </channel>
 </rss>
