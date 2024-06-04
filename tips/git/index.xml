@@ -12,7 +12,7 @@
       <link>http://localhost:1313/tips/git/console-commands/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/tips/git/console-commands/</guid>
-      <description>Here are a few common (and uncommon) tasks you can perform from the command-line.&#xA;Set up new project $ git clone ... $ git submodule init $ git submodule update Start work $ git checkout main $ git pull $ git checkout branch-name $ git merge main // resolve merge conflicts, if any This helps keep things up-to-date when working with others.&#xA;There are considerations and alternatives.&#xA;Work a task $ git status $ git add //.</description>
+      <description>Here are a few common (and uncommon) tasks you can perform from the command-line.&#xA;Set up new project $ git clone ... $ git submodule init $ git submodule update Start work $ git checkout main $ git pull $ git checkout branch-name $ git merge main // resolve merge conflicts, if any This helps keep things up-to-date when working with others.&#xA;There are considerations and alternatives.&#xA;Work task $ git status $ git add //.</description>
     </item>
     <item>
       <title>Fix broken branches and main mistakes</title>

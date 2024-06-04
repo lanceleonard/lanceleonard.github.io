@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>HTML, CSS, and more. on Lance&#39;s Quips &amp; Quibbles</title>
+    <title>Web: browsers, design, markup, and more on Lance&#39;s Quips &amp; Quibbles</title>
     <link>http://localhost:1313/tips/web/</link>
-    <description>Recent content in HTML, CSS, and more. on Lance&#39;s Quips &amp; Quibbles</description>
+    <description>Recent content in Web: browsers, design, markup, and more on Lance&#39;s Quips &amp; Quibbles</description>
     <generator>Hugo</generator>
     <language>en</language>
     <atom:link href="http://localhost:1313/tips/web/index.xml" rel="self" type="application/rss+xml" />

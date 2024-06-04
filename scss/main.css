@@ -20247,5 +20247,16 @@ For details, see https://www.docsy.dev/docs/adding-content/repository-links/#dis
 /*
 $google_font_family: 'Open+Sans:300,300i,400,400i,700,700i';
 */
+.td-content p {
+  margin-top: 1rem;
+  margin-bottom: 0.3rem; }
+
+/* Temp hack Hide the site name/anchor in the sidebar */
+#m- {
+  display: none !important; }
+
+#hero-page .card:hover {
+  box-shadow: 0 1px 15px #d3d3d3;
+  border: 1px solid lightcyan; }
 
 /*# sourceMappingURL=main.css.map */
