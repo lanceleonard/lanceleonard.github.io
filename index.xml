@@ -12,7 +12,7 @@
       <link>http://localhost:1313/tips/git/console-commands/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/tips/git/console-commands/</guid>
-      <description>Here are a few common (and uncommon) tasks you can perform from the command-line.&#xA;Set up new project $ git clone ... $ git submodule init $ git submodule update Start work $ git checkout main $ git pull $ git checkout branch-name $ git merge main // resolve merge conflicts, if any This helps keep things up-to-date when working with others.&#xA;There are considerations and alternatives.&#xA;Work a task $ git status $ git add //.</description>
+      <description>Here are a few common (and uncommon) tasks you can perform from the command-line.&#xA;Set up new project $ git clone ... $ git submodule init $ git submodule update Start work $ git checkout main $ git pull $ git checkout branch-name $ git merge main // resolve merge conflicts, if any This helps keep things up-to-date when working with others.&#xA;There are considerations and alternatives.&#xA;Work task $ git status $ git add //.</description>
     </item>
     <item>
       <title>Fix broken branches and main mistakes</title>
@@ -33,7 +33,7 @@
       <link>http://localhost:1313/tips/doc/tools/hugo/dark-mode-code-docsy/</link>
       <pubDate>Wed, 08 May 2024 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/tips/doc/tools/hugo/dark-mode-code-docsy/</guid>
-      <description>If you&amp;rsquo;re using docsy as your Hugo theme and have enabled dark mode, your code blocks might not render by default.&#xA;To fix this quickly, you can create a CSS rule that sets the background-color for &amp;lt;pre&amp;gt; elements that are children of the .highlight class.&#xA;Here&amp;rsquo;s one way to do this:&#xA;In your assets/scss folder, create (or edit) _style_project.scss.&#xA;Declare the following rule:&#xA;/* Fix dark mode code rendering */ .</description>
+      <description>If you&amp;rsquo;re using Docsy as your Hugo theme, your code blocks might not render correctly in dark mode.&#xA;To fix this quickly, create a CSS rule that sets the background-color for &amp;lt;pre&amp;gt; elements that are children of the .highlight class.&#xA;Here&amp;rsquo;s one way to do this:&#xA;In your assets/scss folder, create (or edit) _style_project.scss.&#xA;Declare the following rule:&#xA;/* Fix dark mode code rendering */ .highlight pre { background-color: var(--td-pre-bg) !</description>
     </item>
     <item>
       <title>Excel tips</title>

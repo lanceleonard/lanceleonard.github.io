@@ -160,153 +160,249 @@
     <button class="btn btn-link td-sidebar__toggle d-md-none p-0 ms-3 fas fa-bars" type="button" data-bs-toggle="collapse" data-bs-target="#td-section-nav" aria-controls="td-section-nav" aria-expanded="false" aria-label="Toggle section navigation">
     </button>
   </form>
-  <nav class="td-sidebar-nav collapse" id="td-section-nav">
+  <nav class="td-sidebar-nav collapse foldable-nav" id="td-section-nav">
     <ul class="td-sidebar-nav__section pe-md-3 ul-0">
       <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m--li">
   <a href="/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section tree-root" id="m-"><span class="">Lance&#39;s Quips &amp; Quibbles</span></a>
   <ul class="ul-1">
     <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-tips-li">
-  <a href="/tips/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-tips"><span class="">Tips</span></a>
+  <input type="checkbox" id="m-tips-check" checked/>
+  <label for="m-tips-check"><a href="/tips/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-tips"><span class="">Tips</span></a></label>
+  
   <ul class="ul-2 foldable">
     <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-tipsapps-li">
-  <a href="/tips/apps/" title="App tips and tricks" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-tipsapps"><span class="">Apps</span></a>
+  <input type="checkbox" id="m-tipsapps-check"/>
+  <label for="m-tipsapps-check"><a href="/tips/apps/" title="App tips and tricks" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-tipsapps"><span class="">Apps</span></a></label>
+  
   <ul class="ul-3 foldable">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-tipsappsexcel-tips-li">
-  <a href="/tips/apps/excel-tips/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-tipsappsexcel-tips"><span class="">Excel tips</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-tipsappsword-2011-tips-li">
-  <a href="/tips/apps/word-2011-tips/" title="Word 2011 tips and fixes" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-tipsappsword-2011-tips"><span class="">Word 2011 tips</span></a>
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipsappsexcel-tips-li">
+  <input type="checkbox" id="m-tipsappsexcel-tips-check"/>
+  <label for="m-tipsappsexcel-tips-check"><a href="/tips/apps/excel-tips/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-tipsappsexcel-tips"><span class="">Excel tips</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipsappsword-2011-tips-li">
+  <input type="checkbox" id="m-tipsappsword-2011-tips-check"/>
+  <label for="m-tipsappsword-2011-tips-check"><a href="/tips/apps/word-2011-tips/" title="Word 2011 tips and fixes" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-tipsappsword-2011-tips"><span class="">Word 2011 tips</span></a></label>
+  
 </li>
   </ul>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-tipsdoc-li">
-  <a href="/tips/doc/" title="Doc guidelines, standards, and tools" class="align-left ps-0 active td-sidebar-link td-sidebar-link__section" id="m-tipsdoc"><span class="td-sidebar-nav-active-item">Docs</span></a>
+  <input type="checkbox" id="m-tipsdoc-check" checked/>
+  <label for="m-tipsdoc-check"><a href="/tips/doc/" title="Doc guidelines, standards, and tools" class="align-left ps-0  active td-sidebar-link td-sidebar-link__section" id="m-tipsdoc"><span class="td-sidebar-nav-active-item">Docs</span></a></label>
+  
   <ul class="ul-3 foldable">
     <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipsdocstyle-guides-li">
-  <a href="/tips/doc/style-guides/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-tipsdocstyle-guides"><span class="">Style guides</span></a>
+  <input type="checkbox" id="m-tipsdocstyle-guides-check"/>
+  <label for="m-tipsdocstyle-guides-check"><a href="/tips/doc/style-guides/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-tipsdocstyle-guides"><span class="">Style guides</span></a></label>
+  
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipsdoctenets-li">
-  <a href="/tips/doc/tenets/" title="Doc project tenets" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-tipsdoctenets"><span class="">Tenets</span></a>
+  <input type="checkbox" id="m-tipsdoctenets-check"/>
+  <label for="m-tipsdoctenets-check"><a href="/tips/doc/tenets/" title="Doc project tenets" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-tipsdoctenets"><span class="">Tenets</span></a></label>
+  
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipsdocvoice-tone-principles-li">
-  <a href="/tips/doc/voice-tone-principles/" title="Voice &amp; tone principles" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-tipsdocvoice-tone-principles"><span class="">Voice &amp; tone</span></a>
+  <input type="checkbox" id="m-tipsdocvoice-tone-principles-check"/>
+  <label for="m-tipsdocvoice-tone-principles-check"><a href="/tips/doc/voice-tone-principles/" title="Voice &amp; tone principles" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-tipsdocvoice-tone-principles"><span class="">Voice &amp; tone</span></a></label>
+  
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-tipsdoctools-li">
-  <a href="/tips/doc/tools/" title="Documentation tools" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-tipsdoctools"><span class="">Tools</span></a>
+  <input type="checkbox" id="m-tipsdoctools-check"/>
+  <label for="m-tipsdoctools-check"><a href="/tips/doc/tools/" title="Documentation tools" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-tipsdoctools"><span class="">Tools</span></a></label>
+  
   <ul class="ul-4 foldable">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child collapse" id="m-tipsdoctoolshugo-li">
-  <a href="/tips/doc/tools/hugo/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-tipsdoctoolshugo"><span class="">Hugo</span></a>
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-tipsdoctoolshugo-li">
+  <input type="checkbox" id="m-tipsdoctoolshugo-check"/>
+  <label for="m-tipsdoctoolshugo-check"><a href="/tips/doc/tools/hugo/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-tipsdoctoolshugo"><span class="">Hugo</span></a></label>
+  
   <ul class="ul-5 foldable">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-tipsdoctoolshugodark-mode-code-docsy-li">
-  <a href="/tips/doc/tools/hugo/dark-mode-code-docsy/" title="Fix dark mode code block" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-tipsdoctoolshugodark-mode-code-docsy"><span class="">Dark mode code</span></a>
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipsdoctoolshugodark-mode-code-docsy-li">
+  <input type="checkbox" id="m-tipsdoctoolshugodark-mode-code-docsy-check"/>
+  <label for="m-tipsdoctoolshugodark-mode-code-docsy-check"><a href="/tips/doc/tools/hugo/dark-mode-code-docsy/" title="Fix dark mode code block" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-tipsdoctoolshugodark-mode-code-docsy"><span class="">Dark mode code</span></a></label>
+  
 </li>
   </ul>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-tipsdoctoolsmarkdown-li">
-  <a href="/tips/doc/tools/markdown/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-tipsdoctoolsmarkdown"><span class="">Markdown</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-tipsdoctoolsmkdocs-li">
-  <a href="/tips/doc/tools/mkdocs/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-tipsdoctoolsmkdocs"><span class="">MKDocs</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-tipsdoctoolspandoc-li">
-  <a href="/tips/doc/tools/pandoc/" title="Pandoc conversion tips" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-tipsdoctoolspandoc"><span class="">Pandoc</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipsdoctoolsmarkdown-li">
+  <input type="checkbox" id="m-tipsdoctoolsmarkdown-check"/>
+  <label for="m-tipsdoctoolsmarkdown-check"><a href="/tips/doc/tools/markdown/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-tipsdoctoolsmarkdown"><span class="">Markdown</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipsdoctoolsmkdocs-li">
+  <input type="checkbox" id="m-tipsdoctoolsmkdocs-check"/>
+  <label for="m-tipsdoctoolsmkdocs-check"><a href="/tips/doc/tools/mkdocs/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-tipsdoctoolsmkdocs"><span class="">MKDocs</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipsdoctoolspandoc-li">
+  <input type="checkbox" id="m-tipsdoctoolspandoc-check"/>
+  <label for="m-tipsdoctoolspandoc-check"><a href="/tips/doc/tools/pandoc/" title="Pandoc conversion tips" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-tipsdoctoolspandoc"><span class="">Pandoc</span></a></label>
+  
 </li>
   </ul>
 </li>
   </ul>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-tipsgit-li">
-  <a href="/tips/git/" title="Git, GitHub, &amp; related" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-tipsgit"><span class="">Git</span></a>
+  <input type="checkbox" id="m-tipsgit-check"/>
+  <label for="m-tipsgit-check"><a href="/tips/git/" title="Git, GitHub, &amp; related" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-tipsgit"><span class="">Git</span></a></label>
+  
   <ul class="ul-3 foldable">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-tipsgitconsole-commands-li">
-  <a href="/tips/git/console-commands/" title="Git console commands" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-tipsgitconsole-commands"><span class="">Console commands</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-tipsgitfix-default-branch-mistake-li">
-  <a href="/tips/git/fix-default-branch-mistake/" title="Fix broken branches and main mistakes" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-tipsgitfix-default-branch-mistake"><span class="">Fix broken branches</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-tipsgitremote-privacy-errors-li">
-  <a href="/tips/git/remote-privacy-errors/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-tipsgitremote-privacy-errors"><span class="">Email privacy error</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-tipsgitgit-bash-default-path-li">
-  <a href="/tips/git/git-bash-default-path/" title="Set Git Bash default path" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-tipsgitgit-bash-default-path"><span class="">Git Bash default path</span></a>
-</li>
-  </ul>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-tipsweb-li">
-  <a href="/tips/web/" title="HTML, CSS, and more." class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-tipsweb"><span class="">HTML &amp; CSS</span></a>
-  <ul class="ul-3 foldable">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child collapse" id="m-tipswebcss-li">
-  <a href="/tips/web/css/" title="Cascading style sheets (CSS)" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-tipswebcss"><span class="">CSS</span></a>
-  <ul class="ul-4 foldable">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-tipswebcssnewspapers-columns-li">
-  <a href="/tips/web/css/newspapers-columns/" title="Simple newspaper columns" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-tipswebcssnewspapers-columns"><span class="">Newspaper columns</span></a>
-</li>
-  </ul>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child collapse" id="m-tipswebhtml-li">
-  <a href="/tips/web/html/" title="HTML samples, ticks, and tidbits" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-tipswebhtml"><span class="">HTML</span></a>
-  <ul class="ul-4 foldable">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-tipswebhtmldetails-element-li">
-  <a href="/tips/web/html/details-element/" title="Hide details until needed" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-tipswebhtmldetails-element"><span class="">Hide details</span></a>
-</li>
-  </ul>
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipsgitconsole-commands-li">
+  <input type="checkbox" id="m-tipsgitconsole-commands-check"/>
+  <label for="m-tipsgitconsole-commands-check"><a href="/tips/git/console-commands/" title="Git console commands" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-tipsgitconsole-commands"><span class="">Console commands</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipsgitfix-default-branch-mistake-li">
+  <input type="checkbox" id="m-tipsgitfix-default-branch-mistake-check"/>
+  <label for="m-tipsgitfix-default-branch-mistake-check"><a href="/tips/git/fix-default-branch-mistake/" title="Fix broken branches and main mistakes" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-tipsgitfix-default-branch-mistake"><span class="">Fix broken branches</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipsgitremote-privacy-errors-li">
+  <input type="checkbox" id="m-tipsgitremote-privacy-errors-check"/>
+  <label for="m-tipsgitremote-privacy-errors-check"><a href="/tips/git/remote-privacy-errors/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-tipsgitremote-privacy-errors"><span class="">Email privacy error</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipsgitgit-bash-default-path-li">
+  <input type="checkbox" id="m-tipsgitgit-bash-default-path-check"/>
+  <label for="m-tipsgitgit-bash-default-path-check"><a href="/tips/git/git-bash-default-path/" title="Set Git Bash default path" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-tipsgitgit-bash-default-path"><span class="">Git Bash default path</span></a></label>
+  
 </li>
   </ul>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-tipsjavascript-li">
-  <a href="/tips/javascript/" title="JavaScript, Node.js, and related" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-tipsjavascript"><span class="">JavaScript</span></a>
+  <input type="checkbox" id="m-tipsjavascript-check"/>
+  <label for="m-tipsjavascript-check"><a href="/tips/javascript/" title="JavaScript, Node.js, and related" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-tipsjavascript"><span class="">JavaScript</span></a></label>
+  
   <ul class="ul-3 foldable">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-tipsjavascriptdictionary-sorting-li">
-  <a href="/tips/javascript/dictionary-sorting/" title="Dictionary sorting in JavaScript" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-tipsjavascriptdictionary-sorting"><span class="">Dictionary sorting</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-tipsjavascriptextract-webpage-links-li">
-  <a href="/tips/javascript/extract-webpage-links/" title="Extract links from a webpage" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-tipsjavascriptextract-webpage-links"><span class="">Extract links</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child collapse" id="m-tipsjavascriptnodejs-li">
-  <a href="/tips/javascript/nodejs/" title="Node.js, npm, and more" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-tipsjavascriptnodejs"><span class="">Node.js &amp; npm</span></a>
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipsjavascriptdictionary-sorting-li">
+  <input type="checkbox" id="m-tipsjavascriptdictionary-sorting-check"/>
+  <label for="m-tipsjavascriptdictionary-sorting-check"><a href="/tips/javascript/dictionary-sorting/" title="Dictionary sorting in JavaScript" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-tipsjavascriptdictionary-sorting"><span class="">Dictionary sorting</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipsjavascriptextract-webpage-links-li">
+  <input type="checkbox" id="m-tipsjavascriptextract-webpage-links-check"/>
+  <label for="m-tipsjavascriptextract-webpage-links-check"><a href="/tips/javascript/extract-webpage-links/" title="Extract links from a webpage" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-tipsjavascriptextract-webpage-links"><span class="">Extract links</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-tipsjavascriptnodejs-li">
+  <input type="checkbox" id="m-tipsjavascriptnodejs-check"/>
+  <label for="m-tipsjavascriptnodejs-check"><a href="/tips/javascript/nodejs/" title="Node.js, npm, and more" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-tipsjavascriptnodejs"><span class="">Node.js &amp; npm</span></a></label>
+  
   <ul class="ul-4 foldable">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-tipsjavascriptnodejscollect-filenames-li">
-  <a href="/tips/javascript/nodejs/collect-filenames/" title="Collect filenames with Node.js" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-tipsjavascriptnodejscollect-filenames"><span class="">Collect filenames</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-tipsjavascriptnodejscreate-node-modules-li">
-  <a href="/tips/javascript/nodejs/create-node-modules/" title="Create custom Node.js modules" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-tipsjavascriptnodejscreate-node-modules"><span class="">Create custom modules</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-tipsjavascriptnodejsxml-to-json-li">
-  <a href="/tips/javascript/nodejs/xml-to-json/" title="Convert XML to JSON" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-tipsjavascriptnodejsxml-to-json"><span class="">XML to JSON</span></a>
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipsjavascriptnodejscollect-filenames-li">
+  <input type="checkbox" id="m-tipsjavascriptnodejscollect-filenames-check"/>
+  <label for="m-tipsjavascriptnodejscollect-filenames-check"><a href="/tips/javascript/nodejs/collect-filenames/" title="Collect filenames with Node.js" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-tipsjavascriptnodejscollect-filenames"><span class="">Collect filenames</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipsjavascriptnodejscreate-node-modules-li">
+  <input type="checkbox" id="m-tipsjavascriptnodejscreate-node-modules-check"/>
+  <label for="m-tipsjavascriptnodejscreate-node-modules-check"><a href="/tips/javascript/nodejs/create-node-modules/" title="Create custom Node.js modules" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-tipsjavascriptnodejscreate-node-modules"><span class="">Create custom modules</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipsjavascriptnodejsxml-to-json-li">
+  <input type="checkbox" id="m-tipsjavascriptnodejsxml-to-json-check"/>
+  <label for="m-tipsjavascriptnodejsxml-to-json-check"><a href="/tips/javascript/nodejs/xml-to-json/" title="Convert XML to JSON" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-tipsjavascriptnodejsxml-to-json"><span class="">XML to JSON</span></a></label>
+  
 </li>
   </ul>
 </li>
   </ul>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipsmac-li">
-  <a href="/tips/mac/" title="Mac, MacOS, and OS/X" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-tipsmac"><span class="">Mac</span></a>
+  <input type="checkbox" id="m-tipsmac-check"/>
+  <label for="m-tipsmac-check"><a href="/tips/mac/" title="Mac, MacOS, and OS/X" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-tipsmac"><span class="">Mac</span></a></label>
+  
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-tipsunix-li">
-  <a href="/tips/unix/" title="Unix general tips" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-tipsunix"><span class="">Unix</span></a>
+  <input type="checkbox" id="m-tipsunix-check"/>
+  <label for="m-tipsunix-check"><a href="/tips/unix/" title="Unix general tips" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-tipsunix"><span class="">Unix</span></a></label>
+  
   <ul class="ul-3 foldable">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-tipsunixpackage-managers-li">
-  <a href="/tips/unix/package-managers/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-tipsunixpackage-managers"><span class="">Package managers</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-tipsunixvi-cheat-sheet-li">
-  <a href="/tips/unix/vi-cheat-sheet/" title="Vi editor cheat sheet" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-tipsunixvi-cheat-sheet"><span class="">vi cheat sheet</span></a>
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipsunixpackage-managers-li">
+  <input type="checkbox" id="m-tipsunixpackage-managers-check"/>
+  <label for="m-tipsunixpackage-managers-check"><a href="/tips/unix/package-managers/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-tipsunixpackage-managers"><span class="">Package managers</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipsunixvi-cheat-sheet-li">
+  <input type="checkbox" id="m-tipsunixvi-cheat-sheet-check"/>
+  <label for="m-tipsunixvi-cheat-sheet-check"><a href="/tips/unix/vi-cheat-sheet/" title="Vi editor cheat sheet" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-tipsunixvi-cheat-sheet"><span class="">vi cheat sheet</span></a></label>
+  
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-tipsweb-li">
+  <input type="checkbox" id="m-tipsweb-check"/>
+  <label for="m-tipsweb-check"><a href="/tips/web/" title="Web: browsers, design, markup, and more" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-tipsweb"><span class="">Web</span></a></label>
+  
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-tipswebcss-li">
+  <input type="checkbox" id="m-tipswebcss-check"/>
+  <label for="m-tipswebcss-check"><a href="/tips/web/css/" title="Cascading style sheets (CSS)" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-tipswebcss"><span class="">CSS</span></a></label>
+  
+  <ul class="ul-4 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipswebcssnewspapers-columns-li">
+  <input type="checkbox" id="m-tipswebcssnewspapers-columns-check"/>
+  <label for="m-tipswebcssnewspapers-columns-check"><a href="/tips/web/css/newspapers-columns/" title="Simple newspaper columns" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-tipswebcssnewspapers-columns"><span class="">Newspaper columns</span></a></label>
+  
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-tipswebhtml-li">
+  <input type="checkbox" id="m-tipswebhtml-check"/>
+  <label for="m-tipswebhtml-check"><a href="/tips/web/html/" title="HTML samples, ticks, and tidbits" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-tipswebhtml"><span class="">HTML</span></a></label>
+  
+  <ul class="ul-4 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipswebhtmldetails-element-li">
+  <input type="checkbox" id="m-tipswebhtmldetails-element-check"/>
+  <label for="m-tipswebhtmldetails-element-check"><a href="/tips/web/html/details-element/" title="Hide details until needed" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-tipswebhtmldetails-element"><span class="">Hide details</span></a></label>
+  
+</li>
+  </ul>
 </li>
   </ul>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-tipswindows-li">
-  <a href="/tips/windows/" title="Windows and related topics" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-tipswindows"><span class="">Windows</span></a>
+  <input type="checkbox" id="m-tipswindows-check"/>
+  <label for="m-tipswindows-check"><a href="/tips/windows/" title="Windows and related topics" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-tipswindows"><span class="">Windows</span></a></label>
+  
   <ul class="ul-3 foldable">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-tipswindowselevation-prompt-shortcuts-li">
-  <a href="/tips/windows/elevation-prompt-shortcuts/" title="Keyboard shortcuts for elevation prompts" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-tipswindowselevation-prompt-shortcuts"><span class="">Elevation prompt shortcuts</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-tipswindowsrecover-offscreen-window-li">
-  <a href="/tips/windows/recover-offscreen-window/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-tipswindowsrecover-offscreen-window"><span class="">Recover offscreen window</span></a>
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipswindowselevation-prompt-shortcuts-li">
+  <input type="checkbox" id="m-tipswindowselevation-prompt-shortcuts-check"/>
+  <label for="m-tipswindowselevation-prompt-shortcuts-check"><a href="/tips/windows/elevation-prompt-shortcuts/" title="Keyboard shortcuts for elevation prompts" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-tipswindowselevation-prompt-shortcuts"><span class="">Elevation prompt shortcuts</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipswindowsrecover-offscreen-window-li">
+  <input type="checkbox" id="m-tipswindowsrecover-offscreen-window-check"/>
+  <label for="m-tipswindowsrecover-offscreen-window-check"><a href="/tips/windows/recover-offscreen-window/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-tipswindowsrecover-offscreen-window"><span class="">Recover offscreen window</span></a></label>
+  
 </li>
   </ul>
 </li>
   </ul>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-scribbles-li">
-  <a href="/scribbles/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-scribbles"><span class="">Scribbles</span></a>
+  <input type="checkbox" id="m-scribbles-check"/>
+  <label for="m-scribbles-check"><a href="/scribbles/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-scribbles"><span class="">Scribbles</span></a></label>
+  
   <ul class="ul-2 foldable">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child collapse" id="m-scribblesjournal-li">
-  <a href="/scribbles/journal/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-scribblesjournal"><span class="">Journal</span></a>
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-scribblesjournal-li">
+  <input type="checkbox" id="m-scribblesjournal-check"/>
+  <label for="m-scribblesjournal-check"><a href="/scribbles/journal/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-scribblesjournal"><span class="">Journal</span></a></label>
+  
   <ul class="ul-3 foldable">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-scribblesjournalinitial-migration-li">
-  <a href="/scribbles/journal/initial-migration/" title="Initial migration complete" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-scribblesjournalinitial-migration"><span class="">Initial migration</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-scribblesjournalrestart-engines-li">
-  <a href="/scribbles/journal/restart-engines/" title="Restart the engines" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-scribblesjournalrestart-engines"><span class="">Restart engines</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-scribblesjournalfirst-post-li">
-  <a href="/scribbles/journal/first-post/" title="First post: Don&#39;t panic" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-scribblesjournalfirst-post"><span class="">Don&#39;t panic!</span></a>
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-scribblesjournalinitial-migration-li">
+  <input type="checkbox" id="m-scribblesjournalinitial-migration-check"/>
+  <label for="m-scribblesjournalinitial-migration-check"><a href="/scribbles/journal/initial-migration/" title="Initial migration complete" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-scribblesjournalinitial-migration"><span class="">Initial migration</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-scribblesjournalrestart-engines-li">
+  <input type="checkbox" id="m-scribblesjournalrestart-engines-check"/>
+  <label for="m-scribblesjournalrestart-engines-check"><a href="/scribbles/journal/restart-engines/" title="Restart the engines" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-scribblesjournalrestart-engines"><span class="">Restart engines</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-scribblesjournalfirst-post-li">
+  <input type="checkbox" id="m-scribblesjournalfirst-post-check"/>
+  <label for="m-scribblesjournalfirst-post-check"><a href="/scribbles/journal/first-post/" title="First post: Don&#39;t panic" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-scribblesjournalfirst-post"><span class="">Don&#39;t panic!</span></a></label>
+  
 </li>
   </ul>
 </li>
   </ul>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-about-li">
-  <a href="/about/" title="About the Site" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-about"><span class="">About</span></a>
+  <input type="checkbox" id="m-about-check"/>
+  <label for="m-about-check"><a href="/about/" title="About the Site" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-about"><span class="">About</span></a></label>
+  
   <ul class="ul-2 foldable">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-aboutfair-warnings-li">
-  <a href="/about/fair-warnings/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-aboutfair-warnings"><span class="">Fair warnings</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-aboutprivacy-policy-li">
-  <a href="/about/privacy-policy/" title="Privacy policy" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-aboutprivacy-policy"><span class="">Privacy</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-aboutsite-name-li">
-  <a href="/about/site-name/" title="The site name" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-aboutsite-name"><span class="">Site name</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-aboutchangelog-li">
-  <a href="/about/changelog/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-aboutchangelog"><span class="">Changelog</span></a>
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-aboutfair-warnings-li">
+  <input type="checkbox" id="m-aboutfair-warnings-check"/>
+  <label for="m-aboutfair-warnings-check"><a href="/about/fair-warnings/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-aboutfair-warnings"><span class="">Fair warnings</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-aboutprivacy-policy-li">
+  <input type="checkbox" id="m-aboutprivacy-policy-check"/>
+  <label for="m-aboutprivacy-policy-check"><a href="/about/privacy-policy/" title="Privacy policy" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-aboutprivacy-policy"><span class="">Privacy</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-aboutsite-name-li">
+  <input type="checkbox" id="m-aboutsite-name-check"/>
+  <label for="m-aboutsite-name-check"><a href="/about/site-name/" title="The site name" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-aboutsite-name"><span class="">Site name</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-aboutchangelog-li">
+  <input type="checkbox" id="m-aboutchangelog-check"/>
+  <label for="m-aboutchangelog-check"><a href="/about/changelog/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-aboutchangelog"><span class="">Changelog</span></a></label>
+  
 </li>
   </ul>
 </li>

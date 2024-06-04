@@ -6,14 +6,14 @@
     <description>Recent content in Hugo on Lance&#39;s Quips &amp; Quibbles</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 17 May 2024 13:51:15 -0700</lastBuildDate>
+    <lastBuildDate>Tue, 04 Jun 2024 16:06:52 -0700</lastBuildDate>
     <atom:link href="http://localhost:1313/tips/doc/tools/hugo/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Fix dark mode code block</title>
       <link>http://localhost:1313/tips/doc/tools/hugo/dark-mode-code-docsy/</link>
       <pubDate>Wed, 08 May 2024 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/tips/doc/tools/hugo/dark-mode-code-docsy/</guid>
-      <description>If you&amp;rsquo;re using docsy as your Hugo theme and have enabled dark mode, your code blocks might not render by default.&#xA;To fix this quickly, you can create a CSS rule that sets the background-color for &amp;lt;pre&amp;gt; elements that are children of the .highlight class.&#xA;Here&amp;rsquo;s one way to do this:&#xA;In your assets/scss folder, create (or edit) _style_project.scss.&#xA;Declare the following rule:&#xA;/* Fix dark mode code rendering */ .</description>
+      <description>If you&amp;rsquo;re using Docsy as your Hugo theme, your code blocks might not render correctly in dark mode.&#xA;To fix this quickly, create a CSS rule that sets the background-color for &amp;lt;pre&amp;gt; elements that are children of the .highlight class.&#xA;Here&amp;rsquo;s one way to do this:&#xA;In your assets/scss folder, create (or edit) _style_project.scss.&#xA;Declare the following rule:&#xA;/* Fix dark mode code rendering */ .highlight pre { background-color: var(--td-pre-bg) !</description>
     </item>
   </channel>
 </rss>
