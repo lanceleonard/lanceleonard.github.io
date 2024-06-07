@@ -2,219 +2,219 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Lance&#39;s Quips &amp; Quibbles</title>
-    <link>http://localhost:1313/</link>
+    <link>https://lanceleonard.com/</link>
     <description>Recent content on Lance&#39;s Quips &amp; Quibbles</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://lanceleonard.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Git console commands</title>
-      <link>http://localhost:1313/tips/git/console-commands/</link>
+      <link>https://lanceleonard.com/tips/git/console-commands/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tips/git/console-commands/</guid>
+      <guid>https://lanceleonard.com/tips/git/console-commands/</guid>
       <description>Here are a few common (and uncommon) tasks you can perform from the command-line.&#xA;Set up new project $ git clone ... $ git submodule init $ git submodule update Start work $ git checkout main $ git pull $ git checkout branch-name $ git merge main // resolve merge conflicts, if any This helps keep things up-to-date when working with others.&#xA;There are considerations and alternatives.&#xA;Work task $ git status $ git add //.</description>
     </item>
     <item>
       <title>Fix broken branches and main mistakes</title>
-      <link>http://localhost:1313/tips/git/fix-default-branch-mistake/</link>
+      <link>https://lanceleonard.com/tips/git/fix-default-branch-mistake/</link>
       <pubDate>Mon, 06 May 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tips/git/fix-default-branch-mistake/</guid>
+      <guid>https://lanceleonard.com/tips/git/fix-default-branch-mistake/</guid>
       <description>Once established, git workflows go fairly smoothly.&#xA;At some point, you might realize that a branch pull request (PR) includes commits that it shouldn&amp;rsquo;t.&#xA;Alternatively, your local default branch (main or master for older projects) has somehow managed to get ahead of the remote origin.&#xA;To fix things, you need to:&#xA;Replace the broken branch Replace the broken pull request Replace broken branch For the most part, you can&amp;rsquo;t selectively remove commits from a pull request.</description>
     </item>
     <item>
       <title>Email privacy error</title>
-      <link>http://localhost:1313/tips/git/remote-privacy-errors/</link>
+      <link>https://lanceleonard.com/tips/git/remote-privacy-errors/</link>
       <pubDate>Sun, 12 May 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tips/git/remote-privacy-errors/</guid>
+      <guid>https://lanceleonard.com/tips/git/remote-privacy-errors/</guid>
       <description>When trying to push a commit using git from the command-line, you receive a GH007 remote error:&#xA;remote: error: GH007: Your push would publish a private email address. Here, you&amp;rsquo;ve likely:&#xA;Configured your local copy of git to use the email address associated with your GitHub account Enabled the Keep my email addresses private option in your Github profile settings. The error is Github&amp;rsquo;s way of enforcing the privacy of your email address.</description>
     </item>
     <item>
       <title>Fix dark mode code block</title>
-      <link>http://localhost:1313/tips/doc/tools/hugo/dark-mode-code-docsy/</link>
+      <link>https://lanceleonard.com/tips/doc/tools/hugo/dark-mode-code-docsy/</link>
       <pubDate>Wed, 08 May 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tips/doc/tools/hugo/dark-mode-code-docsy/</guid>
+      <guid>https://lanceleonard.com/tips/doc/tools/hugo/dark-mode-code-docsy/</guid>
       <description>If you&amp;rsquo;re using Docsy as your Hugo theme, your code blocks might not render correctly in dark mode.&#xA;To fix this quickly, create a CSS rule that sets the background-color for &amp;lt;pre&amp;gt; elements that are children of the .highlight class.&#xA;Here&amp;rsquo;s one way to do this:&#xA;In your assets/scss folder, create (or edit) _style_project.scss.&#xA;Declare the following rule:&#xA;/* Fix dark mode code rendering */ .highlight pre { background-color: var(--td-pre-bg) !</description>
     </item>
     <item>
       <title>Excel tips</title>
-      <link>http://localhost:1313/tips/apps/excel-tips/</link>
+      <link>https://lanceleonard.com/tips/apps/excel-tips/</link>
       <pubDate>Wed, 08 May 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tips/apps/excel-tips/</guid>
+      <guid>https://lanceleonard.com/tips/apps/excel-tips/</guid>
       <description>Here some practical tips for Microsoft Excel.&#xA;Strikethrough text To draw a line (or strike through) text in a cell:&#xA;Edit the cell Select the text Press Ctrl+5 (Windows) Here, 5 represents the key in the number row of your keyboard, not the center key in a number pad.&#xA;For best results, format the cell to wrap overflow text.&#xA;String formula functions Here are a few macros to help manipulate text strings</description>
     </item>
     <item>
       <title>MKDocs</title>
-      <link>http://localhost:1313/tips/doc/tools/mkdocs/</link>
+      <link>https://lanceleonard.com/tips/doc/tools/mkdocs/</link>
       <pubDate>Wed, 08 May 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tips/doc/tools/mkdocs/</guid>
+      <guid>https://lanceleonard.com/tips/doc/tools/mkdocs/</guid>
       <description>MKDocs is a static-site generator that converts Markdown source files into fully formed websites.&#xA;Check version Use --version to display the current MkDocs version:&#xA;$ mkdocs --version Hide footer ad Early versions of MkDocs include a small &amp;ldquo;ad&amp;rdquo; in the footer of your webpages (&amp;ldquo;Documentation built wwith MKDocs&amp;rdquo;).&#xA;You can hide this by adding a CSS rule to hide the message or by removing it from your site&amp;rsquo;s template.&#xA;Hide with CSS To hide the ad using CSS:</description>
     </item>
     <item>
       <title>Style guides</title>
-      <link>http://localhost:1313/tips/doc/style-guides/</link>
+      <link>https://lanceleonard.com/tips/doc/style-guides/</link>
       <pubDate>Wed, 08 May 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tips/doc/style-guides/</guid>
+      <guid>https://lanceleonard.com/tips/doc/style-guides/</guid>
       <description>Style guides define rules for using language in a given context.&#xA;These rules provide a &amp;ldquo;common voice&amp;rdquo; that customers recognize and expect when working with professional content.&#xA;A good style guide improves your writing and overall effectiveness.&#xA;Recommended guides For technical docs, consider adopting one of the following:&#xA;Google developer doc style guide Microsoft Writing Style Guide Each guide was developed by the publisher using research and customer focus groups. Each is actively tested, reviewed, and maintained by their respective organizations.</description>
     </item>
     <item>
       <title>Word 2011 tips and fixes</title>
-      <link>http://localhost:1313/tips/apps/word-2011-tips/</link>
+      <link>https://lanceleonard.com/tips/apps/word-2011-tips/</link>
       <pubDate>Wed, 08 May 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tips/apps/word-2011-tips/</guid>
+      <guid>https://lanceleonard.com/tips/apps/word-2011-tips/</guid>
       <description>If, for whatever reason, you&amp;rsquo;re using Microsoft Word 2001 for the Mac, the following tips may help:&#xA;If the tabs don&amp;rsquo;t respond to mouse clicks, try clicking the very top pixel of the tab (or as close to it as you can manage).&#xA;For some unknown reason, this seems to do the trick.&#xA;The A footer of section _x_ is set outside the printable area of this page error indicates that the footer (or header) is larger than the non-printable area of the page.</description>
     </item>
     <item>
       <title>Set Git Bash default path</title>
-      <link>http://localhost:1313/tips/git/git-bash-default-path/</link>
+      <link>https://lanceleonard.com/tips/git/git-bash-default-path/</link>
       <pubDate>Tue, 07 May 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tips/git/git-bash-default-path/</guid>
+      <guid>https://lanceleonard.com/tips/git/git-bash-default-path/</guid>
       <description>Git for Windows includes a tool called Git Bash, which gives you a bash shell you can use to run git via the command line.&#xA;To set the Git Bash default directory, change the Start in field on the Shortcut tab of the Git Bash properties.&#xA;Here&amp;rsquo;s how:&#xA;Right-click the Git Bash icon in the taskbar to display the taskbar shortcut menu.&#xA;Right-click the Git Bash command in the taskbar shortcut menu and then select Properties.</description>
     </item>
     <item>
       <title>Dictionary sorting in JavaScript</title>
-      <link>http://localhost:1313/tips/javascript/dictionary-sorting/</link>
+      <link>https://lanceleonard.com/tips/javascript/dictionary-sorting/</link>
       <pubDate>Mon, 06 May 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tips/javascript/dictionary-sorting/</guid>
+      <guid>https://lanceleonard.com/tips/javascript/dictionary-sorting/</guid>
       <description>By default, the JavaScript Array.sort() function sorts arrays according to character placement within a character set. For most web content, this is UTF-8.&#xA;However, this may not always be an ideal result.&#xA;Here, we show how to define a custom sort order in JavaScript.&#xA;Process array To illustrate, consider the following book titles, organized roughly by the year they were first published.&#xA;A Study in Scarlet The Sign of Four The Adventures of Sherlock Holmes The Memoirs of Sherlock Holmes The Hound of the Baskervilles The Return of Sherlock Holmes His Last Bow The Valley of Fear The Case-Book of Sherlock Holmes To print an array containing these titles to a web page, you might use something like this:</description>
     </item>
     <item>
       <title>Keyboard shortcuts for elevation prompts</title>
-      <link>http://localhost:1313/tips/windows/elevation-prompt-shortcuts/</link>
+      <link>https://lanceleonard.com/tips/windows/elevation-prompt-shortcuts/</link>
       <pubDate>Mon, 06 May 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tips/windows/elevation-prompt-shortcuts/</guid>
+      <guid>https://lanceleonard.com/tips/windows/elevation-prompt-shortcuts/</guid>
       <description>Windows uses privilege elevation prompts (also known as user account controls or UACs) to confirm administrative actions, such as installing new software, deleting files from sensitive locations, and so on.&#xA;Elevation prompt behavior has changed since the original Window Vista introduction, however, the experience can be jarring, especially if you routinely switch between devices running different versions of Windows.&#xA;A few keyboard shortcuts have remained consistent through multiple versions of Windows, including:</description>
     </item>
     <item>
       <title>Extract links from a webpage</title>
-      <link>http://localhost:1313/tips/javascript/extract-webpage-links/</link>
+      <link>https://lanceleonard.com/tips/javascript/extract-webpage-links/</link>
       <pubDate>Mon, 06 May 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tips/javascript/extract-webpage-links/</guid>
+      <guid>https://lanceleonard.com/tips/javascript/extract-webpage-links/</guid>
       <description>An uncommon bit of website maintenance involves reviewing or updating links on a webpage.&#xA;Typically, you want a list of the URLs specified in anchor elements (&amp;lt;a href=&amp;quot;...&amp;quot;&amp;gt;&amp;lt;/a&amp;gt;).&#xA;This means you want a list of the URLs specified in the HREF attribute of anchors.&#xA;Like many tasks, this can be more complicated than it first appears.&#xA;List webpage links Use the Document.links property to get a list of the links on a webpage.</description>
     </item>
     <item>
       <title>Doc project tenets</title>
-      <link>http://localhost:1313/tips/doc/tenets/</link>
+      <link>https://lanceleonard.com/tips/doc/tenets/</link>
       <pubDate>Mon, 06 May 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tips/doc/tenets/</guid>
+      <guid>https://lanceleonard.com/tips/doc/tenets/</guid>
       <description>Tenets are guiding project principles; they outline and frame design thinking.&#xA;Here are the ones I generally start with.&#xA;Docs are features Many teams treat docs as afterthoughts. Like good software, good docs require design, forethought, and planning.&#xA;Effective docs follow the product lifecycle: design, implementation, review, and maintenance.&#xA;Treat doc reviews as seriously as code reviews. Reviewers need to be proactive and timely in their feedback.&#xA;Feedback must be specific, clear, and actionable.</description>
     </item>
     <item>
       <title>Voice &amp; tone principles</title>
-      <link>http://localhost:1313/tips/doc/voice-tone-principles/</link>
+      <link>https://lanceleonard.com/tips/doc/voice-tone-principles/</link>
       <pubDate>Mon, 06 May 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tips/doc/voice-tone-principles/</guid>
+      <guid>https://lanceleonard.com/tips/doc/voice-tone-principles/</guid>
       <description>Docs, to some degree, represent the voice of your organization.&#xA;People respond well to a friendly, helpful tone that is easy-to-read.&#xA;These principles help.&#xA;Use one clear intent Good docs help users solve problems.&#xA;Before working on a doc, understand the audience you&amp;rsquo;re trying to reach and the problem being solved.&#xA;This is called the intent and is typically expressed as as follows:&#xA;&amp;ldquo;As a &amp;lt;role&amp;gt;, I want to &amp;lt;solve a problem&amp;gt;.</description>
     </item>
     <item>
       <title>Collect filenames with Node.js</title>
-      <link>http://localhost:1313/tips/javascript/nodejs/collect-filenames/</link>
+      <link>https://lanceleonard.com/tips/javascript/nodejs/collect-filenames/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tips/javascript/nodejs/collect-filenames/</guid>
+      <guid>https://lanceleonard.com/tips/javascript/nodejs/collect-filenames/</guid>
       <description>Node.js can help maintain doc experiences through automation. You can use it to:&#xA;Detect file changes in source repositories.&#xA;Fix pathname issues in doc source files&#xA;Repair broken (or incomplete) markup&#xA;Update pipeline config files&#xA;Generate index pages, tag clouds, and other supporting content.&#xA;Tasks like these frequently require a list of files in a given directory, along with any child directories.&#xA;Here&amp;rsquo;s one way to generate such a list:</description>
     </item>
     <item>
       <title>Create custom Node.js modules</title>
-      <link>http://localhost:1313/tips/javascript/nodejs/create-node-modules/</link>
+      <link>https://lanceleonard.com/tips/javascript/nodejs/create-node-modules/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tips/javascript/nodejs/create-node-modules/</guid>
+      <guid>https://lanceleonard.com/tips/javascript/nodejs/create-node-modules/</guid>
       <description>This article shows how to create and use a custom Node module&#xA;Node.js module design is based on CommonJS module specification, though sources vary on the intent and history. (Some sources vary when describing intent and history.)&#xA;To begin, move reusable functions into a separate JavaScript file (called mymodules.js in this example):&#xA;// myModule.js module.exports.isBlank = function( inputValue ) { var blnResult = ( ( inputValue == undefined ) || ( inputValue == null ) || ( inputValue == &amp;#34;&amp;#34; ) ); return blnResult; } module.</description>
     </item>
     <item>
       <title>Fair warnings</title>
-      <link>http://localhost:1313/about/fair-warnings/</link>
+      <link>https://lanceleonard.com/about/fair-warnings/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/about/fair-warnings/</guid>
+      <guid>https://lanceleonard.com/about/fair-warnings/</guid>
       <description>Occasionally, I&amp;rsquo;m asked I&amp;rsquo;m a particular Lance Leonard.&#xA;I&amp;rsquo;ll admit to being a Lance Leonard, but perhaps not the Lance Leonard you&amp;rsquo;re looking for. (&amp;ldquo;Haven&amp;rsquo;t you heard? I come in six-packs.&amp;rdquo;)&#xA;For example, I am not:&#xA;A conservative politician from New Jersey. (You&amp;rsquo;ve likely reversed the names, not to mention the, well, never mind. It&amp;rsquo;s not that sort of site.)&#xA;Formerly of any confection or beverage companies; the email addresses are close, but different.</description>
     </item>
     <item>
       <title>Hide details until needed</title>
-      <link>http://localhost:1313/tips/web/html/details-element/</link>
+      <link>https://lanceleonard.com/tips/web/html/details-element/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tips/web/html/details-element/</guid>
+      <guid>https://lanceleonard.com/tips/web/html/details-element/</guid>
       <description>Effective web design is often a balancing act between engaging experiences and practical content. You want to provide visual delight to those willing to partake without alienating those who prefer to avoid unwanted distractions.&#xA;An effective compromise is to hide certain elements until the user choose to view them. The &amp;lt;details&amp;gt; element lets you do this.&#xA;By default, it hides content until opened by the user. Because &amp;lt;details&amp;gt; is a core HTML element, most browsers implement it in a way that lets those using alternate browsing experiences, such as screen readers, know what&amp;rsquo;s going on and how to interact with the content.</description>
     </item>
     <item>
       <title>Simple newspaper columns</title>
-      <link>http://localhost:1313/tips/web/css/newspapers-columns/</link>
+      <link>https://lanceleonard.com/tips/web/css/newspapers-columns/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tips/web/css/newspapers-columns/</guid>
+      <guid>https://lanceleonard.com/tips/web/css/newspapers-columns/</guid>
       <description>Use the column-width property to display lists in columns that flow like newspaper stories.&#xA;Here&amp;rsquo;s an example:&#xA;Abyssinian&#xA;American Shorthair&#xA;Arabian Mau&#xA;Bengal&#xA;Calico&#xA;Chartreux&#xA;Himalayan&#xA;Korat&#xA;Maine Coon&#xA;Manx&#xA;Minuet&#xA;Norwegian Forest Cat&#xA;Persian&#xA;Ragdoll&#xA;Siamese&#xA;Snowshoe&#xA;Tortoiseshell&#xA;York Chocolate&#xA;To learn more, including how to style the columns, see Multiple-column layout (Mozilla developer).&#xA;Inline examples Here, the list is specified using an inline style parameter applied to an unordered list (&amp;lt;ul&amp;gt;) element.</description>
     </item>
     <item>
       <title>Pandoc conversion tips</title>
-      <link>http://localhost:1313/tips/doc/tools/pandoc/</link>
+      <link>https://lanceleonard.com/tips/doc/tools/pandoc/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tips/doc/tools/pandoc/</guid>
+      <guid>https://lanceleonard.com/tips/doc/tools/pandoc/</guid>
       <description>Pandoc helps convert documents, such as Word .DOCX files or PDF documents, to alternate formats, like Markdown and others.&#xA;Conversion can require a bit of tinkering. The following tips can help.&#xA;Simple conversion To use Pandoc to convert a document to a new format:&#xA;$ pandoc source.docx -o target.md By default, many details are inferred from the input parameters. In this example:&#xA;The input file (source) is assumed to be a Microsoft Word .</description>
     </item>
     <item>
       <title>Privacy policy</title>
-      <link>http://localhost:1313/about/privacy-policy/</link>
+      <link>https://lanceleonard.com/about/privacy-policy/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/about/privacy-policy/</guid>
+      <guid>https://lanceleonard.com/about/privacy-policy/</guid>
       <description>I don&amp;rsquo;t track you or how you use the site.&#xA;I don&amp;rsquo;t record any personally identifying information (PII).&#xA;No cookies are saved to your device, so there&amp;rsquo;s nothing to opt in to.&#xA;At some point, I may add analytics to help understand how people (in general) use the site. When I do that, I&amp;rsquo;ll update things accordingly.&#xA;If I learn you stopped by, I&amp;rsquo;ll keep that to myself.&#xA;Since I&amp;rsquo;m not tracking anything, there&amp;rsquo;s nothing to share, sell, delete, or otherwise abuse.</description>
     </item>
     <item>
       <title>The site name</title>
-      <link>http://localhost:1313/about/site-name/</link>
+      <link>https://lanceleonard.com/about/site-name/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/about/site-name/</guid>
+      <guid>https://lanceleonard.com/about/site-name/</guid>
       <description>A paradox?&#xA;A paradox, A most ingenious paradox!&#xA;We&amp;rsquo;ve quips and quibbles heard in flocks!&#xA;But none to beat this paradox!&#xA;&amp;ndash; Ruth &amp;amp; Frederic, &amp;ldquo;The Pirates of Penzance&amp;rdquo;,&#xA;Act II (Scene 19), by W.S. Gilbert &amp;amp; Arthur Sullivan, 1879&#xA;The site&amp;rsquo;s name is based, in part, on lyrics from The Pirates of Penzance. (It&amp;rsquo;s also a subtle nod to one of my earliest documentation roles and, yes, there&amp;rsquo;s a small story or few.</description>
     </item>
     <item>
       <title>Convert XML to JSON</title>
-      <link>http://localhost:1313/tips/javascript/nodejs/xml-to-json/</link>
+      <link>https://lanceleonard.com/tips/javascript/nodejs/xml-to-json/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tips/javascript/nodejs/xml-to-json/</guid>
+      <guid>https://lanceleonard.com/tips/javascript/nodejs/xml-to-json/</guid>
       <description>The xml2js module provides a convenient way to Here&amp;rsquo;s a relatively simple way to convert XML to JSON using Node.js:&#xA;var fs = require( &amp;#39;fs&amp;#39; ), x2j = require( &amp;#39;xml2js&amp;#39; ); var sInputFile = &amp;#34;books.xml;&amp;#34; var p = new x2j.Parser(); var sXMLData = fs.readFileSync( sInputFile, &amp;#39;utf8&amp;#39; ); p.parseString( sXMLData, function( err, result ) { var s = JSON.stringify( result, undefined, 3 ); console.log( &amp;#34;Result&amp;#34; + &amp;#34;\n&amp;#34;, s, &amp;#34;\n&amp;#34; ); }); Here, the input file (books.</description>
     </item>
     <item>
       <title>Recover offscreen window</title>
-      <link>http://localhost:1313/tips/windows/recover-offscreen-window/</link>
+      <link>https://lanceleonard.com/tips/windows/recover-offscreen-window/</link>
       <pubDate>Tue, 07 May 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tips/windows/recover-offscreen-window/</guid>
+      <guid>https://lanceleonard.com/tips/windows/recover-offscreen-window/</guid>
       <description>When working with multiple monitors, it&amp;rsquo;s possible for open windows to be left offscreen.&#xA;I&amp;rsquo;ve see this happen when:&#xA;Traveling with a laptop normally hooked up to external monitors when docked at home.&#xA;Using a KVM switch to share a monitor between different machines.&#xA;Most of the time, windows adjust to the new display area. Every so often, however, one remains in its original position. It&amp;rsquo;s open and responds to input.</description>
     </item>
     <item>
       <title>Package managers</title>
-      <link>http://localhost:1313/tips/unix/package-managers/</link>
+      <link>https://lanceleonard.com/tips/unix/package-managers/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tips/unix/package-managers/</guid>
+      <guid>https://lanceleonard.com/tips/unix/package-managers/</guid>
       <description>Package managers vary between distributions (distros).&#xA;Here&amp;rsquo;s a starting list:&#xA;Operating system (distro) Package manager MacOS (OS/X) brew Alpine Linux apk Amazon Linux dnf (AL2023)&#xA;yum (AL2 and earlier) archlinux pacman Debian (v8+)&#xA;Ubuntu (v13.10+) apt-get Fedora Linux dnf (v22+)&#xA;yum (v21 and earlier) FreeBSD pkg gentoo linux emerge OpenBSD/NetBSD pkg_add openSUSE zypper Raspberry Pi (Raspbian) Varies, typically apt or pip Red Hat Enterprise (RHEL) (v7+) yum Slackware sbopkg </description>
     </item>
     <item>
       <title>Vi editor cheat sheet</title>
-      <link>http://localhost:1313/tips/unix/vi-cheat-sheet/</link>
+      <link>https://lanceleonard.com/tips/unix/vi-cheat-sheet/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tips/unix/vi-cheat-sheet/</guid>
+      <guid>https://lanceleonard.com/tips/unix/vi-cheat-sheet/</guid>
       <description>Here is a quick cheat sheet for the vi text editor:&#xA;There are two modes: Command and Insert.&#xA;The word INSERT appears in the bottom left corner of the screen when that mode is active.&#xA;If you&amp;rsquo;re not sure what mode you&amp;rsquo;re in, press Esc to go into Command mode.&#xA;To move the cursor in command mode:&#xA;H (left) J (right) K (up) L (right) Press I to activate Insert mode.</description>
     </item>
     <item>
       <title>Initial migration complete</title>
-      <link>http://localhost:1313/scribbles/journal/initial-migration/</link>
+      <link>https://lanceleonard.com/scribbles/journal/initial-migration/</link>
       <pubDate>Fri, 10 May 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/scribbles/journal/initial-migration/</guid>
+      <guid>https://lanceleonard.com/scribbles/journal/initial-migration/</guid>
       <description>The site has been been updated to a new look. It has more content and a more professional pipeline.&#xA;I have to admit that I was a little worried when starting the migration process, even though I&amp;rsquo;ve been working with (or near) the new toolset for some time.&#xA;Part of my nervousness stems from earlier experiences, which have included some rather&amp;hellip;dramatic results.&#xA;No matter how well you plan, something always seems to go sideways.</description>
     </item>
     <item>
       <title>Restart the engines</title>
-      <link>http://localhost:1313/scribbles/journal/restart-engines/</link>
+      <link>https://lanceleonard.com/scribbles/journal/restart-engines/</link>
       <pubDate>Wed, 01 May 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/scribbles/journal/restart-engines/</guid>
+      <guid>https://lanceleonard.com/scribbles/journal/restart-engines/</guid>
       <description>Welcome back to the ongoing work-in-progress. I&amp;rsquo;m blowing off the dust, sweeping away the cobwebs, and setting up new things.&#xA;This site serves as a practical portfolio and personal knowledgebase. It provides writing samples and illustrates my approach to technical writing. It also shares knowledge and lessons learned during my technical adventures.&#xA;I hope the content is engaging, practical, and has at least a bit of value. (I&amp;rsquo;m still trying to chase down the various typos, so you&amp;rsquo;ll have to forgive a few rough edges.</description>
     </item>
     <item>
       <title>First post: Don&#39;t panic</title>
-      <link>http://localhost:1313/scribbles/journal/first-post/</link>
+      <link>https://lanceleonard.com/scribbles/journal/first-post/</link>
       <pubDate>Wed, 25 Jan 2017 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/scribbles/journal/first-post/</guid>
+      <guid>https://lanceleonard.com/scribbles/journal/first-post/</guid>
       <description>&lt;p&gt;Choose your greeting:&lt;/p&gt;</description>
     </item>
     <item>
       <title>Search Results</title>
-      <link>http://localhost:1313/search/</link>
+      <link>https://lanceleonard.com/search/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/search/</guid>
+      <guid>https://lanceleonard.com/search/</guid>
       <description></description>
     </item>
   </channel>

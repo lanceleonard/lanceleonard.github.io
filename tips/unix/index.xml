@@ -2,23 +2,23 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Unix general tips on Lance&#39;s Quips &amp; Quibbles</title>
-    <link>http://localhost:1313/tips/unix/</link>
+    <link>https://lanceleonard.com/tips/unix/</link>
     <description>Recent content in Unix general tips on Lance&#39;s Quips &amp; Quibbles</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <atom:link href="http://localhost:1313/tips/unix/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://lanceleonard.com/tips/unix/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Package managers</title>
-      <link>http://localhost:1313/tips/unix/package-managers/</link>
+      <link>https://lanceleonard.com/tips/unix/package-managers/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tips/unix/package-managers/</guid>
+      <guid>https://lanceleonard.com/tips/unix/package-managers/</guid>
       <description>Package managers vary between distributions (distros).&#xA;Here&amp;rsquo;s a starting list:&#xA;Operating system (distro) Package manager MacOS (OS/X) brew Alpine Linux apk Amazon Linux dnf (AL2023)&#xA;yum (AL2 and earlier) archlinux pacman Debian (v8+)&#xA;Ubuntu (v13.10+) apt-get Fedora Linux dnf (v22+)&#xA;yum (v21 and earlier) FreeBSD pkg gentoo linux emerge OpenBSD/NetBSD pkg_add openSUSE zypper Raspberry Pi (Raspbian) Varies, typically apt or pip Red Hat Enterprise (RHEL) (v7+) yum Slackware sbopkg </description>
     </item>
     <item>
       <title>Vi editor cheat sheet</title>
-      <link>http://localhost:1313/tips/unix/vi-cheat-sheet/</link>
+      <link>https://lanceleonard.com/tips/unix/vi-cheat-sheet/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tips/unix/vi-cheat-sheet/</guid>
+      <guid>https://lanceleonard.com/tips/unix/vi-cheat-sheet/</guid>
       <description>Here is a quick cheat sheet for the vi text editor:&#xA;There are two modes: Command and Insert.&#xA;The word INSERT appears in the bottom left corner of the screen when that mode is active.&#xA;If you&amp;rsquo;re not sure what mode you&amp;rsquo;re in, press Esc to go into Command mode.&#xA;To move the cursor in command mode:&#xA;H (left) J (right) K (up) L (right) Press I to activate Insert mode.</description>
     </item>
   </channel>
