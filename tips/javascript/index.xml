@@ -2,23 +2,23 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>JavaScript, Node.js, and related on Lance&#39;s Quips &amp; Quibbles</title>
-    <link>http://localhost:1313/tips/javascript/</link>
+    <link>https://lanceleonard.com/tips/javascript/</link>
     <description>Recent content in JavaScript, Node.js, and related on Lance&#39;s Quips &amp; Quibbles</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <atom:link href="http://localhost:1313/tips/javascript/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://lanceleonard.com/tips/javascript/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Dictionary sorting in JavaScript</title>
-      <link>http://localhost:1313/tips/javascript/dictionary-sorting/</link>
+      <link>https://lanceleonard.com/tips/javascript/dictionary-sorting/</link>
       <pubDate>Mon, 06 May 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tips/javascript/dictionary-sorting/</guid>
+      <guid>https://lanceleonard.com/tips/javascript/dictionary-sorting/</guid>
       <description>By default, the JavaScript Array.sort() function sorts arrays according to character placement within a character set. For most web content, this is UTF-8.&#xA;However, this may not always be an ideal result.&#xA;Here, we show how to define a custom sort order in JavaScript.&#xA;Process array To illustrate, consider the following book titles, organized roughly by the year they were first published.&#xA;A Study in Scarlet The Sign of Four The Adventures of Sherlock Holmes The Memoirs of Sherlock Holmes The Hound of the Baskervilles The Return of Sherlock Holmes His Last Bow The Valley of Fear The Case-Book of Sherlock Holmes To print an array containing these titles to a web page, you might use something like this:</description>
     </item>
     <item>
       <title>Extract links from a webpage</title>
-      <link>http://localhost:1313/tips/javascript/extract-webpage-links/</link>
+      <link>https://lanceleonard.com/tips/javascript/extract-webpage-links/</link>
       <pubDate>Mon, 06 May 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tips/javascript/extract-webpage-links/</guid>
+      <guid>https://lanceleonard.com/tips/javascript/extract-webpage-links/</guid>
       <description>An uncommon bit of website maintenance involves reviewing or updating links on a webpage.&#xA;Typically, you want a list of the URLs specified in anchor elements (&amp;lt;a href=&amp;quot;...&amp;quot;&amp;gt;&amp;lt;/a&amp;gt;).&#xA;This means you want a list of the URLs specified in the HREF attribute of anchors.&#xA;Like many tasks, this can be more complicated than it first appears.&#xA;List webpage links Use the Document.links property to get a list of the links on a webpage.</description>
     </item>
   </channel>

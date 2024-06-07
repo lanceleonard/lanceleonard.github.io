@@ -2,23 +2,23 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Windows and related topics on Lance&#39;s Quips &amp; Quibbles</title>
-    <link>http://localhost:1313/tips/windows/</link>
+    <link>https://lanceleonard.com/tips/windows/</link>
     <description>Recent content in Windows and related topics on Lance&#39;s Quips &amp; Quibbles</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <atom:link href="http://localhost:1313/tips/windows/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://lanceleonard.com/tips/windows/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Keyboard shortcuts for elevation prompts</title>
-      <link>http://localhost:1313/tips/windows/elevation-prompt-shortcuts/</link>
+      <link>https://lanceleonard.com/tips/windows/elevation-prompt-shortcuts/</link>
       <pubDate>Mon, 06 May 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tips/windows/elevation-prompt-shortcuts/</guid>
+      <guid>https://lanceleonard.com/tips/windows/elevation-prompt-shortcuts/</guid>
       <description>Windows uses privilege elevation prompts (also known as user account controls or UACs) to confirm administrative actions, such as installing new software, deleting files from sensitive locations, and so on.&#xA;Elevation prompt behavior has changed since the original Window Vista introduction, however, the experience can be jarring, especially if you routinely switch between devices running different versions of Windows.&#xA;A few keyboard shortcuts have remained consistent through multiple versions of Windows, including:</description>
     </item>
     <item>
       <title>Recover offscreen window</title>
-      <link>http://localhost:1313/tips/windows/recover-offscreen-window/</link>
+      <link>https://lanceleonard.com/tips/windows/recover-offscreen-window/</link>
       <pubDate>Tue, 07 May 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tips/windows/recover-offscreen-window/</guid>
+      <guid>https://lanceleonard.com/tips/windows/recover-offscreen-window/</guid>
       <description>When working with multiple monitors, it&amp;rsquo;s possible for open windows to be left offscreen.&#xA;I&amp;rsquo;ve see this happen when:&#xA;Traveling with a laptop normally hooked up to external monitors when docked at home.&#xA;Using a KVM switch to share a monitor between different machines.&#xA;Most of the time, windows adjust to the new display area. Every so often, however, one remains in its original position. It&amp;rsquo;s open and responds to input.</description>
     </item>
   </channel>

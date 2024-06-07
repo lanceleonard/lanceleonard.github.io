@@ -2,37 +2,37 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Git, GitHub, &amp; related on Lance&#39;s Quips &amp; Quibbles</title>
-    <link>http://localhost:1313/tips/git/</link>
+    <link>https://lanceleonard.com/tips/git/</link>
     <description>Recent content in Git, GitHub, &amp; related on Lance&#39;s Quips &amp; Quibbles</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <atom:link href="http://localhost:1313/tips/git/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://lanceleonard.com/tips/git/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Git console commands</title>
-      <link>http://localhost:1313/tips/git/console-commands/</link>
+      <link>https://lanceleonard.com/tips/git/console-commands/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tips/git/console-commands/</guid>
+      <guid>https://lanceleonard.com/tips/git/console-commands/</guid>
       <description>Here are a few common (and uncommon) tasks you can perform from the command-line.&#xA;Set up new project $ git clone ... $ git submodule init $ git submodule update Start work $ git checkout main $ git pull $ git checkout branch-name $ git merge main // resolve merge conflicts, if any This helps keep things up-to-date when working with others.&#xA;There are considerations and alternatives.&#xA;Work task $ git status $ git add //.</description>
     </item>
     <item>
       <title>Fix broken branches and main mistakes</title>
-      <link>http://localhost:1313/tips/git/fix-default-branch-mistake/</link>
+      <link>https://lanceleonard.com/tips/git/fix-default-branch-mistake/</link>
       <pubDate>Mon, 06 May 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tips/git/fix-default-branch-mistake/</guid>
+      <guid>https://lanceleonard.com/tips/git/fix-default-branch-mistake/</guid>
       <description>Once established, git workflows go fairly smoothly.&#xA;At some point, you might realize that a branch pull request (PR) includes commits that it shouldn&amp;rsquo;t.&#xA;Alternatively, your local default branch (main or master for older projects) has somehow managed to get ahead of the remote origin.&#xA;To fix things, you need to:&#xA;Replace the broken branch Replace the broken pull request Replace broken branch For the most part, you can&amp;rsquo;t selectively remove commits from a pull request.</description>
     </item>
     <item>
       <title>Email privacy error</title>
-      <link>http://localhost:1313/tips/git/remote-privacy-errors/</link>
+      <link>https://lanceleonard.com/tips/git/remote-privacy-errors/</link>
       <pubDate>Sun, 12 May 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tips/git/remote-privacy-errors/</guid>
+      <guid>https://lanceleonard.com/tips/git/remote-privacy-errors/</guid>
       <description>When trying to push a commit using git from the command-line, you receive a GH007 remote error:&#xA;remote: error: GH007: Your push would publish a private email address. Here, you&amp;rsquo;ve likely:&#xA;Configured your local copy of git to use the email address associated with your GitHub account Enabled the Keep my email addresses private option in your Github profile settings. The error is Github&amp;rsquo;s way of enforcing the privacy of your email address.</description>
     </item>
     <item>
       <title>Set Git Bash default path</title>
-      <link>http://localhost:1313/tips/git/git-bash-default-path/</link>
+      <link>https://lanceleonard.com/tips/git/git-bash-default-path/</link>
       <pubDate>Tue, 07 May 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tips/git/git-bash-default-path/</guid>
+      <guid>https://lanceleonard.com/tips/git/git-bash-default-path/</guid>
       <description>Git for Windows includes a tool called Git Bash, which gives you a bash shell you can use to run git via the command line.&#xA;To set the Git Bash default directory, change the Start in field on the Shortcut tab of the Git Bash properties.&#xA;Here&amp;rsquo;s how:&#xA;Right-click the Git Bash icon in the taskbar to display the taskbar shortcut menu.&#xA;Right-click the Git Bash command in the taskbar shortcut menu and then select Properties.</description>
     </item>
   </channel>
