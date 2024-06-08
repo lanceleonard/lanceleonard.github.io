@@ -3,7 +3,7 @@
   <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="noindex, nofollow">
+<meta name="robots" content="index, follow">
 
 
 <link rel="shortcut icon" href="/favicons/favicon.ico" >
@@ -26,19 +26,19 @@
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="tips">
-    <meta property="article:modified_time" content="2024-06-03T16:15:58-07:00">
+    <meta property="article:modified_time" content="2024-06-04T20:58:52-07:00">
 
   <meta itemprop="name" content="Nested list item indent">
   <meta itemprop="description" content="Shows one way to control the space used to indent nested list items.">
-  <meta itemprop="dateModified" content="2024-06-03T16:15:58-07:00">
-  <meta itemprop="wordCount" content="115"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="Nested list item indent">
+  <meta itemprop="dateModified" content="2024-06-04T20:58:52-07:00">
+  <meta itemprop="wordCount" content="234"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="Nested list item indent">
 <meta name="twitter:description" content="Shows one way to control the space used to indent nested list items.">
 
 
 
 
-
-<link href="/scss/main.css" rel="stylesheet">
+<link rel="preload" href="/scss/main.min.14291bf618f45ab5aeb1b38f2a11c1d7f4bf1ad154b5c0ea21589742a7e90969.css" as="style">
+<link href="/scss/main.min.14291bf618f45ab5aeb1b38f2a11c1d7f4bf1ad154b5c0ea21589742a7e90969.css" rel="stylesheet" integrity="">
 
 <script
   src="https://code.jquery.com/jquery-3.7.1.min.js"
@@ -129,7 +129,7 @@
     aria-label="Search this site…"
     autocomplete="off"
     
-    data-offline-search-index-json-src="/offline-search-index.json"
+    data-offline-search-index-json-src="/offline-search-index.8968d69bcd95ac18fda260ee45e1e83b.json"
     data-offline-search-base-href="/"
     data-offline-search-max-results="10"
   >
@@ -153,7 +153,7 @@
     aria-label="Search this site…"
     autocomplete="off"
     
-    data-offline-search-index-json-src="/offline-search-index.json"
+    data-offline-search-index-json-src="/offline-search-index.8968d69bcd95ac18fda260ee45e1e83b.json"
     data-offline-search-base-href="/"
     data-offline-search-max-results="10"
   >
@@ -213,11 +213,7 @@
   <label for="m-tipsdoctoolshugo-check"><a href="/tips/doc/tools/hugo/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-tipsdoctoolshugo"><span class="">Hugo</span></a></label>
   
   <ul class="ul-5 foldable">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipsdoctoolshugocustomize-theme-style-li">
-  <input type="checkbox" id="m-tipsdoctoolshugocustomize-theme-style-check"/>
-  <label for="m-tipsdoctoolshugocustomize-theme-style-check"><a href="/tips/doc/tools/hugo/customize-theme-style/" title="Customize theme styles" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-tipsdoctoolshugocustomize-theme-style"><span class="">Customize theme</span></a></label>
-  
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipsdoctoolshugodark-mode-code-docsy-li">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipsdoctoolshugodark-mode-code-docsy-li">
   <input type="checkbox" id="m-tipsdoctoolshugodark-mode-code-docsy-check"/>
   <label for="m-tipsdoctoolshugodark-mode-code-docsy-check"><a href="/tips/doc/tools/hugo/dark-mode-code-docsy/" title="Fix dark mode code block" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-tipsdoctoolshugodark-mode-code-docsy"><span class="">Dark mode code</span></a></label>
   
@@ -427,7 +423,15 @@
 
 </div>
 
-            
+            <div class="td-toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#framework-impact">Framework impact</a></li>
+    <li><a href="#vital-statistics">Vital statistics</a></li>
+  </ul>
+</nav>
+      </div>
+    
             
 	
           </aside>
@@ -453,74 +457,218 @@
 	<div class="lead">Shows one way to control the space used to indent nested list items.</div>
 	<header class="article-meta">
 		
-  <p class="reading-time"><i class="fa-solid fa-clock" aria-hidden="true"></i>&nbsp; less than a minute &nbsp;</p>
+  <p class="reading-time"><i class="fa-solid fa-clock" aria-hidden="true"></i>&nbsp; 2 minute read &nbsp;</p>
 </header>
 	<p>Many modern browsers indent list items 40 pixels by default.</p>
-<p>Many doc websites, like this one, use nested lists to navigate organized topics.  When multiple levels are used, the default spacing may interfere with legibility.</p>
-<p>You can use the <code>padding-inline-start</code> CSS property to control the indent distance:</p>
+<p>When a nested list contains more three or more levels, the default indent becomes more pronounced.</p>
+<p>You can use <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/padding-inline-start"><code>padding-inline-start</code></a> to control this, as shown in the following examples:</p>
+<p> </p>
+
+
+  
+
+  
+
+<ul class="nav nav-tabs" id="tabs-0" role="tablist">
+  <li class="nav-item">
+      <button class="nav-link active"
+          id="tabs-00-00-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-00" role="tab"
+          data-td-tp-persist="browser default (40px)" aria-controls="tabs-00-00" aria-selected="true">
+        Browser default (40px)
+      </button>
+    </li><li class="nav-item">
+      <button class="nav-link"
+          id="tabs-00-01-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-01" role="tab"
+          data-td-tp-persist="custom indent (16px)" aria-controls="tabs-00-01" aria-selected="false">
+        Custom indent (16px)
+      </button>
+    </li>
+</ul>
+
+<div class="tab-content" id="tabs-0-content">
+    <div class="tab-body tab-pane fade show active"
+        id="tabs-00-00" role="tabpanel" aria-labelled-by="tabs-00-00-tab" tabindex="0">
+        <ul class="example-list-indent-40">
+<li>Base item
 <ul>
-<li>
-<p>Level 1</p>
-<p>organize This can create problems when space is a premium, especially when using indented lists as navigation elements in doc websites (such as this one).</p>
+<li>Shapes
+<ul>
+<li>Circle
+<ul>
+<li>Influence</li>
+<li>Fifths</li>
+<li>Social</li>
+</ul>
+</li>
+<li>Square
+<ul>
+<li>Town</li>
+<li>Meal</li>
+<li>Deal</li>
+</ul>
+</li>
+<li>Triangle
+<ul>
+<li>Acute</li>
+<li>Right</li>
+<li>Obtuse</li>
+</ul>
 </li>
 </ul>
-<p>Use the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/column-width"><code>column-width</code></a> property to display lists in columns that flow like newspaper stories.</p>
-<p style="border-bottom:1px solid;">Here&rsquo;s an example:</p>
-<ul style="column-width: 15em;border-bottom:1px solid;">
-<li>
-<p>Abyssinian</p>
 </li>
-<li>
-<p>American Shorthair</p>
+<li>Colors
+<ul>
+<li>Red
+<ul>
+<li>Antares</li>
+<li>Betelgeuse</li>
+<li>VY Canis Majoris</li>
+</ul>
 </li>
-<li>
-<p>Arabian Mau</p>
+<li>Blue
+<ul>
+<li>Alpha Camelopardis</li>
+<li>Cygnus X-1</li>
+<li>Mintaka</li>
+</ul>
 </li>
-<li>
-<p>Bengal</p>
+<li>Yellow
+<ul>
+<li>Sol</li>
+<li>Chalawan</li>
+<li>Tau Ceti</li>
+</ul>
 </li>
-<li>
-<p>Calico</p>
+</ul>
 </li>
-<li>
-<p>Chartreux</p>
+<li>Kingdoms
+<ul>
+<li>Animal
+<ul>
+<li>Felis catus</li>
+<li>Chiroptera</li>
+<li>Corvus corax</li>
+</ul>
 </li>
-<li>
-<p>Himalayan</p>
+<li>Vegetable
+<ul>
+<li>Broccoli</li>
+<li>Cauliflower</li>
+<li>Kale</li>
+</ul>
 </li>
-<li>
-<p>Korat</p>
+<li>Mineral
+<ul>
+<li>Tungsten</li>
+<li>Cinnabar</li>
+<li>Corundum</li>
+</ul>
 </li>
-<li>
-<p>Maine Coon</p>
+</ul>
 </li>
-<li>
-<p>Manx</p>
+</ul>
 </li>
-<li>
-<p>Minuet</p>
+</ul>
+
+    </div>
+    <div class="tab-body tab-pane fade"
+        id="tabs-00-01" role="tabpanel" aria-labelled-by="tabs-00-01-tab" tabindex="0">
+        <ul class="example-list-indent-16">
+<li>Base item
+<ul>
+<li>Shapes
+<ul>
+<li>Circle
+<ul>
+<li>Influence</li>
+<li>Fifths</li>
+<li>Social</li>
+</ul>
 </li>
-<li>
-<p>Norwegian Forest Cat</p>
+<li>Square
+<ul>
+<li>Town</li>
+<li>Meal</li>
+<li>Deal</li>
+</ul>
 </li>
-<li>
-<p>Persian</p>
+<li>Triangle
+<ul>
+<li>Acute</li>
+<li>Right</li>
+<li>Obtuse</li>
+</ul>
 </li>
-<li>
-<p>Ragdoll</p>
+</ul>
 </li>
-<li>
-<p>Siamese</p>
+<li>Colors
+<ul>
+<li>Red
+<ul>
+<li>Antares</li>
+<li>Betelgeuse</li>
+<li>VY Canis Majoris</li>
+</ul>
 </li>
-<li>
-<p>Snowshoe</p>
+<li>Blue
+<ul>
+<li>Alpha Camelopardis</li>
+<li>Cygnus X-1</li>
+<li>Mintaka</li>
+</ul>
 </li>
-<li>
-<p>Tortoiseshell</p>
+<li>Yellow
+<ul>
+<li>Sol</li>
+<li>Chalawan</li>
+<li>Tau Ceti</li>
+</ul>
 </li>
-<li>
-<p>York Chocolate</p>
+</ul>
 </li>
+<li>Kingdoms
+<ul>
+<li>Animal
+<ul>
+<li>Felis catus</li>
+<li>Chiroptera</li>
+<li>Corvus corax</li>
+</ul>
+</li>
+<li>Vegetable
+<ul>
+<li>Broccoli</li>
+<li>Cauliflower</li>
+<li>Kale</li>
+</ul>
+</li>
+<li>Mineral
+<ul>
+<li>Tungsten</li>
+<li>Cinnabar</li>
+<li>Corundum</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+    </div>
+</div>
+
+<p>Here, the first example shows the typical browser default (40px) and the second reduces this to 16px, as shown in this CSS rule:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="p">.</span><span class="nc">example-list-indent-16</span> <span class="nt">ul</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">   <span class="n">padding-inline-start</span><span class="p">:</span> <span class="mi">16</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h2 id="framework-impact">Framework impact<a class="td-heading-self-link" href="#framework-impact" aria-label="Heading self-link"></a></h2>
+<p>Common web design design frameworks, such as <a href="https://getbootstrap.com/">Bootstrap</a>, often reset (or <a href="https://getbootstrap.com/docs/4.1/content/reboot/"><em>reboot</em></a>) browser style defaults to simplify cross-browser design.</p>
+<p>These changes can affect the list indent.  For example, this site defaults to a list indent of 32px because its theme incorporates Bootstrap.</p>
+<p>As a result, you may need to experiment to achieve your desired results.</p>
+<h2 id="vital-statistics">Vital statistics<a class="td-heading-self-link" href="#vital-statistics" aria-label="Heading self-link"></a></h2>
+<ul>
+<li>4 Jun 2024: First post</li>
 </ul>
 
 	
@@ -568,8 +716,8 @@
   </footer>
   
     </div>
-    <script src="/js/main.js"></script>
-<script defer src="/js/click-to-copy.js" crossorigin="anonymous"></script>
+    <script src="/js/main.min.f72d00502781aaf278a14088eb2356b1ba2a05ad698a0c43fe86314d74ceab56.js" integrity="sha256-9y0AUCeBqvJ4oUCI6yNWsboqBa1pigxD/oYxTXTOq1Y=" crossorigin="anonymous"></script>
+<script defer src="/js/click-to-copy.min.73478a7d4807698aed7e355eb23f9890ca18fea3158604c8471746d046702bad.js" integrity="sha256-c0eKfUgHaYrtfjVesj&#43;YkMoY/qMVhgTIRxdG0EZwK60=" crossorigin="anonymous"></script>
 <script src='/js/tabpane-persist.js'></script>
 
   </body>
