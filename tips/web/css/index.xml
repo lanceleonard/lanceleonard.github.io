@@ -8,6 +8,13 @@
     <language>en</language>
     <atom:link href="https://lanceleonard.com/tips/web/css/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Nested list item indent</title>
+      <link>https://lanceleonard.com/tips/web/css/list-indents/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://lanceleonard.com/tips/web/css/list-indents/</guid>
+      <description>Many modern browsers indent list items 40 pixels by default.&#xA;When a nested list contains more three or more levels, the default indent becomes more pronounced.&#xA;You can use padding-inline-start to control this, as shown in the following examples:&#xA;Browser default (40px) Custom indent (16px) Base item Shapes Circle Influence Fifths Social Square Town Meal Deal Triangle Acute Right Obtuse Colors Red Antares Betelgeuse VY Canis Majoris Blue Alpha Camelopardis Cygnus X-1 Mintaka Yellow Sol Chalawan Tau Ceti Kingdoms Animal Felis catus Chiroptera Corvus corax Vegetable Broccoli Cauliflower Kale Mineral Tungsten Cinnabar Corundum Base item Shapes Circle Influence Fifths Social Square Town Meal Deal Triangle Acute Right Obtuse Colors Red Antares Betelgeuse VY Canis Majoris Blue Alpha Camelopardis Cygnus X-1 Mintaka Yellow Sol Chalawan Tau Ceti Kingdoms Animal Felis catus Chiroptera Corvus corax Vegetable Broccoli Cauliflower Kale Mineral Tungsten Cinnabar Corundum Here, the first example shows the typical browser default (40px) and the second reduces this to 16px, as shown in this CSS rule:</description>
+    </item>
+    <item>
       <title>Simple newspaper columns</title>
       <link>https://lanceleonard.com/tips/web/css/newspapers-columns/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

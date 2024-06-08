@@ -4,7 +4,7 @@
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link rel="alternate" type="application/rss&#43;xml" href="https://lanceleonard.com/about/changelog/index.xml">
-<meta name="robots" content="noindex, nofollow">
+<meta name="robots" content="index, follow">
 
 
 <link rel="shortcut icon" href="/favicons/favicon.ico" >
@@ -29,15 +29,15 @@
 
   <meta itemprop="name" content="Changelog">
   <meta itemprop="description" content="Change happens.  Here&#39;s what&#39;s happened here recently.">
-  <meta itemprop="dateModified" content="2024-06-04T16:06:52-07:00">
-  <meta itemprop="wordCount" content="278"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="Changelog">
+  <meta itemprop="dateModified" content="2024-06-08T11:42:11-07:00">
+  <meta itemprop="wordCount" content="393"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="Changelog">
 <meta name="twitter:description" content="Change happens.  Here&#39;s what&#39;s happened here recently.">
 
 
 
 
-
-<link href="/scss/main.css" rel="stylesheet">
+<link rel="preload" href="/scss/main.min.14291bf618f45ab5aeb1b38f2a11c1d7f4bf1ad154b5c0ea21589742a7e90969.css" as="style">
+<link href="/scss/main.min.14291bf618f45ab5aeb1b38f2a11c1d7f4bf1ad154b5c0ea21589742a7e90969.css" rel="stylesheet" integrity="">
 
 <script
   src="https://code.jquery.com/jquery-3.7.1.min.js"
@@ -128,7 +128,7 @@
     aria-label="Search this site…"
     autocomplete="off"
     
-    data-offline-search-index-json-src="/offline-search-index.json"
+    data-offline-search-index-json-src="/offline-search-index.8968d69bcd95ac18fda260ee45e1e83b.json"
     data-offline-search-base-href="/"
     data-offline-search-max-results="10"
   >
@@ -152,7 +152,7 @@
     aria-label="Search this site…"
     autocomplete="off"
     
-    data-offline-search-index-json-src="/offline-search-index.json"
+    data-offline-search-index-json-src="/offline-search-index.8968d69bcd95ac18fda260ee45e1e83b.json"
     data-offline-search-base-href="/"
     data-offline-search-max-results="10"
   >
@@ -320,7 +320,11 @@
   <label for="m-tipswebcss-check"><a href="/tips/web/css/" title="Cascading style sheets (CSS)" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-tipswebcss"><span class="">CSS</span></a></label>
   
   <ul class="ul-4 foldable">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipswebcssnewspapers-columns-li">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipswebcsslist-indents-li">
+  <input type="checkbox" id="m-tipswebcsslist-indents-check"/>
+  <label for="m-tipswebcsslist-indents-check"><a href="/tips/web/css/list-indents/" title="Nested list item indent" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-tipswebcsslist-indents"><span class="">Nested list indent</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipswebcssnewspapers-columns-li">
   <input type="checkbox" id="m-tipswebcssnewspapers-columns-check"/>
   <label for="m-tipswebcssnewspapers-columns-check"><a href="/tips/web/css/newspapers-columns/" title="Simple newspaper columns" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-tipswebcssnewspapers-columns"><span class="">Newspaper columns</span></a></label>
   
@@ -450,9 +454,33 @@
 		
   <p class="reading-time"><i class="fa-solid fa-clock" aria-hidden="true"></i>&nbsp; 2 minute read &nbsp;</p>
 </header>
-	<h2 id="june-2024">June 2024<a class="td-heading-self-link" href="#june-2024" aria-label="Heading self-link"></a></h2>
+	
+
+<div class="pageinfo pageinfo-info">
+<p>&ldquo;In this world, there are only two tragedies.<br>
+One is not getting what one wants, and the other is getting it.<br>
+The last is much the worst, the last is the real tragedy!&rdquo;<br>
+<em>&ndash; Mr. Dumby, &ldquo;Lady Windermere&rsquo;s Fan: A Play About a Good Woman&rdquo;, by Oscar Wilde (1892)</em><br>
+ </p>
+
+</div>
+
+<h2 id="june-2024">June 2024<a class="td-heading-self-link" href="#june-2024" aria-label="Heading self-link"></a></h2>
 <ul>
-<li>3 Jun 2024: Quality updates
+<li>
+<p>8 Jun 2024: More quality improvements</p>
+<ul>
+<li>Added new CSS article: <a href="/tips/web/css/list-indents/">List item indents</a>.</li>
+<li>Internal: Updated breadcrumb partial to hide breadcrumbs on individual pages.  (Note to self: see <code>content/_index.md</code> for sample use.)</li>
+<li>Internal: Updated breadcrumb separators</li>
+<li>Fixed a problem with redirects leading to 404 errors, along with a few outdated links.</li>
+<li>The 404 handler has been customized.</li>
+<li>Resolved issues with external search (🤞).</li>
+<li>Additional tweaks and fixes.</li>
+</ul>
+</li>
+<li>
+<p>3 Jun 2024: Quality updates</p>
 <ul>
 <li>The sidebar now shows expand and collapse markers.</li>
 <li>A broken link on the home page has been fixed.  (Sorry.)</li>
@@ -570,8 +598,8 @@
   </footer>
   
     </div>
-    <script src="/js/main.js"></script>
-<script defer src="/js/click-to-copy.js" crossorigin="anonymous"></script>
+    <script src="/js/main.min.f72d00502781aaf278a14088eb2356b1ba2a05ad698a0c43fe86314d74ceab56.js" integrity="sha256-9y0AUCeBqvJ4oUCI6yNWsboqBa1pigxD/oYxTXTOq1Y=" crossorigin="anonymous"></script>
+<script defer src="/js/click-to-copy.min.73478a7d4807698aed7e355eb23f9890ca18fea3158604c8471746d046702bad.js" integrity="sha256-c0eKfUgHaYrtfjVesj&#43;YkMoY/qMVhgTIRxdG0EZwK60=" crossorigin="anonymous"></script>
 <script src='/js/tabpane-persist.js'></script>
 
   </body>

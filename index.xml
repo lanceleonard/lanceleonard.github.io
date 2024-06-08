@@ -124,14 +124,21 @@
       <link>https://lanceleonard.com/about/fair-warnings/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://lanceleonard.com/about/fair-warnings/</guid>
-      <description>Occasionally, I&amp;rsquo;m asked I&amp;rsquo;m a particular Lance Leonard.&#xA;I&amp;rsquo;ll admit to being a Lance Leonard, but perhaps not the Lance Leonard you&amp;rsquo;re looking for. (&amp;ldquo;Haven&amp;rsquo;t you heard? I come in six-packs.&amp;rdquo;)&#xA;For example, I am not:&#xA;A conservative politician from New Jersey. (You&amp;rsquo;ve likely reversed the names, not to mention the, well, never mind. It&amp;rsquo;s not that sort of site.)&#xA;Formerly of any confection or beverage companies; the email addresses are close, but different.</description>
+      <description>&amp;ldquo;[M]any of the truths we cling to depend greatly on our own point of view.&amp;rdquo;&#xA;&amp;ndash; Obi-Wan Kenobi, &amp;ldquo;Star Wars Episode VI: Return of the Jedi&amp;rdquo; (1983)&#xA;Occasionally, I&amp;rsquo;m asked I&amp;rsquo;m a particular Lance Leonard.&#xA;I&amp;rsquo;ll admit to being a Lance Leonard, but perhaps not the Lance Leonard you&amp;rsquo;re looking for. (&amp;ldquo;Haven&amp;rsquo;t you heard? I come in six-packs.&amp;rdquo;)&#xA;For example, I am *not*:&#xA;A conservative politician from New Jersey. (You&amp;rsquo;ve likely reversed the names, not to mention the, well, never mind.</description>
     </item>
     <item>
       <title>Hide details until needed</title>
       <link>https://lanceleonard.com/tips/web/html/details-element/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://lanceleonard.com/tips/web/html/details-element/</guid>
-      <description>Effective web design is often a balancing act between engaging experiences and practical content. You want to provide visual delight to those willing to partake without alienating those who prefer to avoid unwanted distractions.&#xA;An effective compromise is to hide certain elements until the user choose to view them. The &amp;lt;details&amp;gt; element lets you do this.&#xA;By default, it hides content until opened by the user. Because &amp;lt;details&amp;gt; is a core HTML element, most browsers implement it in a way that lets those using alternate browsing experiences, such as screen readers, know what&amp;rsquo;s going on and how to interact with the content.</description>
+      <description>The &amp;lt;details&amp;gt; element (also known as the disclosure element) hides content until a user chooses to view it. You can use this element to reduce the visual impact of large content blocks, such as extended source code, detailed configuration files, videos, and so on.&#xA;By default, &amp;lt;details&amp;gt; hides content until the user chooses to view it.&#xA;The &amp;lt;details&amp;gt; element is a core HTML element supported by many modern browsers.&#xA;Example Here&amp;rsquo;s an example of the &amp;lt;details&amp;gt; element:</description>
+    </item>
+    <item>
+      <title>Nested list item indent</title>
+      <link>https://lanceleonard.com/tips/web/css/list-indents/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://lanceleonard.com/tips/web/css/list-indents/</guid>
+      <description>Many modern browsers indent list items 40 pixels by default.&#xA;When a nested list contains more three or more levels, the default indent becomes more pronounced.&#xA;You can use padding-inline-start to control this, as shown in the following examples:&#xA;Browser default (40px) Custom indent (16px) Base item Shapes Circle Influence Fifths Social Square Town Meal Deal Triangle Acute Right Obtuse Colors Red Antares Betelgeuse VY Canis Majoris Blue Alpha Camelopardis Cygnus X-1 Mintaka Yellow Sol Chalawan Tau Ceti Kingdoms Animal Felis catus Chiroptera Corvus corax Vegetable Broccoli Cauliflower Kale Mineral Tungsten Cinnabar Corundum Base item Shapes Circle Influence Fifths Social Square Town Meal Deal Triangle Acute Right Obtuse Colors Red Antares Betelgeuse VY Canis Majoris Blue Alpha Camelopardis Cygnus X-1 Mintaka Yellow Sol Chalawan Tau Ceti Kingdoms Animal Felis catus Chiroptera Corvus corax Vegetable Broccoli Cauliflower Kale Mineral Tungsten Cinnabar Corundum Here, the first example shows the typical browser default (40px) and the second reduces this to 16px, as shown in this CSS rule:</description>
     </item>
     <item>
       <title>Simple newspaper columns</title>
@@ -152,14 +159,14 @@
       <link>https://lanceleonard.com/about/privacy-policy/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://lanceleonard.com/about/privacy-policy/</guid>
-      <description>I don&amp;rsquo;t track you or how you use the site.&#xA;I don&amp;rsquo;t record any personally identifying information (PII).&#xA;No cookies are saved to your device, so there&amp;rsquo;s nothing to opt in to.&#xA;At some point, I may add analytics to help understand how people (in general) use the site. When I do that, I&amp;rsquo;ll update things accordingly.&#xA;If I learn you stopped by, I&amp;rsquo;ll keep that to myself.&#xA;Since I&amp;rsquo;m not tracking anything, there&amp;rsquo;s nothing to share, sell, delete, or otherwise abuse.</description>
+      <description>&amp;ldquo;Now that I do know it, I shall do my best to forget it.&amp;rdquo;&#xA;&amp;ndash; Sherlock Holmes, &amp;ldquo;A Study in Scarlet&amp;rdquo;, by Sir Arthur Conan Doyle (1887)&#xA;I don&amp;rsquo;t track you or how you use the site.&#xA;I don&amp;rsquo;t record any personally identifying information (PII).&#xA;No cookies are saved to your device, so there&amp;rsquo;s nothing to opt in to&amp;hellip;or out of.&#xA;At some point, I may add analytics to help understand how people use the site in general.</description>
     </item>
     <item>
       <title>The site name</title>
       <link>https://lanceleonard.com/about/site-name/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://lanceleonard.com/about/site-name/</guid>
-      <description>A paradox?&#xA;A paradox, A most ingenious paradox!&#xA;We&amp;rsquo;ve quips and quibbles heard in flocks!&#xA;But none to beat this paradox!&#xA;&amp;ndash; Ruth &amp;amp; Frederic, &amp;ldquo;The Pirates of Penzance&amp;rdquo;,&#xA;Act II (Scene 19), by W.S. Gilbert &amp;amp; Arthur Sullivan, 1879&#xA;The site&amp;rsquo;s name is based, in part, on lyrics from The Pirates of Penzance. (It&amp;rsquo;s also a subtle nod to one of my earliest documentation roles and, yes, there&amp;rsquo;s a small story or few.</description>
+      <description>A paradox?&#xA;A paradox, A most ingenious paradox!&#xA;We&amp;rsquo;ve quips and quibbles heard in flocks!&#xA;But none to beat this paradox!&#xA;&amp;ndash; Ruth &amp;amp; Frederic, &amp;ldquo;The Pirates of Penzance&amp;rdquo;,&#xA;Act II (Scene 19), by W.S. Gilbert &amp;amp; Arthur Sullivan, 1879&#xA;The site&amp;rsquo;s name is based, in part, on lyrics from The Pirates of Penzance. (It&amp;rsquo;s also a subtle nod to one of my earliest doc roles and, yes, there&amp;rsquo;s a small story or few.</description>
     </item>
     <item>
       <title>Convert XML to JSON</title>

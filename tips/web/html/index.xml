@@ -12,7 +12,7 @@
       <link>https://lanceleonard.com/tips/web/html/details-element/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://lanceleonard.com/tips/web/html/details-element/</guid>
-      <description>Effective web design is often a balancing act between engaging experiences and practical content. You want to provide visual delight to those willing to partake without alienating those who prefer to avoid unwanted distractions.&#xA;An effective compromise is to hide certain elements until the user choose to view them. The &amp;lt;details&amp;gt; element lets you do this.&#xA;By default, it hides content until opened by the user. Because &amp;lt;details&amp;gt; is a core HTML element, most browsers implement it in a way that lets those using alternate browsing experiences, such as screen readers, know what&amp;rsquo;s going on and how to interact with the content.</description>
+      <description>The &amp;lt;details&amp;gt; element (also known as the disclosure element) hides content until a user chooses to view it. You can use this element to reduce the visual impact of large content blocks, such as extended source code, detailed configuration files, videos, and so on.&#xA;By default, &amp;lt;details&amp;gt; hides content until the user chooses to view it.&#xA;The &amp;lt;details&amp;gt; element is a core HTML element supported by many modern browsers.&#xA;Example Here&amp;rsquo;s an example of the &amp;lt;details&amp;gt; element:</description>
     </item>
   </channel>
 </rss>
