@@ -1,9 +1,9 @@
 <!doctype html>
 <html itemscope itemtype="http://schema.org/WebPage" lang="en" class="no-js">
-  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="noindex, nofollow">
+<meta name="robots" content="index, follow">
 
 
 <link rel="shortcut icon" href="/favicons/favicon.ico" >
@@ -17,30 +17,30 @@
 <link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
 <link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
 
-<title>Customize theme styles | Lance&#39;s Quips &amp; Quibbles</title>
-<meta name="description" content="How to customize a Hugo theme style">
-<meta property="og:url" content="https://lanceleonard.com/tips/doc/tools/hugo/customize-theme-style/">
+<title>The Compleat Klingon Coder | Lance&#39;s Quips &amp; Quibbles</title>
+<meta name="description" content="A collection of quotes allegedly overheard from Klingon code warriors">
+<meta property="og:url" content="https://lanceleonard.com/scribbles/trifles/klingon-coder/">
   <meta property="og:site_name" content="Lance&#39;s Quips &amp; Quibbles">
-  <meta property="og:title" content="Customize theme styles">
-  <meta property="og:description" content="How to customize a Hugo theme style">
+  <meta property="og:title" content="The Compleat Klingon Coder">
+  <meta property="og:description" content="A collection of quotes allegedly overheard from Klingon code warriors">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
-    <meta property="article:section" content="tips">
-    <meta property="article:published_time" content="2024-05-30T00:00:00+00:00">
-    <meta property="article:modified_time" content="2024-06-03T16:15:58-07:00">
+    <meta property="article:section" content="scribbles">
+    <meta property="article:published_time" content="2024-06-08T00:00:00+00:00">
+    <meta property="article:modified_time" content="2024-06-11T08:24:38-07:00">
 
-  <meta itemprop="name" content="Customize theme styles">
-  <meta itemprop="description" content="How to customize a Hugo theme style">
-  <meta itemprop="datePublished" content="2024-05-30T00:00:00+00:00">
-  <meta itemprop="dateModified" content="2024-06-03T16:15:58-07:00">
-  <meta itemprop="wordCount" content="276"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="Customize theme styles">
-<meta name="twitter:description" content="How to customize a Hugo theme style">
-
-
+  <meta itemprop="name" content="The Compleat Klingon Coder">
+  <meta itemprop="description" content="A collection of quotes allegedly overheard from Klingon code warriors">
+  <meta itemprop="datePublished" content="2024-06-08T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2024-06-11T08:24:38-07:00">
+  <meta itemprop="wordCount" content="286"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="The Compleat Klingon Coder">
+<meta name="twitter:description" content="A collection of quotes allegedly overheard from Klingon code warriors">
 
 
 
-<link href="/scss/main.css" rel="stylesheet">
+
+<link rel="preload" href="/scss/main.min.14291bf618f45ab5aeb1b38f2a11c1d7f4bf1ad154b5c0ea21589742a7e90969.css" as="style">
+<link href="/scss/main.min.14291bf618f45ab5aeb1b38f2a11c1d7f4bf1ad154b5c0ea21589742a7e90969.css" rel="stylesheet" integrity="">
 
 <script
   src="https://code.jquery.com/jquery-3.7.1.min.js"
@@ -63,10 +63,10 @@
         <a class="nav-link" href="/about/"><span>About</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link active" href="/tips/"><span>Tips</span></a>
+        <a class="nav-link" href="/tips/"><span>Tips</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/scribbles/"><span>Scribbles</span></a>
+        <a class="nav-link active" href="/scribbles/"><span>Scribbles</span></a>
       </li>
       <li class="td-light-dark-menu nav-item dropdown">
         <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
@@ -131,7 +131,7 @@
     aria-label="Search this site…"
     autocomplete="off"
     
-    data-offline-search-index-json-src="/offline-search-index.json"
+    data-offline-search-index-json-src="/offline-search-index.d84685bf95551cf3ba6f0858a0a19565.json"
     data-offline-search-base-href="/"
     data-offline-search-max-results="10"
   >
@@ -155,7 +155,7 @@
     aria-label="Search this site…"
     autocomplete="off"
     
-    data-offline-search-index-json-src="/offline-search-index.json"
+    data-offline-search-index-json-src="/offline-search-index.d84685bf95551cf3ba6f0858a0a19565.json"
     data-offline-search-base-href="/"
     data-offline-search-max-results="10"
   >
@@ -168,8 +168,8 @@
       <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m--li">
   <a href="/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section tree-root" id="m-"><span class="">Lance&#39;s Quips &amp; Quibbles</span></a>
   <ul class="ul-1">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-tips-li">
-  <input type="checkbox" id="m-tips-check" checked/>
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-tips-li">
+  <input type="checkbox" id="m-tips-check"/>
   <label for="m-tips-check"><a href="/tips/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-tips"><span class="">Tips</span></a></label>
   
   <ul class="ul-2 foldable">
@@ -188,8 +188,8 @@
   
 </li>
   </ul>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-tipsdoc-li">
-  <input type="checkbox" id="m-tipsdoc-check" checked/>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-tipsdoc-li">
+  <input type="checkbox" id="m-tipsdoc-check"/>
   <label for="m-tipsdoc-check"><a href="/tips/doc/" title="Doc guidelines, standards, and tools" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-tipsdoc"><span class="">Docs</span></a></label>
   
   <ul class="ul-3 foldable">
@@ -205,21 +205,17 @@
   <input type="checkbox" id="m-tipsdocvoice-tone-principles-check"/>
   <label for="m-tipsdocvoice-tone-principles-check"><a href="/tips/doc/voice-tone-principles/" title="Voice &amp; tone principles" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-tipsdocvoice-tone-principles"><span class="">Voice &amp; tone</span></a></label>
   
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-tipsdoctools-li">
-  <input type="checkbox" id="m-tipsdoctools-check" checked/>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-tipsdoctools-li">
+  <input type="checkbox" id="m-tipsdoctools-check"/>
   <label for="m-tipsdoctools-check"><a href="/tips/doc/tools/" title="Documentation tools" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-tipsdoctools"><span class="">Tools</span></a></label>
   
   <ul class="ul-4 foldable">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-tipsdoctoolshugo-li">
-  <input type="checkbox" id="m-tipsdoctoolshugo-check" checked/>
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-tipsdoctoolshugo-li">
+  <input type="checkbox" id="m-tipsdoctoolshugo-check"/>
   <label for="m-tipsdoctoolshugo-check"><a href="/tips/doc/tools/hugo/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-tipsdoctoolshugo"><span class="">Hugo</span></a></label>
   
   <ul class="ul-5 foldable">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-tipsdoctoolshugocustomize-theme-style-li">
-  <input type="checkbox" id="m-tipsdoctoolshugocustomize-theme-style-check" checked/>
-  <label for="m-tipsdoctoolshugocustomize-theme-style-check"><a href="/tips/doc/tools/hugo/customize-theme-style/" title="Customize theme styles" class="align-left ps-0  active td-sidebar-link td-sidebar-link__page" id="m-tipsdoctoolshugocustomize-theme-style"><span class="td-sidebar-nav-active-item">Customize theme</span></a></label>
-  
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipsdoctoolshugodark-mode-code-docsy-li">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipsdoctoolshugodark-mode-code-docsy-li">
   <input type="checkbox" id="m-tipsdoctoolshugodark-mode-code-docsy-check"/>
   <label for="m-tipsdoctoolshugodark-mode-code-docsy-check"><a href="/tips/doc/tools/hugo/dark-mode-code-docsy/" title="Fix dark mode code block" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-tipsdoctoolshugodark-mode-code-docsy"><span class="">Dark mode code</span></a></label>
   
@@ -327,7 +323,11 @@
   <label for="m-tipswebcss-check"><a href="/tips/web/css/" title="Cascading style sheets (CSS)" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-tipswebcss"><span class="">CSS</span></a></label>
   
   <ul class="ul-4 foldable">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipswebcssnewspapers-columns-li">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipswebcsslist-indents-li">
+  <input type="checkbox" id="m-tipswebcsslist-indents-check"/>
+  <label for="m-tipswebcsslist-indents-check"><a href="/tips/web/css/list-indents/" title="Nested list item indent" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-tipswebcsslist-indents"><span class="">Nested list indent</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipswebcssnewspapers-columns-li">
   <input type="checkbox" id="m-tipswebcssnewspapers-columns-check"/>
   <label for="m-tipswebcssnewspapers-columns-check"><a href="/tips/web/css/newspapers-columns/" title="Simple newspaper columns" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-tipswebcssnewspapers-columns"><span class="">Newspaper columns</span></a></label>
   
@@ -341,6 +341,10 @@
     <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipswebhtmldetails-element-li">
   <input type="checkbox" id="m-tipswebhtmldetails-element-check"/>
   <label for="m-tipswebhtmldetails-element-check"><a href="/tips/web/html/details-element/" title="Hide details until needed" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-tipswebhtmldetails-element"><span class="">Hide details</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipswebhtmlie-doc-modes-li">
+  <input type="checkbox" id="m-tipswebhtmlie-doc-modes-check"/>
+  <label for="m-tipswebhtmlie-doc-modes-check"><a href="/tips/web/html/ie-doc-modes/" title="Internet Explorer document mode settings" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-tipswebhtmlie-doc-modes"><span class="">IE doc mode</span></a></label>
   
 </li>
   </ul>
@@ -363,8 +367,8 @@
   </ul>
 </li>
   </ul>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-scribbles-li">
-  <input type="checkbox" id="m-scribbles-check"/>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-scribbles-li">
+  <input type="checkbox" id="m-scribbles-check" checked/>
   <label for="m-scribbles-check"><a href="/scribbles/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-scribbles"><span class="">Scribbles</span></a></label>
   
   <ul class="ul-2 foldable">
@@ -384,6 +388,32 @@
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-scribblesjournalfirst-post-li">
   <input type="checkbox" id="m-scribblesjournalfirst-post-check"/>
   <label for="m-scribblesjournalfirst-post-check"><a href="/scribbles/journal/first-post/" title="First post: Don&#39;t panic" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-scribblesjournalfirst-post"><span class="">Don&#39;t panic!</span></a></label>
+  
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-scribblesthoughts-li">
+  <input type="checkbox" id="m-scribblesthoughts-check"/>
+  <label for="m-scribblesthoughts-check"><a href="/scribbles/thoughts/" title="Random thoughts" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-scribblesthoughts"><span class="">Thoughts</span></a></label>
+  
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-scribblesthoughtsphoenix-bingo-card-li">
+  <input type="checkbox" id="m-scribblesthoughtsphoenix-bingo-card-check"/>
+  <label for="m-scribblesthoughtsphoenix-bingo-card-check"><a href="/scribbles/thoughts/phoenix-bingo-card/" title="Is Phoenix on your bingo card?" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-scribblesthoughtsphoenix-bingo-card"><span class="">Phoenix  bingo card</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-scribblesthoughtssuccess-qualities-li">
+  <input type="checkbox" id="m-scribblesthoughtssuccess-qualities-check"/>
+  <label for="m-scribblesthoughtssuccess-qualities-check"><a href="/scribbles/thoughts/success-qualities/" title="Qualities for successful tech writers" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-scribblesthoughtssuccess-qualities"><span class="">Qualities for success</span></a></label>
+  
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-scribblestrifles-li">
+  <input type="checkbox" id="m-scribblestrifles-check" checked/>
+  <label for="m-scribblestrifles-check"><a href="/scribbles/trifles/" title="Trifles and Tidbits" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-scribblestrifles"><span class="">Trifles</span></a></label>
+  
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-scribblestriflesklingon-coder-li">
+  <input type="checkbox" id="m-scribblestriflesklingon-coder-check" checked/>
+  <label for="m-scribblestriflesklingon-coder-check"><a href="/scribbles/trifles/klingon-coder/" title="The Compleat Klingon Coder" class="align-left ps-0  active td-sidebar-link td-sidebar-link__page" id="m-scribblestriflesklingon-coder"><span class="td-sidebar-nav-active-item">Klingon coder</span></a></label>
   
 </li>
   </ul>
@@ -425,7 +455,14 @@
 
 </div>
 
-            
+            <div class="td-toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#vital-statistics">Vital statistics</a></li>
+  </ul>
+</nav>
+      </div>
+    
             
 	
           </aside>
@@ -436,79 +473,85 @@
             <nav aria-label="breadcrumb" class="td-breadcrumbs">
   <ol class="breadcrumb">
   <li class="breadcrumb-item">
-    <a href="/tips/">Tips</a></li>
+    <a href="/scribbles/">Scribbles</a></li>
   <li class="breadcrumb-item">
-    <a href="/tips/doc/">Docs</a></li>
-  <li class="breadcrumb-item">
-    <a href="/tips/doc/tools/">Tools</a></li>
-  <li class="breadcrumb-item">
-    <a href="/tips/doc/tools/hugo/">Hugo</a></li>
+    <a href="/scribbles/trifles/">Trifles</a></li>
   <li class="breadcrumb-item active" aria-current="page">
-    Customize theme</li>
+    Klingon coder</li>
   </ol>
 </nav>
             
 <div class="td-content">
-	<h1>Customize theme styles</h1>
-	<div class="lead">How to customize a Hugo theme style</div>
+	<h1>The Compleat Klingon Coder</h1>
+	<div class="lead">A collection of quotes allegedly overheard from Klingon code warriors</div>
 	<header class="article-meta">
 		
   <p class="reading-time"><i class="fa-solid fa-clock" aria-hidden="true"></i>&nbsp; 2 minute read &nbsp;</p>
 </header>
-	<p>To customize the theme of a Hugo site, update a local co</p>
-<p>For sites created using Hugo and other static site generators, themes provide convenient starting places.  For example, this site uses Docsy as its baseline theme.</p>
-<p>When a theme includes design choices that do not work for your content, you can customize the theme accordingly.</p>
-<p>To illustrate, consider:</p>
+	<p>&ldquo;Reliable&rdquo; sources tell me these quotes were overheard in (or near) Quark&rsquo;s bar on Freecloud (Alpha Doradus):</p>
 <ul>
-<li>The Doscy theme uses Bootstrap</li>
-<li>Bootstrap changes &ldquo;reboots&rdquo; CSS defaults to create a predictable baseline.</li>
-<li>The Bootstrap baseline changes defaults margins for lists</li>
+<li>
+<p>What is this talk of software &lsquo;releases&rsquo;?</p>
+<p>Klingons do not &lsquo;release&rsquo; software; our software ESCAPES, leaving a bloody trail of designers and testers in its wake!</p>
+</li>
+<li>
+<p>This code is a piece of gagh! You have no honor!</p>
+</li>
+<li>
+<p>A TRUE Klingon warrior does not comment his code!</p>
+</li>
+<li>
+<p>By filing this bug report, you have questioned my family honor. Prepare to die!</p>
+</li>
+<li>
+<p>You question the worthiness of my Code?! I should kill you where you stand!</p>
+</li>
+<li>
+<p>Our competitors are without honor!</p>
+</li>
+<li>
+<p>Specifications are for the weak and timid!</p>
+</li>
+<li>
+<p>This machine is a piece of GAGH! I need more processors if I am to do battle with this code!</p>
+</li>
+<li>
+<p>Perhaps it IS a good day to Die! I say we ship it!</p>
+</li>
+<li>
+<p>My program has just dumped Stova Core!</p>
+</li>
+<li>
+<p>Behold, the keyboard of Kahless! The greatest Klingon code warrior that ever lived!</p>
+</li>
+<li>
+<p>You cannot really appreciate <em>Dilbert</em> unless you&rsquo;ve read it in the original Klingon.</p>
+</li>
+<li>
+<p>Indentation?! - I shall show you proper indentation&hellip;on your skull!</p>
+</li>
+<li>
+<p>Klingon function calls do not have &lsquo;parameters&rsquo; - they have &lsquo;arguments&rsquo; &ndash; and they ALWAYS WIN THEM.</p>
+</li>
+<li>
+<p>Debugging? Klingons do not debug. Our software does not coddle the weak.</p>
+</li>
+<li>
+<p>I have challenged the entire quality assurance team to a Bat-Leth contest. They will not concern us again.</p>
+</li>
+<li>
+<p>Our users will know fear and cower before our software! Ship it! Ship it and let them flee like the targs they are!</p>
+</li>
+<li>
+<p>Cry havoc and let slip the docs of war.</p>
+</li>
 </ul>
-<p>Many of these changes are helpful.  However, they have interesting side effects for certain markup combinations.</p>
-<p>There following example shows one such case:</p>
-<pre tabindex="0"><code>
-  for layout the following margine for paragpraph ekements
-
-``` css
-p {
-    margin-top: 0;
-    margin-bottom: 1em;
-
-}
-
-defaults to the following margine uses the following sets margines for paragraph elements 
-
-it may be appropriate
-There may be times when you decideLike other frameworks, each theme provides a set of initial design decisions that can, at times, 
-
-When using themes, however, you sometimes run into design choices that seem, well, less than ideal.
-
-For example, Docsy uses an interesting st of choices for paragraph spacing as follows:
-
-the default spacing for 
-
-To fix this, you need to customize the style applied to paragraph (`&lt;p&gt;`) elements.  : 
-
-1. In your project source, open `assets/scss/_styles_project.scss`
-
-2. Add the following CSS block 
-
-``` css
-/*
-
-Override project style rules here.
-For details, see https://www.docsy.dev/docs/adding-content/repository-links/#disabling-links
-*/
-
-p {
-   margin-top: 1rem;
-   margin-bottom: 0.3rem;
-}
-</code></pre><ol start="3">
-<li>Save and preview your changes.</li>
-</ol>
-<p>The lines spacing should look more readable.</p>
-<p>The primary spacing is added above (<em>leading</em>) the paragraph and a small amount of white space is added below (<em>trailing</em>).  This</p>
+<p>(Originally collected from multiple &lsquo;Net sources, sadly lost over time.)</p>
+<h2 id="vital-statistics">Vital statistics<a class="td-heading-self-link" href="#vital-statistics" aria-label="Heading self-link"></a></h2>
+<ul>
+<li>First post here: 8 June 2024</li>
+<li>Originally collected on <a href="https://perlmonks.org/?node_id=61246">PerlMonks</a>, 28 Feb 2001, ported for preservation.</li>
+</ul>
 
 	
 </div>
@@ -555,8 +598,8 @@ p {
   </footer>
   
     </div>
-    <script src="/js/main.js"></script>
-<script defer src="/js/click-to-copy.js" crossorigin="anonymous"></script>
+    <script src="/js/main.min.f72d00502781aaf278a14088eb2356b1ba2a05ad698a0c43fe86314d74ceab56.js" integrity="sha256-9y0AUCeBqvJ4oUCI6yNWsboqBa1pigxD/oYxTXTOq1Y=" crossorigin="anonymous"></script>
+<script defer src="/js/click-to-copy.min.73478a7d4807698aed7e355eb23f9890ca18fea3158604c8471746d046702bad.js" integrity="sha256-c0eKfUgHaYrtfjVesj&#43;YkMoY/qMVhgTIRxdG0EZwK60=" crossorigin="anonymous"></script>
 <script src='/js/tabpane-persist.js'></script>
 
   </body>

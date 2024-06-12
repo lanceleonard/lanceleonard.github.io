@@ -14,5 +14,12 @@
       <guid>https://lanceleonard.com/tips/web/html/details-element/</guid>
       <description>The &amp;lt;details&amp;gt; element (also known as the disclosure element) hides content until a user chooses to view it. You can use this element to reduce the visual impact of large content blocks, such as extended source code, detailed configuration files, videos, and so on.&#xA;By default, &amp;lt;details&amp;gt; hides content until the user chooses to view it.&#xA;The &amp;lt;details&amp;gt; element is a core HTML element supported by many modern browsers.&#xA;Example Here&amp;rsquo;s an example of the &amp;lt;details&amp;gt; element:</description>
     </item>
+    <item>
+      <title>Internet Explorer document mode settings</title>
+      <link>https://lanceleonard.com/tips/web/html/ie-doc-modes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://lanceleonard.com/tips/web/html/ie-doc-modes/</guid>
+      <description>Internet Explorer (IE) version 9 introduced the x-ua-compatible header as a way to control Internet Explorer rendering.&#xA;If you&amp;rsquo;re maintaining or migrating a legacy website, you may find this header in META elements in a webpage HEAD section. Alternatively, it may appear in web server configurations.&#xA;Here, we summarize the basic uses of the header as a way to help you understand its use in your particular situation. In addition, we also link to background details.</description>
+    </item>
   </channel>
 </rss>
