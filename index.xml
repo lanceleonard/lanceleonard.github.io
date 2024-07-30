@@ -30,9 +30,9 @@
     </item>
     <item>
       <title>Fix dark mode code block</title>
-      <link>https://lanceleonard.com/tips/doc/tools/hugo/dark-mode-code-docsy/</link>
+      <link>https://lanceleonard.com/tips/doc/hugo/dark-mode-code-docsy/</link>
       <pubDate>Wed, 08 May 2024 00:00:00 +0000</pubDate>
-      <guid>https://lanceleonard.com/tips/doc/tools/hugo/dark-mode-code-docsy/</guid>
+      <guid>https://lanceleonard.com/tips/doc/hugo/dark-mode-code-docsy/</guid>
       <description>If you&amp;rsquo;re using Docsy as your Hugo theme, your code blocks might not render correctly in dark mode.&#xA;To fix this quickly, create a CSS rule that sets the background-color for &amp;lt;pre&amp;gt; elements that are children of the .highlight class.&#xA;Here&amp;rsquo;s one way to do this:&#xA;In your assets/scss folder, create (or edit) _style_project.scss.&#xA;Declare the following rule:&#xA;/* Fix dark mode code rendering */ .highlight pre { background-color: var(--td-pre-bg) !</description>
     </item>
     <item>
@@ -41,13 +41,6 @@
       <pubDate>Wed, 08 May 2024 00:00:00 +0000</pubDate>
       <guid>https://lanceleonard.com/tips/apps/excel-tips/</guid>
       <description>Here some practical tips for Microsoft Excel.&#xA;Strikethrough text To draw a line (or strike through) text in a cell:&#xA;Edit the cell Select the text Press Ctrl+5 (Windows) Here, 5 represents the key in the number row of your keyboard, not the center key in a number pad.&#xA;For best results, format the cell to wrap overflow text.&#xA;String formula functions Here are a few macros to help manipulate text strings</description>
-    </item>
-    <item>
-      <title>MKDocs</title>
-      <link>https://lanceleonard.com/tips/doc/tools/mkdocs/</link>
-      <pubDate>Wed, 08 May 2024 00:00:00 +0000</pubDate>
-      <guid>https://lanceleonard.com/tips/doc/tools/mkdocs/</guid>
-      <description>MKDocs is a static-site generator that converts Markdown source files into fully formed websites.&#xA;Check version Use --version to display the current MkDocs version:&#xA;$ mkdocs --version Hide footer ad Early versions of MkDocs include a small &amp;ldquo;ad&amp;rdquo; in the footer of your webpages (&amp;ldquo;Documentation built wwith MKDocs&amp;rdquo;).&#xA;You can hide this by adding a CSS rule to hide the message or by removing it from your site&amp;rsquo;s template.&#xA;Hide with CSS To hide the ad using CSS:</description>
     </item>
     <item>
       <title>Style guides</title>
@@ -107,16 +100,16 @@
     </item>
     <item>
       <title>Collect filenames with Node.js</title>
-      <link>https://lanceleonard.com/tips/javascript/nodejs/collect-filenames/</link>
+      <link>https://lanceleonard.com/tips/nodejs/collect-filenames/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://lanceleonard.com/tips/javascript/nodejs/collect-filenames/</guid>
+      <guid>https://lanceleonard.com/tips/nodejs/collect-filenames/</guid>
       <description>Node.js can help maintain doc experiences through automation. You can use it to:&#xA;Detect file changes in source repositories.&#xA;Fix pathname issues in doc source files&#xA;Repair broken (or incomplete) markup&#xA;Update pipeline config files&#xA;Generate index pages, tag clouds, and other supporting content.&#xA;Tasks like these frequently require a list of files in a given directory, along with any child directories.&#xA;Here&amp;rsquo;s one way to generate such a list:</description>
     </item>
     <item>
       <title>Create custom Node.js modules</title>
-      <link>https://lanceleonard.com/tips/javascript/nodejs/create-node-modules/</link>
+      <link>https://lanceleonard.com/tips/nodejs/create-node-modules/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://lanceleonard.com/tips/javascript/nodejs/create-node-modules/</guid>
+      <guid>https://lanceleonard.com/tips/nodejs/create-node-modules/</guid>
       <description>This article shows how to create and use a custom Node module&#xA;Node.js module design is based on CommonJS module specification, though sources vary on the intent and history. (Some sources vary when describing intent and history.)&#xA;To begin, move reusable functions into a separate JavaScript file (called mymodules.js in this example):&#xA;// myModule.js module.exports.isBlank = function( inputValue ) { var blnResult = ( ( inputValue == undefined ) || ( inputValue == null ) || ( inputValue == &amp;#34;&amp;#34; ) ); return blnResult; } module.</description>
     </item>
     <item>
@@ -148,13 +141,6 @@
       <description>Use the column-width property to display lists in columns that flow like newspaper stories.&#xA;Here&amp;rsquo;s an example:&#xA;Abyssinian&#xA;American Shorthair&#xA;Arabian Mau&#xA;Bengal&#xA;Calico&#xA;Chartreux&#xA;Himalayan&#xA;Korat&#xA;Maine Coon&#xA;Manx&#xA;Minuet&#xA;Norwegian Forest Cat&#xA;Persian&#xA;Ragdoll&#xA;Siamese&#xA;Snowshoe&#xA;Tortoiseshell&#xA;York Chocolate&#xA;To learn more, including how to style the columns, see Multiple-column layout (Mozilla developer).&#xA;Inline examples Here, the list is specified using an inline style parameter applied to an unordered list (&amp;lt;ul&amp;gt;) element.</description>
     </item>
     <item>
-      <title>Pandoc conversion tips</title>
-      <link>https://lanceleonard.com/tips/doc/tools/pandoc/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://lanceleonard.com/tips/doc/tools/pandoc/</guid>
-      <description>Pandoc helps convert documents, such as Word .DOCX files or PDF documents, to alternate formats, like Markdown and others.&#xA;Conversion can require a bit of tinkering. The following tips can help.&#xA;Simple conversion To use Pandoc to convert a document to a new format:&#xA;$ pandoc source.docx -o target.md By default, many details are inferred from the input parameters. In this example:&#xA;The input file (source) is assumed to be a Microsoft Word .</description>
-    </item>
-    <item>
       <title>Privacy policy</title>
       <link>https://lanceleonard.com/about/privacy-policy/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -170,10 +156,10 @@
     </item>
     <item>
       <title>Convert XML to JSON</title>
-      <link>https://lanceleonard.com/tips/javascript/nodejs/xml-to-json/</link>
+      <link>https://lanceleonard.com/tips/nodejs/xml-to-json/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://lanceleonard.com/tips/javascript/nodejs/xml-to-json/</guid>
-      <description>The xml2js module provides a convenient way to Here&amp;rsquo;s a relatively simple way to convert XML to JSON using Node.js:&#xA;var fs = require( &amp;#39;fs&amp;#39; ), x2j = require( &amp;#39;xml2js&amp;#39; ); var sInputFile = &amp;#34;books.xml;&amp;#34; var p = new x2j.Parser(); var sXMLData = fs.readFileSync( sInputFile, &amp;#39;utf8&amp;#39; ); p.parseString( sXMLData, function( err, result ) { var s = JSON.stringify( result, undefined, 3 ); console.log( &amp;#34;Result&amp;#34; + &amp;#34;\n&amp;#34;, s, &amp;#34;\n&amp;#34; ); }); Here, the input file (books.</description>
+      <guid>https://lanceleonard.com/tips/nodejs/xml-to-json/</guid>
+      <description>The xml2js module provides a convenient way to convert XML to JSON using Node.js:&#xA;var fs = require( &amp;#39;fs&amp;#39; ), x2j = require( &amp;#39;xml2js&amp;#39; ); var sInputFile = &amp;#34;books.xml;&amp;#34; var p = new x2j.Parser(); var sXMLData = fs.readFileSync( sInputFile, &amp;#39;utf8&amp;#39; ); p.parseString( sXMLData, function( err, result ) { var s = JSON.stringify( result, undefined, 3 ); console.log( &amp;#34;Result&amp;#34; + &amp;#34;\n&amp;#34;, s, &amp;#34;\n&amp;#34; ); }); Here, the input file (books.xml) is read into a string variable and then parsed.</description>
     </item>
     <item>
       <title>Recover offscreen window</title>
@@ -183,6 +169,13 @@
       <description>When working with multiple monitors, it&amp;rsquo;s possible for open windows to be left offscreen.&#xA;I&amp;rsquo;ve see this happen when:&#xA;Traveling with a laptop normally hooked up to external monitors when docked at home.&#xA;Using a KVM switch to share a monitor between different machines.&#xA;Most of the time, windows adjust to the new display area. Every so often, however, one remains in its original position. It&amp;rsquo;s open and responds to input.</description>
     </item>
     <item>
+      <title>MKDocs</title>
+      <link>https://lanceleonard.com/tips/doc/mkdocs/</link>
+      <pubDate>Wed, 08 May 2024 00:00:00 +0000</pubDate>
+      <guid>https://lanceleonard.com/tips/doc/mkdocs/</guid>
+      <description>MKDocs is a static-site generator that converts Markdown source files into fully formed websites.&#xA;Check version Use --version to display the current MkDocs version:&#xA;$ mkdocs --version Hide footer ad Early versions of MkDocs include a small &amp;ldquo;ad&amp;rdquo; in the footer of your webpages (&amp;ldquo;Documentation built wwith MKDocs&amp;rdquo;).&#xA;You can hide this by adding a CSS rule to hide the message or by removing it from your site&amp;rsquo;s template.&#xA;Hide with CSS To hide the ad using CSS:</description>
+    </item>
+    <item>
       <title>Package managers</title>
       <link>https://lanceleonard.com/tips/unix/package-managers/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -190,11 +183,32 @@
       <description>Package managers vary between distributions (distros).&#xA;Here&amp;rsquo;s a starting list:&#xA;Operating system (distro) Package manager MacOS (OS/X) brew Alpine Linux apk Amazon Linux dnf (AL2023)&#xA;yum (AL2 and earlier) archlinux pacman Debian (v8+)&#xA;Ubuntu (v13.10+) apt-get Fedora Linux dnf (v22+)&#xA;yum (v21 and earlier) FreeBSD pkg gentoo linux emerge OpenBSD/NetBSD pkg_add openSUSE zypper Raspberry Pi (Raspbian) Varies, typically apt or pip Red Hat Enterprise (RHEL) (v7+) yum Slackware sbopkg </description>
     </item>
     <item>
+      <title>Pandoc conversion tips</title>
+      <link>https://lanceleonard.com/tips/doc/pandoc/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://lanceleonard.com/tips/doc/pandoc/</guid>
+      <description>Pandoc helps convert documents, such as Word .DOCX files or PDF documents, to alternate formats, like Markdown and others.&#xA;Conversion can require a bit of tinkering. The following tips can help.&#xA;Simple conversion To use Pandoc to convert a document to a new format:&#xA;$ pandoc source.docx -o target.md By default, many details are inferred from the input parameters. In this example:&#xA;The input file (source) is assumed to be a Microsoft Word .</description>
+    </item>
+    <item>
       <title>Vi editor cheat sheet</title>
       <link>https://lanceleonard.com/tips/unix/vi-cheat-sheet/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://lanceleonard.com/tips/unix/vi-cheat-sheet/</guid>
       <description>Here is a quick cheat sheet for the vi text editor:&#xA;There are two modes: Command and Insert.&#xA;The word INSERT appears in the bottom left corner of the screen when that mode is active.&#xA;If you&amp;rsquo;re not sure what mode you&amp;rsquo;re in, press Esc to go into Command mode.&#xA;To move the cursor in command mode:&#xA;H (left) J (right) K (up) L (right) Press I to activate Insert mode.</description>
+    </item>
+    <item>
+      <title>Bingo card redux</title>
+      <link>https://lanceleonard.com/scribbles/thoughts/bingo-card-redux/</link>
+      <pubDate>Mon, 08 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>https://lanceleonard.com/scribbles/thoughts/bingo-card-redux/</guid>
+      <description>Reminder: life happens when you&amp;rsquo;re not paying attention.  Pay attention.</description>
+    </item>
+    <item>
+      <title>Six week progress report</title>
+      <link>https://lanceleonard.com/scribbles/journal/six-week-progress/</link>
+      <pubDate>Fri, 14 Jun 2024 00:00:00 +0000</pubDate>
+      <guid>https://lanceleonard.com/scribbles/journal/six-week-progress/</guid>
+      <description>It&amp;rsquo;s been several weeks since I began reimplementing the website. It&amp;rsquo;s been an interesting experience to say the least. It&amp;rsquo;s fun to create something new and watch it come together. It&amp;rsquo;s also a little aggravating to find things that slipped through and need to be cleaned up. It&amp;rsquo;s also educational to overcome bits of friction to create a better experience.&#xA;Perhaps it&amp;rsquo;s time to take stock.&#xA;What&amp;rsquo;s gone well? Well, here&amp;rsquo;s a high-level look at the recent changes:</description>
     </item>
     <item>
       <title>Is Phoenix on your bingo card?</title>
