@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hugo on Lance&#39;s Quips &amp; Quibbles</title>
+    <link>https://lanceleonard.com/tips/doc/hugo/</link>
+    <description>Recent content in Hugo on Lance&#39;s Quips &amp; Quibbles</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 29 Jul 2024 19:15:30 -0700</lastBuildDate>
+    <atom:link href="https://lanceleonard.com/tips/doc/hugo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Fix dark mode code block</title>
+      <link>https://lanceleonard.com/tips/doc/hugo/dark-mode-code-docsy/</link>
+      <pubDate>Wed, 08 May 2024 00:00:00 +0000</pubDate>
+      <guid>https://lanceleonard.com/tips/doc/hugo/dark-mode-code-docsy/</guid>
+      <description>If you&amp;rsquo;re using Docsy as your Hugo theme, your code blocks might not render correctly in dark mode.&#xA;To fix this quickly, create a CSS rule that sets the background-color for &amp;lt;pre&amp;gt; elements that are children of the .highlight class.&#xA;Here&amp;rsquo;s one way to do this:&#xA;In your assets/scss folder, create (or edit) _style_project.scss.&#xA;Declare the following rule:&#xA;/* Fix dark mode code rendering */ .highlight pre { background-color: var(--td-pre-bg) !</description>
+    </item>
+  </channel>
+</rss>
