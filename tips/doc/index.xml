@@ -8,39 +8,60 @@
     <language>en</language>
     <atom:link href="https://lanceleonard.com/tips/doc/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Style guides</title>
-      <link>https://lanceleonard.com/tips/doc/style-guides/</link>
-      <pubDate>Wed, 08 May 2024 00:00:00 +0000</pubDate>
-      <guid>https://lanceleonard.com/tips/doc/style-guides/</guid>
-      <description>Style guides define rules for using language in a given context.&#xA;These rules provide a &amp;ldquo;common voice&amp;rdquo; that customers recognize and expect when working with professional content.&#xA;A good style guide improves your writing and overall effectiveness.&#xA;Recommended guides For technical docs, consider adopting one of the following:&#xA;Google developer doc style guide Microsoft Writing Style Guide Each guide was developed by the publisher using research and customer focus groups. Each is actively tested, reviewed, and maintained by their respective organizations.</description>
-    </item>
-    <item>
       <title>Doc project tenets</title>
       <link>https://lanceleonard.com/tips/doc/tenets/</link>
       <pubDate>Mon, 06 May 2024 00:00:00 +0000</pubDate>
       <guid>https://lanceleonard.com/tips/doc/tenets/</guid>
-      <description>Tenets are guiding project principles; they outline and frame design thinking.&#xA;Here are the ones I generally start with.&#xA;Docs are features Many teams treat docs as afterthoughts. Like good software, good docs require design, forethought, and planning.&#xA;Effective docs follow the product lifecycle: design, implementation, review, and maintenance.&#xA;Treat doc reviews as seriously as code reviews. Reviewers need to be proactive and timely in their feedback.&#xA;Feedback must be specific, clear, and actionable.</description>
+      <description>&lt;p&gt;Tenets are guiding project principles; they outline and &lt;a href=&#34;https://lanceleonard.com/tips/doc/tenets/#more-about-tenets&#34;&gt;frame design thinking&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;Here are the ones I generally start with.&lt;/p&gt;&#xA;&lt;h2 id=&#34;docs-are-features&#34;&gt;Docs are features&lt;/h2&gt;&#xA;&lt;p&gt;Many teams treat docs as afterthoughts.  Like good software, good docs require design, forethought, and planning.&lt;/p&gt;&#xA;&lt;p&gt;Effective docs follow the product lifecycle: design, implementation, review, and maintenance.&lt;/p&gt;&#xA;&lt;p&gt;Treat doc reviews as seriously as code reviews. Reviewers need to be proactive and timely in their feedback.&lt;/p&gt;&#xA;&lt;p&gt;Feedback must be specific, clear, and actionable.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>GROW Content Process</title>
+      <link>https://lanceleonard.com/tips/doc/grow-content-process/</link>
+      <pubDate>Tue, 15 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>https://lanceleonard.com/tips/doc/grow-content-process/</guid>
+      <description>&lt;p&gt;Periodically, new technical writers (and interviewers) ask if I follow a particular process when creating docs.&lt;/p&gt;&#xA;&lt;p&gt;I generally follow a process I call GROW:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Gather information&lt;/li&gt;&#xA;&lt;li&gt;Review knowledge&lt;/li&gt;&#xA;&lt;li&gt;Order into a narrative&lt;/li&gt;&#xA;&lt;li&gt;Work the plan&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;At first glance, it seems a bit simplistic.  But, I&amp;rsquo;ve found it helpful for a range of needs.&lt;/p&gt;&#xA;&lt;p&gt;Each phase guides you through the project in an agile fashion.  If you get stuck, step back and focus on the purpose of the active phase.  Use that purpose to identify and guide next steps.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Readability scores</title>
+      <link>https://lanceleonard.com/tips/doc/readability/</link>
+      <pubDate>Sat, 07 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>https://lanceleonard.com/tips/doc/readability/</guid>
+      <description>&lt;p&gt;To be effective, tech docs need to be accurate, clear, and readable.&lt;/p&gt;&#xA;&lt;p&gt;Reviewers and subject matter experts (SMEs) help keep things accurate; they also let you know when things aren&amp;rsquo;t clear.&lt;/p&gt;&#xA;&lt;p&gt;Studies &lt;a href=&#34;https://en.wikipedia.org/wiki/Readability#Readability_studies&#34;&gt;have shown&lt;/a&gt; you can improve readability by lowering the education level needed to understand a piece of writing.&lt;/p&gt;&#xA;&lt;p&gt;There are many ways to estimate education level, including &lt;a href=&#34;https://en.wikipedia.org/wiki/Flesch%E2%80%93Kincaid_readability_tests&#34;&gt;Flesch-Kindcaid&lt;/a&gt;, &lt;a href=&#34;https://en.wikipedia.org/wiki/Gunning_fog_index&#34;&gt;Gunning fog&lt;/a&gt;, and &lt;a href=&#34;https://en.wikipedia.org/wiki/Readability#Readability_formulas&#34;&gt;many others&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;This article shows how modern writing principles can lower readability scores, which in turn leads to more effective content.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Style guides</title>
+      <link>https://lanceleonard.com/tips/doc/style-guides/</link>
+      <pubDate>Wed, 08 May 2024 00:00:00 +0000</pubDate>
+      <guid>https://lanceleonard.com/tips/doc/style-guides/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Style_guide&#34;&gt;Style guides&lt;/a&gt; define rules for using language in a given context.&lt;/p&gt;&#xA;&lt;p&gt;These rules provide a &amp;ldquo;common voice&amp;rdquo; that customers recognize and expect when working with professional content.&lt;/p&gt;&#xA;&lt;p&gt;A good style guide improves your writing and overall effectiveness.&lt;/p&gt;&#xA;&lt;h2 id=&#34;recommended-guides&#34;&gt;Recommended guides&lt;/h2&gt;&#xA;&lt;p&gt;For technical docs, consider adopting one of the following:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Google &lt;a href=&#34;https://developers.google.com/style/tone&#34;&gt;developer doc style guide&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;Microsoft &lt;a href=&#34;https://learn.microsoft.com/en-us/style-guide/top-10-tips-style-voice&#34;&gt;Writing Style Guide&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Each guide was developed by the publisher using research and customer focus groups.  Each is actively tested, reviewed, and maintained by their respective organizations.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Voice &amp; tone principles</title>
       <link>https://lanceleonard.com/tips/doc/voice-tone-principles/</link>
       <pubDate>Mon, 06 May 2024 00:00:00 +0000</pubDate>
       <guid>https://lanceleonard.com/tips/doc/voice-tone-principles/</guid>
-      <description>Docs, to some degree, represent the voice of your organization.&#xA;People respond well to a friendly, helpful tone that is easy-to-read.&#xA;These principles help.&#xA;Use one clear intent Good docs help users solve problems.&#xA;Before working on a doc, understand the audience you&amp;rsquo;re trying to reach and the problem being solved.&#xA;This is called the intent and is typically expressed as as follows:&#xA;&amp;ldquo;As a &amp;lt;role&amp;gt;, I want to &amp;lt;solve a problem&amp;gt;.</description>
+      <description>&lt;p&gt;Docs, to some degree, represent the voice of your organization.&lt;/p&gt;&#xA;&lt;p&gt;People respond well to a friendly, helpful tone that is easy-to-read.&lt;/p&gt;&#xA;&lt;p&gt;These principles help.&lt;/p&gt;&#xA;&lt;h2 id=&#34;use-one-clear-intent&#34;&gt;Use one clear intent&lt;/h2&gt;&#xA;&lt;p&gt;Good docs help users solve problems.&lt;/p&gt;&#xA;&lt;p&gt;Before working on a doc, understand the audience you&amp;rsquo;re trying to reach and the problem being solved.&lt;/p&gt;&#xA;&lt;p&gt;This is called the &lt;em&gt;intent&lt;/em&gt; and is typically expressed as as follows:&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;&amp;ldquo;As a &amp;lt;role&amp;gt;, I want to &amp;lt;solve a problem&amp;gt;.&lt;/p&gt;</description>
     </item>
     <item>
       <title>MKDocs</title>
       <link>https://lanceleonard.com/tips/doc/mkdocs/</link>
       <pubDate>Wed, 08 May 2024 00:00:00 +0000</pubDate>
       <guid>https://lanceleonard.com/tips/doc/mkdocs/</guid>
-      <description>MKDocs is a static-site generator that converts Markdown source files into fully formed websites.&#xA;Check version Use --version to display the current MkDocs version:&#xA;$ mkdocs --version Hide footer ad Early versions of MkDocs include a small &amp;ldquo;ad&amp;rdquo; in the footer of your webpages (&amp;ldquo;Documentation built wwith MKDocs&amp;rdquo;).&#xA;You can hide this by adding a CSS rule to hide the message or by removing it from your site&amp;rsquo;s template.&#xA;Hide with CSS To hide the ad using CSS:</description>
+      <description>&lt;p&gt;&lt;a href=&#34;https://mkdocs.org&#34;&gt;MKDocs&lt;/a&gt; is a static-site generator that converts Markdown source files into fully formed websites.&lt;/p&gt;&#xA;&lt;h2 id=&#34;check-version&#34;&gt;Check version&lt;/h2&gt;&#xA;&lt;p&gt;Use &lt;code&gt;--version&lt;/code&gt; to display the current MkDocs version:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; mkdocs --version&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;hide-footer-ad&#34;&gt;Hide footer ad&lt;/h2&gt;&#xA;&lt;p&gt;Early versions of MkDocs include a small &amp;ldquo;ad&amp;rdquo; in the footer of your webpages (&amp;ldquo;Documentation built wwith MKDocs&amp;rdquo;).&lt;/p&gt;&#xA;&lt;p&gt;You can hide this by adding a CSS rule to hide the message or by removing it from your site&amp;rsquo;s template.&lt;/p&gt;&#xA;&lt;h3 id=&#34;hide-with-css&#34;&gt;Hide with CSS&lt;/h3&gt;&#xA;&lt;p&gt;To hide the ad using CSS:&lt;/p&gt;</description>
     </item>
     <item>
       <title>Pandoc conversion tips</title>
       <link>https://lanceleonard.com/tips/doc/pandoc/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://lanceleonard.com/tips/doc/pandoc/</guid>
-      <description>Pandoc helps convert documents, such as Word .DOCX files or PDF documents, to alternate formats, like Markdown and others.&#xA;Conversion can require a bit of tinkering. The following tips can help.&#xA;Simple conversion To use Pandoc to convert a document to a new format:&#xA;$ pandoc source.docx -o target.md By default, many details are inferred from the input parameters. In this example:&#xA;The input file (source) is assumed to be a Microsoft Word .</description>
+      <description>&lt;p&gt;&lt;a href=&#34;https://pandoc.org/&#34;&gt;Pandoc&lt;/a&gt; helps convert documents, such as Word .DOCX files or PDF documents, to alternate formats, like Markdown and others.&lt;/p&gt;&#xA;&lt;p&gt;Conversion can require a bit of tinkering.  The following tips can help.&lt;/p&gt;&#xA;&lt;h2 id=&#34;simple-conversion&#34;&gt;Simple conversion&lt;/h2&gt;&#xA;&lt;p&gt;To use Pandoc to convert a document to a new format:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; pandoc source.docx -o target.md&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;By default, many details are inferred from the input parameters.  In this example:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;The input file (source) is assumed to be a Microsoft Word .DOCX file&lt;/li&gt;&#xA;&lt;li&gt;The output file (target) is assumed to be a Markdown .MD file.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Use parameters to control these decisions.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Vale: a prose linter</title>
+      <link>https://lanceleonard.com/tips/doc/vale/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://lanceleonard.com/tips/doc/vale/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://vale.sh/&#34;&gt;Vale&lt;/a&gt; is a style-guide validator that helps you write better content.&lt;/p&gt;&#xA;&lt;p&gt;When run from a command-line, it checks your work against a set of selected rules and highlights potential problems. In writing terms, Vale enforces style guidelines takes from major publishers and related resources. Think of Vale as a personal &lt;a href=&#34;https://en.wikipedia.org/wiki/Copy_editing&#34;&gt;copyeditor&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;More formally, Vale is a linter. Developers use linters to make sure their code follows predetermined guidelines. Vale performs a similar task. You can use it to check content written in Markdown, AsciiDoc, Restructured Text (RST), HTML, and more.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
