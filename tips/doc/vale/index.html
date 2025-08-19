@@ -31,7 +31,7 @@
   <meta itemprop="name" content="Vale: a prose linter">
   <meta itemprop="description" content="A command-line tool that validates content against a set of known rules. Think of it as your personal style checker.">
   <meta itemprop="dateModified" content="2025-08-18T09:56:56-07:00">
-  <meta itemprop="wordCount" content="1453">
+  <meta itemprop="wordCount" content="1468">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Vale: a prose linter">
   <meta name="twitter:description" content="A command-line tool that validates content against a set of known rules. Think of it as your personal style checker.">
@@ -572,14 +572,14 @@
 </ul>
 <p>Vale also supports supplementary style guides. You can also create and customize rules to match your preferences.</p>
 <h2 id="quick-setup">Quick setup</h2>
-<p>The Vale docs provide detailed <a href="https://vale.sh/docs/install">installation instructions</a> (Vale.sh) for a variety of options, including Docker.  However, they can be a bit hard to follow.</p>
+<p>The Vale docs provide detailed <a href="https://vale.sh/docs/install">installation instructions</a> (Vale.sh) for a variety of options, including Docker. However, they can be a bit hard to follow.</p>
 <p>For an individual writer, the typical installation process is:</p>
 <p>To install and set up Vale:</p>
 <ol>
 <li>
 <p>Use your system&rsquo;s <a href="https://vale.sh/docs/install">package manager</a> (Vale.sh) to install Vale.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-console" data-lang="console"><span class="line"><span class="cl"><span class="gp">$</span> brew install vale
-</span></span></code></pre></div><p>Here, Homebrew installs Vale on a Mac.</p>
+</span></span></code></pre></div><p>This shows how to use Homebrew to install Vale on a Mac.</p>
 </li>
 <li>
 <p>Use the Vale <a href="https://vale.sh/generator">Config Generator</a> (Vale.sh) to create an initial configuration.</p>
@@ -637,7 +637,7 @@
 </ul>
 <p>The numbers on the left report the location of the problem in your source file. The first value is the line number and the second reports the character position.</p>
 <p>The value on the right reports the package and name of the rule, which helps with later configuration.</p>
-<p>You probably won&rsquo;t fix every reported problem. You should at least investigate then decide next steps.</p>
+<p>You probably won&rsquo;t fix every reported problem. You should at least investigate and then decide next steps.</p>
 <h2 id="checking-multiple-files">Checking multiple files</h2>
 <p>Use the <code>glob</code> parameter to check multiple files:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-console" data-lang="console"><span class="line"><span class="cl"><span class="gp">%</span> vale --glob<span class="o">=</span><span class="s2">&#34;**/*.md&#34;</span> content/
@@ -779,8 +779,8 @@
 <p>Use this feature carefully.</p>
 <p>To learn more about how Vale handles custom vocabularies, see <a href="https://vale.sh/docs/keys/vocab">Vocabularies</a> (Vale.sh).</p>
 <h3 id="evaluate-customizations">Evaluate customizations</h3>
-<p>Effective customization takes time. Take time to review how they impact your work. Try to balance convenience against risk.</p>
-<p>It may tempting to turn off an annoying rule that routinely flags false positives. If an embarrassing mistake slips through as a result, consider reversing the change.</p>
+<p>Take time to evaluate the impact of customization. Vale&rsquo;s diligence can seem annoying, however, there is also value in catching common mistakes. Try to balance convenience against risk.</p>
+<p>It may tempting to turn off a specific rule that routinely flags false positives. Before doing so, consider the impact of letting an embarrassing mistake slip through.</p>
 <p>To learn more about Vale customization, start by exploring Vale&rsquo;s:</p>
 <ul>
 <li><a href="https://vale.sh">Media Library</a> (Vale.sh)</li>
