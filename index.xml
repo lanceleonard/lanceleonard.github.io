@@ -19,7 +19,7 @@
       <link>https://lanceleonard.com/tips/doc/tenets/</link>
       <pubDate>Mon, 06 May 2024 00:00:00 +0000</pubDate>
       <guid>https://lanceleonard.com/tips/doc/tenets/</guid>
-      <description>&lt;p&gt;Tenets are guiding project principles; they outline and &lt;a href=&#34;https://lanceleonard.com/tips/doc/tenets/#more-about-tenets&#34;&gt;frame design thinking&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;Here are the ones I generally start with.&lt;/p&gt;&#xA;&lt;h2 id=&#34;docs-are-features&#34;&gt;Docs are features&lt;/h2&gt;&#xA;&lt;p&gt;Many teams treat docs as afterthoughts.  Like good software, good docs require design, forethought, and planning.&lt;/p&gt;&#xA;&lt;p&gt;Effective docs follow the product lifecycle: design, implementation, review, and maintenance.&lt;/p&gt;&#xA;&lt;p&gt;Treat doc reviews as seriously as code reviews. Reviewers need to be proactive and timely in their feedback.&lt;/p&gt;&#xA;&lt;p&gt;Feedback must be specific, clear, and actionable.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Tenets are guiding project principles; they outline and &lt;a href=&#34;https://lanceleonard.com/tips/doc/tenets/#more-about-tenets&#34;&gt;frame design thinking&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;Here are the ones I generally start with.&lt;/p&gt;&#xA;&lt;h2 id=&#34;docs-are-features&#34;&gt;Docs are features&lt;/h2&gt;&#xA;&lt;p&gt;Many teams treat docs as afterthoughts. Like good software, good docs require design, forethought, and planning.&lt;/p&gt;&#xA;&lt;p&gt;Effective docs follow the product lifecycle: design, implementation, review, and maintenance.&lt;/p&gt;&#xA;&lt;p&gt;Treat doc reviews as seriously as code reviews. Reviewers need to be proactive and timely in their feedback.&lt;/p&gt;&#xA;&lt;p&gt;Feedback must be specific, clear, and actionable.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Git console commands</title>
@@ -257,7 +257,7 @@
       <link>https://lanceleonard.com/tips/doc/vale/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://lanceleonard.com/tips/doc/vale/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://vale.sh/&#34;&gt;Vale&lt;/a&gt; is a style-guide validator that helps you write better content.&lt;/p&gt;&#xA;&lt;p&gt;When run from a command-line, it checks your work against a set of selected rules and highlights potential problems. In writing terms, Vale enforces style guidelines takes from major publishers and related resources. Think of Vale as a personal &lt;a href=&#34;https://en.wikipedia.org/wiki/Copy_editing&#34;&gt;copyeditor&lt;/a&gt; (Wikipedia).&lt;/p&gt;&#xA;&lt;p&gt;More formally, Vale is a linter. Developers use linters to make sure their code follows predetermined guidelines. Vale performs a similar task. You can use it to check content written in Markdown, AsciiDoc, Restructured Text (RST), HTML, and more.&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;a href=&#34;https://vale.sh/&#34;&gt;Vale&lt;/a&gt; is a style-guide validator that helps you write better content.&lt;/p&gt;&#xA;&lt;p&gt;When run from a command-line, it checks your work against a set of selected rules and highlights potential problems. In writing terms, Vale enforces style guidelines taken from major publishers and related resources. Think of Vale as a personal &lt;a href=&#34;https://en.wikipedia.org/wiki/Copy_editing&#34;&gt;copyeditor&lt;/a&gt; (Wikipedia).&lt;/p&gt;&#xA;&lt;p&gt;More formally, Vale is a linter. Developers use linters to make sure their code follows predetermined guidelines. Vale performs a similar task. You can use it to check content written in Markdown, AsciiDoc, Restructured Text (RST), HTML, and more.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Vi editor cheat sheet</title>
@@ -313,7 +313,7 @@
       <link>https://lanceleonard.com/scribbles/journal/six-week-progress/</link>
       <pubDate>Fri, 14 Jun 2024 00:00:00 +0000</pubDate>
       <guid>https://lanceleonard.com/scribbles/journal/six-week-progress/</guid>
-      <description>&lt;p&gt;It&amp;rsquo;s been several weeks since I began reimplementing the website. It&amp;rsquo;s been an interesting experience to say the least. It&amp;rsquo;s fun to create something new and watch it come together. It&amp;rsquo;s also a little aggravating to find things that slipped through and need to be cleaned up. It&amp;rsquo;s also educational to overcome bits of friction to create a better experience.&lt;/p&gt;&#xA;&lt;p&gt;Perhaps it&amp;rsquo;s time to take stock.&lt;/p&gt;&#xA;&lt;p&gt;What&amp;rsquo;s gone well?  Well, here&amp;rsquo;s a high-level look at the recent changes:&lt;/p&gt;</description>
+      <description>&lt;p&gt;It&amp;rsquo;s been several weeks since I began reimplementing the website.  It&amp;rsquo;s been an interesting experience to say the least.  I&amp;rsquo;ve had fun creating something new and watching it come together.  I&amp;rsquo;ve also been a little aggravated to find things that slipped through and needed to be cleaned up.  I&amp;rsquo;ve learned a few things while overcoming bits of friction to create a better experience.&lt;/p&gt;&#xA;&lt;p&gt;Perhaps it&amp;rsquo;s time to take stock.&lt;/p&gt;&#xA;&lt;p&gt;What&amp;rsquo;s gone well? Well, here&amp;rsquo;s a high-level look at the recent changes:&lt;/p&gt;</description>
     </item>
     <item>
       <title>Is Phoenix on your bingo card?</title>
@@ -341,7 +341,7 @@
       <link>https://lanceleonard.com/scribbles/journal/restart-engines/</link>
       <pubDate>Wed, 01 May 2024 00:00:00 +0000</pubDate>
       <guid>https://lanceleonard.com/scribbles/journal/restart-engines/</guid>
-      <description>&lt;p&gt;Welcome back to the ongoing work-in-progress. I&amp;rsquo;m blowing off the dust, sweeping away the cobwebs, and setting up new things.&lt;/p&gt;&#xA;&lt;p&gt;This site serves as a practical portfolio and personal knowledgebase. It provides writing samples and illustrates my approach to technical writing. It also shares knowledge and lessons learned during my technical adventures.&lt;/p&gt;&#xA;&lt;p&gt;I hope the content is engaging, practical, and has at least a bit of value. (I&amp;rsquo;m still trying to chase down the various typos, so you&amp;rsquo;ll have to forgive a few rough edges.)&lt;/p&gt;</description>
+      <description>&lt;p&gt;Welcome back to the ongoing work-in-progress. I&amp;rsquo;m blowing off the dust, sweeping away the cobwebs, and setting up new things.&lt;/p&gt;&#xA;&lt;p&gt;This site serves as a practical portfolio and personal resource. It provides writing samples and illustrates my approach to technical writing. It also shares knowledge and lessons learned during my technical adventures.&lt;/p&gt;&#xA;&lt;p&gt;I hope the content is engaging, practical, and has at least a bit of value. (I&amp;rsquo;m still trying to chase down the various typos, so you&amp;rsquo;ll have to forgive a few rough edges.)&lt;/p&gt;</description>
     </item>
     <item>
       <title>First post: Don&#39;t panic</title>
