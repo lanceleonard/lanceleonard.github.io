@@ -7,5 +7,12 @@
     <generator>Hugo</generator>
     <language>en</language>
     <atom:link href="https://lanceleonard.com/tips/web/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Lychee: a link checker</title>
+      <link>https://lanceleonard.com/tips/web/lychee-link-checker/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://lanceleonard.com/tips/web/lychee-link-checker/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://lychee.cli.rs/&#34;&gt;Lychee&lt;/a&gt; is a link checker that has a hidden superpower for doc sites. It can verify anchor fragments; that is, it can detect broken links to specific sections in a webpage.&lt;/p&gt;&#xA;&#xA;&#xA;&lt;div class=&#34;alert alert-info&#34; role=&#34;alert&#34;&gt;&#xA;&lt;h4 class=&#34;alert-heading&#34;&gt;Note&lt;/h4&gt;&#xA;&#xA;    &lt;p&gt;The name &lt;em&gt;Lychee&lt;/em&gt; is used for multiple products. This article describes the link checker written in Rust.&lt;/p&gt;&#xA;&lt;p&gt;Help with the photo management system is available at &lt;a href=&#34;https://lycheeorg.dev/&#34;&gt;https://lycheeorg.dev/&lt;/a&gt;.&lt;/p&gt;&#xA;&#xA;&#xA;&lt;/div&gt;&#xA;&#xA;&lt;p&gt;This article provides a high-level introduction to lychee, one designed to help you get started quickly. Once you have the basics, use the &lt;a href=&#34;https://lychee.cli.rs/&#34;&gt;lychee docs&lt;/a&gt; for more details and options.&lt;/p&gt;</description>
+    </item>
   </channel>
 </rss>

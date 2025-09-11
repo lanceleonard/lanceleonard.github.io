@@ -30,7 +30,7 @@
   <meta itemprop="name" content="Doc guidelines, standards, and tools">
   <meta itemprop="description" content="Practical guidelines for creating good docs and help with related tools.">
   <meta itemprop="dateModified" content="2025-08-16T21:24:25-07:00">
-  <meta itemprop="wordCount" content="119">
+  <meta itemprop="wordCount" content="246">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Doc guidelines, standards, and tools">
   <meta name="twitter:description" content="Practical guidelines for creating good docs and help with related tools.">
@@ -130,7 +130,7 @@
     aria-label="Search this site…"
     autocomplete="off"
     
-    data-offline-search-index-json-src="/offline-search-index.bf322293b0566407b731b5c8ab18bad0.json"
+    data-offline-search-index-json-src="/offline-search-index.4478a0446bb6427fefafe4c657a1bb70.json"
     data-offline-search-base-href="/"
     data-offline-search-max-results="10"
   >
@@ -154,7 +154,7 @@
     aria-label="Search this site…"
     autocomplete="off"
     
-    data-offline-search-index-json-src="/offline-search-index.bf322293b0566407b731b5c8ab18bad0.json"
+    data-offline-search-index-json-src="/offline-search-index.4478a0446bb6427fefafe4c657a1bb70.json"
     data-offline-search-base-href="/"
     data-offline-search-max-results="10"
   >
@@ -304,6 +304,10 @@
   <input type="checkbox" id="m-tipsappsword-2011-tips-check"/>
   <label for="m-tipsappsword-2011-tips-check"><a href="/tips/apps/word-2011-tips/" title="Word 2011 tips and fixes" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-tipsappsword-2011-tips"><span class="">Word 2011 tips</span></a></label>
   
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipsappsword-doc-language-li">
+  <input type="checkbox" id="m-tipsappsword-doc-language-check"/>
+  <label for="m-tipsappsword-doc-language-check"><a href="/tips/apps/word-doc-language/" title="Word doc language" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-tipsappsword-doc-language"><span class="">Word language</span></a></label>
+  
 </li>
   </ul>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-tipsunix-li">
@@ -350,12 +354,20 @@
   <input type="checkbox" id="m-tipswebhtmlauto-capitalization-check"/>
   <label for="m-tipswebhtmlauto-capitalization-check"><a href="/tips/web/html/auto-capitalization/" title="Deactivate automatic capitalization" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-tipswebhtmlauto-capitalization"><span class="">Auto capitalization</span></a></label>
   
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipswebhtmlcustom-anchor-links-li">
+  <input type="checkbox" id="m-tipswebhtmlcustom-anchor-links-check"/>
+  <label for="m-tipswebhtmlcustom-anchor-links-check"><a href="/tips/web/html/custom-anchor-links/" title="Defining custom anchor links" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-tipswebhtmlcustom-anchor-links"><span class="">Custom anchors</span></a></label>
+  
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipswebhtmldetails-element-li">
   <input type="checkbox" id="m-tipswebhtmldetails-element-check"/>
   <label for="m-tipswebhtmldetails-element-check"><a href="/tips/web/html/details-element/" title="Hide details until needed" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-tipswebhtmldetails-element"><span class="">Hide details</span></a></label>
   
 </li>
   </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipsweblychee-link-checker-li">
+  <input type="checkbox" id="m-tipsweblychee-link-checker-check"/>
+  <label for="m-tipsweblychee-link-checker-check"><a href="/tips/web/lychee-link-checker/" title="Lychee: a link checker" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-tipsweblychee-link-checker"><span class="">Lychee</span></a></label>
+  
 </li>
   </ul>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-tipswindows-li">
@@ -517,7 +529,8 @@
             <div class="td-toc">
         <nav id="TableOfContents">
   <ul>
-    <li><a href="#diagrams">Diagrams</a></li>
+    <li><a href="#markup-viewers">Markup viewers</a></li>
+    <li><a href="#diagram--drawing-tools">Diagram &amp; drawing tools</a></li>
   </ul>
 </nav>
       </div>
@@ -543,7 +556,7 @@
   <div class="lead">Practical guidelines for creating good docs and help with related tools.</div>
 	<header class="article-meta">
 		
-  <p class="reading-time"><i class="fa-solid fa-clock" aria-hidden="true"></i>&nbsp; less than a minute &nbsp;</p>
+  <p class="reading-time"><i class="fa-solid fa-clock" aria-hidden="true"></i>&nbsp; 2 minute read &nbsp;</p>
 </header>
 	
        Here are some tools, resources, and guidelines for creating docs.
@@ -614,7 +627,22 @@
                 <p>A command-line tool that validates content against a set of known rules. Think of it as your personal style checker.</p>
             </div>
         </div>
-<h2 id="diagrams">Diagrams</h2>
+<h2 id="markup-viewers">Markup viewers</h2>
+<p>Many tools leverage common markup formats, such as Markdown and Restructured Text (RST).  The following editors can help you learn these formats using local previews:</p>
+<ul>
+<li>
+<p><a href="https://github.com/ThisIs-Developer/Markdown-Viewer">Markdown-Viewer</a> is one of several Markdown viewers available on GitHub.  This supports LaTeX math equations and Mermaid diagrams. It also calculated readability statistics.</p>
+</li>
+<li>
+<p><a href="https://github.com/faust93/livesphinx">LiveSphinx</a> supports Restructured Text and Sphinx extensions.</p>
+</li>
+<li>
+<p>Both Visual Studio Code and IntelliJ feature</p>
+</li>
+</ul>
+<p>Each tool can be incorporated into a content pipeline as part of a docs-as-code process.</p>
+<p>As of this writing, each of these tool operate locally, which means your content is not sent to another server or used to train an AI model. This depends, in part, on your local environment, such as your browser or how the tool is hosted.</p>
+<h2 id="diagram--drawing-tools">Diagram &amp; drawing tools</h2>
 <ul>
 <li>
 <p><a href="https://draw.io">Draw.io</a> (also known as diagrams.net) can make visually pleasing diagrams with minimal effort.</p>

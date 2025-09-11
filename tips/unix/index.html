@@ -30,7 +30,7 @@
   <meta itemprop="name" content="Unix general tips">
   <meta itemprop="description" content="Tips and reminders that apply to Unix and similar operating systems.">
   <meta itemprop="dateModified" content="2025-08-16T21:24:25-07:00">
-  <meta itemprop="wordCount" content="115">
+  <meta itemprop="wordCount" content="389">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Unix general tips">
   <meta name="twitter:description" content="Tips and reminders that apply to Unix and similar operating systems.">
@@ -130,7 +130,7 @@
     aria-label="Search this site…"
     autocomplete="off"
     
-    data-offline-search-index-json-src="/offline-search-index.bf322293b0566407b731b5c8ab18bad0.json"
+    data-offline-search-index-json-src="/offline-search-index.4478a0446bb6427fefafe4c657a1bb70.json"
     data-offline-search-base-href="/"
     data-offline-search-max-results="10"
   >
@@ -154,7 +154,7 @@
     aria-label="Search this site…"
     autocomplete="off"
     
-    data-offline-search-index-json-src="/offline-search-index.bf322293b0566407b731b5c8ab18bad0.json"
+    data-offline-search-index-json-src="/offline-search-index.4478a0446bb6427fefafe4c657a1bb70.json"
     data-offline-search-base-href="/"
     data-offline-search-max-results="10"
   >
@@ -304,6 +304,10 @@
   <input type="checkbox" id="m-tipsappsword-2011-tips-check"/>
   <label for="m-tipsappsword-2011-tips-check"><a href="/tips/apps/word-2011-tips/" title="Word 2011 tips and fixes" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-tipsappsword-2011-tips"><span class="">Word 2011 tips</span></a></label>
   
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipsappsword-doc-language-li">
+  <input type="checkbox" id="m-tipsappsword-doc-language-check"/>
+  <label for="m-tipsappsword-doc-language-check"><a href="/tips/apps/word-doc-language/" title="Word doc language" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-tipsappsword-doc-language"><span class="">Word language</span></a></label>
+  
 </li>
   </ul>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-tipsunix-li">
@@ -350,12 +354,20 @@
   <input type="checkbox" id="m-tipswebhtmlauto-capitalization-check"/>
   <label for="m-tipswebhtmlauto-capitalization-check"><a href="/tips/web/html/auto-capitalization/" title="Deactivate automatic capitalization" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-tipswebhtmlauto-capitalization"><span class="">Auto capitalization</span></a></label>
   
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipswebhtmlcustom-anchor-links-li">
+  <input type="checkbox" id="m-tipswebhtmlcustom-anchor-links-check"/>
+  <label for="m-tipswebhtmlcustom-anchor-links-check"><a href="/tips/web/html/custom-anchor-links/" title="Defining custom anchor links" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-tipswebhtmlcustom-anchor-links"><span class="">Custom anchors</span></a></label>
+  
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipswebhtmldetails-element-li">
   <input type="checkbox" id="m-tipswebhtmldetails-element-check"/>
   <label for="m-tipswebhtmldetails-element-check"><a href="/tips/web/html/details-element/" title="Hide details until needed" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-tipswebhtmldetails-element"><span class="">Hide details</span></a></label>
   
 </li>
   </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipsweblychee-link-checker-li">
+  <input type="checkbox" id="m-tipsweblychee-link-checker-check"/>
+  <label for="m-tipsweblychee-link-checker-check"><a href="/tips/web/lychee-link-checker/" title="Lychee: a link checker" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-tipsweblychee-link-checker"><span class="">Lychee</span></a></label>
+  
 </li>
   </ul>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-tipswindows-li">
@@ -517,8 +529,12 @@
             <div class="td-toc">
         <nav id="TableOfContents">
   <ul>
-    <li><a href="#unix-contexts">Unix contexts</a></li>
-    <li><a href="#resources--links">Resources &amp; links</a></li>
+    <li><a href="#basic-file-operations">Basic file operations</a></li>
+    <li><a href="#dates">Dates</a></li>
+    <li><a href="#shell">Shell</a></li>
+    <li><a href="#certificates">Certificates</a></li>
+    <li><a href="#dns">DNS</a></li>
+    <li><a href="#other-resources">Other resources</a></li>
   </ul>
 </nav>
       </div>
@@ -544,10 +560,12 @@
   <div class="lead">Tips and reminders that apply to Unix and similar operating systems.</div>
 	<header class="article-meta">
 		
-  <p class="reading-time"><i class="fa-solid fa-clock" aria-hidden="true"></i>&nbsp; less than a minute &nbsp;</p>
+  <p class="reading-time"><i class="fa-solid fa-clock" aria-hidden="true"></i>&nbsp; 2 minute read &nbsp;</p>
 </header>
 	
-       This section provides help that applies to multiple operating systems and contexts.  Unless otherwise specified, these should work in most situations.
+       
+Unless otherwise specified, these should work in most situations.  Use manpages to verify.
+
        <h2>Notes</h2>
     
     <div class="section-index">
@@ -567,48 +585,92 @@
                 <p>A quick cheat sheet for the vi editor</p>
             </div>
         </div>
-<h2 id="unix-contexts">Unix contexts</h2>
-<p>The general term &ldquo;Unix&rdquo; can refer to any number of specialized contexts, including:</p>
-<ul>
-<li>Server-based versions of Unix, such as FreeBSD</li>
-<li>Linux distributions, like Debian, RedHat, and Raspberry Pi OS</li>
-<li>Mobile device operating systems</li>
-<li>Various command-line consoles, including Mac Terminal, Git Bash, and <a href="https://en.wikipedia.org/wiki/Windows_Subsystem_for_Linux">Windows Subsystem for Linux</a> (WSL).</li>
-</ul>
-<!--
-Content related to a specific operating system can generally be found in that section of the site.
--->
-<!--
-## Basic commands
-
-### Current directory
-
-``` bash
-$ pwd
-```
-
-### Dates
-
-#### Current date
-
-``` bash
-$ date
-```
--->
-<h2 id="resources--links">Resources &amp; links</h2>
+<p>Here are a few reminders for quick reference.</p>
+<h2 id="basic-file-operations">Basic file operations</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-console" data-lang="console"><span class="line"><span class="cl"><span class="gp">%</span> ls                         // list files - compact, horizontal
+</span></span><span class="line"><span class="cl"><span class="gp">%</span> ls -l                      // list files - detail list
+</span></span><span class="line"><span class="cl"><span class="gp">%</span> ls -la                     // list all files, incl hidden, symlinks
+</span></span><span class="line"><span class="cl"><span class="gp">%</span> ls -la -t                  // sort list by last file update, descending
+</span></span><span class="line"><span class="cl"><span class="gp">%</span> ls -la -t <span class="p">|</span> pbcopy         // sort list <span class="p">&amp;</span> copy to Clipboard
+</span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="gp">%</span> ls -l . <span class="p">|</span> wc -l            // Count files in a folder <span class="o">(</span>wc lowercase L<span class="o">)</span>
+</span></span><span class="line"><span class="cl"><span class="gp">%</span> cat &lt;filename&gt; <span class="p">|</span> wc -l     // Count lines in a file <span class="o">(</span>wc lowercase L<span class="o">)</span>
+</span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="gp">%</span> cp &lt;source&gt; &lt;target&gt;       // Copy file
+</span></span><span class="line"><span class="cl"><span class="gp">%</span> cp -R &lt;source&gt;/ &lt;target&gt;/  // Copy files, recursively
+</span></span><span class="line"><span class="cl"><span class="gp">%</span> mv &lt;source&gt; &lt;target&gt;       // Move file <span class="o">(</span>rename<span class="o">)</span>
+</span></span><span class="line"><span class="cl"><span class="gp">%</span> rm &lt;filename&gt;              // Remove file <span class="o">(</span>delete<span class="o">)</span>
+</span></span><span class="line"><span class="cl"><span class="gp">%</span> rmdir &lt;folder&gt;             // Remove empty directory
+</span></span><span class="line"><span class="cl"><span class="gp">%</span> rm -rf                     // Remove non-empty directory <span class="p">&amp;</span> children <span class="o">(</span>Careful!<span class="o">)</span>
+</span></span><span class="line"><span class="cl"><span class="gp">%</span> df                         // Disk free <span class="o">(</span>available storage space<span class="o">)</span>
+</span></span><span class="line"><span class="cl"><span class="gp">%</span> du -ah d                   // Disk used - show all files
+</span></span><span class="line"><span class="cl"><span class="gp">%</span> du -hc                     // Disk used - Folder summary
+</span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="go">// Create a tarball (create, view files as added, compress, next value is tarball filename)
+</span></span></span><span class="line"><span class="cl"><span class="go"></span><span class="gp">%</span> tar -cvzf &lt;tar_filename&gt; &lt;filespec&gt;
+</span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="go">// Take ownership of a file
+</span></span></span><span class="line"><span class="cl"><span class="go"></span><span class="gp">%</span> chown -R <span class="o">(</span>whoami<span class="o">)</span> &lt;filename&gt;   
+</span></span></code></pre></div><h2 id="dates">Dates</h2>
 <ul>
 <li>
-<p>Certificates</p>
+<p>Current date:<br>
+<code>% date</code></p>
+</li>
+<li>
+<p>Current date as Epoch (milliseconds since 1970):<br>
+<code>% date +'%s'</code></p>
+</li>
+<li>
+<p>Convert Epoch time to local time:<br>
+<code>% date -R &lt;input value&gt;</code></p>
+<p>If your result seems highly inaccurate, your input value is likely expressed in milliseconds.</p>
+<p>When this happens, try removing last three characters:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-console" data-lang="console"><span class="line"><span class="cl"><span class="gp">$</span> date -r <span class="m">1722865314420</span>   // Wed Jun <span class="m">5</span> 11:27:00 PDT <span class="m">56565</span> <span class="o">(</span>wrong<span class="o">)</span>
+</span></span><span class="line"><span class="cl"><span class="gp">$</span> date -r <span class="m">1722865314</span>      // Mon Aug <span class="m">5</span> 06:41:54 PDT <span class="m">2024</span>  <span class="o">(</span>right<span class="o">)</span>
+</span></span></code></pre></div></li>
+<li>
+<p>Current month:<br>
+<code>% cal</code></p>
+</li>
+</ul>
+<h2 id="shell">Shell</h2>
+<ul>
+<li>
+<p>What shell am I using?<br>
+<code>% echo $0</code></p>
+</li>
+<li>
+<p>Which file is the shell resource file?</p>
+<ul>
+<li>bash: <code>~/.bashrc</code> (<code>~/.profile</code> on earlier Macs)</li>
+<li>zsh: <code>~/.zshrc</code></li>
+</ul>
+</li>
+<li>
+<p>Script debug info?<br>
+<code>-xv &lt;scriptname&gt; &lt;options&gt;</code></p>
+</li>
+</ul>
+<h2 id="certificates">Certificates</h2>
 <ul>
 <li><a href="https://en.wikipedia.org/wiki/Public_key_certificate">Public key certificates</a> (explains chain of trust and includes an interesting graphic) (Wikipedia)</li>
 <li>IETF RFS 5280: <a href="https://datatracker.ietf.org/doc/html/rfc5280#section-4.2.1.6">X.509 public key certificates</a> (IETF)</li>
 <li>How to <a href="https://www.shellhacks.com/decode-ssl-certificate/">decode an SSL certificate</a> (ShellHacks)</li>
 <li>Generate <a href="https://letsencrypt.org/docs/certificates-for-localhost/">certificates for localhost</a> (Let&rsquo;s Encrypt)</li>
 </ul>
+<h2 id="dns">DNS</h2>
+<ul>
+<li>
+<p><a href="https://stevessmarthomeguide.com/name-resolution-and-dns-on-home-networks/">Set up DNS for a home network</a> (Steve&rsquo;s Smarthome Guide)</p>
 </li>
 <li>
-<p><a href="https://geoff.greer.fm/ag/">ag: The Silver Searcher</a>: Fast alternative to grep that ignores dot files (such as <code>.gitignore</code>, <code>.DS_Store</code>, and so on), which means it&rsquo;s useful for maintenance scripts and cleanup.</p>
+<p><a href="https://stevessmarthomeguide.com/home-network-dns-dnsmasq/">DNS and DNSMasq</a> [Steve&rsquo;s Smarthome Guide]</p>
 </li>
+</ul>
+<h2 id="other-resources">Other resources</h2>
+<ul>
+<li><a href="https://geoff.greer.fm/ag/">ag: The Silver Searcher</a>: Fast alternative to grep that ignores dot files (such as <code>.gitignore</code>, <code>.DS_Store</code>, and so on), which means it&rsquo;s useful for maintenance scripts and cleanup.</li>
 </ul>
 
     </div>

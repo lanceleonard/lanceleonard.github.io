@@ -21,5 +21,12 @@
       <guid>https://lanceleonard.com/tips/apps/word-2011-tips/</guid>
       <description>&lt;p&gt;If, for whatever reason, you&amp;rsquo;re using Microsoft Word 2011 for the Mac, the following tips may help:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;If the tabs don&amp;rsquo;t respond to mouse clicks, try clicking the very top pixel of the tab (or as close to it as you can manage).&lt;/p&gt;&#xA;&lt;p&gt;For some unknown reason, this seems to do the trick.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;The &lt;code&gt;A footer of section _x_ is set outside the printable area of this page&lt;/code&gt; error indicates that the footer (or header) is larger than the non-printable area of the page.&lt;/p&gt;</description>
     </item>
+    <item>
+      <title>Word doc language</title>
+      <link>https://lanceleonard.com/tips/apps/word-doc-language/</link>
+      <pubDate>Mon, 08 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>https://lanceleonard.com/tips/apps/word-doc-language/</guid>
+      <description>&lt;p&gt;Microsoft Word documents have settings that can override preferences set in the app.&lt;/p&gt;&#xA;&lt;p&gt;If you&amp;rsquo;re not expecting this, you can encounter behavior that seems strange.  (It&amp;rsquo;s easy to fix.)&lt;/p&gt;&#xA;&lt;p&gt;Imagine you&amp;rsquo;re based in the US.  While editing a Word doc, you notice that the word &lt;em&gt;color&lt;/em&gt; is underlined with a red squiggle.&lt;/p&gt;&#xA;&lt;p&gt;When you right-click the word, the shortcut menu suggests using the word &lt;em&gt;colour&lt;/em&gt; instead.&lt;/p&gt;&#xA;&lt;p&gt;In the Word options, you verify that your default proofing language is set to &lt;em&gt;English (United States)&lt;/em&gt;.&lt;/p&gt;</description>
+    </item>
   </channel>
 </rss>

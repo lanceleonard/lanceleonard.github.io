@@ -17,32 +17,28 @@
 <link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
 <link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
 
-<title>Fix dark mode code block | Lance&#39;s Quips &amp; Quibbles</title>
-<meta name="description" content="How to get code to render in dark mode using docsy theme.">
-<meta property="og:url" content="https://lanceleonard.com/tips/doc/tools/hugo/dark-mode-code-docsy/">
-  <meta property="og:site_name" content="Lance&#39;s Quips &amp; Quibbles">
-  <meta property="og:title" content="Fix dark mode code block">
-  <meta property="og:description" content="How to get code to render in dark mode using docsy theme.">
+<title>Grep intro &amp; quickstart | Lance&#39;s Quips &amp; Quibbles</title>
+<meta name="description" content="A quick introduction to grep, with examples.">
+<meta property="og:url" content="https://lanceleonard.com/tips/unix/grep-intro/">
+  <meta property="og:site_name" content="Lance&#39;s Quips & Quibbles">
+  <meta property="og:title" content="Grep intro & quickstart">
+  <meta property="og:description" content="A quick introduction to grep, with examples.">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="tips">
-    <meta property="article:published_time" content="2024-05-08T00:00:00+00:00">
-    <meta property="article:modified_time" content="2024-06-04T16:06:52-07:00">
 
-  <meta itemprop="name" content="Fix dark mode code block">
-  <meta itemprop="description" content="How to get code to render in dark mode using docsy theme.">
-  <meta itemprop="datePublished" content="2024-05-08T00:00:00+00:00">
-  <meta itemprop="dateModified" content="2024-06-04T16:06:52-07:00">
-  <meta itemprop="wordCount" content="126">
+  <meta itemprop="name" content="Grep intro & quickstart">
+  <meta itemprop="description" content="A quick introduction to grep, with examples.">
+  <meta itemprop="wordCount" content="38">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Fix dark mode code block">
-  <meta name="twitter:description" content="How to get code to render in dark mode using docsy theme.">
+  <meta name="twitter:title" content="Grep intro & quickstart">
+  <meta name="twitter:description" content="A quick introduction to grep, with examples.">
 
 
 
 
-<link rel="preload" href="/scss/main.min.14291bf618f45ab5aeb1b38f2a11c1d7f4bf1ad154b5c0ea21589742a7e90969.css" as="style">
-<link href="/scss/main.min.14291bf618f45ab5aeb1b38f2a11c1d7f4bf1ad154b5c0ea21589742a7e90969.css" rel="stylesheet" integrity="">
+<link rel="preload" href="/scss/main.min.cf525a7a8c6d91f936378a17af79ab3cb1dbf1d5cd49892656bf1771a6710b6d.css" as="style">
+<link href="/scss/main.min.cf525a7a8c6d91f936378a17af79ab3cb1dbf1d5cd49892656bf1771a6710b6d.css" rel="stylesheet" integrity="">
 
 <script
   src="https://code.jquery.com/jquery-3.7.1.min.js"
@@ -133,7 +129,7 @@
     aria-label="Search this site…"
     autocomplete="off"
     
-    data-offline-search-index-json-src="/offline-search-index.8968d69bcd95ac18fda260ee45e1e83b.json"
+    data-offline-search-index-json-src="/offline-search-index.ac800912db644fe4a0467fc908443c98.json"
     data-offline-search-base-href="/"
     data-offline-search-max-results="10"
   >
@@ -157,7 +153,7 @@
     aria-label="Search this site…"
     autocomplete="off"
     
-    data-offline-search-index-json-src="/offline-search-index.8968d69bcd95ac18fda260ee45e1e83b.json"
+    data-offline-search-index-json-src="/offline-search-index.ac800912db644fe4a0467fc908443c98.json"
     data-offline-search-base-href="/"
     data-offline-search-max-results="10"
   >
@@ -175,68 +171,62 @@
   <label for="m-tips-check"><a href="/tips/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-tips"><span class="">Tips</span></a></label>
   
   <ul class="ul-2 foldable">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-tipsapps-li">
-  <input type="checkbox" id="m-tipsapps-check"/>
-  <label for="m-tipsapps-check"><a href="/tips/apps/" title="App tips and tricks" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-tipsapps"><span class="">Apps</span></a></label>
-  
-  <ul class="ul-3 foldable">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipsappsexcel-tips-li">
-  <input type="checkbox" id="m-tipsappsexcel-tips-check"/>
-  <label for="m-tipsappsexcel-tips-check"><a href="/tips/apps/excel-tips/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-tipsappsexcel-tips"><span class="">Excel tips</span></a></label>
-  
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipsappsword-2011-tips-li">
-  <input type="checkbox" id="m-tipsappsword-2011-tips-check"/>
-  <label for="m-tipsappsword-2011-tips-check"><a href="/tips/apps/word-2011-tips/" title="Word 2011 tips and fixes" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-tipsappsword-2011-tips"><span class="">Word 2011 tips</span></a></label>
-  
-</li>
-  </ul>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-tipsdoc-li">
-  <input type="checkbox" id="m-tipsdoc-check" checked/>
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-tipsdoc-li">
+  <input type="checkbox" id="m-tipsdoc-check"/>
   <label for="m-tipsdoc-check"><a href="/tips/doc/" title="Doc guidelines, standards, and tools" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-tipsdoc"><span class="">Docs</span></a></label>
   
   <ul class="ul-3 foldable">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipsdocstyle-guides-li">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipsdoctenets-li">
+  <input type="checkbox" id="m-tipsdoctenets-check"/>
+  <label for="m-tipsdoctenets-check"><a href="/tips/doc/tenets/" title="Doc project tenets" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-tipsdoctenets"><span class="">Doc tenets</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipsdocgrow-content-process-li">
+  <input type="checkbox" id="m-tipsdocgrow-content-process-check"/>
+  <label for="m-tipsdocgrow-content-process-check"><a href="/tips/doc/grow-content-process/" title="GROW Content Process" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-tipsdocgrow-content-process"><span class="">Grow process</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipsdocreadability-li">
+  <input type="checkbox" id="m-tipsdocreadability-check"/>
+  <label for="m-tipsdocreadability-check"><a href="/tips/doc/readability/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-tipsdocreadability"><span class="">Readability scores</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipsdocstyle-guides-li">
   <input type="checkbox" id="m-tipsdocstyle-guides-check"/>
   <label for="m-tipsdocstyle-guides-check"><a href="/tips/doc/style-guides/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-tipsdocstyle-guides"><span class="">Style guides</span></a></label>
-  
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipsdoctenets-li">
-  <input type="checkbox" id="m-tipsdoctenets-check"/>
-  <label for="m-tipsdoctenets-check"><a href="/tips/doc/tenets/" title="Doc project tenets" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-tipsdoctenets"><span class="">Tenets</span></a></label>
   
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipsdocvoice-tone-principles-li">
   <input type="checkbox" id="m-tipsdocvoice-tone-principles-check"/>
   <label for="m-tipsdocvoice-tone-principles-check"><a href="/tips/doc/voice-tone-principles/" title="Voice &amp; tone principles" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-tipsdocvoice-tone-principles"><span class="">Voice &amp; tone</span></a></label>
   
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-tipsdoctools-li">
-  <input type="checkbox" id="m-tipsdoctools-check" checked/>
-  <label for="m-tipsdoctools-check"><a href="/tips/doc/tools/" title="Documentation tools" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-tipsdoctools"><span class="">Tools</span></a></label>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-tipsdochugo-li">
+  <input type="checkbox" id="m-tipsdochugo-check"/>
+  <label for="m-tipsdochugo-check"><a href="/tips/doc/hugo/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-tipsdochugo"><span class="">Hugo</span></a></label>
   
   <ul class="ul-4 foldable">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-tipsdoctoolshugo-li">
-  <input type="checkbox" id="m-tipsdoctoolshugo-check" checked/>
-  <label for="m-tipsdoctoolshugo-check"><a href="/tips/doc/tools/hugo/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-tipsdoctoolshugo"><span class="">Hugo</span></a></label>
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipsdochugocustomize-theme-style-li">
+  <input type="checkbox" id="m-tipsdochugocustomize-theme-style-check"/>
+  <label for="m-tipsdochugocustomize-theme-style-check"><a href="/tips/doc/hugo/customize-theme-style/" title="Customize theme styles" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-tipsdochugocustomize-theme-style"><span class="">Customize theme</span></a></label>
   
-  <ul class="ul-5 foldable">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-tipsdoctoolshugodark-mode-code-docsy-li">
-  <input type="checkbox" id="m-tipsdoctoolshugodark-mode-code-docsy-check" checked/>
-  <label for="m-tipsdoctoolshugodark-mode-code-docsy-check"><a href="/tips/doc/tools/hugo/dark-mode-code-docsy/" title="Fix dark mode code block" class="align-left ps-0  active td-sidebar-link td-sidebar-link__page" id="m-tipsdoctoolshugodark-mode-code-docsy"><span class="td-sidebar-nav-active-item">Dark mode code</span></a></label>
-  
-</li>
-  </ul>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipsdoctoolsmarkdown-li">
-  <input type="checkbox" id="m-tipsdoctoolsmarkdown-check"/>
-  <label for="m-tipsdoctoolsmarkdown-check"><a href="/tips/doc/tools/markdown/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-tipsdoctoolsmarkdown"><span class="">Markdown</span></a></label>
-  
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipsdoctoolsmkdocs-li">
-  <input type="checkbox" id="m-tipsdoctoolsmkdocs-check"/>
-  <label for="m-tipsdoctoolsmkdocs-check"><a href="/tips/doc/tools/mkdocs/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-tipsdoctoolsmkdocs"><span class="">MKDocs</span></a></label>
-  
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipsdoctoolspandoc-li">
-  <input type="checkbox" id="m-tipsdoctoolspandoc-check"/>
-  <label for="m-tipsdoctoolspandoc-check"><a href="/tips/doc/tools/pandoc/" title="Pandoc conversion tips" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-tipsdoctoolspandoc"><span class="">Pandoc</span></a></label>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipsdochugodark-mode-code-docsy-li">
+  <input type="checkbox" id="m-tipsdochugodark-mode-code-docsy-check"/>
+  <label for="m-tipsdochugodark-mode-code-docsy-check"><a href="/tips/doc/hugo/dark-mode-code-docsy/" title="Fix dark mode code block" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-tipsdochugodark-mode-code-docsy"><span class="">Dark mode code</span></a></label>
   
 </li>
   </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipsdocmarkdown-li">
+  <input type="checkbox" id="m-tipsdocmarkdown-check"/>
+  <label for="m-tipsdocmarkdown-check"><a href="/tips/doc/markdown/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-tipsdocmarkdown"><span class="">Markdown</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipsdocmkdocs-li">
+  <input type="checkbox" id="m-tipsdocmkdocs-check"/>
+  <label for="m-tipsdocmkdocs-check"><a href="/tips/doc/mkdocs/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-tipsdocmkdocs"><span class="">MKDocs</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipsdocpandoc-li">
+  <input type="checkbox" id="m-tipsdocpandoc-check"/>
+  <label for="m-tipsdocpandoc-check"><a href="/tips/doc/pandoc/" title="Pandoc conversion tips" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-tipsdocpandoc"><span class="">Pandoc</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipsdocvale-li">
+  <input type="checkbox" id="m-tipsdocvale-check"/>
+  <label for="m-tipsdocvale-check"><a href="/tips/doc/vale/" title="Vale: a prose linter" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-tipsdocvale"><span class="">Vale</span></a></label>
+  
 </li>
   </ul>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-tipsgit-li">
@@ -264,7 +254,7 @@
   </ul>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-tipsjavascript-li">
   <input type="checkbox" id="m-tipsjavascript-check"/>
-  <label for="m-tipsjavascript-check"><a href="/tips/javascript/" title="JavaScript, Node.js, and related" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-tipsjavascript"><span class="">JavaScript</span></a></label>
+  <label for="m-tipsjavascript-check"><a href="/tips/javascript/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-tipsjavascript"><span class="">JavaScript</span></a></label>
   
   <ul class="ul-3 foldable">
     <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipsjavascriptdictionary-sorting-li">
@@ -275,37 +265,60 @@
   <input type="checkbox" id="m-tipsjavascriptextract-webpage-links-check"/>
   <label for="m-tipsjavascriptextract-webpage-links-check"><a href="/tips/javascript/extract-webpage-links/" title="Extract links from a webpage" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-tipsjavascriptextract-webpage-links"><span class="">Extract links</span></a></label>
   
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-tipsjavascriptnodejs-li">
-  <input type="checkbox" id="m-tipsjavascriptnodejs-check"/>
-  <label for="m-tipsjavascriptnodejs-check"><a href="/tips/javascript/nodejs/" title="Node.js, npm, and more" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-tipsjavascriptnodejs"><span class="">Node.js &amp; npm</span></a></label>
-  
-  <ul class="ul-4 foldable">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipsjavascriptnodejscollect-filenames-li">
-  <input type="checkbox" id="m-tipsjavascriptnodejscollect-filenames-check"/>
-  <label for="m-tipsjavascriptnodejscollect-filenames-check"><a href="/tips/javascript/nodejs/collect-filenames/" title="Collect filenames with Node.js" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-tipsjavascriptnodejscollect-filenames"><span class="">Collect filenames</span></a></label>
-  
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipsjavascriptnodejscreate-node-modules-li">
-  <input type="checkbox" id="m-tipsjavascriptnodejscreate-node-modules-check"/>
-  <label for="m-tipsjavascriptnodejscreate-node-modules-check"><a href="/tips/javascript/nodejs/create-node-modules/" title="Create custom Node.js modules" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-tipsjavascriptnodejscreate-node-modules"><span class="">Create custom modules</span></a></label>
-  
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipsjavascriptnodejsxml-to-json-li">
-  <input type="checkbox" id="m-tipsjavascriptnodejsxml-to-json-check"/>
-  <label for="m-tipsjavascriptnodejsxml-to-json-check"><a href="/tips/javascript/nodejs/xml-to-json/" title="Convert XML to JSON" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-tipsjavascriptnodejsxml-to-json"><span class="">XML to JSON</span></a></label>
-  
-</li>
-  </ul>
 </li>
   </ul>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipsmac-li">
   <input type="checkbox" id="m-tipsmac-check"/>
   <label for="m-tipsmac-check"><a href="/tips/mac/" title="Mac, MacOS, and OS/X" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-tipsmac"><span class="">Mac</span></a></label>
   
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-tipsunix-li">
-  <input type="checkbox" id="m-tipsunix-check"/>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-tipsnodejs-li">
+  <input type="checkbox" id="m-tipsnodejs-check"/>
+  <label for="m-tipsnodejs-check"><a href="/tips/nodejs/" title="Node.js, npm, and more" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-tipsnodejs"><span class="">Node.js</span></a></label>
+  
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipsnodejscollect-filenames-li">
+  <input type="checkbox" id="m-tipsnodejscollect-filenames-check"/>
+  <label for="m-tipsnodejscollect-filenames-check"><a href="/tips/nodejs/collect-filenames/" title="Collect filenames with Node.js" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-tipsnodejscollect-filenames"><span class="">Collect filenames</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipsnodejscreate-node-modules-li">
+  <input type="checkbox" id="m-tipsnodejscreate-node-modules-check"/>
+  <label for="m-tipsnodejscreate-node-modules-check"><a href="/tips/nodejs/create-node-modules/" title="Create custom Node.js modules" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-tipsnodejscreate-node-modules"><span class="">Create custom modules</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipsnodejsxml-to-json-li">
+  <input type="checkbox" id="m-tipsnodejsxml-to-json-check"/>
+  <label for="m-tipsnodejsxml-to-json-check"><a href="/tips/nodejs/xml-to-json/" title="Convert XML to JSON" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-tipsnodejsxml-to-json"><span class="">XML to JSON</span></a></label>
+  
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-tipsapps-li">
+  <input type="checkbox" id="m-tipsapps-check"/>
+  <label for="m-tipsapps-check"><a href="/tips/apps/" title="Office app tips and tricks" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-tipsapps"><span class="">Office apps</span></a></label>
+  
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipsappsexcel-tips-li">
+  <input type="checkbox" id="m-tipsappsexcel-tips-check"/>
+  <label for="m-tipsappsexcel-tips-check"><a href="/tips/apps/excel-tips/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-tipsappsexcel-tips"><span class="">Excel tips</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipsappsword-2011-tips-li">
+  <input type="checkbox" id="m-tipsappsword-2011-tips-check"/>
+  <label for="m-tipsappsword-2011-tips-check"><a href="/tips/apps/word-2011-tips/" title="Word 2011 tips and fixes" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-tipsappsword-2011-tips"><span class="">Word 2011 tips</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipsappsword-doc-language-li">
+  <input type="checkbox" id="m-tipsappsword-doc-language-check"/>
+  <label for="m-tipsappsword-doc-language-check"><a href="/tips/apps/word-doc-language/" title="Word doc language" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-tipsappsword-doc-language"><span class="">Word language</span></a></label>
+  
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-tipsunix-li">
+  <input type="checkbox" id="m-tipsunix-check" checked/>
   <label for="m-tipsunix-check"><a href="/tips/unix/" title="Unix general tips" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-tipsunix"><span class="">Unix</span></a></label>
   
   <ul class="ul-3 foldable">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipsunixpackage-managers-li">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-tipsunixgrep-intro-li">
+  <input type="checkbox" id="m-tipsunixgrep-intro-check" checked/>
+  <label for="m-tipsunixgrep-intro-check"><a href="/tips/unix/grep-intro/" title="Grep intro &amp; quickstart" class="align-left ps-0  active td-sidebar-link td-sidebar-link__page" id="m-tipsunixgrep-intro"><span class="td-sidebar-nav-active-item">Grep intro</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipsunixpackage-managers-li">
   <input type="checkbox" id="m-tipsunixpackage-managers-check"/>
   <label for="m-tipsunixpackage-managers-check"><a href="/tips/unix/package-managers/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-tipsunixpackage-managers"><span class="">Package managers</span></a></label>
   
@@ -340,12 +353,24 @@
   <label for="m-tipswebhtml-check"><a href="/tips/web/html/" title="HTML samples, ticks, and tidbits" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-tipswebhtml"><span class="">HTML</span></a></label>
   
   <ul class="ul-4 foldable">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipswebhtmldetails-element-li">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipswebhtmlauto-capitalization-li">
+  <input type="checkbox" id="m-tipswebhtmlauto-capitalization-check"/>
+  <label for="m-tipswebhtmlauto-capitalization-check"><a href="/tips/web/html/auto-capitalization/" title="Deactivate automatic capitalization" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-tipswebhtmlauto-capitalization"><span class="">Auto capitalization</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipswebhtmlcustom-anchor-links-li">
+  <input type="checkbox" id="m-tipswebhtmlcustom-anchor-links-check"/>
+  <label for="m-tipswebhtmlcustom-anchor-links-check"><a href="/tips/web/html/custom-anchor-links/" title="Defining custom anchor links" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-tipswebhtmlcustom-anchor-links"><span class="">Custom anchors</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipswebhtmldetails-element-li">
   <input type="checkbox" id="m-tipswebhtmldetails-element-check"/>
   <label for="m-tipswebhtmldetails-element-check"><a href="/tips/web/html/details-element/" title="Hide details until needed" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-tipswebhtmldetails-element"><span class="">Hide details</span></a></label>
   
 </li>
   </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipsweblychee-link-checker-li">
+  <input type="checkbox" id="m-tipsweblychee-link-checker-check"/>
+  <label for="m-tipsweblychee-link-checker-check"><a href="/tips/web/lychee-link-checker/" title="Lychee: a link checker" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-tipsweblychee-link-checker"><span class="">Lychee</span></a></label>
+  
 </li>
   </ul>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-tipswindows-li">
@@ -356,6 +381,10 @@
     <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipswindowselevation-prompt-shortcuts-li">
   <input type="checkbox" id="m-tipswindowselevation-prompt-shortcuts-check"/>
   <label for="m-tipswindowselevation-prompt-shortcuts-check"><a href="/tips/windows/elevation-prompt-shortcuts/" title="Keyboard shortcuts for elevation prompts" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-tipswindowselevation-prompt-shortcuts"><span class="">Elevation prompt shortcuts</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipswindowsview-product-key-li">
+  <input type="checkbox" id="m-tipswindowsview-product-key-check"/>
+  <label for="m-tipswindowsview-product-key-check"><a href="/tips/windows/view-product-key/" title="View product key" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-tipswindowsview-product-key"><span class="">Product key</span></a></label>
   
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipswindowsrecover-offscreen-window-li">
   <input type="checkbox" id="m-tipswindowsrecover-offscreen-window-check"/>
@@ -375,7 +404,15 @@
   <label for="m-scribblesjournal-check"><a href="/scribbles/journal/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-scribblesjournal"><span class="">Journal</span></a></label>
   
   <ul class="ul-3 foldable">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-scribblesjournalinitial-migration-li">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-scribblesjournalsummer-cleaning-update-li">
+  <input type="checkbox" id="m-scribblesjournalsummer-cleaning-update-check"/>
+  <label for="m-scribblesjournalsummer-cleaning-update-check"><a href="/scribbles/journal/summer-cleaning-update/" title="Summer cleaning update" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-scribblesjournalsummer-cleaning-update"><span class="">Summer cleaning</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-scribblesjournalsix-week-progress-li">
+  <input type="checkbox" id="m-scribblesjournalsix-week-progress-check"/>
+  <label for="m-scribblesjournalsix-week-progress-check"><a href="/scribbles/journal/six-week-progress/" title="Six week progress report" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-scribblesjournalsix-week-progress"><span class="">Six weeks later</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-scribblesjournalinitial-migration-li">
   <input type="checkbox" id="m-scribblesjournalinitial-migration-check"/>
   <label for="m-scribblesjournalinitial-migration-check"><a href="/scribbles/journal/initial-migration/" title="Initial migration complete" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-scribblesjournalinitial-migration"><span class="">Initial migration</span></a></label>
   
@@ -386,6 +423,71 @@
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-scribblesjournalfirst-post-li">
   <input type="checkbox" id="m-scribblesjournalfirst-post-check"/>
   <label for="m-scribblesjournalfirst-post-check"><a href="/scribbles/journal/first-post/" title="First post: Don&#39;t panic" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-scribblesjournalfirst-post"><span class="">Don&#39;t panic!</span></a></label>
+  
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-scribblesthoughts-li">
+  <input type="checkbox" id="m-scribblesthoughts-check"/>
+  <label for="m-scribblesthoughts-check"><a href="/scribbles/thoughts/" title="Random thoughts" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-scribblesthoughts"><span class="">Thoughts</span></a></label>
+  
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-scribblesthoughtsintegrity-question-li">
+  <input type="checkbox" id="m-scribblesthoughtsintegrity-question-check"/>
+  <label for="m-scribblesthoughtsintegrity-question-check"><a href="/scribbles/thoughts/integrity-question/" title="A question of integrity" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-scribblesthoughtsintegrity-question"><span class="">Integrity question</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-scribblesthoughtsmistaken-presumptions-li">
+  <input type="checkbox" id="m-scribblesthoughtsmistaken-presumptions-check"/>
+  <label for="m-scribblesthoughtsmistaken-presumptions-check"><a href="/scribbles/thoughts/mistaken-presumptions/" title="Beware mistaken presumptions" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-scribblesthoughtsmistaken-presumptions"><span class="">Mistaken presumptions</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-scribblesthoughtsbingo-card-redux-li">
+  <input type="checkbox" id="m-scribblesthoughtsbingo-card-redux-check"/>
+  <label for="m-scribblesthoughtsbingo-card-redux-check"><a href="/scribbles/thoughts/bingo-card-redux/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-scribblesthoughtsbingo-card-redux"><span class="">Bingo card redux</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-scribblesthoughtsphoenix-bingo-card-li">
+  <input type="checkbox" id="m-scribblesthoughtsphoenix-bingo-card-check"/>
+  <label for="m-scribblesthoughtsphoenix-bingo-card-check"><a href="/scribbles/thoughts/phoenix-bingo-card/" title="Is Phoenix on your bingo card?" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-scribblesthoughtsphoenix-bingo-card"><span class="">Phoenix  bingo card</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-scribblesthoughtssuccess-qualities-li">
+  <input type="checkbox" id="m-scribblesthoughtssuccess-qualities-check"/>
+  <label for="m-scribblesthoughtssuccess-qualities-check"><a href="/scribbles/thoughts/success-qualities/" title="Qualities for successful tech writers" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-scribblesthoughtssuccess-qualities"><span class="">Qualities for success</span></a></label>
+  
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-scribblestrifles-li">
+  <input type="checkbox" id="m-scribblestrifles-check"/>
+  <label for="m-scribblestrifles-check"><a href="/scribbles/trifles/" title="Trifles and Tidbits" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-scribblestrifles"><span class="">Trifles</span></a></label>
+  
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-scribblestriflescooking-li">
+  <input type="checkbox" id="m-scribblestriflescooking-check"/>
+  <label for="m-scribblestriflescooking-check"><a href="/scribbles/trifles/cooking/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-scribblestriflescooking"><span class="">Cooking</span></a></label>
+  
+  <ul class="ul-4 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-scribblestriflescookingbachelor-stew-li">
+  <input type="checkbox" id="m-scribblestriflescookingbachelor-stew-check"/>
+  <label for="m-scribblestriflescookingbachelor-stew-check"><a href="/scribbles/trifles/cooking/bachelor-stew/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-scribblestriflescookingbachelor-stew"><span class="">Bachelor stew</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-scribblestriflescookingburrito-filling-li">
+  <input type="checkbox" id="m-scribblestriflescookingburrito-filling-check"/>
+  <label for="m-scribblestriflescookingburrito-filling-check"><a href="/scribbles/trifles/cooking/burrito-filling/" title="Low sodium burrito filling" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-scribblestriflescookingburrito-filling"><span class="">Burrito filling</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-scribblestriflescookingfluffy-scrambled-eggs-li">
+  <input type="checkbox" id="m-scribblestriflescookingfluffy-scrambled-eggs-check"/>
+  <label for="m-scribblestriflescookingfluffy-scrambled-eggs-check"><a href="/scribbles/trifles/cooking/fluffy-scrambled-eggs/" title="Fluffy scrambled eggs" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-scribblestriflescookingfluffy-scrambled-eggs"><span class="">Fluffy scramble</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-scribblestriflescookingpumpkin-pie-recipe-li">
+  <input type="checkbox" id="m-scribblestriflescookingpumpkin-pie-recipe-check"/>
+  <label for="m-scribblestriflescookingpumpkin-pie-recipe-check"><a href="/scribbles/trifles/cooking/pumpkin-pie-recipe/" title="Pumpkin pie recipe" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-scribblestriflescookingpumpkin-pie-recipe"><span class="">Pumpkin pie</span></a></label>
+  
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-scribblestriflesklingon-coder-li">
+  <input type="checkbox" id="m-scribblestriflesklingon-coder-check"/>
+  <label for="m-scribblestriflesklingon-coder-check"><a href="/scribbles/trifles/klingon-coder/" title="The Compleat Klingon Coder" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-scribblestriflesklingon-coder"><span class="">Klingon coder</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-scribblestriflesyule-kitty-legend-li">
+  <input type="checkbox" id="m-scribblestriflesyule-kitty-legend-check"/>
+  <label for="m-scribblestriflesyule-kitty-legend-check"><a href="/scribbles/trifles/yule-kitty-legend/" title="The Legend of the Yule Kitty" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-scribblestriflesyule-kitty-legend"><span class="">Yule Kitty Legend</span></a></label>
   
 </li>
   </ul>
@@ -402,7 +504,7 @@
   
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-aboutprivacy-policy-li">
   <input type="checkbox" id="m-aboutprivacy-policy-check"/>
-  <label for="m-aboutprivacy-policy-check"><a href="/about/privacy-policy/" title="Privacy policy" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-aboutprivacy-policy"><span class="">Privacy</span></a></label>
+  <label for="m-aboutprivacy-policy-check"><a href="/about/privacy-policy/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-aboutprivacy-policy"><span class="">Privacy policy</span></a></label>
   
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-aboutsite-name-li">
   <input type="checkbox" id="m-aboutsite-name-check"/>
@@ -430,6 +532,7 @@
             <div class="td-toc">
         <nav id="TableOfContents">
   <ul>
+    <li><a href="#summarizing-hit-counts">Summarizing hit counts</a></li>
     <li><a href="#vital-statistics">Vital statistics</a></li>
   </ul>
 </nav>
@@ -447,56 +550,25 @@
   <li class="breadcrumb-item">
     <a href="/tips/">Tips</a></li>
   <li class="breadcrumb-item">
-    <a href="/tips/doc/">Docs</a></li>
-  <li class="breadcrumb-item">
-    <a href="/tips/doc/tools/">Tools</a></li>
-  <li class="breadcrumb-item">
-    <a href="/tips/doc/tools/hugo/">Hugo</a></li>
+    <a href="/tips/unix/">Unix</a></li>
   <li class="breadcrumb-item active" aria-current="page">
-    Dark mode code</li>
+    Grep intro</li>
   </ol>
 </nav>
             
 <div class="td-content">
-	<h1>Fix dark mode code block</h1>
-	<div class="lead">How to get code to render in dark mode using docsy theme.</div>
+	<h1>Grep intro &amp; quickstart</h1>
+	<div class="lead">A quick introduction to grep, with examples.</div>
 	<header class="article-meta">
 		
   <p class="reading-time"><i class="fa-solid fa-clock" aria-hidden="true"></i>&nbsp; less than a minute &nbsp;</p>
 </header>
-	<p>If you&rsquo;re using <a href="https://docsy.dev/docs">Docsy</a> as your <a href="https://gohugo.io">Hugo</a> theme, your code blocks might not render correctly in dark mode.</p>
-<p>To fix this quickly, create a CSS rule that sets the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-color"><code>background-color</code></a> for <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/pre"><code>&lt;pre&gt;</code></a> elements that are children of the <code>.highlight</code> class.</p>
-<p>Here&rsquo;s one way to do this:</p>
-<ol>
-<li>
-<p>In your <code>assets/scss</code> folder, create (or edit) <code>_style_project.scss</code>.</p>
-</li>
-<li>
-<p>Declare the following rule:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="c">/* Fix dark mode code rendering */</span>
-</span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nc">highlight</span> <span class="nt">pre</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="k">background-color</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">td</span><span class="o">-</span><span class="kc">pre</span><span class="o">-</span><span class="n">bg</span><span class="p">)</span> <span class="cp">!important</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></div><p>Here, <code>--td-pre-bg</code> evaluates to the background color value defined by your theme.</p>
-</li>
-<li>
-<p>Save your changes and rebuild your project.</p>
-</li>
-</ol>
-<p>Your code blocks should now be more readable in dark mode.</p>
-<p>To learn more about <code>_styles_project.scss</code>, see <a href="https://www.docsy.dev/docs/adding-content/lookandfeel/#project-style-files">Project style files</a> (Docsy)</p>
-<h2 id="vital-statistics">Vital statistics<a class="td-heading-self-link" href="#vital-statistics" aria-label="Heading self-link"></a></h2>
+	<h2 id="summarizing-hit-counts">Summarizing hit counts</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-console" data-lang="console"><span class="line"><span class="cl"><span class="gp">%</span> grep -cir <span class="s2">&#34;mysearchstring&#34;</span> --include <span class="s2">&#34;*.md&#34;</span> <span class="p">|</span> grep -v <span class="s2">&#34;:0&#34;</span>
+</span></span></code></pre></div><p>Here, the results of the first search are piped back into grep and filtered to filenames with hits.</p>
+<h2 id="vital-statistics">Vital statistics</h2>
 <ul>
-<li>
-<p>Last tested with:</p>
-<ul>
-<li>Hugo v0.0125.5+extended</li>
-<li>Docsy v0.10.0</li>
-</ul>
-</li>
-<li>
-<p>16 May 2024: First post</p>
-</li>
+<li>First post: 21 September 2025</li>
 </ul>
 
 	
@@ -536,7 +608,7 @@
           
         </div><div class="td-footer__center col-12 col-sm-6 py-2 order-sm-2">
           <span class="td-footer__copyright">&copy;
-    2017&ndash;2024
+    2017&ndash;2025
     <span class="td-footer__authors">Lance Leonard | <a href="https://choosealicense.com/licenses/mit/">MIT License</a> |</span></span><span class="td-footer__all_rights_reserved">All Rights Reserved</span><span class="ms-2"><a href="/about/privacy-policy" target="_blank" rel="noopener">Privacy Policy</a></span>
         </div>
       </div>
@@ -544,7 +616,7 @@
   </footer>
   
     </div>
-    <script src="/js/main.min.f72d00502781aaf278a14088eb2356b1ba2a05ad698a0c43fe86314d74ceab56.js" integrity="sha256-9y0AUCeBqvJ4oUCI6yNWsboqBa1pigxD/oYxTXTOq1Y=" crossorigin="anonymous"></script>
+    <script src="/js/main.min.bf0cab613e991fc11bc28a4a07b0aedef47c7c7c2595703ac3adf962fd6a8099.js" integrity="sha256-vwyrYT6ZH8EbwopKB7Cu3vR8fHwllXA6w635Yv1qgJk=" crossorigin="anonymous"></script>
 <script defer src="/js/click-to-copy.min.73478a7d4807698aed7e355eb23f9890ca18fea3158604c8471746d046702bad.js" integrity="sha256-c0eKfUgHaYrtfjVesj&#43;YkMoY/qMVhgTIRxdG0EZwK60=" crossorigin="anonymous"></script>
 <script src='/js/tabpane-persist.js'></script>
 
