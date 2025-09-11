@@ -29,8 +29,8 @@
 
   <meta itemprop="name" content="Mac, MacOS, and OS/X">
   <meta itemprop="description" content="Apple Macintosh operating systems are covered here.">
-  <meta itemprop="dateModified" content="2025-08-16T21:24:25-07:00">
-  <meta itemprop="wordCount" content="297">
+  <meta itemprop="dateModified" content="2025-09-10T13:20:14-07:00">
+  <meta itemprop="wordCount" content="465">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Mac, MacOS, and OS/X">
   <meta name="twitter:description" content="Apple Macintosh operating systems are covered here.">
@@ -130,7 +130,7 @@
     aria-label="Search this site…"
     autocomplete="off"
     
-    data-offline-search-index-json-src="/offline-search-index.bf322293b0566407b731b5c8ab18bad0.json"
+    data-offline-search-index-json-src="/offline-search-index.4478a0446bb6427fefafe4c657a1bb70.json"
     data-offline-search-base-href="/"
     data-offline-search-max-results="10"
   >
@@ -154,7 +154,7 @@
     aria-label="Search this site…"
     autocomplete="off"
     
-    data-offline-search-index-json-src="/offline-search-index.bf322293b0566407b731b5c8ab18bad0.json"
+    data-offline-search-index-json-src="/offline-search-index.4478a0446bb6427fefafe4c657a1bb70.json"
     data-offline-search-base-href="/"
     data-offline-search-max-results="10"
   >
@@ -304,6 +304,10 @@
   <input type="checkbox" id="m-tipsappsword-2011-tips-check"/>
   <label for="m-tipsappsword-2011-tips-check"><a href="/tips/apps/word-2011-tips/" title="Word 2011 tips and fixes" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-tipsappsword-2011-tips"><span class="">Word 2011 tips</span></a></label>
   
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipsappsword-doc-language-li">
+  <input type="checkbox" id="m-tipsappsword-doc-language-check"/>
+  <label for="m-tipsappsword-doc-language-check"><a href="/tips/apps/word-doc-language/" title="Word doc language" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-tipsappsword-doc-language"><span class="">Word language</span></a></label>
+  
 </li>
   </ul>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-tipsunix-li">
@@ -350,12 +354,20 @@
   <input type="checkbox" id="m-tipswebhtmlauto-capitalization-check"/>
   <label for="m-tipswebhtmlauto-capitalization-check"><a href="/tips/web/html/auto-capitalization/" title="Deactivate automatic capitalization" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-tipswebhtmlauto-capitalization"><span class="">Auto capitalization</span></a></label>
   
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipswebhtmlcustom-anchor-links-li">
+  <input type="checkbox" id="m-tipswebhtmlcustom-anchor-links-check"/>
+  <label for="m-tipswebhtmlcustom-anchor-links-check"><a href="/tips/web/html/custom-anchor-links/" title="Defining custom anchor links" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-tipswebhtmlcustom-anchor-links"><span class="">Custom anchors</span></a></label>
+  
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipswebhtmldetails-element-li">
   <input type="checkbox" id="m-tipswebhtmldetails-element-check"/>
   <label for="m-tipswebhtmldetails-element-check"><a href="/tips/web/html/details-element/" title="Hide details until needed" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-tipswebhtmldetails-element"><span class="">Hide details</span></a></label>
   
 </li>
   </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipsweblychee-link-checker-li">
+  <input type="checkbox" id="m-tipsweblychee-link-checker-check"/>
+  <label for="m-tipsweblychee-link-checker-check"><a href="/tips/web/lychee-link-checker/" title="Lychee: a link checker" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-tipsweblychee-link-checker"><span class="">Lychee</span></a></label>
+  
 </li>
   </ul>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-tipswindows-li">
@@ -522,7 +534,8 @@
         <li><a href="#hidden-files">Hidden files</a></li>
       </ul>
     </li>
-    <li><a href="#homebrew">Homebrew</a></li>
+    <li><a href="#brew-homebrew">Brew (Homebrew)</a></li>
+    <li><a href="#force-quit">Force quit</a></li>
     <li><a href="#safari">Safari</a>
       <ul>
         <li><a href="#enable-developer-tools">Enable developer tools</a></li>
@@ -554,7 +567,7 @@
   <div class="lead">Apple Macintosh operating systems are covered here.</div>
 	<header class="article-meta">
 		
-  <p class="reading-time"><i class="fa-solid fa-clock" aria-hidden="true"></i>&nbsp; 2 minute read &nbsp;</p>
+  <p class="reading-time"><i class="fa-solid fa-clock" aria-hidden="true"></i>&nbsp; 3 minute read &nbsp;</p>
 </header>
 	
     <div class="section-index">
@@ -574,8 +587,8 @@
 <p>You need to restart all Finder instances to pick up changes.  To do so quickly, run:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-console" data-lang="console"><span class="line"><span class="cl"><span class="gp">$</span> killall Finder
 </span></span></code></pre></div><p>(This command is case-sensitive.)</p>
-<h2 id="homebrew">Homebrew</h2>
-<p>Homebrew is a popular package manager for macOS, generally run from the command line (Terminal).</p>
+<h2 id="brew-homebrew">Brew (Homebrew)</h2>
+<p>Brew (formally Homebrew) is a popular package manager for macOS, generally run from the command line (Terminal).</p>
 <p>Set up instructions are on the <a href="https://brew.sh/">Homebrew site</a> (brew.sh).</p>
 <p>To keep everything up-to-date:</p>
 <ol>
@@ -585,6 +598,52 @@
 </ol>
 <p>For best results, consider running <code>brew doctor</code> <em>twice</em> before starting this process.  (There are times when it seems to help.)</p>
 <p>To learn more, see the <a href="https://docs.brew.sh/FAQ#how-do-i-update-my-local-packages">brew FAQs</a> (brew.sh).</p>
+<!-- 
+## Device names
+
+Use the system configuration utility (`scutil`) to set the names of your Mac. 
+
+   ComputerName | 
+   LocalHostName
+   HostName
+
+
+               ComputerName   The user-friendly name for the system.
+
+               LocalHostName  The local (Bonjour) host name.
+
+               HostName       The name associated with hostname(1) and gethostname(3).
+
+-->
+<h2 id="force-quit">Force quit</h2>
+<p>It doesn&rsquo;t happen often, but apps can stop responding on Macs &amp; iPads. Here a few quick reminders:</p>
+<ul>
+<li>
+<p>To close an unresponsive app:</p>
+<ol>
+<li>From Apple menu (<i class="fa-brands fa-apple"></i>), choose <em>Force Quit</em>.</li>
+<li>Next, select the unresponsive app and then select the <em>Force Quit</em> button to close it.</li>
+</ol>
+</li>
+<li>
+<p>The keyboard shortcut is <code>Command + Option + Esc</code> on current Macs and <code>Command + Alt + Esc</code> on earlier devices.</p>
+</li>
+<li>
+<p>If you prefer the command line, you can use <code>top</code> to determine the process ID (<em>pid</em>) of the app and then <code>kill</code> to stop its process.  (For details, see the relevant <code>man</code> pages.)</p>
+</li>
+<li>
+<p>On the iPad Mini:</p>
+<ol>
+<li>Hold the Sleep/Power button until the &ldquo;Slide to Power off&rdquo; message appears</li>
+<li>Release the power button</li>
+<li>Quickly press and hold the Home button. After roughly six seconds, the active app quits.</li>
+</ol>
+<p>If you do not release the power button in Step 2, the device restarts.</p>
+</li>
+<li>
+<p>If you prefer to use Terminal commands, go for it.</p>
+</li>
+</ul>
 <h2 id="safari">Safari</h2>
 <h3 id="enable-developer-tools">Enable developer tools</h3>
 <p>Safari hides View Source and Developer tools by default.</p>
@@ -606,6 +665,7 @@
 <p>To open the Console, for example, use the Safari menu to select <strong>Develop</strong> &gt; <strong>Show JavaScript Console</strong>.</p>
 <h2 id="vital-statistics">Vital statistics</h2>
 <ul>
+<li>August 24 2025: Started expanding.</li>
 <li>20 Jun 2024: Minor edits</li>
 <li>9 May 2024: First post</li>
 </ul>

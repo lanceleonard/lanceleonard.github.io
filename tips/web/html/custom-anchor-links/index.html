@@ -17,32 +17,28 @@
 <link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
 <link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
 
-<title>Six week progress report | Lance&#39;s Quips &amp; Quibbles</title>
-<meta name="description" content="Let&#39;s see how things are going.">
-<meta property="og:url" content="https://lanceleonard.com/scribbles/journal/six-week-progress-report/">
-  <meta property="og:site_name" content="Lance&#39;s Quips &amp; Quibbles">
-  <meta property="og:title" content="Six week progress report">
-  <meta property="og:description" content="Let&#39;s see how things are going.">
+<title>Defining custom anchor links | Lance&#39;s Quips &amp; Quibbles</title>
+<meta name="description" content="Shows one way to define a custom anchor target in a webpage when your tool doesn&#39;t support the `id` attribute.">
+<meta property="og:url" content="https://lanceleonard.com/tips/web/html/custom-anchor-links/">
+  <meta property="og:site_name" content="Lance&#39;s Quips & Quibbles">
+  <meta property="og:title" content="Defining custom anchor links">
+  <meta property="og:description" content="Shows one way to define a custom anchor target in a webpage when your tool doesn&#39;t support the `id` attribute.">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
-    <meta property="article:section" content="scribbles">
-    <meta property="article:published_time" content="2024-06-14T00:00:00+00:00">
-    <meta property="article:modified_time" content="2024-06-14T00:00:00+00:00">
+    <meta property="article:section" content="tips">
 
-  <meta itemprop="name" content="Six week progress report">
-  <meta itemprop="description" content="Let&#39;s see how things are going.">
-  <meta itemprop="datePublished" content="2024-06-14T00:00:00+00:00">
-  <meta itemprop="dateModified" content="2024-06-14T00:00:00+00:00">
-  <meta itemprop="wordCount" content="382">
+  <meta itemprop="name" content="Defining custom anchor links">
+  <meta itemprop="description" content="Shows one way to define a custom anchor target in a webpage when your tool doesn&#39;t support the `id` attribute.">
+  <meta itemprop="wordCount" content="161">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Six week progress report">
-  <meta name="twitter:description" content="Let&#39;s see how things are going.">
+  <meta name="twitter:title" content="Defining custom anchor links">
+  <meta name="twitter:description" content="Shows one way to define a custom anchor target in a webpage when your tool doesn&#39;t support the `id` attribute.">
 
 
 
 
-<link rel="preload" href="/scss/main.min.14291bf618f45ab5aeb1b38f2a11c1d7f4bf1ad154b5c0ea21589742a7e90969.css" as="style">
-<link href="/scss/main.min.14291bf618f45ab5aeb1b38f2a11c1d7f4bf1ad154b5c0ea21589742a7e90969.css" rel="stylesheet" integrity="">
+<link rel="preload" href="/scss/main.min.cf525a7a8c6d91f936378a17af79ab3cb1dbf1d5cd49892656bf1771a6710b6d.css" as="style">
+<link href="/scss/main.min.cf525a7a8c6d91f936378a17af79ab3cb1dbf1d5cd49892656bf1771a6710b6d.css" rel="stylesheet" integrity="">
 
 <script
   src="https://code.jquery.com/jquery-3.7.1.min.js"
@@ -54,7 +50,7 @@
   crossorigin="anonymous"></script>
 
   </head>
-  <body class="td-page td-blog">
+  <body class="td-page">
     <header>
       <nav class="td-navbar js-navbar-scroll" data-bs-theme="dark">
 <div class="container-fluid flex-column flex-md-row">
@@ -65,10 +61,10 @@
         <a class="nav-link" href="/about/"><span>About</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/tips/"><span>Tips</span></a>
+        <a class="nav-link active" href="/tips/"><span>Tips</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link active" href="/scribbles/"><span>Scribbles</span></a>
+        <a class="nav-link" href="/scribbles/"><span>Scribbles</span></a>
       </li>
       <li class="td-light-dark-menu nav-item dropdown">
         <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
@@ -133,7 +129,7 @@
     aria-label="Search this site…"
     autocomplete="off"
     
-    data-offline-search-index-json-src="/offline-search-index.e5160583cac3dc00bc19838b5bab03af.json"
+    data-offline-search-index-json-src="/offline-search-index.4478a0446bb6427fefafe4c657a1bb70.json"
     data-offline-search-base-href="/"
     data-offline-search-max-results="10"
   >
@@ -157,7 +153,7 @@
     aria-label="Search this site…"
     autocomplete="off"
     
-    data-offline-search-index-json-src="/offline-search-index.e5160583cac3dc00bc19838b5bab03af.json"
+    data-offline-search-index-json-src="/offline-search-index.4478a0446bb6427fefafe4c657a1bb70.json"
     data-offline-search-base-href="/"
     data-offline-search-max-results="10"
   >
@@ -170,73 +166,67 @@
       <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m--li">
   <a href="/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section tree-root" id="m-"><span class="">Lance&#39;s Quips &amp; Quibbles</span></a>
   <ul class="ul-1">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-tips-li">
-  <input type="checkbox" id="m-tips-check"/>
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-tips-li">
+  <input type="checkbox" id="m-tips-check" checked/>
   <label for="m-tips-check"><a href="/tips/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-tips"><span class="">Tips</span></a></label>
   
   <ul class="ul-2 foldable">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-tipsapps-li">
-  <input type="checkbox" id="m-tipsapps-check"/>
-  <label for="m-tipsapps-check"><a href="/tips/apps/" title="App tips and tricks" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-tipsapps"><span class="">Apps</span></a></label>
-  
-  <ul class="ul-3 foldable">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipsappsexcel-tips-li">
-  <input type="checkbox" id="m-tipsappsexcel-tips-check"/>
-  <label for="m-tipsappsexcel-tips-check"><a href="/tips/apps/excel-tips/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-tipsappsexcel-tips"><span class="">Excel tips</span></a></label>
-  
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipsappsword-2011-tips-li">
-  <input type="checkbox" id="m-tipsappsword-2011-tips-check"/>
-  <label for="m-tipsappsword-2011-tips-check"><a href="/tips/apps/word-2011-tips/" title="Word 2011 tips and fixes" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-tipsappsword-2011-tips"><span class="">Word 2011 tips</span></a></label>
-  
-</li>
-  </ul>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-tipsdoc-li">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-tipsdoc-li">
   <input type="checkbox" id="m-tipsdoc-check"/>
   <label for="m-tipsdoc-check"><a href="/tips/doc/" title="Doc guidelines, standards, and tools" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-tipsdoc"><span class="">Docs</span></a></label>
   
   <ul class="ul-3 foldable">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipsdocstyle-guides-li">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipsdoctenets-li">
+  <input type="checkbox" id="m-tipsdoctenets-check"/>
+  <label for="m-tipsdoctenets-check"><a href="/tips/doc/tenets/" title="Doc project tenets" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-tipsdoctenets"><span class="">Doc tenets</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipsdocgrow-content-process-li">
+  <input type="checkbox" id="m-tipsdocgrow-content-process-check"/>
+  <label for="m-tipsdocgrow-content-process-check"><a href="/tips/doc/grow-content-process/" title="GROW Content Process" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-tipsdocgrow-content-process"><span class="">Grow process</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipsdocreadability-li">
+  <input type="checkbox" id="m-tipsdocreadability-check"/>
+  <label for="m-tipsdocreadability-check"><a href="/tips/doc/readability/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-tipsdocreadability"><span class="">Readability scores</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipsdocstyle-guides-li">
   <input type="checkbox" id="m-tipsdocstyle-guides-check"/>
   <label for="m-tipsdocstyle-guides-check"><a href="/tips/doc/style-guides/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-tipsdocstyle-guides"><span class="">Style guides</span></a></label>
-  
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipsdoctenets-li">
-  <input type="checkbox" id="m-tipsdoctenets-check"/>
-  <label for="m-tipsdoctenets-check"><a href="/tips/doc/tenets/" title="Doc project tenets" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-tipsdoctenets"><span class="">Tenets</span></a></label>
   
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipsdocvoice-tone-principles-li">
   <input type="checkbox" id="m-tipsdocvoice-tone-principles-check"/>
   <label for="m-tipsdocvoice-tone-principles-check"><a href="/tips/doc/voice-tone-principles/" title="Voice &amp; tone principles" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-tipsdocvoice-tone-principles"><span class="">Voice &amp; tone</span></a></label>
   
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-tipsdoctools-li">
-  <input type="checkbox" id="m-tipsdoctools-check"/>
-  <label for="m-tipsdoctools-check"><a href="/tips/doc/tools/" title="Documentation tools" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-tipsdoctools"><span class="">Tools</span></a></label>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-tipsdochugo-li">
+  <input type="checkbox" id="m-tipsdochugo-check"/>
+  <label for="m-tipsdochugo-check"><a href="/tips/doc/hugo/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-tipsdochugo"><span class="">Hugo</span></a></label>
   
   <ul class="ul-4 foldable">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-tipsdoctoolshugo-li">
-  <input type="checkbox" id="m-tipsdoctoolshugo-check"/>
-  <label for="m-tipsdoctoolshugo-check"><a href="/tips/doc/tools/hugo/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-tipsdoctoolshugo"><span class="">Hugo</span></a></label>
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipsdochugocustomize-theme-style-li">
+  <input type="checkbox" id="m-tipsdochugocustomize-theme-style-check"/>
+  <label for="m-tipsdochugocustomize-theme-style-check"><a href="/tips/doc/hugo/customize-theme-style/" title="Customize theme styles" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-tipsdochugocustomize-theme-style"><span class="">Customize theme</span></a></label>
   
-  <ul class="ul-5 foldable">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipsdoctoolshugodark-mode-code-docsy-li">
-  <input type="checkbox" id="m-tipsdoctoolshugodark-mode-code-docsy-check"/>
-  <label for="m-tipsdoctoolshugodark-mode-code-docsy-check"><a href="/tips/doc/tools/hugo/dark-mode-code-docsy/" title="Fix dark mode code block" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-tipsdoctoolshugodark-mode-code-docsy"><span class="">Dark mode code</span></a></label>
-  
-</li>
-  </ul>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipsdoctoolsmarkdown-li">
-  <input type="checkbox" id="m-tipsdoctoolsmarkdown-check"/>
-  <label for="m-tipsdoctoolsmarkdown-check"><a href="/tips/doc/tools/markdown/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-tipsdoctoolsmarkdown"><span class="">Markdown</span></a></label>
-  
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipsdoctoolsmkdocs-li">
-  <input type="checkbox" id="m-tipsdoctoolsmkdocs-check"/>
-  <label for="m-tipsdoctoolsmkdocs-check"><a href="/tips/doc/tools/mkdocs/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-tipsdoctoolsmkdocs"><span class="">MKDocs</span></a></label>
-  
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipsdoctoolspandoc-li">
-  <input type="checkbox" id="m-tipsdoctoolspandoc-check"/>
-  <label for="m-tipsdoctoolspandoc-check"><a href="/tips/doc/tools/pandoc/" title="Pandoc conversion tips" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-tipsdoctoolspandoc"><span class="">Pandoc</span></a></label>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipsdochugodark-mode-code-docsy-li">
+  <input type="checkbox" id="m-tipsdochugodark-mode-code-docsy-check"/>
+  <label for="m-tipsdochugodark-mode-code-docsy-check"><a href="/tips/doc/hugo/dark-mode-code-docsy/" title="Fix dark mode code block" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-tipsdochugodark-mode-code-docsy"><span class="">Dark mode code</span></a></label>
   
 </li>
   </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipsdocmarkdown-li">
+  <input type="checkbox" id="m-tipsdocmarkdown-check"/>
+  <label for="m-tipsdocmarkdown-check"><a href="/tips/doc/markdown/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-tipsdocmarkdown"><span class="">Markdown</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipsdocmkdocs-li">
+  <input type="checkbox" id="m-tipsdocmkdocs-check"/>
+  <label for="m-tipsdocmkdocs-check"><a href="/tips/doc/mkdocs/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-tipsdocmkdocs"><span class="">MKDocs</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipsdocpandoc-li">
+  <input type="checkbox" id="m-tipsdocpandoc-check"/>
+  <label for="m-tipsdocpandoc-check"><a href="/tips/doc/pandoc/" title="Pandoc conversion tips" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-tipsdocpandoc"><span class="">Pandoc</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipsdocvale-li">
+  <input type="checkbox" id="m-tipsdocvale-check"/>
+  <label for="m-tipsdocvale-check"><a href="/tips/doc/vale/" title="Vale: a prose linter" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-tipsdocvale"><span class="">Vale</span></a></label>
+  
 </li>
   </ul>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-tipsgit-li">
@@ -262,9 +252,28 @@
   
 </li>
   </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-tipsjavascript-li">
+  <input type="checkbox" id="m-tipsjavascript-check"/>
+  <label for="m-tipsjavascript-check"><a href="/tips/javascript/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-tipsjavascript"><span class="">JavaScript</span></a></label>
+  
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipsjavascriptdictionary-sorting-li">
+  <input type="checkbox" id="m-tipsjavascriptdictionary-sorting-check"/>
+  <label for="m-tipsjavascriptdictionary-sorting-check"><a href="/tips/javascript/dictionary-sorting/" title="Dictionary sorting in JavaScript" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-tipsjavascriptdictionary-sorting"><span class="">Dictionary sorting</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipsjavascriptextract-webpage-links-li">
+  <input type="checkbox" id="m-tipsjavascriptextract-webpage-links-check"/>
+  <label for="m-tipsjavascriptextract-webpage-links-check"><a href="/tips/javascript/extract-webpage-links/" title="Extract links from a webpage" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-tipsjavascriptextract-webpage-links"><span class="">Extract links</span></a></label>
+  
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipsmac-li">
+  <input type="checkbox" id="m-tipsmac-check"/>
+  <label for="m-tipsmac-check"><a href="/tips/mac/" title="Mac, MacOS, and OS/X" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-tipsmac"><span class="">Mac</span></a></label>
+  
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-tipsnodejs-li">
   <input type="checkbox" id="m-tipsnodejs-check"/>
-  <label for="m-tipsnodejs-check"><a href="/tips/nodejs/" title="Node.js, npm, and more" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-tipsnodejs"><span class="">Node.js &amp; npm</span></a></label>
+  <label for="m-tipsnodejs-check"><a href="/tips/nodejs/" title="Node.js, npm, and more" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-tipsnodejs"><span class="">Node.js</span></a></label>
   
   <ul class="ul-3 foldable">
     <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipsnodejscollect-filenames-li">
@@ -281,44 +290,25 @@
   
 </li>
   </ul>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-tipsjavascript-li">
-  <input type="checkbox" id="m-tipsjavascript-check"/>
-  <label for="m-tipsjavascript-check"><a href="/tips/javascript/" title="JavaScript, Node.js, and related" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-tipsjavascript"><span class="">JavaScript</span></a></label>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-tipsapps-li">
+  <input type="checkbox" id="m-tipsapps-check"/>
+  <label for="m-tipsapps-check"><a href="/tips/apps/" title="Office app tips and tricks" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-tipsapps"><span class="">Office apps</span></a></label>
   
   <ul class="ul-3 foldable">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipsjavascriptdictionary-sorting-li">
-  <input type="checkbox" id="m-tipsjavascriptdictionary-sorting-check"/>
-  <label for="m-tipsjavascriptdictionary-sorting-check"><a href="/tips/javascript/dictionary-sorting/" title="Dictionary sorting in JavaScript" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-tipsjavascriptdictionary-sorting"><span class="">Dictionary sorting</span></a></label>
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipsappsexcel-tips-li">
+  <input type="checkbox" id="m-tipsappsexcel-tips-check"/>
+  <label for="m-tipsappsexcel-tips-check"><a href="/tips/apps/excel-tips/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-tipsappsexcel-tips"><span class="">Excel tips</span></a></label>
   
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipsjavascriptextract-webpage-links-li">
-  <input type="checkbox" id="m-tipsjavascriptextract-webpage-links-check"/>
-  <label for="m-tipsjavascriptextract-webpage-links-check"><a href="/tips/javascript/extract-webpage-links/" title="Extract links from a webpage" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-tipsjavascriptextract-webpage-links"><span class="">Extract links</span></a></label>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipsappsword-2011-tips-li">
+  <input type="checkbox" id="m-tipsappsword-2011-tips-check"/>
+  <label for="m-tipsappsword-2011-tips-check"><a href="/tips/apps/word-2011-tips/" title="Word 2011 tips and fixes" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-tipsappsword-2011-tips"><span class="">Word 2011 tips</span></a></label>
   
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-tipsjavascriptnodejs-li">
-  <input type="checkbox" id="m-tipsjavascriptnodejs-check"/>
-  <label for="m-tipsjavascriptnodejs-check"><a href="/tips/javascript/nodejs/" title="Node.js, npm, and more" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-tipsjavascriptnodejs"><span class="">Node.js &amp; npm</span></a></label>
-  
-  <ul class="ul-4 foldable">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipsjavascriptnodejscollect-filenames-li">
-  <input type="checkbox" id="m-tipsjavascriptnodejscollect-filenames-check"/>
-  <label for="m-tipsjavascriptnodejscollect-filenames-check"><a href="/tips/javascript/nodejs/collect-filenames/" title="Collect filenames with Node.js" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-tipsjavascriptnodejscollect-filenames"><span class="">Collect filenames</span></a></label>
-  
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipsjavascriptnodejscreate-node-modules-li">
-  <input type="checkbox" id="m-tipsjavascriptnodejscreate-node-modules-check"/>
-  <label for="m-tipsjavascriptnodejscreate-node-modules-check"><a href="/tips/javascript/nodejs/create-node-modules/" title="Create custom Node.js modules" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-tipsjavascriptnodejscreate-node-modules"><span class="">Create custom modules</span></a></label>
-  
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipsjavascriptnodejsxml-to-json-li">
-  <input type="checkbox" id="m-tipsjavascriptnodejsxml-to-json-check"/>
-  <label for="m-tipsjavascriptnodejsxml-to-json-check"><a href="/tips/javascript/nodejs/xml-to-json/" title="Convert XML to JSON" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-tipsjavascriptnodejsxml-to-json"><span class="">XML to JSON</span></a></label>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipsappsword-doc-language-li">
+  <input type="checkbox" id="m-tipsappsword-doc-language-check"/>
+  <label for="m-tipsappsword-doc-language-check"><a href="/tips/apps/word-doc-language/" title="Word doc language" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-tipsappsword-doc-language"><span class="">Word language</span></a></label>
   
 </li>
   </ul>
-</li>
-  </ul>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipsmac-li">
-  <input type="checkbox" id="m-tipsmac-check"/>
-  <label for="m-tipsmac-check"><a href="/tips/mac/" title="Mac, MacOS, and OS/X" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-tipsmac"><span class="">Mac</span></a></label>
-  
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-tipsunix-li">
   <input type="checkbox" id="m-tipsunix-check"/>
   <label for="m-tipsunix-check"><a href="/tips/unix/" title="Unix general tips" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-tipsunix"><span class="">Unix</span></a></label>
@@ -334,8 +324,8 @@
   
 </li>
   </ul>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-tipsweb-li">
-  <input type="checkbox" id="m-tipsweb-check"/>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-tipsweb-li">
+  <input type="checkbox" id="m-tipsweb-check" checked/>
   <label for="m-tipsweb-check"><a href="/tips/web/" title="Web: browsers, design, markup, and more" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-tipsweb"><span class="">Web</span></a></label>
   
   <ul class="ul-3 foldable">
@@ -354,17 +344,29 @@
   
 </li>
   </ul>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-tipswebhtml-li">
-  <input type="checkbox" id="m-tipswebhtml-check"/>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-tipswebhtml-li">
+  <input type="checkbox" id="m-tipswebhtml-check" checked/>
   <label for="m-tipswebhtml-check"><a href="/tips/web/html/" title="HTML samples, ticks, and tidbits" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-tipswebhtml"><span class="">HTML</span></a></label>
   
   <ul class="ul-4 foldable">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipswebhtmldetails-element-li">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipswebhtmlauto-capitalization-li">
+  <input type="checkbox" id="m-tipswebhtmlauto-capitalization-check"/>
+  <label for="m-tipswebhtmlauto-capitalization-check"><a href="/tips/web/html/auto-capitalization/" title="Deactivate automatic capitalization" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-tipswebhtmlauto-capitalization"><span class="">Auto capitalization</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-tipswebhtmlcustom-anchor-links-li">
+  <input type="checkbox" id="m-tipswebhtmlcustom-anchor-links-check" checked/>
+  <label for="m-tipswebhtmlcustom-anchor-links-check"><a href="/tips/web/html/custom-anchor-links/" title="Defining custom anchor links" class="align-left ps-0  active td-sidebar-link td-sidebar-link__page" id="m-tipswebhtmlcustom-anchor-links"><span class="td-sidebar-nav-active-item">Custom anchors</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipswebhtmldetails-element-li">
   <input type="checkbox" id="m-tipswebhtmldetails-element-check"/>
   <label for="m-tipswebhtmldetails-element-check"><a href="/tips/web/html/details-element/" title="Hide details until needed" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-tipswebhtmldetails-element"><span class="">Hide details</span></a></label>
   
 </li>
   </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipsweblychee-link-checker-li">
+  <input type="checkbox" id="m-tipsweblychee-link-checker-check"/>
+  <label for="m-tipsweblychee-link-checker-check"><a href="/tips/web/lychee-link-checker/" title="Lychee: a link checker" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-tipsweblychee-link-checker"><span class="">Lychee</span></a></label>
+  
 </li>
   </ul>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-tipswindows-li">
@@ -376,6 +378,10 @@
   <input type="checkbox" id="m-tipswindowselevation-prompt-shortcuts-check"/>
   <label for="m-tipswindowselevation-prompt-shortcuts-check"><a href="/tips/windows/elevation-prompt-shortcuts/" title="Keyboard shortcuts for elevation prompts" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-tipswindowselevation-prompt-shortcuts"><span class="">Elevation prompt shortcuts</span></a></label>
   
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipswindowsview-product-key-li">
+  <input type="checkbox" id="m-tipswindowsview-product-key-check"/>
+  <label for="m-tipswindowsview-product-key-check"><a href="/tips/windows/view-product-key/" title="View product key" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-tipswindowsview-product-key"><span class="">Product key</span></a></label>
+  
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipswindowsrecover-offscreen-window-li">
   <input type="checkbox" id="m-tipswindowsrecover-offscreen-window-check"/>
   <label for="m-tipswindowsrecover-offscreen-window-check"><a href="/tips/windows/recover-offscreen-window/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-tipswindowsrecover-offscreen-window"><span class="">Recover offscreen window</span></a></label>
@@ -384,19 +390,23 @@
   </ul>
 </li>
   </ul>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-scribbles-li">
-  <input type="checkbox" id="m-scribbles-check" checked/>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-scribbles-li">
+  <input type="checkbox" id="m-scribbles-check"/>
   <label for="m-scribbles-check"><a href="/scribbles/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-scribbles"><span class="">Scribbles</span></a></label>
   
   <ul class="ul-2 foldable">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-scribblesjournal-li">
-  <input type="checkbox" id="m-scribblesjournal-check" checked/>
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-scribblesjournal-li">
+  <input type="checkbox" id="m-scribblesjournal-check"/>
   <label for="m-scribblesjournal-check"><a href="/scribbles/journal/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-scribblesjournal"><span class="">Journal</span></a></label>
   
   <ul class="ul-3 foldable">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-scribblesjournalsix-week-progress-report-li">
-  <input type="checkbox" id="m-scribblesjournalsix-week-progress-report-check" checked/>
-  <label for="m-scribblesjournalsix-week-progress-report-check"><a href="/scribbles/journal/six-week-progress-report/" title="Six week progress report" class="align-left ps-0  active td-sidebar-link td-sidebar-link__page" id="m-scribblesjournalsix-week-progress-report"><span class="td-sidebar-nav-active-item">Six weeks later</span></a></label>
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-scribblesjournalsummer-cleaning-update-li">
+  <input type="checkbox" id="m-scribblesjournalsummer-cleaning-update-check"/>
+  <label for="m-scribblesjournalsummer-cleaning-update-check"><a href="/scribbles/journal/summer-cleaning-update/" title="Summer cleaning update" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-scribblesjournalsummer-cleaning-update"><span class="">Summer cleaning</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-scribblesjournalsix-week-progress-li">
+  <input type="checkbox" id="m-scribblesjournalsix-week-progress-check"/>
+  <label for="m-scribblesjournalsix-week-progress-check"><a href="/scribbles/journal/six-week-progress/" title="Six week progress report" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-scribblesjournalsix-week-progress"><span class="">Six weeks later</span></a></label>
   
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-scribblesjournalinitial-migration-li">
   <input type="checkbox" id="m-scribblesjournalinitial-migration-check"/>
@@ -417,7 +427,19 @@
   <label for="m-scribblesthoughts-check"><a href="/scribbles/thoughts/" title="Random thoughts" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-scribblesthoughts"><span class="">Thoughts</span></a></label>
   
   <ul class="ul-3 foldable">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-scribblesthoughtsphoenix-bingo-card-li">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-scribblesthoughtsintegrity-question-li">
+  <input type="checkbox" id="m-scribblesthoughtsintegrity-question-check"/>
+  <label for="m-scribblesthoughtsintegrity-question-check"><a href="/scribbles/thoughts/integrity-question/" title="A question of integrity" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-scribblesthoughtsintegrity-question"><span class="">Integrity question</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-scribblesthoughtsmistaken-presumptions-li">
+  <input type="checkbox" id="m-scribblesthoughtsmistaken-presumptions-check"/>
+  <label for="m-scribblesthoughtsmistaken-presumptions-check"><a href="/scribbles/thoughts/mistaken-presumptions/" title="Beware mistaken presumptions" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-scribblesthoughtsmistaken-presumptions"><span class="">Mistaken presumptions</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-scribblesthoughtsbingo-card-redux-li">
+  <input type="checkbox" id="m-scribblesthoughtsbingo-card-redux-check"/>
+  <label for="m-scribblesthoughtsbingo-card-redux-check"><a href="/scribbles/thoughts/bingo-card-redux/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-scribblesthoughtsbingo-card-redux"><span class="">Bingo card redux</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-scribblesthoughtsphoenix-bingo-card-li">
   <input type="checkbox" id="m-scribblesthoughtsphoenix-bingo-card-check"/>
   <label for="m-scribblesthoughtsphoenix-bingo-card-check"><a href="/scribbles/thoughts/phoenix-bingo-card/" title="Is Phoenix on your bingo card?" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-scribblesthoughtsphoenix-bingo-card"><span class="">Phoenix  bingo card</span></a></label>
   
@@ -432,9 +454,36 @@
   <label for="m-scribblestrifles-check"><a href="/scribbles/trifles/" title="Trifles and Tidbits" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-scribblestrifles"><span class="">Trifles</span></a></label>
   
   <ul class="ul-3 foldable">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-scribblestriflesklingon-coder-li">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-scribblestriflescooking-li">
+  <input type="checkbox" id="m-scribblestriflescooking-check"/>
+  <label for="m-scribblestriflescooking-check"><a href="/scribbles/trifles/cooking/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-scribblestriflescooking"><span class="">Cooking</span></a></label>
+  
+  <ul class="ul-4 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-scribblestriflescookingbachelor-stew-li">
+  <input type="checkbox" id="m-scribblestriflescookingbachelor-stew-check"/>
+  <label for="m-scribblestriflescookingbachelor-stew-check"><a href="/scribbles/trifles/cooking/bachelor-stew/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-scribblestriflescookingbachelor-stew"><span class="">Bachelor stew</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-scribblestriflescookingburrito-filling-li">
+  <input type="checkbox" id="m-scribblestriflescookingburrito-filling-check"/>
+  <label for="m-scribblestriflescookingburrito-filling-check"><a href="/scribbles/trifles/cooking/burrito-filling/" title="Low sodium burrito filling" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-scribblestriflescookingburrito-filling"><span class="">Burrito filling</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-scribblestriflescookingfluffy-scrambled-eggs-li">
+  <input type="checkbox" id="m-scribblestriflescookingfluffy-scrambled-eggs-check"/>
+  <label for="m-scribblestriflescookingfluffy-scrambled-eggs-check"><a href="/scribbles/trifles/cooking/fluffy-scrambled-eggs/" title="Fluffy scrambled eggs" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-scribblestriflescookingfluffy-scrambled-eggs"><span class="">Fluffy scramble</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-scribblestriflescookingpumpkin-pie-recipe-li">
+  <input type="checkbox" id="m-scribblestriflescookingpumpkin-pie-recipe-check"/>
+  <label for="m-scribblestriflescookingpumpkin-pie-recipe-check"><a href="/scribbles/trifles/cooking/pumpkin-pie-recipe/" title="Pumpkin pie recipe" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-scribblestriflescookingpumpkin-pie-recipe"><span class="">Pumpkin pie</span></a></label>
+  
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-scribblestriflesklingon-coder-li">
   <input type="checkbox" id="m-scribblestriflesklingon-coder-check"/>
   <label for="m-scribblestriflesklingon-coder-check"><a href="/scribbles/trifles/klingon-coder/" title="The Compleat Klingon Coder" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-scribblestriflesklingon-coder"><span class="">Klingon coder</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-scribblestriflesyule-kitty-legend-li">
+  <input type="checkbox" id="m-scribblestriflesyule-kitty-legend-check"/>
+  <label for="m-scribblestriflesyule-kitty-legend-check"><a href="/scribbles/trifles/yule-kitty-legend/" title="The Legend of the Yule Kitty" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-scribblestriflesyule-kitty-legend"><span class="">Yule Kitty Legend</span></a></label>
   
 </li>
   </ul>
@@ -451,7 +500,7 @@
   
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-aboutprivacy-policy-li">
   <input type="checkbox" id="m-aboutprivacy-policy-check"/>
-  <label for="m-aboutprivacy-policy-check"><a href="/about/privacy-policy/" title="Privacy policy" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-aboutprivacy-policy"><span class="">Privacy</span></a></label>
+  <label for="m-aboutprivacy-policy-check"><a href="/about/privacy-policy/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-aboutprivacy-policy"><span class="">Privacy policy</span></a></label>
   
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-aboutsite-name-li">
   <input type="checkbox" id="m-aboutsite-name-check"/>
@@ -476,62 +525,58 @@
 
 </div>
 
-            
+            <div class="td-toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#vital-statistics">Vital statistics</a></li>
+  </ul>
+</nav>
+      </div>
+    
             
 	
           </aside>
-          <main class="col-12 col-md-9 col-xl-8 ps-md-5 pe-md-4" role="main">
-            <a class="td-rss-button" title="RSS" href="/scribbles/journal/index.xml" target="_blank" rel="noopener">
-              <i class="fa-solid fa-rss" aria-hidden="true"></i>
-            </a>
+          <main class="col-12 col-md-9 col-xl-8 ps-md-5" role="main">
+            
+  
+
+            <nav aria-label="breadcrumb" class="td-breadcrumbs">
+  <ol class="breadcrumb">
+  <li class="breadcrumb-item">
+    <a href="/tips/">Tips</a></li>
+  <li class="breadcrumb-item">
+    <a href="/tips/web/">Web</a></li>
+  <li class="breadcrumb-item">
+    <a href="/tips/web/html/">HTML</a></li>
+  <li class="breadcrumb-item active" aria-current="page">
+    Custom anchors</li>
+  </ol>
+</nav>
             
 <div class="td-content">
-	<h1>Six week progress report</h1>
-	<div class="lead">Let&rsquo;s see how things are going.</div>
-	<div class="td-byline mb-4">
-		By <b>Lance Leonard</b> |
-		<time datetime="2024-06-14" class="text-body-secondary">Friday, June 14, 2024</time>
-	</div>
+	<h1>Defining custom anchor links</h1>
+	<div class="lead">Shows one way to define a custom anchor target in a webpage when your tool doesn&rsquo;t support the <code>id</code> attribute.</div>
 	<header class="article-meta">
 		
-  <p class="reading-time"><i class="fa-solid fa-clock" aria-hidden="true"></i>&nbsp; 2 minute read &nbsp;</p>
+  <p class="reading-time"><i class="fa-solid fa-clock" aria-hidden="true"></i>&nbsp; less than a minute &nbsp;</p>
 </header>
-	<p>It&rsquo;s been several weeks since I began reimplementing the website.  It&rsquo;s been an interesting experience.</p>
-<p>Perhaps it&rsquo;s time to take stock.</p>
-<p>What&rsquo;s gone well?  Let&rsquo;s review the major accomplishments:</p>
-<p>Overall, I&rsquo;ve:</p>
+	<p>For modern browsers and contexts, use the HTML <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/id"><code>id</code>  attribute</a> to define a custom anchor target (also called a <em>fragment identifier</em>).</p>
+<p>Some tools, such as online services or wikis, don&rsquo;t provide convenient ways to set IDs in documents.</p>
+<p>If you&rsquo;re working with such a tool <em>and</em> it supports HTML, trying using the HTML anchor element (<code>&lt;a&gt;</code>) to define the anchor target.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">a</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;myanchor&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span></span></code></pre></div><p>While <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/a#name">deprecated in HTML5</a>, many browsers still support this markup. As a result, it&rsquo;s an effective workaround for limited use.</p>
+<p>Be sure to investigate your tool carefully before using this, as there might be more appropriate alternatives.</p>
+<p>For example, some static site generators (SSGs) support alternate approaches:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl">Here&#39;s a thing to link to...
+</span></span><span class="line"><span class="cl">{id=&#34;myanchor&#34;}
+</span></span></code></pre></div><p>This example shows an optional behavior <a href="https://gohugo.io/content-management/markdown-attributes/#usage">supported by Hugo</a>: an inline declaration specified on the line immediately following the target location. Support depends on the tool and how it&rsquo;s configured for a specific site.</p>
+<h2 id="vital-statistics">Vital statistics</h2>
 <ul>
-<li>Migrated the site to a new stack (changing from MKDocs to Hugo)</li>
-<li>Learned (and adapted) a new template (Docsy)</li>
-<li>Tweaked and fixed a few layout choices</li>
-<li>Added navigation improvements</li>
-<li>Rewritten several topics to reflect my current style (while adding new topics)</li>
-<li>Fixed a number of (relatively) minor CSS bugs/choices</li>
-</ul>
-<p>None of these tasks have been unexpected.</p>
-<p>Some have been trivial; others have required a bit of investigation, experimentation, and patience.  (All good qualities to bring to any migration.)</p>
-<p>To be honest, I&rsquo;ve been a bit surprised that things haven&rsquo;t been more difficult.  Yes, there have been a few missteps and glitches.  However, I&rsquo;ve been able to fix things relatively quickly.</p>
-<p>I actually feel good enough about the site to show it to others for their feedback.  So that&rsquo;s a positive change.</p>
-<p>The site was originally created as a way to share writing samples with prospective employers.  Now that there&rsquo;s a solid foundation, I&rsquo;ve been able to expand the scope beyond a few curated topics.  It&rsquo;ll be interesting to see how things develop.</p>
-<p>What could have gone better?</p>
-<p>Some problems might&rsquo;ve been avoided with more mindful planning and more rigorous testing.  (This seems a bit speculative and/or obvious.)</p>
-<p>Given that this is (essentially) a volunteer, spare-time project, I think progress has been good, especially given unexpected and competing demands: family, unplanned travel, and other challenges.</p>
-<p>It&rsquo;s also tempting to wonder if I&rsquo;ve used my time as wisely as I could have.  Again, this seems speculative.</p>
-<p>Armchair quarterbacking aside, I&rsquo;m not sure there have been many major issues.  Yes, broken links <em>should</em> have been noticed during unit review.  And, yes, some of my initial organizational ideas haven&rsquo;t been as successful as I&rsquo;d hoped.</p>
-<p>However, these seem like natural artifacts of the agile development process.  We do what we can in the time available and then we evaluate and iterate to improve things over time.</p>
-<p>I think the new foundation enables a number of possibilities that weren&rsquo;t feasible with the earlier design.</p>
-<p>In addition, I feel more engaged with the site&hellip;and more motivated to keep improving it.  Perhaps that&rsquo;s the best benefit for all.</p>
-
-	<ul class="list-unstyled d-flex justify-content-between align-items-center mb-0 pt-5">
-  <li>
-    <a href="/scribbles/journal/initial-migration/" aria-label="Previous - Initial migration complete" class="btn btn-primary"><span class="me-1">←</span>Previous</a>
-  </li>
-  <li>
-    <a class="btn btn-primary disabled">Next<span class="ms-1">→</span></a>
-  </li>
+<li>18 August 2025: First post for this site</li>
 </ul>
 
-	</div>
+	
+</div>
 
 
           </main>
@@ -567,7 +612,7 @@
           
         </div><div class="td-footer__center col-12 col-sm-6 py-2 order-sm-2">
           <span class="td-footer__copyright">&copy;
-    2017&ndash;2024
+    2017&ndash;2025
     <span class="td-footer__authors">Lance Leonard | <a href="https://choosealicense.com/licenses/mit/">MIT License</a> |</span></span><span class="td-footer__all_rights_reserved">All Rights Reserved</span><span class="ms-2"><a href="/about/privacy-policy" target="_blank" rel="noopener">Privacy Policy</a></span>
         </div>
       </div>
@@ -575,7 +620,7 @@
   </footer>
   
     </div>
-    <script src="/js/main.min.f72d00502781aaf278a14088eb2356b1ba2a05ad698a0c43fe86314d74ceab56.js" integrity="sha256-9y0AUCeBqvJ4oUCI6yNWsboqBa1pigxD/oYxTXTOq1Y=" crossorigin="anonymous"></script>
+    <script src="/js/main.min.bf0cab613e991fc11bc28a4a07b0aedef47c7c7c2595703ac3adf962fd6a8099.js" integrity="sha256-vwyrYT6ZH8EbwopKB7Cu3vR8fHwllXA6w635Yv1qgJk=" crossorigin="anonymous"></script>
 <script defer src="/js/click-to-copy.min.73478a7d4807698aed7e355eb23f9890ca18fea3158604c8471746d046702bad.js" integrity="sha256-c0eKfUgHaYrtfjVesj&#43;YkMoY/qMVhgTIRxdG0EZwK60=" crossorigin="anonymous"></script>
 <script src='/js/tabpane-persist.js'></script>
 

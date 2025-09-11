@@ -17,26 +17,22 @@
 <link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
 <link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
 
-<title>An example of integrity | Lance&#39;s Quips &amp; Quibbles</title>
-<meta name="description" content="Integrity has many facets; not all are obvious.">
-<meta property="og:url" content="https://lanceleonard.com/scribbles/thoughts/integrity-example/">
+<title>Vi editor cheat sheet | Lance&#39;s Quips &amp; Quibbles</title>
+<meta name="description" content="A quick cheat sheet for the vi editor">
+<meta property="og:url" content="https://lanceleonard.com/tips/unix/vi-cheat-sheet-copy/">
   <meta property="og:site_name" content="Lance&#39;s Quips & Quibbles">
-  <meta property="og:title" content="An example of integrity">
-  <meta property="og:description" content="Integrity has many facets; not all are obvious.">
+  <meta property="og:title" content="Vi editor cheat sheet">
+  <meta property="og:description" content="A quick cheat sheet for the vi editor">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
-    <meta property="article:section" content="scribbles">
-    <meta property="article:published_time" content="2024-10-15T00:00:00+00:00">
-    <meta property="article:modified_time" content="2024-10-15T00:00:00+00:00">
+    <meta property="article:section" content="tips">
 
-  <meta itemprop="name" content="An example of integrity">
-  <meta itemprop="description" content="Integrity has many facets; not all are obvious.">
-  <meta itemprop="datePublished" content="2024-10-15T00:00:00+00:00">
-  <meta itemprop="dateModified" content="2024-10-15T00:00:00+00:00">
-  <meta itemprop="wordCount" content="459">
+  <meta itemprop="name" content="Vi editor cheat sheet">
+  <meta itemprop="description" content="A quick cheat sheet for the vi editor">
+  <meta itemprop="wordCount" content="152">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="An example of integrity">
-  <meta name="twitter:description" content="Integrity has many facets; not all are obvious.">
+  <meta name="twitter:title" content="Vi editor cheat sheet">
+  <meta name="twitter:description" content="A quick cheat sheet for the vi editor">
 
 
 
@@ -54,7 +50,7 @@
   crossorigin="anonymous"></script>
 
   </head>
-  <body class="td-page td-blog">
+  <body class="td-page">
     <header>
       <nav class="td-navbar js-navbar-scroll" data-bs-theme="dark">
 <div class="container-fluid flex-column flex-md-row">
@@ -65,10 +61,10 @@
         <a class="nav-link" href="/about/"><span>About</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/tips/"><span>Tips</span></a>
+        <a class="nav-link active" href="/tips/"><span>Tips</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link active" href="/scribbles/"><span>Scribbles</span></a>
+        <a class="nav-link" href="/scribbles/"><span>Scribbles</span></a>
       </li>
       <li class="td-light-dark-menu nav-item dropdown">
         <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
@@ -133,7 +129,7 @@
     aria-label="Search this site…"
     autocomplete="off"
     
-    data-offline-search-index-json-src="/offline-search-index.f74a976993b119d42b0b232f656a978f.json"
+    data-offline-search-index-json-src="/offline-search-index.b7b546e86adf50bf9a26d0d4b8f87439.json"
     data-offline-search-base-href="/"
     data-offline-search-max-results="10"
   >
@@ -157,7 +153,7 @@
     aria-label="Search this site…"
     autocomplete="off"
     
-    data-offline-search-index-json-src="/offline-search-index.f74a976993b119d42b0b232f656a978f.json"
+    data-offline-search-index-json-src="/offline-search-index.b7b546e86adf50bf9a26d0d4b8f87439.json"
     data-offline-search-base-href="/"
     data-offline-search-max-results="10"
   >
@@ -170,8 +166,8 @@
       <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m--li">
   <a href="/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section tree-root" id="m-"><span class="">Lance&#39;s Quips &amp; Quibbles</span></a>
   <ul class="ul-1">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-tips-li">
-  <input type="checkbox" id="m-tips-check"/>
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-tips-li">
+  <input type="checkbox" id="m-tips-check" checked/>
   <label for="m-tips-check"><a href="/tips/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-tips"><span class="">Tips</span></a></label>
   
   <ul class="ul-2 foldable">
@@ -307,16 +303,24 @@
   <input type="checkbox" id="m-tipsappsword-2011-tips-check"/>
   <label for="m-tipsappsword-2011-tips-check"><a href="/tips/apps/word-2011-tips/" title="Word 2011 tips and fixes" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-tipsappsword-2011-tips"><span class="">Word 2011 tips</span></a></label>
   
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipsappsword-doc-language-li">
+  <input type="checkbox" id="m-tipsappsword-doc-language-check"/>
+  <label for="m-tipsappsword-doc-language-check"><a href="/tips/apps/word-doc-language/" title="Word doc language" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-tipsappsword-doc-language"><span class="">Word language</span></a></label>
+  
 </li>
   </ul>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-tipsunix-li">
-  <input type="checkbox" id="m-tipsunix-check"/>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-tipsunix-li">
+  <input type="checkbox" id="m-tipsunix-check" checked/>
   <label for="m-tipsunix-check"><a href="/tips/unix/" title="Unix general tips" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-tipsunix"><span class="">Unix</span></a></label>
   
   <ul class="ul-3 foldable">
     <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipsunixpackage-managers-li">
   <input type="checkbox" id="m-tipsunixpackage-managers-check"/>
   <label for="m-tipsunixpackage-managers-check"><a href="/tips/unix/package-managers/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-tipsunixpackage-managers"><span class="">Package managers</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-tipsunixvi-cheat-sheet-copy-li">
+  <input type="checkbox" id="m-tipsunixvi-cheat-sheet-copy-check" checked/>
+  <label for="m-tipsunixvi-cheat-sheet-copy-check"><a href="/tips/unix/vi-cheat-sheet-copy/" title="Vi editor cheat sheet" class="align-left ps-0  active td-sidebar-link td-sidebar-link__page" id="m-tipsunixvi-cheat-sheet-copy"><span class="td-sidebar-nav-active-item">vi cheat sheet</span></a></label>
   
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipsunixvi-cheat-sheet-li">
   <input type="checkbox" id="m-tipsunixvi-cheat-sheet-check"/>
@@ -353,12 +357,20 @@
   <input type="checkbox" id="m-tipswebhtmlauto-capitalization-check"/>
   <label for="m-tipswebhtmlauto-capitalization-check"><a href="/tips/web/html/auto-capitalization/" title="Deactivate automatic capitalization" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-tipswebhtmlauto-capitalization"><span class="">Auto capitalization</span></a></label>
   
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipswebhtmlcustom-anchor-links-li">
+  <input type="checkbox" id="m-tipswebhtmlcustom-anchor-links-check"/>
+  <label for="m-tipswebhtmlcustom-anchor-links-check"><a href="/tips/web/html/custom-anchor-links/" title="Defining custom anchor links" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-tipswebhtmlcustom-anchor-links"><span class="">Custom anchors</span></a></label>
+  
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipswebhtmldetails-element-li">
   <input type="checkbox" id="m-tipswebhtmldetails-element-check"/>
   <label for="m-tipswebhtmldetails-element-check"><a href="/tips/web/html/details-element/" title="Hide details until needed" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-tipswebhtmldetails-element"><span class="">Hide details</span></a></label>
   
 </li>
   </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-tipsweblychee-link-checker-li">
+  <input type="checkbox" id="m-tipsweblychee-link-checker-check"/>
+  <label for="m-tipsweblychee-link-checker-check"><a href="/tips/web/lychee-link-checker/" title="Lychee: a link checker" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-tipsweblychee-link-checker"><span class="">Lychee</span></a></label>
+  
 </li>
   </ul>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-tipswindows-li">
@@ -382,8 +394,8 @@
   </ul>
 </li>
   </ul>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-scribbles-li">
-  <input type="checkbox" id="m-scribbles-check" checked/>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-scribbles-li">
+  <input type="checkbox" id="m-scribbles-check"/>
   <label for="m-scribbles-check"><a href="/scribbles/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-scribbles"><span class="">Scribbles</span></a></label>
   
   <ul class="ul-2 foldable">
@@ -414,14 +426,14 @@
   
 </li>
   </ul>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-scribblesthoughts-li">
-  <input type="checkbox" id="m-scribblesthoughts-check" checked/>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-scribblesthoughts-li">
+  <input type="checkbox" id="m-scribblesthoughts-check"/>
   <label for="m-scribblesthoughts-check"><a href="/scribbles/thoughts/" title="Random thoughts" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-scribblesthoughts"><span class="">Thoughts</span></a></label>
   
   <ul class="ul-3 foldable">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-scribblesthoughtsintegrity-example-li">
-  <input type="checkbox" id="m-scribblesthoughtsintegrity-example-check" checked/>
-  <label for="m-scribblesthoughtsintegrity-example-check"><a href="/scribbles/thoughts/integrity-example/" title="An example of integrity" class="align-left ps-0  active td-sidebar-link td-sidebar-link__page" id="m-scribblesthoughtsintegrity-example"><span class="td-sidebar-nav-active-item">Integrity example</span></a></label>
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-scribblesthoughtsintegrity-question-li">
+  <input type="checkbox" id="m-scribblesthoughtsintegrity-question-check"/>
+  <label for="m-scribblesthoughtsintegrity-question-check"><a href="/scribbles/thoughts/integrity-question/" title="A question of integrity" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-scribblesthoughtsintegrity-question"><span class="">Integrity question</span></a></label>
   
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-scribblesthoughtsmistaken-presumptions-li">
   <input type="checkbox" id="m-scribblesthoughtsmistaken-presumptions-check"/>
@@ -492,7 +504,7 @@
   
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-aboutprivacy-policy-li">
   <input type="checkbox" id="m-aboutprivacy-policy-check"/>
-  <label for="m-aboutprivacy-policy-check"><a href="/about/privacy-policy/" title="Privacy policy" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-aboutprivacy-policy"><span class="">Privacy</span></a></label>
+  <label for="m-aboutprivacy-policy-check"><a href="/about/privacy-policy/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-aboutprivacy-policy"><span class="">Privacy policy</span></a></label>
   
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-aboutsite-name-li">
   <input type="checkbox" id="m-aboutsite-name-check"/>
@@ -517,56 +529,86 @@
 
 </div>
 
-            
+            <div class="td-toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#background">Background</a></li>
+    <li><a href="#vital-statistics">Vital statistics</a></li>
+  </ul>
+</nav>
+      </div>
+    
             
 	
           </aside>
-          <main class="col-12 col-md-9 col-xl-8 ps-md-5 pe-md-4" role="main">
-            <a class="td-rss-button" title="RSS" href="/scribbles/thoughts/index.xml" target="_blank" rel="noopener">
-              <i class="fa-solid fa-rss" aria-hidden="true"></i>
-            </a>
+          <main class="col-12 col-md-9 col-xl-8 ps-md-5" role="main">
+            
+  
+
+            <nav aria-label="breadcrumb" class="td-breadcrumbs">
+  <ol class="breadcrumb">
+  <li class="breadcrumb-item">
+    <a href="/tips/">Tips</a></li>
+  <li class="breadcrumb-item">
+    <a href="/tips/unix/">Unix</a></li>
+  <li class="breadcrumb-item active" aria-current="page">
+    vi cheat sheet</li>
+  </ol>
+</nav>
             
 <div class="td-content">
-	<h1>An example of integrity</h1>
-	<div class="lead">Integrity has many facets; not all are obvious.</div>
-	<div class="td-byline mb-4">
-		
-		<time datetime="2024-10-15" class="text-body-secondary">Tuesday, October 15, 2024</time>
-	</div>
+	<h1>Vi editor cheat sheet</h1>
+	<div class="lead">A quick cheat sheet for the vi editor</div>
 	<header class="article-meta">
 		
-  <p class="reading-time"><i class="fa-solid fa-clock" aria-hidden="true"></i>&nbsp; 3 minute read &nbsp;</p>
+  <p class="reading-time"><i class="fa-solid fa-clock" aria-hidden="true"></i>&nbsp; less than a minute &nbsp;</p>
 </header>
-	<p>During a job interview, I was asked to provide an example of integrity.</p>
-<p>The question caught me off-guard; it wasn&rsquo;t one I&rsquo;d previously planned to answer.</p>
-<p>An example popped into my head, but I hesitated to present it.</p>
-<p>I set the stage by saying I had an example that might work, but that it wasn&rsquo;t necessarily work-related.</p>
-<p>Nevertheless, I thought it demonstrated my approach to integrity in general and showed, in some ways, how seriously I can take responsibilities that test integrity.</p>
-<p>I asked if that was OK and they agreed.</p>
-<p>My youngest daughter grew up with a co-parenting arrangement. Her mother and I were supposed to collaborate on major decisions and find common ground.</p>
-<p>In practice, the arrangement was (far) more one-sided than expected. I often found myself frustrated because of some demand or decision made without my input. Often, I learned of these from my daughter.</p>
-<p>Yet&hellip; No matter how frustrated I got, I made sure to <em>never</em> express that around my daughter. When she was around, I focused on her feelings. I encouraged her to have the best possible relationship she could have with <em>all</em> of her parents.</p>
-<p>When she spoke enthusiastically about activities with her other family, I listened attentively and spoke encouragingly.</p>
-<p>When she was older and began to ask tough questions, I continually returned to the theme of the best possible relationship. I said I understood her questions. I respected her feelings; they were valid. It was perfectly OK for her to have a different relationship with her mother than I did.</p>
-<p>I made many mistakes as a parent. We all do. Yet, in this: I did my level best to love her unconditionally; that is, without condition. I tried to respect her feelings and her needs, often at the expense of my own.</p>
-<p>These were not always easy things to do or to say. Yet no matter <em>what</em> I felt, I did my best to support her, sticking to the theme of the best possible relationship.</p>
-<p>I told the interviewers that this was a good example of how I approach the idea of integrity and how seriously I take it.</p>
-<p>To me, you have to walk the talk. Lead by example. Show, rather than tell.</p>
-<p>The example of my daughter showed how disciplined I can be with a message, even one I don&rsquo;t necessarily like or understand.</p>
-<p>For more than 15 years, I routinely put my daughters&rsquo; needs ahead of my own.</p>
-<p>It&rsquo;s hard for me to think of many more clear examples of integrity.</p>
-<p>The result?  Today, I have a good relationship with my daughter. She shares things with me she doesn&rsquo;t share with her other family. We don&rsquo;t always see eye-to-eye, but she trusts me. And that&rsquo;s something I treasure.</p>
-
-	<ul class="list-unstyled d-flex justify-content-between align-items-center mb-0 pt-5">
-  <li>
-    <a href="/scribbles/thoughts/mistaken-presumptions/" aria-label="Previous - Beware mistaken presumptions" class="btn btn-primary"><span class="me-1">←</span>Previous</a>
-  </li>
-  <li>
-    <a class="btn btn-primary disabled">Next<span class="ms-1">→</span></a>
-  </li>
+	<p>Here is a quick cheat sheet for the <a href="https://en.wikipedia.org/wiki/Vi_%28text_editor%29">vi text editor</a>:</p>
+<ul>
+<li>
+<p>There are two modes: <em>Command</em> and <em>Insert</em>.</p>
+</li>
+<li>
+<p>The word <code>INSERT</code> appears in the bottom left corner of the screen when that mode is active.</p>
+</li>
+<li>
+<p>If you&rsquo;re not sure what mode you&rsquo;re in, press <code>Esc</code> to go into <em>Command</em> mode.</p>
+</li>
+<li>
+<p>To move the cursor in command mode:</p>
+<ul>
+<li><code>H</code> (left)</li>
+<li><code>J</code> (right)</li>
+<li><code>K</code> (up)</li>
+<li><code>L</code> (right)</li>
+</ul>
+</li>
+<li>
+<p>Press <code>I</code> to activate <em>Insert</em> mode.</p>
+</li>
+<li>
+<p>When finished, go to <em>Command</em> mode and then type:</p>
+<ul>
+<li><code>:wd</code> to save</li>
+<li><code>:q!</code> to discard changes</li>
+</ul>
+</li>
+</ul>
+<h2 id="background">Background</h2>
+<p>Like the <a href="https://en.wikipedia.org/wiki/The_Spanish_Inquisition_%28Monty_Python%29">Spanish Inquisition</a>, the vi editor shows up unexpectedly.  I&rsquo;ve seen it appear when:</p>
+<ul>
+<li>Having to resolve merge conflicts in git</li>
+<li>Working with console windows in cloud environments</li>
+</ul>
+<p>Because I don&rsquo;t normally use the editor, I tend to forget how to save changes and close it.</p>
+<h2 id="vital-statistics">Vital statistics</h2>
+<ul>
+<li>Last update: 12 May 20224: Refactored for the new site.</li>
+<li>First post: 21 September 2017</li>
 </ul>
 
-	</div>
+	
+</div>
 
 
           </main>
